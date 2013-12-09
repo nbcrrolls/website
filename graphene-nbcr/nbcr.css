@@ -1,0 +1,607 @@
+/* for si-program table */
+table.si-program {
+        font: Avant Garde, Arial, sans-serif ;
+        border: 0px solid #fff !important;
+}
+.si-program .column-1 { 
+	width: 13%;
+        color: #005983 !important;
+}
+.si-program .column-2 {
+	width: 29%;
+	background-color: #F0FBFE !important;
+}
+.si-program .column-3 {
+	width: 29%;
+	background-color: #DCEEFF !important;
+}
+.si-program .column-4 {
+	width: 29%;
+	background-color: #DCE7Ff !important;
+}
+table.si-program tr td {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 8pt;
+        border: 0px solid #fff !important; 
+        padding: 0px 0px 0px 5px !important;
+}
+
+.si-program .row-1 td ,
+.si-program .row-6 td ,
+.si-program .row-10 td ,
+.si-program .row-14 td ,
+.si-program .row-19 td {
+        font-weight: bold;
+        color: #101030;
+        border: 0px solid #fff !important;
+}
+
+.si-program .row-2 .column-2 ,
+.si-program .row-4 .column-2 ,
+.si-program .row-8 .column-2 ,
+.si-program .row-12 .column-2 ,
+.si-program .row-16 .column-2 ,
+.si-program .row-18 .column-2 ,
+.si-program .row-21 .column-2 {
+        color: #101030;
+	background-color: #efefef !important;
+        border: 0px solid #fff !important;
+}
+
+
+/* for publications table */
+.publications {
+        margin-right: 20px !important;
+        border: solid #fff 1px !important;
+        font: Avant Garde, Arial, sans-serif ;
+}
+
+.publications .column-1 { 
+	width: 30%;
+}
+.publications .column-2 {
+	width: 40%;
+}
+.publications .column-3 {
+	width: 15%;
+}
+.publications .column-4 {
+	width: 10%;
+}
+.publications .column-5 {
+	width: 5%;
+}
+
+.publications .odd th { 
+	text-align:center;
+        color: #005983 !important;
+	background-color: #DCE7F0 !important;
+        font-size: 10pt;
+}
+
+.publications .odd td {
+	background-color: #ededed !important;
+}
+
+.publications .even td {
+	background-color: #ffffff !important;
+}
+
+.publications tr td {
+        margin-left: 5px;
+        margin-right: 1px;
+        font-size: 8pt;
+        border: 0px solid #fff;
+        padding: 0px 5px 0px 5px;
+}
+
+.publications .row-hover tr.even:hover td,
+.publications .row-hover tr.odd:hover td {
+  color: #005983;
+  background-color: #DCE7F0 !important;
+}
+
+.publications .odd th { 
+	text-align:center;
+        color: #005983 !important;
+	background-color: #DCE7F0 !important;
+        font-size: 10pt;
+}
+
+.publications .odd td {
+	background-color: #ededed !important;
+}
+
+.publications .even td {
+	background-color: #ffffff !important;
+}
+
+.publications tr td {
+        margin-left: 5px;
+        margin-right: 1px;
+        font-size: 8pt;
+        border: 0px solid #fff;
+        padding: 0px 5px 0px 5px;
+}
+
+.publications .row-hover tr.even:hover td,
+.publications .row-hover tr.odd:hover td {
+  color: #005983;
+  background-color: #DCE7F0 !important;
+}
+
+
+/* for people table */
+table.people {
+	width: 90%;
+	margin-right: 20px;
+	border: solid #fff 0px !important;
+}
+.people tr td {
+	margin-left: 1px;
+	margin-right: 1px;
+	background-color: #ffffff;
+	font: Avant Garde, Century Gothic, Arial, sans-serif ;
+	font-size: 10pt;
+	border: 0px solid #fff;
+	padding: 0px !important;
+}
+
+/* for simple table */
+.half {
+	width: 50%;
+}
+
+table.simple {
+	border: solid #fff 1px !important;
+	margin: auto !important ;
+}
+.simple tr td {
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: #ffffff !important;
+	font: Avant Garde, Arial, sans-serif ;
+	border: 1px solid #fff !important;
+	padding: 0px !important;
+}
+.simple .head td { 
+	text-align:center;
+        color: #101030 !important;
+	background-color: #efefef !important;
+	font-weight: bold;
+}
+
+.simple .odd td {
+	background-color: #F0FBFE !important;
+}
+
+.simple .even td {
+	background-color: #ffffff !important;
+}
+
+/* 2 text widgets in the left sife two-column */
+.swbar {
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: #ffffff;
+	color: #005983;
+	font: Avant Garde, Century Gothic, Arial, sans-serif ;
+	font-size: 9pt;
+	border: solid #FFF 0px;
+	padding: 0px;
+	font-weight: bold;
+}
+
+.swbar tr td {
+	border: 0px solid #FFF;
+	font: Avant Garde, Century Gothic, Arial ;
+	font-size: 9pt;
+	padding: 0px 10px 0px 0px;
+	vertical-align: top;
+}
+
+.sw {
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: #ffffff;
+	color: #990000;
+	font: Avant Garde, Century Gothic, Arial ;
+	font-size: 9pt;
+	border: solid #FFF 0px;
+	padding: 0px;
+}
+
+.sw tr td {
+	border: 0px solid #FFF;
+	font-size: 10pt;
+	padding: 0px 10px 0px 10px;
+}
+
+.sw td {
+	vertical-align: top;
+}
+
+.sw th {
+	vertical-align: top;
+	color: #101030;
+	font-size: 10pt;
+	padding: 1px 10px 1px 10px;
+	border: 1px solid #c0c0c0;
+}
+
+.swimg-column {
+	width: 120px !important;
+}
+
+.switem-img-thum {
+	width: 27px !important;
+	height: 17px !important;
+	float: left;
+	padding: 1px 5px 1px 0px;
+	vertical-align: baseline;
+}
+
+.switem-img {
+	max-width: 90px !important;
+        border: solid #FFF 1px !important;
+}
+
+/* table of web services */
+.service  {
+        margin-left: 5px;
+        margin-right: 5px;
+	color: #101030;
+        background-color: #ffffff;
+	font-size: 10pt;
+        border: solid #FFF 0px;
+        padding: 0px;
+}
+
+.service th {
+	vertical-align: top;
+	font-size: 10pt;
+	padding: 1px 10px 1px 10px;
+	border: 1px solid #c0c0c0;
+}
+
+.service tr td {
+	vertical-align: top;
+	font-size: 9pt;
+	font-family: Avant Garde, Century Gothic, Arial, sans-serif ;
+	color: #000;
+        background-color: #ffffff;
+	padding: 1px 10px 1px 10px;
+	text-align:justify;
+	border-bottom: 1px solid #c0c0c0;
+}
+
+.sw-citation {
+	font-size: 8pt;
+	color: #101030;
+}
+.sw-test p {
+	font-size: 8pt;
+	color: #990000;
+}
+
+td img {
+	text-align:center;
+	display: block;
+}   
+
+.right {
+	text-align:right;
+}   
+
+.left {
+	text-align:left;
+}
+
+div.center {
+	text-align: center;
+	display:inline-block;
+	margin: 0 auto;
+}
+    
+table.center {
+	margin-left: 2px;
+	margin-right: 2px;
+	background: #FEFFF2;
+}
+
+.centered {
+	text-align:center;
+	display:block;
+}
+
+#sw-itemmenu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+#sw-itemmenu li {
+	text-align:left;
+	font: Avant Garde, Gothic, Arial, sans-serif ;
+	font-size: 10pt;
+	border: solid #000 0px;
+	padding-left: 10px;
+	margin: 0;
+}
+
+.sw-item table {
+	margin-left: 0px;
+	margin-right: 0px;
+	border: solid #fff 1px !important;
+}
+
+.sw-item tr td {
+	padding-left: 10px;
+	border: solid #fff 1px;
+	padding: 2px 5px 2px 5px;
+	background-color: #ffffff;
+	vertical-align: top;
+	text-align:justify;
+}
+
+/* images in the posts */
+.post-img {
+	max-width: 210px;
+	padding: 0px !important;
+	vertical-align: top;
+        border: solid #005983 1px !important;
+	background-color: #fff ;
+        -moz-box-shadow:0 0 15px #333;
+        -webkit-box-shadow:0 0 15px #333;
+
+}
+
+/* images in the highlights */
+.highlights-img {
+	max-width: 350px !important;
+	padding: 0px 5px !important;
+	vertical-align: top;
+        border: solid #005983 0px !important;
+	background-color: #fff ;
+
+}
+
+.small-logo  {
+	height: 30px !important;
+	padding: 0px 15px !important;
+}
+
+/* map image */
+.align-right { 
+        float:right; 
+        margin: 4px 0px 0px 1em !important;
+/*        margin: 0 0 15px 15px;  */
+}
+
+.align-left { 
+        float:left; 
+        margin: 4px 1em 0px 0px !important;
+}
+
+.align-top { 
+	vertical-align: top !important;
+	border: solid #fff 0px !important;
+	background-color: #fff ;
+}
+
+#header { background: #101030 url(gradient.gif) repeat-y; height: 117px; }
+
+/* for people pages */
+.person-info table {
+	margin-left: 0px;
+	margin-right: 0px;
+	border: solid #fff 1px !important;
+}
+.person-info tr td {
+	margin-left: 0px;
+	border: solid #fff 1px !important; 
+	padding: 2px 10px 2px 0px !important;
+	background-color: #ffffff;
+	vertical-align: top;
+	text-align:justify;
+}
+
+.person-img-column {
+	width: 120px !important;
+	padding: 0px !important;
+}
+
+.person-img {
+	max-width: 150px !important;
+        border: solid #fff 0px !important;
+}
+
+#person-itemmenu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+#person-itemmenu li {
+	text-align:left;
+	font-family: "Osaka", sans-serif;
+	font-size: 10pt;
+	border: solid #000 0px;
+	padding-left: 0px;
+	margin: 0;
+}
+
+.showword {
+	color: #005983;
+	font: Avant Garde, Century Gothic, Arial, sans-serif ;
+	font-weight: bold;
+}
+
+.showphrase {
+	color: #003F5B;
+	font: Avant Garde, Century Gothic, Arial, sans-serif ;
+	font-style: oblique;
+	font-size: 10pt;
+}
+
+/* user map */
+#Umap {
+	margin:0;
+	padding:0;
+	width:685px !important;
+	height:374px !important;
+	background:url('http://nbcr.ucsd.edu/wordpress2/wp-content/themes/graphene-nbcr/images/users/tools1.png') top left no-repeat #fff;
+	font-family:arial, helvetica, sans-serif;
+	font-size:8pt;
+}
+#Umap li {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#Umap li a {
+	position:absolute;
+	display:block;
+	/* Specifying a background image (a 1px by 1px transparent gif)
+	fixes a bug in older versions of IE that causeses the block to not
+	render at its full dimensions.
+	*/
+	background:url(blank.gif);
+	text-decoration:none;
+	color:#000;
+}
+#Umap li a span { display:none; }
+#Umap li a:hover span {
+	position:relative;
+	display:block;
+	width:250px;
+	left:20px;
+	top:20px;
+	border:1px solid #005983;
+	background:#fff;
+	padding:5px 10px 5px 10px;
+	filter:alpha(opacity=80);
+	opacity:0.8;
+}
+#Umap a.step-1 {
+	top:70px;
+	left:30px;
+	width:180px;
+	height:180px;
+}
+#Umap a.step-2 {
+	top:270px;
+	left:130px;
+	width:250px;
+	height:180px;
+}
+#Umap a.step-3 {
+	top:270px;
+	left:410px;
+	width:150px;
+	height:150px;
+}
+#Umap a.step-4 {
+	top:70px;
+	left:460px;
+	width:180px;
+	height:180px;
+}
+
+/* cadd pipeline map */
+#CADDmap {
+	margin:0;
+	padding:0;
+	width:685px !important;
+	height:606px !important;
+	background:url('http://nbcr.ucsd.edu/wordpress2/wp-content/themes/graphene-nbcr/images/users/tools2.png') top left no-repeat #fff;
+	font-family:arial, helvetica, sans-serif;
+	font-size:8pt;
+}
+#CADDmap li {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#CADDmap li a {
+	position:absolute;
+	display:block;
+	/* Specifying a background image (a 1px by 1px transparent gif)
+	fixes a bug in older versions of IE that causeses the block to not
+	render at its full dimensions.
+	*/
+	background:url(blank.gif);
+	text-decoration:none;
+	color:#000;
+}
+#CADDmap li a span { display:none; }
+#CADDmap li a:hover span {
+	position:relative;
+	display:block;
+	width:200px;
+	left:20px;
+	top:20px;
+	border:1px solid #005983;
+	background:#fff;
+	padding:5px 10px 5px 10px;
+	filter:alpha(opacity=80);
+	opacity:0.8;
+}
+#CADDmap a.cadd-1 {
+	top:102px;
+	left:10px;
+	width:340px;
+	height:152px;
+}
+#CADDmap a.cadd-2 {
+	top:314px;
+	left:187px;
+	width:126px;
+	height:126px;
+}
+#CADDmap a.cadd-3 {
+	top:125px;
+	left:535px;
+	width:126px;
+	height:126px;
+}
+#CADDmap a.cadd-4 {
+	top:330px;
+	left:552px;
+	width:126px;
+	height:126px;
+}
+#CADDmap a.cadd-5 {
+	top:426px;
+	left:372px;
+	width:126px;
+	height:126px;
+}
+#CADDmap a.cadd-6 {
+	top:560px;
+	left:372px;
+	width:126px;
+	height:126px;
+}
+
+/* tabs links coloring */
+#tabs-1-1 a,
+#tabs-1-2 a,
+#tabs-1-3 a,
+#tabs-1-4 a,
+#tabs-1-1 a:visited,
+#tabs-1-2 a:visited,
+#tabs-1-3 a:visited,
+#tabs-1-4 a:visited {
+        color: #005983;
+        text-decoration: none;
+        text-decoration: underline;
+}
+
+#tabs-1-1 a:hover,
+#tabs-1-2 a:hover,
+#tabs-1-3 a:hover,
+#tabs-1-4 a:hover {
+        color: #0082A0;
+        text-decoration: underline;
+}
+
