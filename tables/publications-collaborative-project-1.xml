@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<col>Author</col>
+		<col>Title</col>
+		<col>Publishing Info</col>
+	</row>
+	<row>
+		<col>F. B. Sachse, N. S. Torres, E. Savio-Galimberti, T. Aiba, D. A. Kass, G. F.  Tomaselli, and J. H. Bridge</col>
+		<col>Subcellular structures and function of myocytes impaired during heart failure are restored by cardiac resynchronization therapy</col>
+		<col>Circ Res, 2012. accepted</col>
+	</row>
+	<row>
+		<col>N. S. Torres, F. B. Sachse, K. W. Spitzer, and J. H. B. Bridge.</col>
+		<col> Activation of calcium release from RyR clusters depends on their distance from the sarcolemma.</col>
+		<col>In Biophys J (Annual Meeting Abstracts), 2012. accepted</col>
+	</row>
+	<row>
+		<col>M. Fink, S. A. Niederer, E. M. Cherry, F. H. Fenton, J. T. Koivumäki, G. Seemann, R. Thul, H. Zhang, F. B. Sachse, D. Beard, E. J. Crampin, and N. P. Smith.</col>
+		<col>Cardiac cell modelling: Observations from the heart of the cardiac physiome project.</col>
+		<col>Prog Biophys Mol Biol, 104:2-21, 2011</col>
+	</row>
+	<row>
+		<col>P. Kekenes-Huskey, Y. Cheng, J. Hake, F. B. Sachse, J. H. Bridge, A. McCammon, and A. Michailova.</col>
+		<col>Contributions of structural t-tubule heterogeneities and membrane Ca2+ flux localization to local Ca2+ signaling in rabbit ventricular myocytes.</col>
+		<col>In Biophys J (Annual Meeting Abstracts), 2011</col>
+	</row>
+	<row>
+		<col>T. G. McNary, J. H. Bridge, and F. B. Sachse.</col>
+		<col>Strain transfer in ventricular cardiomyocytes to their transverse tubular system revealed by scanning confocal microscopy.</col>
+		<col>Biophys J, 100(10):L53-55, 2011</col>
+	</row>
+	<row>
+		<col>T. G. McNary, K. W. Spitzer, J. H. B. Bridge, and F. B. Sachse.</col>
+		<col>Changes in geometry of transverse tubules due to mechanical deformation of ventricular myocytes.</col>
+		<col>In Proc 7th Annual Mountain West Biomedical Engineering Conference, 2011</col>
+	</row>
+	<row>
+		<col>T. A. Quinn, S. Granite, M. A. Allessie, C. Antzelevitch, C. Bollensdorff, G. Bub, R. A. B. Burton, E. Cerbai, P. S. Chen, M. Delmar, D. DiFrancesco, Y. E. Earm, I. R. Efimov, M. Egger, E. Entcheva, M. Fink, R. Fischmeister, M. R. Franz, A. Garny, W. R. Giles, T. Hannes, S. E. Harding, P. J. Hunter, G. Iribe, J. Jalife, C. R. Johnson, R. S. Kass, I. Kodama, G. Koren, P. Lord, V. S. Markhasin, S. Matsuoka, A. D. McCulloch, G. R. Mirams, G. E. Morley, S. Nattel, D. Noble, S. P. Olesen, A. V. Panfilov, N. A. Trayanova, U. Ravens, S. Richard, D. S. Rosenbaum, Y. Rudy, F. Sachs, F. B. Sachse, D. A. Saint, U. Schotten, O. Solovyova, P. Taggart, L. Tung, A. Varró, P.G. Volders, K. Wang, J. N. Weiss, E. Wettwer, E. White, R. Wilders, R. L. Winslow, and P. Kohl.</col>
+		<col>Minimum information about a cardiac electrophysiology experiment (MICEE): Standardised reporting for model reproducibility, interoperability, and data sharing.</col>
+		<col>Prog Biophys Mol Biol, 107(1):4-10, 2011</col>
+	</row>
+</table>

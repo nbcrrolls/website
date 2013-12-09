@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<col>Authors</col>
+		<col>Title</col>
+		<col>Publishing Info</col>
+		<col>PMC</col>
+		<col>CST</col>
+	</row>
+	<row>
+		<col>Abramson, D.; Enticott, C.; Peachey, T.; Michailova, A.; Amirriazi, S.; Chitter, R.</col>
+		<col>Automatic design optimization using parallel workflows</col>
+		<col>International Conference on Computational Science, ICCS 2010, pp 2165-2174</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMCS0121">PMCS0121</a>]]></col>
+		<col>  </col>
+	</row>
+	<row>
+		<col>Aguado-Sierra, J.; Kerckhoffs, R. C. P.; Lionetti, F. V.; Hunt, D. L.; Villongco, C.; Gonzales, M. J.; Campbell, S. G.; McCulloch, A. D.</col>
+		<col>A computational framework for Patient-Specific Multi-Scale Cardiac modeling.</col>
+		<col>Patient-specific modeling of the cardiovascular system:Technology-driven personalized medicine, Kerckhoffs, R. C. P., Ed. Springer, New York, 2010, pp 203-223</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/ "> </a>]]></col>
+		<col>T0003 </col>
+	</row>
+	<row>
+		<col>Amaro, R. E.; Li, W. W.</col>
+		<col>Emerging methods for ensemble-based virtual screening. </col>
+		<col>Curr Top Med Chem 2010, 10, (1), 3-13.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3086266">PMC3086266</a>]]></col>
+		<col> </col>
+	</row>
+	<row>
+		<col>Ambrus, G.; Whitby, L. R.; Singer, E. L.; Trott, O.; Choi, E.; Olson, A. J.; Boger, D. L.; Gerace, L.</col>
+		<col>Small molecule peptidomimetic inhibitors of importin alpha/beta mediated nuclear transport.</col>
+		<col> Bioorg Med Chem 2010, 18, (21), 7611-20.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2966498">PMC2966498</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Baron, R.; Setny, P.; McCammon, J. A.</col>
+		<col>Water in cavity-ligand recognition. </col>
+		<col>J Am Chem Soc 2010, 132, (34), 12091-7.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2933114">PMC2933114</a>]]></col>
+		<col> </col>
+	</row>
+	<row>
+		<col>Bauler, P.; Huber, G.; Leyh, T.; McCammon, J. A.</col>
+		<col>Channeling by Proximity: The Catalytic Advantages of Active Site Colocalization Using Brownian Dynamics. </col>
+		<col>J Phys Chem Lett 2010, 1, (9), 1332-1335.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2865391">PMC2865391</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Callenberg, K. M.; Choudhary, O. P.; de Forest, G. L.; Gohara, D. W.; Baker, N. A.; Grabe, M.</col>
+		<col>APBSmem: a graphical interface for electrostatic calculations at the membrane.</col>
+		<col>PLoS ONE 2010, 5, (9)</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2947494">PMC2947494</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Campbell, S. G.; Lionetti, F. V.; Campbell, K. S.; McCulloch, A. D.</col>
+		<col>Coupling of adjacent tropomyosins enhances cross-bridge-mediated cooperative activation in a markov model of the cardiac thin filament.</col>
+		<col>Biophys J 2010, 98, (10), 2254-64.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2872217">PMC2872217</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Chen, Z.; Baker, N. A.; Wei, G. W.</col>
+		<col> Differential geometry based solvation model I: Eulerian formulation. </col>
+		<col>J Comput Phys 2010, 229, (22), 8231-8258. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2951687">PMC2951687</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Cheng, Y.; Yu, Z.; Hoshijima, M.; Holst, M. J.; McCulloch, A. D.; McCammon, J. A.; Michailova, A. P.</col>
+		<col> Numerical analysis of Ca2+ signaling in rat ventricular myocytes with realistic transverse-axial tubular geometry and inhibited sarcoplasmic reticulum. </col>
+		<col>PLoS Comput Biol 2010, 6, (10), e1000972.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2965743">PMC2965743</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Dong, K. K.; Nan, K.; Tilak, S.; Wu, K.; Zheng, C.; Schulze, J.; Arzberger, P. W.; Li, W. W.</col>
+		<col>Real Time Biomedical Data Streaming Platform (RIMES): a data-intensive virtual environment</col>
+		<col>International Workshop on HPC and Grid Applications (IWHGA 2010), 2010,  pp 342-346</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/ "> </a>]]></col>
+		<col>C0005</col>
+	</row>
+	<row>
+		<col>Durrant, J. D.; Amaro, R. E.; Xie, L.; Urbaniak, M. D.; Ferguson, M. A.; Haapalainen, A.; Chen, Z.; Di Guilmi, A. M.; Wunder, F.; Bourne, P. E.; McCammon, J. A.</col>
+		<col> A multidimensional strategy to detect polypharmacological targets in the absence of structural and sequence homology. </col>
+		<col>PLoS Comput Biol 2010, 6, (1), e1000648.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2799658">PMC2799658</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Durrant, J. D.; Keranen, H.; Wilson, B. A.; McCammon, J. A.</col>
+		<col>Computational identification of uncharacterized cruzain binding sites. </col>
+		<col>PLoS Negl Trop Dis 2010, 4, (5), e676. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2867933">PMC2867933</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Durrant, J. D.; McCammon, J. A.</col>
+		<col>Computer-aided drug-discovery techniques that account for receptor flexibility. </col>
+		<col>Curr Opin Pharmacol 2010, 10, (6), 770-4.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3026641">PMC3026641</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Durrant, J. D.; McCammon, J. A.</col>
+		<col>NNScore: a neural-network-based scoring function for the characterization of protein-ligand complexes. </col>
+		<col>J Chem Inf Model 2010, 50, (10), 1865-71.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2964041">PMC2964041</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Durrant, J. D.; McCammon, J. A.</col>
+		<col>Potential drug-like inhibitors of Group 1 influenza neuraminidase identified through computer-aided drug design. </col>
+		<col>Comput Biol Chem 2010, 34, (2), 97-105.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2896249">PMC2896249</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Durrant, J. D.; Urbaniak, M. D.; Ferguson, M. A.; McCammon, J. A.</col>
+		<col>Computer-aided identification of Trypanosoma brucei uridine diphosphate galactose 4'-epimerase inhibitors: toward the development of novel therapies for African sleeping sickness. </col>
+		<col>J Med Chem 2010, 53, (13), 5025-32. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895357">PMC2895357</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Feala, J. D.; Cortes, J.; Duxbury, P. M.; Piermarocchi, C.; McCulloch, A. D.; Paternostro, G.</col>
+		<col> Systems approaches and algorithms for discovery of combinatorial therapies. </col>
+		<col>Wiley Interdiscip Rev Syst Biol Med 2010, 2, (2), 181-93.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/ "> </a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Fink, M.; Niederer, S. A.; Cherry, E. M.; Fenton, F. H.; Koivumaki, J. T.; Seemann, G.; Thul, R.; Zhang, H.; Sachse, F. B.; Beard, D.; Crampin, E. J.; Smith, N. P.</col>
+		<col> Cardiac cell modelling: observations from the heart of the cardiac physiome project. </col>
+		<col>Prog Biophys Mol Biol 2011, 104, (1-3), 2-21.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/ "> </a>]]></col>
+		<col> </col>
+	</row>
+	<row>
+		<col>Fitzpatrick, K.; Skasko, M.; Deerinck, T. J.; Crum, J.; Ellisman, M. H.; Guatelli, J.</col>
+		<col>Direct restriction of virus release and incorporation of the interferon-induced protein BST-2 into HIV-1 particles. </col>
+		<col>PLoS Pathog 2010, 6, (3), e1000701.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2832767">PMC2832767</a>]]></col>
+		<col> </col>
+	</row>
+	<row>
+		<col>Grant, B. J.; Gorfe, A. A.; McCammon, J. A.</col>
+		<col> Large conformational changes in proteins: signaling and other functions. </col>
+		<col>Curr Opin Struct Biol 2010, 20, (2), 142-7.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2866511">PMC2866511</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Grant, B. J.; McCammon, J. A.; Gorfe, A. A.</col>
+		<col> Conformational selection in G-proteins: lessons from Ras and Rho. </col>
+		<col>Biophys J 2010, 99, (11), L87-9.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2998626">PMC2998626</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Holst, M.; Larson, M.; Malqvist, A.; Soderlund, R.</col>
+		<col>Convergence Analysis of Finite Element Approximations of the Joule Heating Problem in Three Spatial Dimension.</col>
+		<col>BIT50, 2010, pp 781-795,</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/ "> </a>]]></col>
+		<col>T0002</col>
+	</row>
+	<row>
+		<col>Huber, G. A.; McCammon, J. A.</col>
+		<col>Browndye: A Software Package for Brownian Dynamics. </col>
+		<col>Comput Phys Commun 2010, 181, (11), 1896-1905.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2994412">PMC2994412</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Ishizuka, R.; Huber, G. A.; McCammon, J. A.</col>
+		<col> Solvation Effect on the Conformations of Alanine Dipeptide: Integral Equation Approach. </col>
+		<col>J Phys Chem Lett 2010, 1, (15), 2279-2283. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2916711">PMC2916711</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Ivetac, A.; McCammon, J. A.</col>
+		<col> Mapping the druggable allosteric space of G-protein coupled receptors: a fragment-based molecular dynamics approach. </col>
+		<col>Chem Biol Drug Des 2010, 76, (3), 201-17. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2918726">PMC2918726</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Kerckhoffs, R. C.; Omens, J. H.; McCulloch, A. D.; Mulligan, L. J.</col>
+		<col> Ventricular dilation and electrical dyssynchrony synergistically increase regional mechanical nonuniformity but not mechanical dyssynchrony: a computational model. </col>
+		<col>Circ Heart Fail 2010, 3, (4), 528-36.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3050711">PMC3050711</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Lawrenz, M.; Wereszczynski, J.; Amaro, R.; Walker, R.; Roitberg, A.; McCammon, J. A.</col>
+		<col> Impact of calcium on N1 influenza neuraminidase dynamics and binding free energy. </col>
+		<col>Proteins 2010, 78, (11), 2523-32. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2902668">PMC2902668</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Li, B.; Lu, B.; Wang, Z.; McCammon, J. A.</col>
+		<col> Solutions to a reduced Poisson-Nernst-Planck system and determination of reaction rates. </col>
+		<col>Physica A 2010, 389, (7), 1329-1345. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2835320">PMC2835320</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Lu, B.; Cheng, X.; Huang, J.; McCammon, J. A.</col>
+		<col> AFMPB: An Adaptive Fast Multipole Poisson-Boltzmann Solver for Calculating Electrostatics in Biomolecular Systems. </col>
+		<col>Comput Phys Commun 2010, 181, (6), 1150-1160. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2880819">PMC2880819</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Lu, B.; Holst, M. J.; McCammon, J. A.; Zhou, Y. C.</col>
+		<col> Poisson-Nernst-Planck Equations for Simulation Biomolecular Diffusion-Reaction Processes I: Finite Element Solutions. </col>
+		<col>J Comp Physics 2010, 229, (19), 6979–6994. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/ "> </a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Lu, B.; Holst, M. J.; McCammon, J. A.; Zhou, Y. C.</col>
+		<col> Poisson-Nernst-Planck Equations for Simulating Biomolecular Diffusion-Reaction Processes I: Finite Element Solutions. </col>
+		<col>J Comput Phys 2010, 229, (19), 6979-6994. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMCID2922884">PMCID2922884</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Lu, B.; McCammon, J. A.</col>
+		<col>Kinetics of diffusion-controlled enzymatic reactions with charged substrates.</col>
+		<col>Biophys J 2010, 3, 1.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2821377">PMC2821377</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Lukman, S.; Grant, B. J.; Gorfe, A. A.; Grant, G. H.; McCammon, J. A.</col>
+		<col> The distinct conformational dynamics of K-Ras and H-Ras A59G. </col>
+		<col>PLoS Comput Biol 2010, 6, (9),  </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2936511">PMC2936511</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Markwick, P. R.; Cervantes, C. F.; Abel, B. L.; Komives, E. A.; Blackledge, M.; McCammon, J. A.</col>
+		<col> Enhanced conformational space sampling improves the prediction of chemical shifts in proteins. </col>
+		<col>J Am Chem Soc 2010, 132, (4), 1220-1. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2812018">PMC2812018</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Peng, L. X.; Ivetac, A.; Chaudhari, A. S.; Van, S.; Zhao, G.; Yu, L.; Howell, S. B.; McCammon, J. A.; Gough, D. A.</col>
+		<col> Characterization of a clinical polymer-drug conjugate using multiscale modeling. </col>
+		<col>Biopolymers 2010, 93, (11), 936-51. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3099131">PMC3099131</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Perkins, G. A.; Tjong, J.; Brown, J. M.; Poquiz, P. H.; Scott, R. T.; Kolson, D. R.; Ellisman, M. H.; Spirou, G. A.</col>
+		<col> The micro-architecture of mitochondria at active zones: electron tomography reveals novel anchoring scaffolds and cristae structured for high-rate metabolism. </col>
+		<col>J Neurosci 2010, 30, (3), 1015-26. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2829299">PMC2829299</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Perryman, A. L.; Forli, S.; Morris, G. M.; Burt, C.; Cheng, Y.; Palmer, M. J.; Whitby, K.; McCammon, J. A.; Phillips, C.; Olson, A. J.</col>
+		<col> A dynamic model of HIV integrase inhibition and drug resistance. </col>
+		<col>J Mol Biol 2010, 397, (2), 600-15. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2846753">PMC2846753</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Perryman, A. L.; Zhang, Q.; Soutter, H. H.; Rosenfeld, R.; McRee, D. E.; Olson, A. J.; Elder, J. E.; Stout, C. D.</col>
+		<col> Fragment-based screen against HIV protease. </col>
+		<col>Chem Biol Drug Des 2010, 75, (3), 257-68. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2911974">PMC2911974</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Qin, S.; Minh, D. D.; McCammon, J. A.; Zhou, H. X.</col>
+		<col> Method to Predict Crowding Effects by Postprocessing Molecular Dynamics Trajectories: Application to the Flap Dynamics of HIV-1 Protease. </col>
+		<col>J Phys Chem Lett 2010, 1, (1), 107-110. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2837415">PMC2837415</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Ren, J.; Williams, N.; Clementi, L.; Krishnan, S.; Li, W. W.</col>
+		<col> Opal web services for biomedical applications. </col>
+		<col>Nucleic Acids Res 2010, 38, (Web Server issue), W724-31. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2896135">PMC2896135</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Ren, J.; Xie, L.; Li, W. W.; Bourne, P. E.</col>
+		<col> SMAP-WS: a parallel web service for structural proteome-wide ligand-binding site comparison. </col>
+		<col>Nucleic Acids Res 2010, 38, (Web Server issue), W441-4. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2896174">PMC2896174</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Rouffet, M.; de Oliveira, C. A.; Udi, Y.; Agrawal, A.; Sagi, I.; McCammon, J. A.; Cohen, S. M.</col>
+		<col> From sensors to silencers: quinoline- and benzimidazole-sulfonamides as inhibitors for zinc proteases. </col>
+		<col>J Am Chem Soc 2010, 132, (24), 8232-3.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2886603">PMC2886603</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Setny, P.; Baron, R.; McCammon, J. A.</col>
+		<col> How Can Hydrophobic Association Be Enthalpy Driven? </col>
+		<col>J Chem Theory Comput 2010, 6, (9), 2866-2871. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2938831">PMC2938831</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Sierecki, E.; Sinko, W.; McCammon, J. A.; Newton, A. C.</col>
+		<col> Discovery of small molecule inhibitors of the PH domain leucine-rich repeat protein phosphatase (PHLPP) by chemical and virtual screening. </col>
+		<col>J Med Chem 2010, 53, (19), 6899-911. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2951065">PMC2951065</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Sivendran, S.; Jones, V.; Sun, D.; Wang, Y.; Grzegorzewicz, A. E.; Scherman, M. S.; Napper, A. D.; McCammon, J. A.; Lee, R. E.; Diamond, S. L.; McNeil, M.</col>
+		<col>Identification of triazinoindol-benzimidazolones as nanomolar inhibitors of the Mycobacterium tuberculosis enzyme TDP-6-deoxy-d-xylo-4-hexopyranosid-4-ulose 3,5-epimerase (RmlC). </col>
+		<col>Bioorg Med Chem 2010, 18, (2), 896-908. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2818544">PMC2818544</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Sung, J. C.; Van Wynsberghe, A. W.; Amaro, R. E.; Li, W. W.; McCammon, J. A.</col>
+		<col> Role of secondary sialic acid binding sites in influenza N1 neuraminidase. </col>
+		<col>J Am Chem Soc 2010, 132, (9), 2883-5. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2835425">PMC2835425</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Tainer, J. A.; McCammon, J. A.; Ivanov, I.</col>
+		<col> Recognition of the ring-opened state of proliferating cell nuclear antigen by replication factor C promotes eukaryotic clamp-loading. </col>
+		<col>J Am Chem Soc 2010, 132, (21), 7372-8.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2876781">PMC2876781</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Wereszczynski, J.; McCammon, J. A.</col>
+		<col> Using Selectively Applied Accelerated Molecular Dynamics to Enhance Free Energy Calculations. </col>
+		<col>J Chem Theory Comput 2010, 6, (11), 3285-3292. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2976571">PMC2976571</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>West, J. B.; Fu, Z.; Deerinck, T. J.; Mackey, M. R.; Obayashi, J. T.; Ellisman, M. H.</col>
+		<col> Structure-function studies of blood and air capillaries in chicken lung using 3D electron microscopy. R</col>
+		<col>espir Physiol Neurobiol 2010, 170, (2), 202-9. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2821748">PMC2821748</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Williams, S. L.; de Oliveira, C. A.; McCammon, J. A.</col>
+		<col> Coupling Constant pH Molecular Dynamics with Accelerated Molecular Dynamics. </col>
+		<col>J Chem Theory Comput 2010, 6, (2), 560-568. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2817915">PMC2817915</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col>Zhou, H. X.; McCammon, J. A.</col>
+		<col> The gates of ion channels and enzymes. </col>
+		<col>Trends Biochem Sci 2010, 35, (3), 179-85.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2867094">PMC2867094</a>]]></col>
+		<col></col>
+	</row>
+</table>

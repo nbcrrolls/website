@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<col>Author</col>
+		<col>Title </col>
+		<col>Publishing Info</col>
+	</row>
+	<row>
+		<col>Aksoylu B, Bond S and Holst MJ</col>
+		<col>Local Refinement and Multilevel Preconditioning III: Implementation and numerical experiments.</col>
+		<col>SIAM J.Sci. Comput. 25, pp 478-498, 2004</col>
+	</row>
+	<row>
+		<col>Aksoylu B and Holst MJ</col>
+		<col> An Odyssey into Local Refinement and Multilevel Preconditioning I: Optimality of the BPX Preconditioner. </col>
+		<col>In: ICES Report. Institute for Computational Engineering and Sciences, The University of Texas at Austin, Austin, TX, 2004</col>
+	</row>
+	<row>
+		<col>Aksoylu B and Holst MJ</col>
+		<col>An Odyssey into Local Refinement and Multilevel Preconditioning II: Stabilizing Hierachical Basis Methods</col>
+		<col>SIAM J. Numer. Anal. 25, pp 478-498, 2004</col>
+	</row>
+	<row>
+		<col>Baldridge KK, Greenberg JP, Sudholt W, Altintas I, Bhatia K, Mock S, Amoreira C and Potier Y</col>
+		<col>The Computational Chemistry Prototyping Environment.</col>
+		<col>IEEE on Grid Computing 93, 510, 2005</col>
+	</row>
+	<row>
+		<col>Belik ME, Usyk TP and McCulloch AD</col>
+		<col>Computational methods for cardiac electrophysiology.</col>
+		<col>Elsevier, 2004, p. 69.</col>
+	</row>
+	<row>
+		<col>Bossy-Wetzel E, Talantova MV, Lee WD, Scholzke MN, Harrop A, Mathews E, Gotz T, Han J, Ellisman MH, Perkins GA and Lipton SA</col>
+		<col>Crosstalk between nitric oxide and zinc pathways to neuronal cell death involving mitochondrial dysfunction and p38-activated K+ channels.</col>
+		<col>Neuron 41, 351-65, 2004</col>
+	</row>
+	<row>
+		<col>Bouwer JC, Mackey MR, Lawrence A, Deerinck TJ, Jones YZ, Terada M, Martone ME, Peltier S and Ellisman MH</col>
+		<col>Automated most-probable loss tomography of thick selectively stained biological specimens with quantitative measurement of resolution improvement.</col>
+		<col>J Struct Biol 148, 297-306, 2004</col>
+	</row>
+	<row>
+		<col>Bruno G, Katz M, Sacerdoti FD and Papadopoulos PM</col>
+		<col>Rolls: Modifying a Standard System Installer to Support User-Customizable Cluster Frontend Appliances.</col>
+		<col>In: IEEE International Conference on Cluster Computing. San Diego, USA, 2004, pp 421-430</col>
+	</row>
+	<row>
+		<col>Bui JM, Tai K and McCammon JA</col>
+		<col>Acetylcholinesterase: enhanced fluctuations and alternative routes to the active site in the complex with fasciculin-2.</col>
+		<col>J Am Chem Soc 126,  7198-205, 2004</col>
+	</row>
+	<row>
+		<col>Chen L, Gupta A and Kurul ME</col>
+		<col>Efficient Algorithms for Pattern Matching on Directed Acyclic Graphs</col>
+		<col>In: IEEE Int. Conf. on Data Engineering (ECDE). Tokyo, Japan, 2005, pp 384-385</col>
+	</row>
+	<row>
+		<col>Chen L, McCulloch AD and May-Newman K</col>
+		<col>Nonhomogeneous deformation in the anterior leaflet of the mitral valve.</col>
+		<col>Ann Biomed Eng 32, 1599-606, 2004</col>
+	</row>
+	<row>
+		<col>Dolinsky TJ, Nielsen JE, McCammon JA and Baker NA</col>
+		<col>PDB2PQR: an automated pipeline for the setup of Poisson-Boltzmann electrostatics calculations.</col>
+		<col>Nucleic Acids Res 32, W665-7, 2004</col>
+	</row>
+	<row>
+		<col>Estep D, Holst MJ and Larson M</col>
+		<col>Generalized Greens functions and the effective domain of influence.</col>
+		<col>SIAM J. Sci. Comp. 26, 1314-1339, 2005</col>
+	</row>
+	<row>
+		<col>Ferrarini L, Bertelli L, Feala J, McCulloch AD and Paternostro G</col>
+		<col>A more efficient search strategy for aging genes based on connectivity.</col>
+		<col>Bioinformatics 21, 338-48, 2005</col>
+	</row>
+	<row>
+		<col>Gillet A, Sanner M, Stoffler D and Olson A</col>
+		<col>Tangible augmented interfaces for structural molecular biology.</col>
+		<col>IEEE Comput Graph Appl 25, 13-17, 2005</col>
+	</row>
+	<row>
+		<col>Gillet A, Sanner M, Stoffler D and Olson A</col>
+		<col>Tangible interfaces for structural molecular biology.</col>
+		<col>Structure 13, pp 483-91, 2005</col>
+	</row>
+	<row>
+		<col>Greenberg JP, Mock S, Bhatia K, Katz M, Bruno G, Papadopoulos P and Baldridge KK</col>
+		<col>Incorporation of Middleware and Grid Technologies to Enhance Usability in Computational Chemistry Applications.</col>
+		<col>Future Generations of Computer Systems 21, 3-10, 2005</col>
+	</row>
+	<row>
+		<col>Hamelberg D and McCammon JA</col>
+		<col>Standard free energy of releasing a localized water molecule from the binding pockets of proteins: double-decoupling method.</col>
+		<col>J. Am. Chem. Soc., 2004, 126(24), pp 7683-76899</col>
+	</row>
+	<row>
+		<col>Hamelberg D, Mongan J and McCammon JA</col>
+		<col>Accelerated molecular dynamics: a promising and efficient simulation method for biomolecules.</col>
+		<col>J Chem Phys 120, 11919-29, 2004</col>
+	</row>
+	<row>
+		<col>Healy SN, Belik ME, Michailova A, Puglisi JL, Bers DM and McCulloch AD.</col>
+		<col>3D Simulation of Action Potential Heterogeneity in Rabbit Ventricular Tissue.</col>
+		<col>In: Biophysical Society. Long Beach, CA, 2004, p 299a.</col>
+	</row>
+	<row>
+		<col>Huey R, Goodsell DS, Morris GM and Olson AJ</col>
+		<col>Grid-based hydrogen bond potentials with improved directionality.</col>
+		<col>Lett. Drug Des.and Disc 1: 178-183, 2004.</col>
+	</row>
+	<row>
+		<col>Martone ME, Gupta A and Ellisman MH</col>
+		<col>E-neuroscience: challenges and triumphs in integrating distributed data from molecules to brains. </col>
+		<col>Nat Neurosci 7: 467-72, 2004.</col>
+	</row>
+	<row>
+		<col>Michailova A, Saucerman J, Belik ME and McCulloch AD</col>
+		<col>Modeling regulation of cardiac KATP and L-type Ca2+ currents by ATP, ADP, and Mg2+.</col>
+		<col>Biophys J 88: 2234-49, 2005.</col>
+	</row>
+	<row>
+		<col>Michailova AP, Belik ME and McCulloch AD</col>
+		<col>Effects of magnesium on cardiac excitation-contraction coupling.  </col>
+		<col>J Am Coll Nutr 23: 514S-517S, 2004.</col>
+	</row>
+	<row>
+		<col>Perryman AL, Lin JH and McCammon JA</col>
+		<col>HIV-1 protease molecular dynamics of a wild-type and of the V82F/I84V mutant: possible contributions to drug resistance and a potential new target site for drugs. </col>
+		<col>Protein Sci 13: 1108-23, 2004.</col>
+	</row>
+	<row>
+		<col>Ricci JE, Munoz-Pinedo C, Fitzgerald P, Bailly-Maitre B, Perkins GA, Yadava N, Scheffler IE, Ellisman MH and Green DR</col>
+		<col>Disruption of mitochondrial function during apoptosis is mediated by caspase cleavage of the p75 subunit of complex I of the electron transport chain. </col>
+		<col>Cell 117: 773-86, 2004. </col>
+	</row>
+	<row>
+		<col>Sacerdoti FD, Chandra S and Bhatia K</col>
+		<col>Grid Systems Deployment and Management Using Rocks. </col>
+		<col>In: IEEE International Conference on Cluster Computing. IEEE Computer Society, San Diego, USA, 2004, pp 337-345.</col>
+	</row>
+	<row>
+		<col>Sanner MF</col>
+		<col>A component-based software environment for visualizing large macromolecular assemblies. </col>
+		<col>Structure (Camb) 13: 447-62, 2005.</col>
+	</row>
+	<row>
+		<col>Saucerman JJ, Healy SN, Belik ME, Puglisi JL and McCulloch AD</col>
+		<col>Proarrhythmic consequences of a KCNQ1 AKAP-binding domain mutation: computational models of whole cells and heterogeneous tissue.</col>
+		<col>Circ Res 95: 1216-24, 2004.</col>
+	</row>
+	<row>
+		<col>Saucerman JJ and McCulloch AD</col>
+		<col>Mechanistic systems models of cell signaling networks: a case study of myocyte adrenergic regulation.</col>
+		<col>Prog Biophys Mol Biol 85: 261-78, 2004.</col>
+	</row>
+	<row>
+		<col>Schames JR, Henchman RH, Siegel JS, Sotriffer CA, Ni H and McCammon JA</col>
+		<col>Discovery of a novel binding trench in HIV integrase.</col>
+		<col>J Med Chem 47: 1879-81, 2004.</col>
+	</row>
+	<row>
+		<col>Senapati S, Wong CF and McCammon JA</col>
+		<col>Finite concentration effects on diffusion-controlled reactions.</col>
+		<col>J Chem Phys 121: 7896-900, 2004.</col>
+	</row>
+	<row>
+		<col>Sims PA, Wong CF and McCammon JA</col>
+		<col>Charge optimization of the interface between protein kinases and their ligands.</col>
+		<col>J Comput Chem 25: 1416-29, 2004. </col>
+	</row>
+	<row>
+		<col>Song Y, Zhang Y, Shen T, Bajaj CL, McCammon JA and Baker NA</col>
+		<col>Finite element solution of the steady-state Smoluchowski equation for rate
+			constant calculations. </col>
+		<col>Biophys J 86: 2017-29, 2004.</col>
+	</row>
+	<row>
+		<col>Sudholt W, Baldridge K, Abramson D, Enticott C and Garic S</col>
+		<col>Parameter Scan of an Effective Group Difference Pseudopotential Using Grid Computing. </col>
+		<col>New Generation Computing 22: 125-135, 2004.</col>
+	</row>
+	<row>
+		<col>Sudholt W, Baldridge KK, Abramson D, Enticott C and Garic S</col>
+		<col>Applying Grid Computing to the Parameter Sweep of a Group Difference Pseudopotential. </col>
+		<col>In: Lecture Notes in Computer Science. Springer-Verlag, Heidelberg, 2004, pp 148-155.</col>
+	</row>
+	<row>
+		<col>Sudholt W, Baldridge KK, Abramson D, Enticott C, Garic S, Kondric C and Nguyen D</col>
+		<col>Application of Grid Computing to Parameter Sweeps and Optimizations in Molecular Modeling.</col>
+		<col>Future Generation Computer Systems.  Future Generations of Computer Systems 21: 27-35, 2005.</col>
+	</row>
+	<row>
+		<col>Swanson JM, Henchman RH and McCammon JA</col>
+		<col>Revisiting free energy calculations: a theoretical connection to MM/PBSA and direct calculation of the association free energy.</col>
+		<col>Biophys J 86: 67-74, 2004.</col>
+	</row>
+	<row>
+		<col>Trylska J, Grochowski P and McCammon JA</col>
+		<col>The role of hydrogen bonding in the enzymatic reaction catalyzed by HIV-1 protease.</col>
+		<col>Protein Sci 13: 513-28, 2004.</col>
+	</row>
+	<row>
+		<col>Trylska J, Konecny R, Tama F, Brooks CL, 3rd and McCammon JA</col>
+		<col>Ribosome motions modulate electrostatic properties.</col>
+		<col>Biopolymers 74: 423-31, 2004.</col>
+	</row>
+	<row>
+		<col>Xie F, Qu Z, Yang J, Baher A, Weiss JN and Garfinkel A</col>
+		<col>A simulation study of the effects of cardiac anatomy in ventricular fibrillation.</col>
+		<col>J Clin Invest 113: 686-93, 2004.</col>
+	</row>
+	<row>
+		<col>Xu L, Li C, Olson AJ and Wilson IA</col>
+		<col>Crystal structure of avian aminoimidazole-4-carboxamide ribonucleotide transformylase in complex with a novel non-folate inhibitor identified by virtual ligand screening.</col>
+		<col>J Biol Chem 279: 50555-65, 2004.</col>
+	</row>
+	<row>
+		<col>Yerushalmi R, Scherz A and Baldridge KK</col>
+		<col>Direct experimental evaluation of charge scheme performance by a molecular charge-meter.</col>
+		<col>J Am Chem Soc 126: 5897-905, 2004.</col>
+	</row>
+	<row>
+		<col>Zhang D, Konecny R, Baker NA and McCammon JA</col>
+		<col>Electrostatic interaction between RNA and protein capsid in cowpea chlorotic mottle virus simulated by a coarse-grain RNA model and a Monte Carlo approach.</col>
+		<col>Biopolymers 75: 325-37, 2004.</col>
+	</row>
+	<row>
+		<col>Zhang D, Suen J, Zhang Y, Song Y, Radic Z, Taylor P, Holst MJ, Bajaj C, Baker NA and McCammon JA</col>
+		<col>Tetrameric mouse acetylcholinesterase: continuum diffusion rate calculations by solving the steady-state Smoluchowski equation using finite element methods.</col>
+		<col>Biophys J 88: 1659-65, 2005.</col>
+	</row>
+</table>

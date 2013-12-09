@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<col>Authors</col>
+		<col>Title</col>
+		<col>Publishing Info</col>
+		<col>PMC</col>
+		<col>CST</col>
+	</row>
+	<row>
+		<col>Durrant, J. D.; Friedman, A. J.; Rogers, K. E.; McCammon, J. A.</col>
+		<col>Comparing neural-network scoring functions and the state of the art: applications to common library screening.</col>
+		<col>J Chem Inf Model 2013, 53, (7), 1726-35</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3735370">PMC3735370</a>]]></col>
+		<col>T0001</col>
+	</row>
+	<row>
+		<col>Durrant, J. D.; Lindert, S.; McCammon, J. A.</col>
+		<col>AutoGrow 3.0: An improved algorithm for chemically tractable, semi-automated protein inhibitor design.</col>
+		<col>J Mol Graph Model 2013, 44C, 104-112, PMCPMC Journal - In Process.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/ "> </a>]]></col>
+		<col>T0001</col>
+	</row>
+	<row>
+		<col>Eun, C.; Kekenes-Huskey, P. M.; McCammon, J. A.</col>
+		<col>Influence of neighboring reactive particles on diffusion-limited reactions.</col>
+		<col>J Chem Phys 2013, 139, (4), 044117</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3745503">PMC3745503</a>]]></col>
+		<col>T0001</col>
+	</row>
+	<row>
+		<col>Feher, V. A.; Randall, A.; Baldi, P.; Bush, R. M.; de la Maza, L. M.; Amaro, R. E.</col>
+		<col>A 3-Dimensional Trimeric beta-Barrel Model for Chlamydia MOMP Contains Conserved and Novel Elements of Gram-Negative Bacterial Porins.</col>
+		<col>PLoS One 2013, 8, (7), e68934</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/ "> </a>]]></col>
+		<col>T0001</col>
+	</row>
+	<row>
+		<col>Kim, M. O.; Nichols, S. E.; Wang, Y.; McCammon, J. A.</col>
+		<col>Effects of histidine protonation and rotameric states on virtual screening of M. tuberculosis RmlC.</col>
+		<col>J Comput Aided Mol Des 2013, 27, (3), 235-46</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3639364">PMC3639364</a>]]></col>
+		<col>T0001</col>
+	</row>
+	<row>
+		<col>Krishnamurthy, A.; Villongco, C. T.; Chuang, J.; Frank, L. R.; Nigam, V.; Belezzuoli, E.; Stark, P.; Krummen, D. E.; Narayan, S.; Omens, J. H.; McCulloch, A. D.; Kerckhoffs, R. C.</col>
+		<col>Patient-Specific Models of Cardiac Biomechanics.</col>
+		<col>J Comput Phys 2013, 244, 4-21</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3667962">PMC3667962</a>]]></col>
+		<col>T0003</col>
+	</row>
+	<row>
+		<col>Lindert, S.; Meiler, J.; McCammon, J. A.</col>
+		<col>Iterative Molecular Dynamics-Rosetta Protein Structure Refinement Protocol to Improve Model Quality.</col>
+		<col>J Chem Theory Comput 2013, 9, (8), 3843-3847</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3744128">PMC3744128</a>]]></col>
+		<col>T0001</col>
+	</row>
+	<row>
+		<col>Miao, Y.; Nichols, S. E.; Gasper, P. M.; Metzger, V. T.; McCammon, J. A.</col>
+		<col>Activation and dynamic network of the M2 muscarinic receptor.</col>
+		<col>Proc Natl Acad Sci U S A 2013, 110, (27), 10982-7</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3703993">PMC3703993</a>]]></col>
+		<col>T0001</col>
+	</row>
+	<row>
+		<col>Nichols, S. E.; Hernandez, C. X.; Wang, Y.; McCammon, J. A.</col>
+		<col>Structure-based network analysis of an evolved G protein-coupled receptor homodimer interface.</col>
+		<col>Protein Sci 2013, 22, (6), 745-54</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3690714">PMC3690714</a>]]></col>
+		<col>T0001</col>
+	</row>
+	<row>
+		<col>Orloff, D. N.; Iwasa, J. H.; Martone, M. E.; Ellisman, M. H.; Kane, C. M.</col>
+		<col>The cell: an image library-CCDB: a curated repository of microscopy data.</col>
+		<col>Nucleic Acids Res 2013, 41, (Database issue), D1241-50</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3531121">PMC3531121</a>]]></col>
+		<col>T0005</col>
+	</row>
+	<row>
+		<col>Park, J.; Czapla, L.; Amaro, R. E.</col>
+		<col>Molecular Simulations of Aromatase Reveal New Insights Into the Mechanism of Ligand Binding.</col>
+		<col>J Chem Inf Model 2013</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/ "> </a>]]></col>
+		<col>T0001</col>
+	</row>
+	<row>
+		<col>Sinko, W.; Miao, Y.; de Oliveira, C. A.; McCammon, J. A.</col>
+		<col>Population Based Reweighting of Scaled Molecular Dynamics.</col>
+		<col>J Phys Chem B 2013,  PMCPMC Journal - In Process.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/ "> </a>]]></col>
+		<col>T0001</col>
+	</row>
+	<row>
+		<col>Wang, N.; Huber, G. A.; McCammon, J. A.</col>
+		<col>Assessing the two-body diffusion tensor calculated by the bead models.</col>
+		<col>J Chem Phys 2013, 138, (20), 204117</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3683057">PMC3683057</a>]]></col>
+		<col>T0001</col>
+	</row>
+	<row>
+		<col>Dong, K. K.; Nan, K.; Li, J.; Li, W. W.</col>
+		<col>Biomedical Research Data Cloud Services with Duckling Collaboration LiBrary (CLB)</col>
+		<col>IEEE e-Science 2013, October 22-25, 2013, Beijing, China, 2013; 2013</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/ "> </a>]]></col>
+		<col>T00228</col>
+	</row>
+</table>

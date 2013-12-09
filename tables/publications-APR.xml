@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<col>Authors</col>
+		<col>Title</col>
+		<col>Publishing Info</col>
+		<col>PMC
+code</col>
+		<col>C
+S
+T</col>
+	</row>
+	<row>
+		<col>Durrant, J. D.; Cao, R.; Gorfe, A. A.; Zhu, W.; Li, J.; Sankovsky, A.; Oldfield, E.; McCammon, J. A.</col>
+		<col>Non-bisphosphonate inhibitors of isoprenoid biosynthesis identified via computer-aided drug design.</col>
+		<col>Chem Biol Drug Des 2011a, 78, (3), 323-32.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3155669">PMC3155669</a>]]></col>
+		<col>C </col>
+	</row>
+	<row>
+		<col>Rane, A. A.; Chuang, J. S.; Shah, A.; Hu, D. P.; Dalton, N. D.; Gu, Y.; Peterson, K. L.; Omens, J. H.; Christman, K. L.</col>
+		<col>Increased infarct wall thickness by a bio-inert material is insufficient to prevent negative left ventricular remodeling after myocardial infarction</col>
+		<col>PLoS ONE 2011, 6, (6)</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3121880">PMC3121880</a>]]></col>
+		<col>S</col>
+	</row>
+	<row>
+		<col>Sinko, W.; de Oliveira, C. A.; Pierce, L. C.; McCammon, J. A.</col>
+		<col>Protecting high energy barriers: A new equation to regulate boost energy in accelerated molecular dynamics simulations. </col>
+		<col>J Chem Theory Comput 2012, 8, (1), 17-23</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3254191">PMC3254191</a>]]></col>
+		<col>T </col>
+	</row>
+	<row>
+		<col>Grant, B. J.; Lukman, S.; Hocker, H. J.; Sayyah, J.; Brown, J. H.; McCammon, J. A.; Gorfe, A. A., </col>
+		<col>Novel allosteric sites on ras for lead generation</col>
+		<col>Chem Biol Drug Des 2011, 77, (6), 412-20. </col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3095679">PMC3095679</a>]]></col>
+		<col>C </col>
+	</row>
+	<row>
+		<col>Wang, Y.; Hess, T. N.; Jones, V.; Zhou, J. Z.; McNeil, M. R.; Andrew McCammon, J., </col>
+		<col>Novel inhibitors of mycobacterium tuberculosis dtdp-6-deoxy-l-lyxo-4-hexulose reductase (rmld) identified by virtual screening. </col>
+		<col>Bioorg Med Chem Lett 2011a, 21, (23), 7064-7.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3223023">PMC3223023</a>]]></col>
+		<col>C </col>
+	</row>
+	<row>
+		<col>Amaro, R. E.; Li, W. W., </col>
+		<col>Molecular-level simulation of pandemic influenza glycoproteins. </col>
+		<col>Computational Drug Drug Discovery and Design (Methods Mol Biol ) 2012, 819, 575-94.</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3357662">PMC3357662</a>]]></col>
+		<col>S </col>
+	</row>
+</table>
