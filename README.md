@@ -12,3 +12,4 @@ after the update.
 graphene-nbcr
 -------------
 Theme used for NBCR web site, based on graphene theme. 
+  * stats/ - contains html files to produce nbcr stats (and images)
