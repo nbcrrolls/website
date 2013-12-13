@@ -69,9 +69,9 @@
         var options = {
             pointSize: 3, 
             width: 600, 
-            height: 400, 
+            height: 300, 
             title: 'Citations according to Scopus',
-            legend: {position: 'right', textStyle: {color: 'black', fontSize: 11}},
+            legend: {position: 'bottom', textStyle: {color: 'black', fontSize: 11}},
             hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
             vAxis: {title: 'Number', textStyle: {color: 'black', fontSize: 11}},
         };
@@ -96,9 +96,9 @@
         var options = {
             pointSize: 3, 
             width: 600, 
-            height: 400, 
+            height: 300, 
             title: 'Citations according to Scopus',
-            legend: {position: 'right', textStyle: {color: 'black', fontSize: 11}},
+            legend: {position: 'bottom', textStyle: {color: 'black', fontSize: 11}},
             hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
             vAxis: {title: 'Number', textStyle: {color: 'black', fontSize: 11}},
         };
@@ -114,15 +114,13 @@
 
      <h3 align="center"><font color="#0082A0">Citations summary</font></h3>
 
-    <div id="citations1_div" style="width: 600px; height: 400px; float: left"></div>
-    <div id="citations2_div" style="width: 600px; height: 400px; float: left"></div>
-    <br style="clear: left;" />
-
+    <div id="citations1_div" style="width: 600px; height: 300px; "></div>
     <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('citations1_div'));">Save as PNG image</button>
     <button style="position:relative; left:60" onclick="toImg(document.getElementById('citations1_div'), document.getElementById('img_div'));">Convert to image</button>
     
-    <button style="position:relative; left:400 " onclick="saveAsImg(document.getElementById('citations2_div'));">Save as PNG image</button>
-    <button style="position:relative; left:400" onclick="toImg(document.getElementById('citations2_div'), document.getElementById('img_div'));">Convert to image</button>
+    <div id="citations2_div" style="width: 600px; height: 300px; "></div>
+    <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('citations2_div'));">Save as PNG image</button>
+    <button style="position:relative; left:60" onclick="toImg(document.getElementById('citations2_div'), document.getElementById('img_div'));">Convert to image</button>
     
     <br />
 
