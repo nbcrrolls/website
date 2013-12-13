@@ -139,6 +139,7 @@ table.people {
 	border: solid #fff 0px !important;
 }
 .people tr td {
+	width: 20%;
 	margin-left: 1px;
 	margin-right: 1px;
 	background-color: #ffffff;
