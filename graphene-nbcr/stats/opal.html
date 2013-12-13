@@ -158,30 +158,30 @@
   </head>
   <body>
     <h3 align="center"><font color="#0082A0">OPAL web services statistics</font> </h3>
-    <p> The first graph shows yearly opal web services access. <br>
-        The next two graphs show geographical distribution of web services users by unique host IP 
-        in the US and worldwide over the calendar year 2013.  
+    <p> 
+        The first two graphs show geographical distribution of web services users by unique host IP 
+        in the US and worldwide over the calendar year 2013.  <br>
+        The third graph shows opal web services access by calendar year. <br>
     </p>
 
-     <!-- 3 graphs -->
-    <div id="opal1_div" style="width: 400px; height: 360px; float: left"></div>
+     <!-- 2 geolocation graphs -->
     <div id="mapUS_div" style="width: 400px; height: 360px; float: left"></div>
     <div id="mapWorld_div" style="width: 400px; height: 360px; float: left"></div>
     <br style="clear: left;" />
 
-     <!-- sets of buttons for graphs -->
-    <button style="position:relative; left:60" onclick="saveAsImg(document.getElementById('opal1_div'));">Save as PNG image</button>
-    <button style="position:relative; left:60" onclick="toImg(document.getElementById('opal1_div'), document.getElementById('img_div'));">Convert to image</button>
+    <button style="position:relative; left:20 " onclick="saveAsImg(document.getElementById('mapUS_div'));">Save as PNG image</button>
+    <button style="position:relative; left:20" onclick="toImg(document.getElementById('mapUS_div'), document.getElementById('img_div'));">Convert to image</button>
+    
+    <button style="position:relative; left:180 " onclick="saveAsImg(document.getElementById('mapWorld_div'));">Save as PNG image</button>
+    <button style="position:relative; left:180" onclick="toImg(document.getElementById('mapWorld_div'), document.getElementById('img_div'));">Convert to image</button>
+    
+     <!-- access graph -->
+    <div id="opal1_div" style="width: 400px; height: 360px; "></div>
+    <button style="position:relative; left:20" onclick="saveAsImg(document.getElementById('opal1_div'));">Save as PNG image</button>
+    <button style="position:relative; left:20" onclick="toImg(document.getElementById('opal1_div'), document.getElementById('img_div'));">Convert to image</button>
 
-    <button style="position:relative; left:160 " onclick="saveAsImg(document.getElementById('mapUS_div'));">Save as PNG image</button>
-    <button style="position:relative; left:160" onclick="toImg(document.getElementById('mapUS_div'), document.getElementById('img_div'));">Convert to image</button>
-    
-    <button style="position:relative; left:300 " onclick="saveAsImg(document.getElementById('mapWorld_div'));">Save as PNG image</button>
-    <button style="position:relative; left:300" onclick="toImg(document.getElementById('mapWorld_div'), document.getElementById('img_div'));">Convert to image</button>
-    
     <!-- "image placement" position -->
-    <br />
-    <div id="img_div" style="width: 400px; position: relative; top:10;  z-index: 10; border: 1px solid #0082A0; color: #0082A0">
+    <div id="img_div" style="width: 400px; position: absolute; left:400; top:510;  z-index: 10; border: 1px solid #0082A0; color: #0082A0">
       Image will be placed here
     </div>
 
