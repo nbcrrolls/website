@@ -4,7 +4,7 @@
  */
 
 $name = 'Mark Ellisman';
-$affiliation = 'UCSD/NCMIR and CRBS';
+$affiliation = 'UCSD: NCMIR and CRBS';
 $research_role = 'Director, National Center for Microscopy and Imaging Research (NCMIR); 
 Director, Center for Research in Biological Systems (CRBS)';
 $expertise = 'Neurosciences, bioengineering, development and application of advanced imaging technologies';

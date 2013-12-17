@@ -4,7 +4,7 @@
  */
 
 $name = 'Jeff Van Dorn ';
-$affiliation = 'NBCR/UCSD, Department of Bioengineering';
+$affiliation = 'UCSD: NBCR, Department of Bioengineering';
 $research_role = 'Lead developer of Continuity';
 $expertise = 'Software engineering and system administration';
 $nbcr_role = 'Programmer Analyst';

@@ -4,7 +4,7 @@
  */
 
 $name = 'Gary Huber';
-$affiliation = 'HHMI/UCSD Chemistry Department';
+$affiliation = 'HHMI, UCSD: Department of Chemistry';
 $research_role = 'Bioinformatics Specialist in the lab of J. Andrew McCammon';
 $expertise = 'Development of algorithms and software for the simulation of diffusional 
 processes in biological systems. Developer of the software package Browndye and 

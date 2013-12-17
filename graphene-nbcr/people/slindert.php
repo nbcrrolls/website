@@ -4,7 +4,7 @@
  */
 
 $name = 'Steffen Lindert';
-$affiliation = 'UCSD/Pharmacology';
+$affiliation = 'UCSD: Department of Pharmacology';
 $research_role = 'Postdoc in the McCammon lab';
 $expertise = 'Molecular Dynamics simulations, Computer Aided Drug Discover, Multi-Scale Modeling';
 $nbcr_role = 'Postdoctoral Trainee, NBCR';

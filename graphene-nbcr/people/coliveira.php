@@ -4,7 +4,7 @@
  */
 
 $name = 'Cesar Oliveira';
-$affiliation = 'UCSD, Department of Chemistry and Biochemistry';
+$affiliation = 'UCSD: Department of Chemistry and Biochemistry';
 $research_role = 'Research Specialists';
 $expertise = 'Development and application of state-of-the-art computational techniques to investigate 
 the relationship among structure, dynamics, thermodynamics and function of biochemical systems.';

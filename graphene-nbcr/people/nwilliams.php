@@ -4,7 +4,7 @@
  */
 
 $name = 'Nadya Williams';
-$affiliation = 'UCSD/NBCR and CRBS';
+$affiliation = 'UCSD: NBCR and CRBS';
 $research_role = 'Systems Application Specialist';
 $expertise = 'Developing technical solutions for clusers and applications';
 $nbcr_role = 'Systems Application Specialist, key project in addition to NBCR is PRAGMA';

@@ -4,7 +4,7 @@
  */
 
 $name = 'Rick Lawrence';
-$affiliation = 'UCSD/(CRBS, NCMIR, NBCR)';
+$affiliation = 'UCSD: CRBS, NCMIR, NBCR';
 $research_role = 'Performs on mathematical analysis, develops algorithms, and specifies 
 software architecture for electron microscope tomography';
 $expertise = 'PhD in pure mathematics; interests in application of geometry and analysis in tomographic reconstruction';

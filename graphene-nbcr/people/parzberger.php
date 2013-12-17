@@ -4,7 +4,7 @@
  */
 
 $name = 'Peter Arzberger';
-$affiliation = 'UCSD/NBCR';
+$affiliation = 'UCSD: NBCR';
 $research_role = 'Member and principal investigator of both  the Center for Research on 
 Biological Structures and the California Institute for Telecommunications and Information Technology ';
 $expertise = 'developing international, multidisciplinary teams to advance cyberinfrastructure through 

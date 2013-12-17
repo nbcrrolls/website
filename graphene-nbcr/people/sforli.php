@@ -4,7 +4,7 @@
  */
 
 $name = 'Stefano Forli';
-$affiliation = 'TSRI, Molecular Graphics Laboratory, Department of Integrative Structural and Computational Biology';
+$affiliation = 'TSRI: Molecular Graphics Laboratory, Department of Integrative Structural and Computational Biology';
 $research_role = 'Staff Scientist';
 $expertise = 'Medicinal chemistry and drug design; development of docking software and virtual screening tools';
 $nbcr_role = 'CADD tools developer';

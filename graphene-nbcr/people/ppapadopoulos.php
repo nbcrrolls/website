@@ -4,7 +4,7 @@
  */
 
 $name = 'Philip Papadopoulos';
-$affiliation = 'UCSD/SDSC';
+$affiliation = 'UCSD: SDSC';
 $research_role = 'Program Director, UC Computing Systems';
 $expertise = 'HPC, HTC, Cloud, Clusters';
 $nbcr_role = 'Technical Director';

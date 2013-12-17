@@ -4,9 +4,8 @@
  */
 
 $name = 'Andrew McCulloch';
-$affiliation = 'UCSD/NBCR';
-$research_role = 'Professor and Jacobs Distinguished Scholar, Department of Bioengineering, UCSD; Adjunct Professor, Department of Medicine, UCSD
-';
+$affiliation = 'UCSD: NBCR';
+$research_role = 'Professor and Jacobs Distinguished Scholar, Department of Bioengineering, UCSD; Adjunct Professor, Department of Medicine';
 $expertise = 'Developing multi-scale models of myocyte excitation-contraction coupling mechanisms and their regulation by PKA and CaMKII';
 $nbcr_role = 'Principal Investigator';
 $photo = 'amcculloch.png';

@@ -4,7 +4,7 @@
  */
 
 $name = 'Michael Holst';
-$affiliation = 'UCSD: Dept. of Mathematics, Dept. of Physics';
+$affiliation = 'UCSD: Department of Mathematics, Department. of Physics';
 $research_role = 'Full Professor (mathematics and physics) Chancellor\'s Associates Endowed Chair';
 $expertise = 'Applied and computational mathematics';
 $nbcr_role = 'Core 1A lead';

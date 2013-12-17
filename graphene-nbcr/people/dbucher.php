@@ -4,7 +4,7 @@
  */
 
 $name = 'Denis Bucher';
-$affiliation = 'UCSD Chemistry & Biochemistry Department, CTBP, NBCR';
+$affiliation = 'UCSD: Department of Chemistry & Biochemistry, CTBP, NBCR';
 $research_role = 'Project scientist in the group of Prof. A. McCammon';
 $expertise = 'Biomolecular simulations and computer-aided drug design';
 $nbcr_role = 'Development and testing of new methods, occasionally some teaching';

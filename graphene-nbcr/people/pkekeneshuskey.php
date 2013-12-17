@@ -4,7 +4,7 @@
  */
 
 $name = 'Pete Kekenes-Huskey';
-$affiliation = 'UCSD/Pharmacology';
+$affiliation = 'UCSD: Department of Pharmacology';
 $research_role = 'Postdoc';
 $expertise = 'Calcium signaling, Molecular modeling';
 $nbcr_role = 'Postdoc';

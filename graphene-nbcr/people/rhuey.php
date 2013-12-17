@@ -4,7 +4,7 @@
  */
 
 $name = 'Ruth Huey';
-$affiliation = 'TSRI, works under Dr. Arthur Olson in the Interactive Structural and Computational Biology Department';
+$affiliation = 'TSRI: Interactive Structural and Computational Biology Department';
 $research_role = 'Research Programmer, focus on AutoDock';
 $expertise = 'PhD thesis on PSI Condensations of DNA: Implications for DNA 
 Packing. Subsequent work has been focused on Drug Discovery using Computational Chemistry. 

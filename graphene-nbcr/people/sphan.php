@@ -4,7 +4,7 @@
  */
 
 $name = 'Sebastian Phan';
-$affiliation = 'UCSD/NBCR, UCSD/NCMIR';
+$affiliation = 'UCSD: NBCR, NCMIR';
 $research_role = 'Programmer analyst';
 $expertise = 'Electron tomography';
 $nbcr_role = 'Programmer Analyst';
