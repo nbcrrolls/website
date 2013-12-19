@@ -6,6 +6,13 @@ Wordpress installation and management
 Initial wordpress configuration
 --------------------------------
 
+Install newer version of wordpress as /var/www/html/wordpress2
+
+Make redirect on the server, tell apache to use wordpress2 ::
+
+    vim /var/www/html/index.html
+    change from  URL=/wordpress/ to  URL=/wordpress2/
+
 Create a wordpress database *wpdb* and set permissions. Use real values for USER and PASS ::
 
     # mysqladmin create wpdb
@@ -36,7 +43,6 @@ Edit wp-config.php
        define('LOGGED_IN_SALT',   'put your unique phrase here');
        define('NONCE_SALT',       'put your unique phrase here');
 
- 
    #. define WP\_SITEURL, WP\_HOME ::
 
        define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/wordpress2');
@@ -51,7 +57,6 @@ Edit wp-config.php
        define( 'PATH_CURRENT_SITE', '/wordpress2/' );
        define( 'SITE_ID_CURRENT_SITE', 1 );
        define( 'BLOG_ID_CURRENT_SITE', 1 );
-
 
 Create /var/www/html/wordpress2/.htaccess ::
 
@@ -76,13 +81,11 @@ Create /var/www/html/wordpress2/.htaccess ::
 
        #RewriteRule ^([_0-9a-zA-Z-]+/)?siteN/files/(.+) wp-content/blogs.dir/N/files/$2 [L]
 
-
 Create child theme ::
        
        cd /var/www/html/wordpress2/wp-content/themes
        mkdir graphene-nbcr
        cd graphene-nbcr
-       
 
 Theme changes
 ---------------
@@ -179,6 +182,44 @@ Contains template files for software items and php templates for showing them ::
        edit loop-attachment.php and put if statement around comments_template() call
 
 
-Change wordpress host IP 
+Change wordpress host fqdn 
 --------------------------------
+
+#. save htaccess ::
+
+    cp /var/www/html/wordpress2/.htaccess /var/www/html/wordpress2/htaccess.save
+
+#. save text widgets: login to wordpress admin interface, in Appearance/Widgets/Sidebar Widget Area
+open Text widgets (*Available software* and  *Available web services*) and copy and save text. 
+
+#. dump current db ::
+    cd /root/wp
+    mysqldump -u root -p wpdb > dump.sql
+    cp dump.sql rocce-vm0.sql
+
+#. change to new server fqdn ::
+
+    sed -i "s/www2\.nbcr\.net/nbcr\.ucsd\.edu/g" dump.sql
+    vim dump.sql
+    cat dump.sql | /usr/bin/mysql -u wpadmin -p wpdb
+
+#. Check all the files in wordpress2/ and change all occurences of old FQDN to new one ::
+
+    cd /var/www/html/wordpress2/
+    grep -r -l www2.nbcr.net .
+
+    Edit all listed files and make corrections. 
+
+#. Login to wordpress web admin interface and recreate text widgets for software and web servers 
+if they are no longer present. Use  text saved in *save text widget* above.
+
+.. note::  the following commands suggested for server name change did not work
+   and resulted in all pages reloading to home page. The multisite may be an issue
+
+   mysql - root -p
+   mysql> UPDATE wp_options SET option_value = replace(option_value, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2') where opt
+   ion_name = 'home' OR option_name = 'siteurl';
+   mysql> UPDATE wp_posts SET guid = replace(guid,'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
+   mysql> UPDATE wp_posts SET post_content = replace(post_content, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
+   mysql> UPDATE wp_links SET link_url = replace(link_url, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
 
