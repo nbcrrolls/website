@@ -205,6 +205,21 @@ The usual method of turning off comments on posts and pages does not work on ima
        cp /var/www/html/wordpress2/wp-content/themes/twentyten/loop-attachment.php loop-attachment.php
        Edit loop-attachment.php and put if statement around comments_template() call
 
+Dealing with tables
+~~~~~~~~~~~~~~~~~~~
+Tables are generated with *WP-Table Reloaded* plugin.  
+
+* Tables can be edited via a plugin
+  but this is a lengthy update if tables had ordered info. 
+
+* To ease updates of ordered tables, export all the tables as xml files
+  and keep them in website/tables/. 
+
+* When need a table update, edit a table xml file directly then import it into
+  the needed table in the plugin. 
+
+* New tables can be added as xml files. 
+
  
 Change wordpress host fqdn 
 ---------------------------
