@@ -88,23 +88,30 @@ Create child theme ::
 Theme changes
 ---------------
 
-Directories for custom files 
+Directories for custom files. Not editable directly via wordpress dashboard. 
+Used by custom functions and php templates.  Any updates are simply drop-in 
+a new file in a location. The file must conform to naming convention and format. 
 
 **bin/** -  scripts used by finctions.php
 
+**docs/** - specific docs snippets ::
+
+    citations/ - for software citations. Each file is for a specific software item.
+                 Naming: same as software item, filename extention signifies the format: 
+                 *bibtext, plain or endnote*.  Can have 0 - 3 files per software item. 
+    licenses/ - for software licenses, one file per software item. Format: plain ascii. 
+                 Naming: same as software item, no extention. 
+
 **images/** - categorize images ::
 
-    headers/ - header images 960x100
+    headers/ - main page header images 960x100
+    highlights/ - highlights pages images
+    logos/ - logo images
+    people/ - people photos, approx. 250x300
     posts/   - post images, names consistent with post title (ex: chagas for chagas). Size 1000x616
     sw/      - software logos
     sw/thum/ - software logo thums, created from logo images. size 27x16
-    
-**sw/**  - contains php files for software items and php templates for showing them ::
-
-    switem-options-defaults.php - default options
-    switem-layout.php - layout of the sw item on the page
-    template.php - blank template with all needed variable
-    NAME.ph - each software NAME item
+    users/   - image maps 
     
 **people/** - contain php files for people and phph templates for showing them ::
 
@@ -112,6 +119,16 @@ Directories for custom files
     people-layout.php - layout of the people item on the page
     blank.php - blank template with all needed variables
     NAME.php - each person's php file ( NAME = first initial + lastname)
+    
+**stats/** - statistics pages, html files created with google chart. Need updates for yearly stats.
+Displayed under *Statistics* page.
+
+**sw/**  - contains php files for software items and php templates for showing them ::
+
+    switem-options-defaults.php - default options
+    switem-layout.php - layout of the sw item on the page
+    template.php - blank template with all needed variable
+    NAME.ph - each software NAME item
 
 Adding a new sw item 
 ~~~~~~~~~~~~~~~~~~~~~~~
