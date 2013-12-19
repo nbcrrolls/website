@@ -17,7 +17,7 @@ Create a wordpress database *wpdb* and set permissions. Use real values for USER
 
     # mysqladmin create wpdb
     # mysql -u root -p
-    *mysql>* grant all privileges on wpdb.* to 'USER'@'localhost' identified by 'PASS';
+    mysql> grant all privileges on wpdb.* to 'USER'@'localhost' identified by 'PASS';
 
 Create initial wp-config.php file. ::
 
@@ -25,6 +25,7 @@ Create initial wp-config.php file. ::
     # cp wp-config-sample.php wp-config.php
 
 Edit wp-config.php 
+
    #. define dbnamme, dbuser, dbpass, dbhost ::
 
        define('DB_NAME', 'wpdb');
@@ -85,31 +86,49 @@ Create child theme ::
        
        cd /var/www/html/wordpress2/wp-content/themes
        mkdir graphene-nbcr
-       cd graphene-nbcr
-
+        
+ 
 Theme changes
 ---------------
 
-#. images/  - categorize images as ::
+Custom files used by theme-specific php code. 
 
-       headers/ - header images 960x100
-       posts/   - post images, names consistent with post title (ex: chagas for chagas). Size 1000x616
-       sw/      - software logos
-       sw/thum/ - software logo thums, created from logo images. size 27x16
+**bin/** - for scripts used in functions.php
 
-#. sw/  
+**docs/** - for short docss used in software-related pages ::
 
-Contains template files for software items and php templates for showing them ::
+      citations/ - citations for software. Each file represents multiple citations for
+                   a single software item. Naming convention: SWNAME.EXT where SWNAME is
+                   a software item name form the software list (see below) and EXT specifies  
+                   file format  and can be  bibtext, plain pr bibtex.
+      licenses/  - for  licenses, if needed by the software. Naming convention: SWNAME, format is ascii.
 
-      switem-options-defaults.php - holds all default options
+**images/**  - categorize images as ::
+
+       headers/    - header images 960x100
+       highlights/ - images for highlights pages
+       logos/      - for logos
+       people/     - people photos, ~250x300. Images will be scaled by templates. 
+       posts/      - post images, names consistent with post title (ex: chagas for chagas). Size  ~1000x616
+       sw/         - software logos, ~200x200 (size, ratio are variable)
+       sw/thum/    - software logos thums, created from logo images. size ~27x16
+       users/      - image maps
+
+**sw/** - contains template files for software items and php templates for showing them ::
+
+      switem-options-defaults.php - all default options
       switem-layout.php - layout of the sw item on the page
       template.php - template with all needed variables
+      SWNAME.php  - for each software item, SWNAME is software item name from the software list below. 
 
-#. Adding a new sw item ::
+ 
+Adding a new sw item 
+~~~~~~~~~~~~~~~~~~~~~~
 
-  #. Check sw name lineup below, if name is not there, add it and update numerical order below
-  and also on all respective software pages that change due to new item. The chages will be in "Order"
-  in page attributes section.
+#. Check sw name lineup below. 
+   if name is not there, add it and update numerical order below
+   and also on all respective software pages that change due to new item. The chages will be in *Order* tab
+   in page attributes section. ::
 
     1 ADT
     2 AMD
@@ -134,92 +153,108 @@ Contains template files for software items and php templates for showing them ::
     21 SMOL
     22 TxBR
 
-  #. Create a new php file for the new sw item ::
+#. Create a new php file for the new sw item ::
 
      cd sw/
      cp template.php swname.php (copy a template with all required variables)
-     edit swname.php and put all information that exist, leave unknown as is.
+   
+   edit swname.php and put all information that exist, leave unknown as is.
 
-  #. add software images as ::
+#. Add software images as ::
      
       images/sw/swname.png
       images/sw/thum/swname.png  (image size 27x16)
-      images will be scaled according to nbcr.css style settings
+      
+   images will be scaled according to nbcr.css style settings
 
-  #.  create new page with a title as a name of the software item
-      in "Page Attributes" section set using menues  ::
+#. Create a new page with a title as a name of the software item.
+   In "Page Attributes" section set the following using menues  ::
 
          Parent: Software
          Template: Software Item
-         Order: check number in file linup
+         Order: use a number from the name line-up
          in "Custom Fields" under "Name" menu select "filename" and add
          in corresponding "Value"  field a file name as sw/swname.php 
   
-      Once the page is published, note its page id (at the top near title)
+   Once the page is published, note its  id (at the top near title)
 
-  #. Edit  page "Software" and  update the software item in the table with the page id link, for example: ::
+#. Edit  page "Software" and  update the software item in the table with the page id link, for example: ::
 
        <td width="20%">CSMOL</td>
        becomes
        <td width="20%"><a href="?page_id=1032">CSMOL</a></td>
 
-  #. In Dashboard's "Appearance" menu choose "Widgets". In "Sidebar Widget Area" menu on the right hand side of 
-     the page choose widget "Text: Available Software".  Add html text for the new software per already existing 
-     style. Need page id and software name, for example: ::
+#. In Dashboard's "Appearance" menu choose "Widgets". 
+   In "Sidebar Widget Area" menu on the right hand side of 
+   the page choose widget "Text: Available Software".  
+   Add html text for the new software per already existing style. Need page id and software name, for example: ::
 
        <tr class="swbar">
        <td class="left"><a href="?page_id=909"><?php show_thumimg('opal'); ?> Opal</a></td>
        </tr>
 
-     Here name *opal* is used for getting thum image, *Opal* is sw item name, and *909* is Opal page_id in wordpress
+   Here name *opal* is used for getting thum image, *Opal* is sw item name, and *909* is Opal page_id in wordpress
 
+Turn off comments on images
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Turn off comments on images ::
+The usual method of turning off comments on posts and pages does not work on images. The workaround ::
 
        cd /var/www/html/wordpress2/wp-content/themes/graphene-nbcr
        cp /var/www/html/wordpress2/wp-content/themes/twentyten/attachment.php attachment.php
        cp /var/www/html/wordpress2/wp-content/themes/twentyten/loop-attachment.php loop-attachment.php
-       edit loop-attachment.php and put if statement around comments_template() call
+       Edit loop-attachment.php and put if statement around comments_template() call
 
-
+ 
 Change wordpress host fqdn 
---------------------------------
+---------------------------
 
 #. save htaccess ::
 
     cp /var/www/html/wordpress2/.htaccess /var/www/html/wordpress2/htaccess.save
 
-#. save text widgets: login to wordpress admin interface, in Appearance/Widgets/Sidebar Widget Area
-open Text widgets (*Available software* and  *Available web services*) and copy and save text. 
+#. save text widgets: ::
+
+     login to wordpress admin interface, 
+     in Appearance->Widgets->Sidebar Widget Area open Text widgets 
+         Available software 
+         Available web services 
+
+   copy and save text.
 
 #. dump current db ::
+
     cd /root/wp
     mysqldump -u root -p wpdb > dump.sql
     cp dump.sql rocce-vm0.sql
 
 #. change to new server fqdn ::
 
-    sed -i "s/www2\.nbcr\.net/nbcr\.ucsd\.edu/g" dump.sql
-    vim dump.sql
-    cat dump.sql | /usr/bin/mysql -u wpadmin -p wpdb
+      sed -i "s/www2\.nbcr\.net/nbcr\.ucsd\.edu/g" dump.sql
+      vim dump.sql
+      cat dump.sql | /usr/bin/mysql -u wpadmin -p wpdb
+    
+   Note: the following commands suggested for server name change did not work
+   and resulted in all pages reloading to home page. The multisite may be an issue  ::
 
-#. Check all the files in wordpress2/ and change all occurences of old FQDN to new one ::
+      mysql - root -p
+      mysql> UPDATE wp_options SET option_value = replace(option_value, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2') 
+             where option_name = 'home' OR option_name = 'siteurl';
+      mysql> UPDATE wp_posts SET guid = replace(guid,'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
+      mysql> UPDATE wp_posts SET post_content = replace(post_content, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
+      mysql> UPDATE wp_links SET link_url = replace(link_url, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
+
+
+#. Check all the files in wordpress2/ 
+   and change all occurences of old FQDN to new one ::
 
     cd /var/www/html/wordpress2/
     grep -r -l www2.nbcr.net .
 
-    Edit all listed files and make corrections. 
+   Edit all listed files and make corrections. 
 
-#. Login to wordpress web admin interface and recreate text widgets for software and web servers 
-if they are no longer present. Use  text saved in *save text widget* above.
+#. Login to wordpress web admin interface 
+   and recreate text widgets for software and web servers 
+   if they are no longer present. Use  text saved in *save text widget* above.
 
-.. note::  the following commands suggested for server name change did not work
-   and resulted in all pages reloading to home page. The multisite may be an issue
-
-   mysql - root -p
-   mysql> UPDATE wp_options SET option_value = replace(option_value, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2') where opt
-   ion_name = 'home' OR option_name = 'siteurl';
-   mysql> UPDATE wp_posts SET guid = replace(guid,'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
-   mysql> UPDATE wp_posts SET post_content = replace(post_content, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
-   mysql> UPDATE wp_links SET link_url = replace(link_url, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
 
