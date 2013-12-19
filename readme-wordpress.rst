@@ -184,6 +184,9 @@ Adding a new sw item
 
 Turn off comments on images 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+There is a  way to turn comments off on individual 
+posts and pages (via admin dashboard) but not on images. This is a work around.
+
 ::
 
    cd /var/www/html/wordpress2/wp-content/themes/graphene-nbcr
