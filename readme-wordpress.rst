@@ -289,40 +289,40 @@ On new host
  
 #. restore wordpress files ::
 
-   cd /var/www/html
-   tar xzvf /tmp/www-wordpress.tar.gz 
+     cd /var/www/html
+     tar xzvf /tmp/www-wordpress.tar.gz 
 
-#.  start mysql if not running ::
+#. start mysql if not running ::
 
-   ps -ef | grep mysqld
-   /sbin/chkconfig --add mysqld
-   /sbin/chkconfig --list mysqld
-   /etc/init.d/mysql start
+     ps -ef | grep mysqld
+     /sbin/chkconfig --add mysqld
+     /sbin/chkconfig --list mysqld
+     /etc/init.d/mysql start
 
-#.  add root password for mysql access if not present ::
+#. add root password for mysql access if not present ::
 
-   /usr/bin/mysqladmin -u root password 'PASS'
-   /usr/bin/mysqladmin -u root -h my.new.host password 'PASS'
+     /usr/bin/mysqladmin -u root password 'PASS'
+     /usr/bin/mysqladmin -u root -h my.new.host password 'PASS'
 
 #. Create a wordpress database "wpdb" and set permissions. ::
 
-   mysqladmin create wpdb
-   mysql -u root -p
-   mysql> grant all privileges on wpdb.* to 'USER'@'localhost' identified by 'PASS';
+     mysqladmin create wpdb
+     mysql -u root -p
+     mysql> grant all privileges on wpdb.* to 'USER'@'localhost' identified by 'PASS';
 
-#.  restore wp db content from a backup ::
+#. restore wp db content from a backup ::
 
-   cd /tmp
-   zcat wpdb.sql.gz | /usr/bin/mysql --user USER -p wpdb
+     cd /tmp
+     zcat wpdb.sql.gz | /usr/bin/mysql --user USER -p wpdb
 
-#.  update settings in the database to new urls ::
+#. update settings in the database to new urls ::
 
-   /usr/bin/mysql -u root -p wpdb
-   mysql>UPDATE wp_options SET option_value = replace(option_value, 'http://old.ucsd.edu/wordpress2', 'http://new.ucsd.edu/wordpress2') 
-         where option_name = 'home' OR option_name = 'siteurl';
-   mysql>select * from wp_options where option_value='http://new.ucsd.edu/wordpress2';
-   mysql>UPDATE wp_posts SET guid = replace(guid,'http://old.ucsd.edu/wordpress2', 'http://new.ucsd.edu/wordpress2');
-   mysql>UPDATE wp_posts SET post_content = replace(post_content, 'http://old.ucsd.edu/wordpress2', 'http://new.ucsd.edu/wordpress2');
+     /usr/bin/mysql -u root -p wpdb
+     mysql>UPDATE wp_options SET option_value = replace(option_value, 'http://old.ucsd.edu/wordpress2', 'http://new.ucsd.edu/wordpress2') 
+           where option_name = 'home' OR option_name = 'siteurl';
+     mysql>select * from wp_options where option_value='http://new.ucsd.edu/wordpress2';
+     mysql>UPDATE wp_posts SET guid = replace(guid,'http://old.ucsd.edu/wordpress2', 'http://new.ucsd.edu/wordpress2');
+     mysql>UPDATE wp_posts SET post_content = replace(post_content, 'http://old.ucsd.edu/wordpress2', 'http://new.ucsd.edu/wordpress2');
 
 Enable Google Analytics
 -----------------------
