@@ -11,7 +11,7 @@ Make redirect on the server, tell apache to use wordpress2 ::
     vim /var/www/html/index.html
     change from  URL=/wordpress/ to  URL=/wordpress2/
 
-Create a wordpress database *wpdb* and set permissions. Use real values for USER and PASS ::
+Create a wordpress database ``wpdb`` and set permissions. Use real values for ``USER`` and ``PASS`` ::
 
     # mysqladmin create wpdb
     # mysql -u root -p
@@ -96,10 +96,10 @@ Custom files used by theme-specific php code.
 **docs/** - for short docss used in software-related pages ::
 
       citations/ - citations for software. Each file represents multiple citations for
-                   a single software item. Naming convention: SWNAME.EXT where SWNAME is
-                   a software item name form the software list (see below) and EXT specifies  
+                   a single software item. Naming convention: swname.ext where swname is
+                   a software item name form the software list (see below) and ext specifies  
                    file format  and can be  bibtext, plain pr bibtex.
-      licenses/  - for  licenses, if needed by the software. Naming convention: SWNAME, format is ascii.
+      licenses/  - for  licenses, if needed by the software. Naming convention: swname, format is ascii.
 
 **images/**  - categorize images as ::
 
@@ -117,39 +117,20 @@ Custom files used by theme-specific php code.
       switem-options-defaults.php - all default options
       switem-layout.php - layout of the sw item on the page
       template.php - template with all needed variables
-      SWNAME.php  - for each software item, SWNAME is software item name from the software list below. 
+      swname.php  - for each software item, swname is software item name from the software list below. 
 
  
 Adding a new sw item 
 ~~~~~~~~~~~~~~~~~~~~~~
 
-#. Check sw name lineup below. 
-   if name is not there, add it and update numerical order below
-   and also on all respective software pages that change due to new item. The chages will be in *Order* tab
-   in page attributes section. ::
+#. Check sw name lineup below, if name is not there, add it. ::
 
-    1 ADT
-    2 AMD
-    3 APBS
-    4 Autoclick
-    5 AutoGrow
-    6 Browndye
-    7 CADD
-    8 Continuity
-    9 CSMOL
-    10 ePMV
-    11 FETK
-    12 Gamer
-    13 iAPBS
-    14 MEME
-    15 MGLTools
-    16 NNScore
-    17 Opal
-    18 PDB2PQR
-    19 PMV
-    20 POVME
-    21 SMOL
-    22 TxBR
+    ADT         CADD            iAPBS           PMV
+    AMD         Continuity      MEME            POVME
+    APBS        CSMOL           MGLTools        SMOL
+    Autoclick   ePMV            NNScore         TxBR
+    AutoGrow    FETK            Opal            
+    Browndye    Gamer           PDB2PQR
 
 #. Create a new php file for the new sw item ::
 
@@ -170,7 +151,7 @@ Adding a new sw item
 
          Parent: Software
          Template: Software Item
-         Order: use a number from the name line-up
+         Order: 1
          in "Custom Fields" under "Name" menu select "filename" and add
          in corresponding "Value"  field a file name as sw/swname.php 
   
@@ -182,16 +163,18 @@ Adding a new sw item
        becomes
        <td width="20%"><a href="?page_id=1032">CSMOL</a></td>
 
-#. In Dashboard's "Appearance" menu choose "Widgets". 
-   In "Sidebar Widget Area" menu on the right hand side of 
-   the page choose widget "Text: Available Software".  
-   Add html text for the new software per already existing style. Need page id and software name, for example: ::
+#. In dashboard's ``Appearance`` menu choose ``Widgets``. 
+   In ``Sidebar Widget Area`` menu on the right hand side of 
+   the page choose widget ``Text: Available Software``.  
+   Add html text for the new software per already existing style (find
+   its position in alphabetical order shown in ``Software`` page). 
+   Need page id and software name, for example: ::
 
        <tr class="swbar">
        <td class="left"><a href="?page_id=909"><?php show_thumimg('opal'); ?> Opal</a></td>
        </tr>
 
-   Here name *opal* is used for getting thum image, *Opal* is sw item name, and *909* is Opal page_id in wordpress
+   Here name ``opal`` is used for getting thum image, ``Opal`` is sw item name, and ``909`` is Opal page id in wordpress.
 
 Turn off comments on images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -205,7 +188,7 @@ The usual method of turning off comments on posts and pages does not work on ima
 
 Dealing with tables
 ~~~~~~~~~~~~~~~~~~~
-Tables are generated with *WP-Table Reloaded* plugin.  
+Tables are generated with ``WP-Table Reloaded`` plugin.  
 
 * Tables can be edited via a plugin
   but this is a lengthy update if tables had ordered info. 
@@ -222,11 +205,11 @@ Tables are generated with *WP-Table Reloaded* plugin.
 Change wordpress host fqdn 
 ---------------------------
 
-#. save htaccess ::
+#. Save htaccess ::
 
     cp /var/www/html/wordpress2/.htaccess /var/www/html/wordpress2/htaccess.save
 
-#. save text widgets: ::
+#. Save text widgets: ::
 
      login to wordpress admin interface, 
      in Appearance->Widgets->Sidebar Widget Area open Text widgets 
@@ -235,13 +218,13 @@ Change wordpress host fqdn
 
    copy and save text.
 
-#. dump current db ::
+#. Dump current db ::
 
     cd /root/wp
     mysqldump -u root -p wpdb > dump.sql
     cp dump.sql rocce-vm0.sql
 
-#. change to new server fqdn ::
+#. Change to new server fqdn ::
 
       sed -i "s/www2\.nbcr\.net/nbcr\.ucsd\.edu/g" dump.sql
       vim dump.sql
@@ -268,7 +251,7 @@ Change wordpress host fqdn
 
 #. Login to wordpress web admin interface 
    and recreate text widgets for software and web servers 
-   if they are no longer present. Use  text saved in *save text widget* above.
+   if they are no longer present. Use  text saved in *Save text widget* above.
 
 
 Move wordpress to another host 
@@ -285,35 +268,35 @@ On old host dump the wordpress and its db ::
 
 On new host
  
-#. restore wordpress files ::
+#. Restore wordpress files ::
 
      cd /var/www/html
      tar xzvf /tmp/www-wordpress.tar.gz 
 
-#. start mysql if not running ::
+#. Start mysql if not running ::
 
      ps -ef | grep mysqld
      /sbin/chkconfig --add mysqld
      /sbin/chkconfig --list mysqld
      /etc/init.d/mysql start
 
-#. add root password for mysql access if not present ::
+#. Add root password for mysql access if not present ::
 
      /usr/bin/mysqladmin -u root password 'PASS'
      /usr/bin/mysqladmin -u root -h my.new.host password 'PASS'
 
-#. Create a wordpress database "wpdb" and set permissions. ::
+#. Create a wordpress database ``wpdb`` and set permissions. ::
 
      mysqladmin create wpdb
      mysql -u root -p
      mysql> grant all privileges on wpdb.* to 'USER'@'localhost' identified by 'PASS';
 
-#. restore wp db content from a backup ::
+#. Restore wp db content from a backup ::
 
      cd /tmp
      zcat wpdb.sql.gz | /usr/bin/mysql --user USER -p wpdb
 
-#. update settings in the database to new urls ::
+#. Update settings in the database to new urls ::
 
      /usr/bin/mysql -u root -p wpdb
      mysql>UPDATE wp_options SET option_value = replace(option_value, 'http://old.ucsd.edu/wordpress2', 'http://new.ucsd.edu/wordpress2') 
@@ -334,15 +317,28 @@ Enable Google Analytics
     In property column click on tracking info
     Click on the tracking code then copy the code
 
-#. Add traking code to wordpress ::
+   Tracking code  ::
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-890371-2', 'ucsd.edu');
+      ga('send', 'pageview');
+    
+    </script>
+
+#. Add tracking code to wordpress ::
 
     Login to your WordPress blog as admin
     Click on Appearance then click Graphene Options. In the body of the page under General tab
     find Google Analytics Options tab and open it. Paste the tracking code where directed and check
     Enabling ... button. Click on Save options button at the end of the frame.
 
-#. It mabe be better to just add the Google analytics code just before </head>
-   in the head.php theme file.
+#. It mabe be better to add the Google analytics code just before ``</head>``
+   in the ``head.php`` theme file.
 
 #. Add the same code snippet 
    to /var/www/html/index.html
