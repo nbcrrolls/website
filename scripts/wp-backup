@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# Backup wordpress wfeils and db
+# Install as a cron job in /etc/cron.weekly
+# Need to enable ssh authorised access for copying backup to NAS
+
+######## setup ##########
+DATE=`date "+%Y%m%d"`
+BACKDIR=/root/wp/backup/
+
+backup_wordpress_db () {
+# backup mysql DB
+USER='YOUR-USER'
+PASS='YOUR-PASS$'
+DB="wpdb"
+FILE=$BACKDIR/$DB-$DATE.sql.gz
+mysqldump -u $USER -p$PASS $DB | gzip > $FILE
+scp $FILE blat.ucsd.edu:/state/primary/data/root/backup/wp
+}
+
+backup_wordpress_files () {
+# backup wordpress files 
+FILE2=$BACKDIR/www-wordpress-$DATE.gz
+cd  /var/www/html
+tar czf $FILE2 wordpress2
+scp $FILE2 blat.ucsd.edu:/state/primary/data/root/backup/wp
+}
+
+backup_wiki_db () {
+# backup wikidb
+USER='wikiadmin'
+PASS='!p4Nwa$$'
+DB='wikidb'
+FILE3=$BACKDIR/$DB-$DATE.sql.gz
+mysqldump -u $USER -p$PASS $DB | gzip > $FILE3
+scp $FILE3 blat.ucsd.edu:/state/primary/data/root/backup/wp
+}
+
+######## main ##########
+backup_wordpress_db
+backup_wordpress_files
+backup_wiki_db
+scp  /etc/cron.weekly/wp-backup blat.ucsd.edu:/state/primary/data/root/backup/wp
+
+######## info ##########
+#To execute on another servers without uncompressing:
+# zcat backup.sql.gz | mysql --user=USER --password=PASS DBNAME
+
