@@ -1,7 +1,5 @@
 .. highlight:: rest
-
-Wordpress installation and management
-======================================
+.. contents:: NBCR wordpress installation and management
 
 Initial wordpress configuration
 --------------------------------
