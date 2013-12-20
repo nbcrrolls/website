@@ -337,8 +337,8 @@ Enable Google Analytics
     find Google Analytics Options tab and open it. Paste the tracking code where directed and check
     Enabling ... button. Click on Save options button at the end of the frame.
 
-#. It mabe be better to add the Google analytics code just before ``</head>``
-   in the ``head.php`` theme file.
+   Note: It mabe be better to add the Google analytics code just before ``</head>``
+   in the ``head.php`` theme file. Double check the results of analytics.
 
 #. Add the same code snippet 
    to /var/www/html/index.html
