@@ -1,59 +1,62 @@
-
 Set up wiki
 ------------
 
-Point browser to http://your.host.name/wiki and follow set up link.
-at the installation from fill in 
+#. Point browser to http://your.host.name/wiki and follow a set up link.
 
-**Site config** ::
+#. A link opens the installation from  to fill in 
 
-  Wiki name: choose
-  Contact e-mail: choose
-  Language: en - English
+   **Site config** ::
 
-  Copyright/license: choose No license metadata
+     Wiki name: choose
+     Contact e-mail: choose
+     Language: en - English
 
-  Admin username: create 
-  Password: create
+     Copyright/license: choose No license metadata
 
-Object caching: choose No caching
+     Admin username: create 
+     Password: create
 
-**E-mail, e-mail notification and authentication setup** ::
+     Object caching: choose No caching
 
-  E-mail features (global): choose Enabled
-  User-to-user e-mail: choose Disabled
-  E-mail notification about changes: choose  Enabled for changes to user discussion pages...
-  E-mail address authentication: choose Enabled
+   **E-mail, e-mail notification and authentication setup** ::
 
-**Database config** ::
+     E-mail features (global): choose Enabled
+     User-to-user e-mail: choose Disabled
+     E-mail notification about changes: choose  Enabled for changes to user discussion pages...
+     E-mail address authentication: choose Enabled
 
-  Database type: coose MySQL
-  Database host: localhost:/var/lib/mysql/mysql.sock
+   **Database config** ::
 
-  NOTE: host must contain location of mysql socket similar to above. 
+     Database type: coose MySQL
+     Database host: localhost:/var/lib/mysql/mysql.sock
 
-  Database name: wikidb
-  DB username: create
-  DB password:create
+   NOTE: host must contain location of mysql socket similar to above.  ::
 
-  Superuser account: select  "Use superuser account"
-  Superuser name: root
-  Superuser password: fill in
+     Database name: wikidb
+     DB username: create
+     DB password: create
 
-**MySQL-specific options** ::
+     Superuser account: select  "Use superuser account"
+     Superuser name: root
+     Superuser password: fill in
 
-  Database table prefix: leave empty
-  Storage Engine:  choose InnoDB
+   **MySQL-specific options** ::
 
-  Database character set: choose MySQL 4.1/5.0 UTF-8
+     Database table prefix: leave empty
+     Storage Engine:  choose InnoDB
 
-Click on ``Install MEdiaWiki`` button.  A screen will show an error or  a successfull configuration 
-To complete the installation, move ``config/LocalSettings.php`` to the parent directory and change 
-file permissions as ::
-  chown apache:apache LocalSettings.php
-  chmod 600 LocalSettings.php
+     Database character set: choose MySQL 4.1/5.0 UTF-8
 
-The file contains  db username/pass and  
+   Click on ``Install MediaWiki`` button.  
+
+   A screen will show an error or a successfull configuration 
+
+#. Complete  installation
+
+   move ``config/LocalSettings.php`` to the parent directory and change file permissions as ::
+ 
+     chown apache:apache LocalSettings.php
+     chmod 600 LocalSettings.php
 
 Wiki modifucations
 -------------------
@@ -75,22 +78,23 @@ Wiki modifucations
         upload_max_filesize = 25M   (orig 2M)
         post_max_size = 28M         (orig 8M)
 
-   /etc/init.d/httpd restart
+    /etc/init.d/httpd restart
 
-   NOTE: the ``post\_max\_size`` must be bigger then ``upload\_max\_size``
+   NOTE: the ``post_max_size`` must be bigger then ``upload_max_size``
 
 #. Authorization changes
+
    Add the following lines to enable speciufic features in ``LocalSettings.php`` ::
 
-   # Requires that users are registered before they can edit
-   $wgGroupPermissions['*']['edit'] = false;
+     # Requires that users are registered before they can edit
+     $wgGroupPermissions['*']['edit'] = false;
 
-   # Hide user tools for anonymous (IP address) visitors:
-   $wgShowIPinHeader = false;
+     # Hide user tools for anonymous (IP address) visitors
+     $wgShowIPinHeader = false;
 
-   # prevent account creation by anyone except sysops
-   $wgGroupPermissions['*']['createaccount'] = false;
+     # prevent account creation by anyone except sysops
+     $wgGroupPermissions['*']['createaccount'] = false;
 
-   # allow external imges linking
-   $wgAllowExternalImages = true;
+     # allow external imges linking
+     $wgAllowExternalImages = true;
 
