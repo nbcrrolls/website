@@ -273,3 +273,28 @@ Change wordpress host fqdn
    if they are no longer present. Use  text saved in *save text widget* above.
 
 
+Enable Google Analytics
+-----------------------
+
+#. Create google account.
+   There was already an account set for nbcr.net.  Login with personal credentials. ::
+
+    Create new property and new view (for nbcr.ucsd.edu). 
+    Click on the Admin page on the right side after login
+    Select a account from the dropdown list in the Account column
+    In property column click on tracking info
+    Click on the tracking code then copy the code
+
+#. Add traking code to wordpress ::
+
+    Login to your WordPress blog as admin
+    Click on Appearance then click Graphene Options. In the body of the page under General tab
+    find Google Analytics Options tab and open it. Paste the tracking code where directed and check
+    Enabling ... button. Click on Save options button at the end of the frame.
+
+#. It mabe be better to just add the Google analytics code just before </head>
+   in the head.php theme file.
+
+#. Add the same code snippet 
+   to /var/www/html/index.html
+
