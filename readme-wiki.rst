@@ -58,7 +58,7 @@ Set up wiki
      chown apache:apache LocalSettings.php
      chmod 600 LocalSettings.php
 
-Wiki modifucations
+Wiki modifications
 -------------------
 
 #. Enable wiki uploads ::
