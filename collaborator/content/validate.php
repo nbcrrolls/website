@@ -59,7 +59,6 @@
 			## default, add 'state' field as required until country field is set.
 			$requiredFields = array_merge($requiredFields, $stateField);	
 		}
-print_r ($requiredFields);
 	} ## End of checkCountryAndState function
 
 
