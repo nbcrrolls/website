@@ -1,0 +1,14 @@
+1. create collaborators db
+mysqladmin create collaborator -u root -p
+
+2. upload schema
+cat collaborator-schema.sql | mysql -u root -p
+
+2. grant permissions
+mysql -u root -p
+mysql> grant all privileges on collaborator.* to  'nbcradmin'@'localhost' identified by 'PASS';
+mysql> grant all privileges on collaborator.* to  'nbcradmin'@'%' identified by 'PASS';
+
+3. edit accountInfo.php and update with db access info
+
+
