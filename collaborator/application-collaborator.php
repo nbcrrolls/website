@@ -84,7 +84,7 @@
   <h1>NBCR Collaborator Application</h1>
 
   <h5>Please compelte the NBCR Collaborator application below with the details about your project. <br>
-      Your application will be reviewd by the Scientific Advisory Board.<br><br>
+      Your application will be reviewd by the NBCR's Executive Committee.<br><br>
       Any field with a red asterisk <span class="star">*</span> denotes a required field. 
   </h5>
 

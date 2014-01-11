@@ -334,10 +334,9 @@
 <body>
 <h1>NBCR Collaborator Application</h1>
 <h5>Thank you, your Application has been submitted.</h5>
-<p> The NBCR Scientific Advisory Board meets on a regular basis to review applications. <br>
-    Once the application is reviewed, you will receive a notification and additional <br>
+<p> Once the application is reviewed, you will receive a notification and additional <br>
     information at the email address <?php print $save_email; ?> supplied in the application.<br /><br />
-    If you have further questions about this process, please contact us at: XXXX .<br /> <br />
+    If you have further questions about this process, please contact us at: admin@nbcr.net <br /> <br />
     Click <a href="http://nbcr.ucsd.edu" target="_blank">here</a> to return to the NBCR main website.
 </p>
 </body>
