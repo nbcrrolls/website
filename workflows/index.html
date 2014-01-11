@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="lib/style.css" />
+
+    <script src="lib/jquery-1.9.0.min.js"></script>
+
+    <script src="lib/jquery.isotope.min.js"></script>
+
+</head>
+<body>
+
+    <table><tr>
+    <td id="options" style="width:20%; height:100%; vertical-align:top;">
+        <!--
+        <input id="search" type="text" autocomplete="off" placeholder="Start typing..." value="" name="search">
+        -->
+
+        
+        <h3>Types</h3>
+          <div id="TypesFilters" class="filter-set option-set" data-filter-group="Types">
+		  <!--
+            <a href="#" data-filter-value=".Alignment">Alignment</a>
+            <a href="#" data-filter-value=".Assembly">Assembly</a>
+            <a href="#" data-filter-value=".GUI">GUI</a>
+            <a href="#" data-filter-value=".GeneticAndPopulationAnalysis">GeneticAndPopulationAnalysis</a>
+            <a href="#" data-filter-value=".IntegratedBioinformaticsEnvironment">IntegratedBioinformaticsEnvironment</a>
+            <a href="#" data-filter-value=".MetagenomicsMetranscriptomics">MetagenomicsMetranscriptomics</a>
+            <a href="#" data-filter-value=".MultipleAlignment">MultipleAlignment</a>
+            <a href="#" data-filter-value=".NextGenerationSequenceAnalysis">NextGenerationSequenceAnalysis</a>
+			-->
+            <a href="#" data-filter-value=".Clustering">Clustering</a>
+            <a href="#" data-filter-value=".Electrostatic">Electrostatic</a>
+            <a href="#" data-filter-value=".Utilities">Utilities</a>
+          </div>
+
+
+        <h3>Directors</h3>
+          <div id="DirectorsFilters" class="filter-set option-set" data-filter-group="Directors">
+            <a href="#" data-filter-value=".DDF">DDF</a>
+            <a href="#" data-filter-value=".DDP">DDP</a>
+            <a href="#" data-filter-value=".PN">PN</a>
+            <a href="#" data-filter-value=".SDF">SDF</a>
+          </div>
+
+        <h3>Tags</h3>
+          <div id="TagFilters" class="filter-set option-set" data-filter-group="Tags">
+            <a href="#" data-filter-value=".antechamber">antechamber</a>
+            <a href="#" data-filter-value=".Amber">Amber</a>
+            <a href="#" data-filter-value=".createDirectory">createDirectory</a>
+            <a href="#" data-filter-value=".fileCopy">fileCopy</a>
+            <a href="#" data-filter-value=".Gaussian09">Gaussian09</a>
+            <a href="#" data-filter-value=".leap">leap</a>
+            <a href="#" data-filter-value=".pdb2pdbqt">pdb2pdbqt</a>
+            <a href="#" data-filter-value=".trajectory">trajectory</a>
+          </div>
+
+
+		  <!--
+        <h3>BioActors</h3>
+          <div id="BioActorsFilters" class="filter-set option-set" data-filter-group="BioActors">
+            <a href="#" data-filter-value="._2bwt_builder">2bwt-builder</a>
+            <a href="#" data-filter-value=".DynamicTrim_pl">DynamicTrim.pl</a>
+            <a href="#" data-filter-value=".RNA_parse_pl">RNA_parse.pl</a>
+            <a href="#" data-filter-value=".SOAPdenovo31mer">SOAPdenovo31mer</a>
+            <a href="#" data-filter-value=".blast_rRNA_pl">blast_rRNA.pl</a>
+            <a href="#" data-filter-value=".blastall">blastall</a>
+            <a href="#" data-filter-value=".bowtie">bowtie</a>
+            <a href="#" data-filter-value=".bowtie_build">bowtie-build</a>
+            <a href="#" data-filter-value=".bowtie2_build">bowtie2-build</a>
+            <a href="#" data-filter-value=".breakdancer_max">breakdancer-max</a>
+            <a href="#" data-filter-value=".bwa_align">bwa_align</a>
+            <a href="#" data-filter-value=".bwa_index">bwa_index</a>
+            <a href="#" data-filter-value=".cd_hit">cd-hit</a>
+            <a href="#" data-filter-value=".cd_hit_454">cd-hit-454</a>
+            <a href="#" data-filter-value=".cd_hit_est">cd-hit-est</a>
+            <a href="#" data-filter-value=".clustalw">clustalw</a>
+            <a href="#" data-filter-value=".clustalx">clustalx</a>
+            <a href="#" data-filter-value=".cuffdiff">cuffdiff</a>
+            <a href="#" data-filter-value=".cytoscape">cytoscape</a>
+            <a href="#" data-filter-value=".faa_stat_pl">faa_stat.pl</a>
+            <a href="#" data-filter-value=".fastq2fasta_py">fastq2fasta.py</a>
+            <a href="#" data-filter-value=".fraggene_scan_pl">fraggene_scan.pl</a>
+            <a href="#" data-filter-value=".fraggene_scan_parse_pl">fraggene_scan_parse.pl</a>
+            <a href="#" data-filter-value=".hmm_rRNA_pl">hmm_rRNA.pl</a>
+            <a href="#" data-filter-value=".hmmsearch_pl">hmmsearch.pl</a>
+            <a href="#" data-filter-value=".hmmsearch_parse_pl">hmmsearch_parse.pl</a>
+            <a href="#" data-filter-value=".kegg_pl">kegg.pl</a>
+            <a href="#" data-filter-value=".kegg_parse_pl">kegg_parse.pl</a>
+            <a href="#" data-filter-value=".metagene_pl">metagene.pl</a>
+            <a href="#" data-filter-value=".mothur">mothur</a>
+            <a href="#" data-filter-value=".muscle">muscle</a>
+            <a href="#" data-filter-value=".orf_2_tbl_pl">orf_2_tbl.pl</a>
+            <a href="#" data-filter-value=".orf_finder">orf_finder</a>
+            <a href="#" data-filter-value=".qc_filter_pl">qc_filter.pl</a>
+            <a href="#" data-filter-value=".qc_filter_fastq_pl">qc_filter_fastq.pl</a>
+            <a href="#" data-filter-value=".qiime">qiime</a>
+            <a href="#" data-filter-value=".rasmol">rasmol</a>
+            <a href="#" data-filter-value=".rpsblast_pl">rpsblast.pl</a>
+            <a href="#" data-filter-value=".rpsblast_parse_pl">rpsblast_parse.pl</a>
+            <a href="#" data-filter-value=".samtools">samtools</a>
+            <a href="#" data-filter-value=".soap">soap</a>
+            <a href="#" data-filter-value=".ssake">ssake</a>
+            <a href="#" data-filter-value=".tRNAscan_SE_pl">tRNAscan-SE.pl</a>
+            <a href="#" data-filter-value=".tophat">tophat</a>
+            <a href="#" data-filter-value=".uchime">uchime</a>
+            <a href="#" data-filter-value=".velvetg">velvetg</a>
+            <a href="#" data-filter-value=".velveth">velveth</a>
+          </div>
+			-->
+
+        <h3>Actors</h3>
+          <div id="ActorsFilters" class="filter-set option-set" data-filter-group="Actors">
+            <a href="#" data-filter-value=".ArrayElement">ArrayElement</a>
+            <a href="#" data-filter-value=".ArrayLength">ArrayLength</a>
+            <a href="#" data-filter-value=".ArraySort">ArraySort</a>
+            <a href="#" data-filter-value=".ArrayToSequence">ArrayToSequence</a>
+            <a href="#" data-filter-value=".BrowserDisplay">BrowserDisplay</a>
+            <a href="#" data-filter-value=".ConcatenateArrays">ConcatenateArrays</a>
+            <a href="#" data-filter-value=".DirectoryListing">DirectoryListing</a>
+            <a href="#" data-filter-value=".DirectoryMaker">DirectoryMaker</a>
+            <a href="#" data-filter-value=".Distributor">Distributor</a>
+            <a href="#" data-filter-value=".Expression">Expression</a>
+            <a href="#" data-filter-value=".ExternalExecution">ExternalExecution</a>
+            <a href="#" data-filter-value=".FileCopier">FileCopier</a>
+            <a href="#" data-filter-value=".FileWriter">FileWriter</a>
+            <a href="#" data-filter-value=".IterateOverArray">IterateOverArray</a>
+            <a href="#" data-filter-value=".OpalClient">OpalClient</a>
+            <a href="#" data-filter-value=".StringConstant">StringConstant</a>
+            <a href="#" data-filter-value=".StringReplace">StringReplace</a>
+            <a href="#" data-filter-value=".StringSplitter">StringSplitter</a>
+            <a href="#" data-filter-value=".TimeStamp">TimeStamp</a>
+            <a href="#" data-filter-value=".URLToLocalFile">URLToLocalFile</a>
+          </div>
+
+
+    </td>
+    
+    <td style="width:80%; vertical-align:top;">
+    <div id="container">
+                <div id="_0" class="item workflow Utilities CreateDirectoryCopy createDirectory fileCopy 
+				                    DirectoryListing ArrayToSequence StringReplace DirectoryMaker FileCopier PN">
+            <a href="wf/Utilities/CreateDirectoryCopy/index.html">
+                <img class="workflow-thumb" src="wf/Utilities/CreateDirectoryCopy/CreateDirectoryCopy.gif"/>
+                <span class="workflow-name">CreateDirectoryCopy</span>
+            </a>
+        </div>
+
+        <div id="_1" class="item workflow Electrostatic LigandParameterization Gaussian09 antechamber Amber leap
+      	                    ExternalExecuation FileWriter StringConstant SDF">
+            <a href="wf/Electrostatic/LigandParameterization/index.html">
+                <img class="workflow-thumb" src="wf/Electrostatic/LigandParameterization/LigandParameterization.gif"/>
+                <span class="workflow-name">LigandParameterization</span>
+            </a>
+        </div>
+
+        <div id="_2" class="item workflow Electrostatic PDB2PDBQT pdb2pdbqt OpalClient Distributor BrowserDisplay 
+		                    StringSplitter ArrayLength Expression ArrayElement URLToLocalFile PN">
+            <a href="wf/Electrostatic/PDB2PDBQT/index.html">
+                <img class="workflow-thumb" src="wf/Electrostatic/PDB2PDBQT/PDB2PDBQT.gif"/>
+                <span class="workflow-name">PDB2PDBQT</span>
+            </a>
+        </div>
+
+        <div id="_3" class="item workflow Clustering TrajectoriesConcatenate
+		trajectory DirectoryListing ArraySort IterateOverArray
+		                    ConcatenateArrays Expression TimeStamp ArrayToSequence FileWriter ExternalExecution DDF">
+            <a href="wf/Clustering/TrajectoriesConcatenate/index.html">
+                <img class="workflow-thumb" src="wf/Clustering/TrajectoriesConcatenate/TrajectoriesConcatenate.gif"/>
+                <span class="workflow-name">TrajectoriesConcatenate</span>
+            </a>
+        </div>
+
+
+    </div>
+    </td>
+    </tr></table>
+
+    <script>
+        $(function(){
+            var items = [];
+            var $container = $('#container');
+            filters = {};
+
+            $container.isotope({
+                itemSelector: '.item',
+            });
+
+            var $optionSets = $('#options .option-set'),
+            $optionLinks = $optionSets.find('a');
+
+            $optionLinks.click(function() {
+                var $this = $(this);
+                
+                if ( $this.hasClass('selected') ) {
+                    $this.removeClass('selected');
+                } else {
+                    $this.addClass('selected');
+                }
+
+                var $optionSet = $this.parents('.option-set');
+                
+
+                // store filter value in object
+                var group = $optionSet.attr('data-filter-group');
+                var x = [];
+                var optionSetSelected = $optionSet.find('.selected');
+                for ( i = 0; i < optionSetSelected.length; i++) {
+                    var tmp = $(optionSetSelected[i]).attr('data-filter-value');
+                    x.push(tmp);
+                }
+                filters[ group ] = x.join(', ');
+
+                // convert object into array
+                var isoFilters = [];
+                for ( var prop in filters ) {
+                    if(filters[prop].length > 0) {
+                        isoFilters.push( filters[ prop ] )
+                    }
+                }
+                var selector = isoFilters.join(', ');
+                $container.isotope({ filter: selector });
+
+                return false;
+            });
+
+            // stick items into array declared above as a series of objects
+            // we could include more than just the name in here, to build up a bigger search 'index'
+            /*
+            $('span.workflow-name').each(function(){
+                    var tmp = {};
+                    tmp.id = $(this).parent().parent().attr('id');
+                    tmp.name = ($(this).text().toLowerCase());
+                    items.push( tmp );
+            });
+            */
+                
+            // User types in search box - call our search function and supply lower-case keyword as argument
+            /*
+            $('#search').bind('keyup', function() {
+                    isotopeSearch( $(this).val().toLowerCase() );
+            });
+            */
+       
+            /**
+             * Function takes single keyword as argument,
+             * checks array of item objects and looks for substring matches between item.name and keyword,
+             * if matches are found calls isotope.filter() function on our collection.
+             */
+             /*
+             function isotopeSearch(kwd)
+             {
+                 // reset results arrays
+                 var matches = [];
+                 var misses = [];
+
+                 $('.item').removeClass('match miss'); // get rid of any existing classes
+                 $('#noMatches').hide(); // ensure this is always hidden when we start a new query
+
+                 if ( (kwd != '') && (kwd.length >= 2) ) { // min 2 chars to execute query:
+        
+                     // loop through items array     
+                     items.forEach(function(item){
+                         if ( item.name.indexOf(kwd) !== -1 ) { // keyword matches element
+                             matches.push( $('#'+item.id)[0] );
+                         } else {
+                             misses.push( $('#'+item.id)[0] );
+                         }
+                     });
+        
+                     // add appropriate classes and call isotope.filter
+                     $(matches).addClass('match');
+                     $(misses).addClass('miss');
+                     $container.isotope({ filter: $(matches) }); // isotope.filter will take a jQuery object instead of a class name as an argument - sweet!
+        
+                     if (matches.length == 0) {
+                         $('#noMatches').show(); // deal with empty results set
+                     }
+        
+                 } else {
+                     // show all if keyword less than 2 chars
+                     $container.isotope({ filter: '.item' });
+                 }
+            } 
+            */
+        });
+    </script>
+</body>
+</html>
