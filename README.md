@@ -17,3 +17,12 @@ to produce nbcr stats. CAn be used as html pages and to produce images from html
 * **readme-wordpress.rst** -  nbcr-specific wordpress howto
 
 * **collaborator/** - php forms for collaborator application
+
+* **workflows/** 
+  - js code to show kepler workflows availability ( adapted from code by kepler group)
+  - workflows (from Amaro lab):
+
+    * Clustering: TrajectoriesConcatenate
+    * Electrostatic: LigandParameterization  PDB2PDBQT
+    * Utilities: CreateDirectoryCopy
+ 
