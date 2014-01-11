@@ -15,3 +15,5 @@ to produce nbcr stats. CAn be used as html pages and to produce images from html
   - wp-backup - backup of wordpress and its db
 
 * **readme-wordpress.rst** -  nbcr-specific wordpress howto
+
+* **collaborator/** - php forms for collaborator application
