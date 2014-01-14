@@ -188,3 +188,38 @@ a code {
   margin-left:auto;
   margin-right:auto;
 }
+
+.caution {
+    color: #AA0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.actor {
+    font-size: 0.9em;
+    background-color: #009999;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0 4px 0 4px ;
+    -webkit-border--radius: 1.2em;
+       -moz-border-radius: 1.2em;
+            border-radius: 1.2em;
+}
+
+.menuitem {
+    color: #777777;
+    border: 1px solid #C0C7C7;
+    padding: 0 4px 0 4px ;
+    font-size: 0.9em;
+}
+
+.vars {
+    color: #777777;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.reglink {
+    color: #0000CC;
+    text-decoration: underline;
+}

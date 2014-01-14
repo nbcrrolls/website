@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>blast</title>
+		<link rel="stylesheet" href="../../../lib/style.css" />
+	</head>
+	<body>
+		<h1 style="text-align:center;">LigandSimulation Workflow</h1>
+		<table><tr>
+		<td id="bioactors" style="width:10% height:100%; vertical-align:top;">
+		<!--
+			<h2>BioActors</h2>
+			<ul>
+				<li><a href="../../../actors/biokepler/BioActors/blastall/index.html">blastall</a></li>
+			</ul>
+			-->
+		</td>
+		<td style="width:90% vertical-align:top;">
+		<img src="LigandSimulation.gif">
+		</td>
+		</tr>
+		<tr>
+                  <td colspan="2">
+                  <h4>Required software:</h4>
+                  <ul>
+                      <li> Autodock vina 1.1.2 and above </li>
+                      <li> VMD 1.9.1 and above </li>
+                      <li> AmberTools 12 and above </li>
+                      <li> Linux platform </li>
+                  </ul>
+
+                  <h4>Notes</h4>
+                  <p><span class="caution">Caution: </span> This workflow is designed for the users who have 
+                     the background information on AmberTools, especially tleap, VMD and Autodock vina. 
+                     Because many steps are automated, there is a specific naming scheme for the input files. 
+                     Required input files are: 
+			<ul>
+				<li><span class="vars">ligand</span>-new.pdb</li>
+				<li><span class="vars">receptor</span>.pdbqt</li> 
+				<li><span class="vars">receptor</span>-noh.pdb</li> 
+				<li><span class="vars">ligand</span>.prepc</li> 
+				<li><span class="vars">ligand</span>.frcmod</li>
+			</ul>
+		      <span class="vars">ligand</span> and <span class="vars">receptor</span> here are variables that must match the 
+		      <span class="vars">ligand</span> and <span class="vars">receptor</span> parameters. 
+                      All these input files are also the output files of the Ligand Parameterization workflow. 
+                   </p>
+                   <p>This workflow was originally created for a project that involved a zinc ion. As a result, 
+		      when running this workflow, it calls for a zinc parameter file (frcmod.zinc) and three zinc 
+		      libraries (znb.lib, hin.lib and hydroxide.lib) that could be downloaded from 
+                      <a href="http://www.mayo.edu/research/labs/computer-aided-molecular-design/projects/zinc-protein-simulations-using-cationic-dummy-atom-cada-approach">this site</a>. These files are not necessary if user's project does not involve zinc ion. 
+ 		      Users will need to delete the following lines, which can be found in <span class="actor">PDB Modification</span>
+                      actor in <span class="actor">String Constant 4</span>:
+			<ul>
+				<li>loadamberparams /scratch/pieong/zinc_reduced_set/frcmod.zinc</li>
+				<li> loadoff /scratch/pieong/zinc_reduced_set/znb.lib</li>
+				<li> loadoff /scratch/pieong/zinc_reduced_set/hin.lib</li>
+				<li> loadoff /scratch/pieong/zinc_reduced_set/hydroxide.lib</li>
+			</ul>
+		      User can open PDB modification by right-clicking on <span class="actor">PDB Modification</span> actor and selecting 
+                      <span class="menuitem">Open actor</span> from a menu. <br>Once inside the actor, double click on 
+		      <span class="actor">String Constant 4</span> and make edits in a pop-up window. 
+		    </p>
+
+		    <p>The output files from simulations are not automatically downloaded from a remote host to a local machine. 
+		    </p>
+
+                  </td>
+
+		</tr>
+                </table>
+	</body>
+</html>

@@ -2,12 +2,10 @@
 <html>
 <head>
     <link rel="stylesheet" href="lib/style.css" />
-
     <script src="lib/jquery-1.9.0.min.js"></script>
-
     <script src="lib/jquery.isotope.min.js"></script>
-
 </head>
+
 <body>
 
     <table><tr>
@@ -16,24 +14,14 @@
         <input id="search" type="text" autocomplete="off" placeholder="Start typing..." value="" name="search">
         -->
 
-        
         <h3>Types</h3>
           <div id="TypesFilters" class="filter-set option-set" data-filter-group="Types">
-		  <!--
-            <a href="#" data-filter-value=".Alignment">Alignment</a>
-            <a href="#" data-filter-value=".Assembly">Assembly</a>
-            <a href="#" data-filter-value=".GUI">GUI</a>
-            <a href="#" data-filter-value=".GeneticAndPopulationAnalysis">GeneticAndPopulationAnalysis</a>
-            <a href="#" data-filter-value=".IntegratedBioinformaticsEnvironment">IntegratedBioinformaticsEnvironment</a>
-            <a href="#" data-filter-value=".MetagenomicsMetranscriptomics">MetagenomicsMetranscriptomics</a>
-            <a href="#" data-filter-value=".MultipleAlignment">MultipleAlignment</a>
-            <a href="#" data-filter-value=".NextGenerationSequenceAnalysis">NextGenerationSequenceAnalysis</a>
-			-->
             <a href="#" data-filter-value=".Clustering">Clustering</a>
+            <a href="#" data-filter-value=".Docking">Docking</a>
             <a href="#" data-filter-value=".Electrostatic">Electrostatic</a>
             <a href="#" data-filter-value=".Utilities">Utilities</a>
+            <a href="#" data-filter-value=".MDsimulation">MD simulation</a>
           </div>
-
 
         <h3>Directors</h3>
           <div id="DirectorsFilters" class="filter-set option-set" data-filter-group="Directors">
@@ -48,13 +36,19 @@
             <a href="#" data-filter-value=".antechamber">antechamber</a>
             <a href="#" data-filter-value=".Amber">Amber</a>
             <a href="#" data-filter-value=".createDirectory">createDirectory</a>
+            <a href="#" data-filter-value=".cpptraj">cpptraj</a>
+            <a href="#" data-filter-value=".equilibration">equilibration</a>
             <a href="#" data-filter-value=".fileCopy">fileCopy</a>
             <a href="#" data-filter-value=".Gaussian09">Gaussian09</a>
             <a href="#" data-filter-value=".leap">leap</a>
+            <a href="#" data-filter-value=".minimization">minimization</a>
+            <a href="#" data-filter-value=".OpalServer">OpalServer</a>
+            <a href="#" data-filter-value=".production">production</a>
             <a href="#" data-filter-value=".pdb2pdbqt">pdb2pdbqt</a>
             <a href="#" data-filter-value=".trajectory">trajectory</a>
+            <a href="#" data-filter-value=".Vina">Vina</a>
+            <a href="#" data-filter-value=".VMD">VMD</a>
           </div>
-
 
 		  <!--
         <h3>BioActors</h3>
@@ -113,12 +107,16 @@
           <div id="ActorsFilters" class="filter-set option-set" data-filter-group="Actors">
             <a href="#" data-filter-value=".ArrayElement">ArrayElement</a>
             <a href="#" data-filter-value=".ArrayLength">ArrayLength</a>
+            <a href="#" data-filter-value=".ArrayPermute">ArrayPermute</a>
             <a href="#" data-filter-value=".ArraySort">ArraySort</a>
             <a href="#" data-filter-value=".ArrayToSequence">ArrayToSequence</a>
             <a href="#" data-filter-value=".BrowserDisplay">BrowserDisplay</a>
+            <a href="#" data-filter-value=".Constant">Constant</a>
+            <a href="#" data-filter-value=".CompositeActor">CompositeActor</a>
             <a href="#" data-filter-value=".ConcatenateArrays">ConcatenateArrays</a>
             <a href="#" data-filter-value=".DirectoryListing">DirectoryListing</a>
             <a href="#" data-filter-value=".DirectoryMaker">DirectoryMaker</a>
+            <a href="#" data-filter-value=".Display">Display</a>
             <a href="#" data-filter-value=".Distributor">Distributor</a>
             <a href="#" data-filter-value=".Expression">Expression</a>
             <a href="#" data-filter-value=".ExternalExecution">ExternalExecution</a>
@@ -126,20 +124,27 @@
             <a href="#" data-filter-value=".FileWriter">FileWriter</a>
             <a href="#" data-filter-value=".IterateOverArray">IterateOverArray</a>
             <a href="#" data-filter-value=".OpalClient">OpalClient</a>
+            <a href="#" data-filter-value=".PythonActor">PythonActor</a>
+            <a href="#" data-filter-value=".RecordDisassembler">RecordDisassembler</a>
+            <a href="#" data-filter-value=".Sleep">Sleep</a>
+            <a href="#" data-filter-value=".SSHSession">SSHSession</a>
+            <a href="#" data-filter-value=".SSHFileCopier">SSHFileCopier</a>
+            <a href="#" data-filter-value=".SSHExecuteCmd">SSHExecuteCmd</a>
             <a href="#" data-filter-value=".StringConstant">StringConstant</a>
             <a href="#" data-filter-value=".StringReplace">StringReplace</a>
             <a href="#" data-filter-value=".StringSplitter">StringSplitter</a>
             <a href="#" data-filter-value=".TimeStamp">TimeStamp</a>
             <a href="#" data-filter-value=".URLToLocalFile">URLToLocalFile</a>
+            <a href="#" data-filter-value=".VariableSetter">VariableSetter</a>
+            <a href="#" data-filter-value=".ZipFiles">ZipFiles</a>
           </div>
-
 
     </td>
     
     <td style="width:80%; vertical-align:top;">
     <div id="container">
-                <div id="_0" class="item workflow Utilities CreateDirectoryCopy createDirectory fileCopy 
-				                    DirectoryListing ArrayToSequence StringReplace DirectoryMaker FileCopier PN">
+         <div id="_0" class="item workflow Utilities CreateDirectoryCopy createDirectory fileCopy 
+			     DirectoryListing ArrayToSequence StringReplace DirectoryMaker FileCopier PN">
             <a href="wf/Utilities/CreateDirectoryCopy/index.html">
                 <img class="workflow-thumb" src="wf/Utilities/CreateDirectoryCopy/CreateDirectoryCopy.gif"/>
                 <span class="workflow-name">CreateDirectoryCopy</span>
@@ -147,7 +152,7 @@
         </div>
 
         <div id="_1" class="item workflow Electrostatic LigandParameterization Gaussian09 antechamber Amber leap
-      	                    ExternalExecuation FileWriter StringConstant SDF">
+			    ExternalExecuation FileWriter StringConstant SDF">
             <a href="wf/Electrostatic/LigandParameterization/index.html">
                 <img class="workflow-thumb" src="wf/Electrostatic/LigandParameterization/LigandParameterization.gif"/>
                 <span class="workflow-name">LigandParameterization</span>
@@ -155,7 +160,7 @@
         </div>
 
         <div id="_2" class="item workflow Electrostatic PDB2PDBQT pdb2pdbqt OpalClient Distributor BrowserDisplay 
-		                    StringSplitter ArrayLength Expression ArrayElement URLToLocalFile PN">
+			    StringSplitter ArrayLength Expression ArrayElement URLToLocalFile PN">
             <a href="wf/Electrostatic/PDB2PDBQT/index.html">
                 <img class="workflow-thumb" src="wf/Electrostatic/PDB2PDBQT/PDB2PDBQT.gif"/>
                 <span class="workflow-name">PDB2PDBQT</span>
@@ -163,14 +168,39 @@
         </div>
 
         <div id="_3" class="item workflow Clustering TrajectoriesConcatenate
-		trajectory DirectoryListing ArraySort IterateOverArray
-		                    ConcatenateArrays Expression TimeStamp ArrayToSequence FileWriter ExternalExecution DDF">
+			    trajectory DirectoryListing ArraySort IterateOverArray
+			    ConcatenateArrays Expression TimeStamp ArrayToSequence FileWriter ExternalExecution DDF">
             <a href="wf/Clustering/TrajectoriesConcatenate/index.html">
                 <img class="workflow-thumb" src="wf/Clustering/TrajectoriesConcatenate/TrajectoriesConcatenate.gif"/>
                 <span class="workflow-name">TrajectoriesConcatenate</span>
             </a>
         </div>
 
+        <div id="_4" class="item workflow MDsimulation leap Amber VMD minimization equilibration production Constant 
+                            ExternalExecution StringConstant FileWriter Expression PythonActor VariableSetter 
+			    CompositeActor Display SSHSession SSHFileCopier SSHExecuteCmd Sleep SDF">
+            <a href="wf/MD/LigandSimulation/index.html">
+                <img class="workflow-thumb" src="wf/MD/LigandSimulation/LigandSimulation.gif"/>
+                <span class="workflow-name">LigandSimulation</span>
+            </a>
+        </div>
+
+        <div id="_5" class="item workflow Clustering OpalServer cpptraj
+			    CompositeActor DirectoryListing ArraySort IterateOverArray Expression ConcatenateArrays ArrayToSequence
+			    FileWriter ExternalExecution PythonActor ZipFiles OpalClient URLToLocalFile SDF">
+            <a href="wf/Clustering/GromosClustering/index.html">
+                <img class="workflow-thumb" src="wf/Clustering/GromosClustering/GromosClustering.gif"/>
+                <span class="workflow-name">GromosClustering</span>
+            </a>
+        </div>
+
+        <div id="_6" class="item workflow Docking Vina DirectoryListing IterateOverArray ArrayPermute Distributor 
+			    ArrayToSequence RecordDisassembler StringReplace ExternalExecution Display PN">
+            <a href="wf/Docking/AutodockVina/index.html">
+                <img class="workflow-thumb" src="wf/Docking/AutodockVina/AutodockVina.gif"/>
+                <span class="workflow-name">AutodockVina</span>
+            </a>
+        </div>
 
     </div>
     </td>
