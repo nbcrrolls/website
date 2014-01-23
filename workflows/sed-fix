@@ -1,0 +1,1 @@
+sudo sed -i.bak -e 's/href="workflows/href="\/demos?demo=workflows'/g biokepler.html

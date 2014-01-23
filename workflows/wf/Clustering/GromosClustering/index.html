@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>blast</title>
+		<link rel="stylesheet" href="../../../lib/style.css" />
+	</head>
+	<body>
+		<h1 style="text-align:center;">GromosClustering Workflow</h1>
+		<table><tr>
+		<td id="bioactors" style="width:10% height:100%; vertical-align:top;">
+		<!--
+			<h2>BioActors</h2>
+			<ul>
+				<li><a href="../../../actors/biokepler/BioActors/blastall/index.html">blastall</a></li>
+			</ul>
+			-->
+		</td>
+		<td style="width:90% vertical-align:top;">
+		<img src="GromosClustering.gif">
+		</td>
+		</tr>
+		<tr>
+                  <td colspan="2">
+                  <h4>Required software:</h4>
+                  <ul>
+                      <li> AmberTools 12 and above </li>
+                  </ul>
+
+                  <h4>Overview</h4>
+		  <p>This workflow was built with Kepler actors. Amber tool - cpptraj - is required to run the workflow. 
+                     Please make sure cpptraj is installed and the path to cpptraj is stored in bash file. 
+		     Amber13 tools is licensed under GNU (General Public License) and is free to the general public. 
+		     You can download cpptraj from the <a class="reglink" href="http://ambermd.org/#AmberTools">Amber website</a>. 
+		     Gromos clustering is done on the NBCR (National Biomedical Computation Resource) web server. 
+		  </p>
+		  <p>This workflow includes five main components:
+                    <ol>
+			<li><span class="actor">Trajectories Listing</span> takes all the trajectories for the cluster and 
+			    compiles them into one trajectory file. The trajectories of interest must all be in the same folder. </li>
+			<li><span class="actor">PDB Creator</span> takes the trajectory generated in the first component and 
+			    converts it to pdb. Pdb files are the input for gromos clustering. The trajectories will be aligned based on user input. </li>
+			<li><span class="actor">PDB Modifieer</span> modifies the pdb files. It deletes the first line of each frame 
+			    (non-atom information) and changes the ending of each frame from END to ENDMDL. 
+			    All these modifications are required to prepare gromos clustering input. </li>
+			<li><span class="actor">Atom selection</span> generates a pdb file that contains 
+			    all the atoms chosen for clustering. For example, if users want to cluster all the 
+			    trajectories based on the alpha helix near the protein active site, this component will write 
+			    a pdb file consists only the alpha helix.</li>
+			<li><span class="actor">Clustering</span> is where the clustering actually occurs. First, the pdb input files generated 
+			    from previous steps are compressed as required by the NBCR gromos clustering web server. Then, 
+			    the zipped files are sent to the server where the clustering job runs. After clustering is done, 
+			    outputs are transferred back to local machine. Two files are downloaded: log file which 
+			    contains clustering information and a compressed (tar.gz) file which holds all outputs generated from the 
+			    NBCR gromos clustering web server.  </li>
+                    </ol>
+                  </p>
+
+                  </td>
+
+		</tr>
+                </table>
+	</body>
+</html>
