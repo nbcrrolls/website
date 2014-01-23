@@ -105,4 +105,63 @@
 		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/ "> </a>]]></col>
 		<col>T00228</col>
 	</row>
+	<row>
+		<col>Zhou, S., K.E. Rogers, C.A.F. de Oliveira, R. Baron, L.T. Cheng, J.  Dzubiella, B. Li, J.A. McCammon</col>
+		<col>Variational Implicit-Solvent Modeling of Host-Guest Binding: A Case Study on Cucurbit[7]uril</col>
+		<col>J. Chem. Theory Comput. 8, 4195-4204 (2013)</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3770055">PMC3770055</a>]]></col>
+		<col> </col>
+	</row>
+	<row>
+		<col>Kekenes-Huskey, P., T. Liao, A. Gillette, J. Hake, Y. Zhang, A.  Michailova, A. McCulloch, A. McCammon</col>
+		<col>Molecular and subcellular-scale modeling of nucleotide diffusion in the cardiac myofilament lattice</col>
+		<col>Biophys. J. 105, 2130-2140 (2013)</col>
+		<col>PMC3835335</col>
+		<col></col>
+	</row>
+	<row>
+		<col>Lindert, S., D. Bucher, P. Eastman, V. Pande, J.A. McCammon</col>
+		<col>Accelerated Molecular Dynamics Simulations with the AMOEBA Polarizable Force Field on graphics processing units</col>
+		<col>J. Chem. Theory Comp. 9, 4684-4691 (2013)</col>
+		<col>PubMed - in process</col>
+		<col> </col>
+	</row>
+	<row>
+		<col>Nguyen, C., R.W. Haushalter, D.J. Lee, P.R.L. Markwick, J.  Bruegger, G. Caldara-Festin, K. Finzel, D.R. Jackson, F. Ishikawa,
+		  		B.A. O'Dowd, J.A.  McCammon, S.J. Opella, S.C. Tsai, M.D. Burkart</col>
+		<col>Fatty Acid Biosynthesis Caught in the Act</col>
+		<col> Nature 505, 427-431 (2013</col>
+		<col>PubMed - in process</col>
+		<col> </col>
+	</row>
+	<row>
+		<col>Banerjee I, Zhang J, Moore-Morris T, Pfeiffer E, Buchholz K, Liu A, Ouyang K, Stroud M, Gerace L, Evans SM, McCulloch A, Chen J</col>
+		<col>Targeted ablation of Nesprin 1 and Nesprin 2 from murine myocardium results in cardiomyopathy, altered nuclear morphology and
+		inhibition of the biomechanical gene response</col>
+		<col>PLOS Genetics (2013)</col>
+		<col> </col>
+		<col> </col>
+	</row>
+	<row>
+		<col>Pfeiffer E, Tangney J, Omens J, McCulloch AD</col>
+		<col>Biomechanics of cardiac electromechanical coupling and mechanoelectric feedback</col>
+		<col>J Biomech Eng (2013)</col>
+		<col>PMID: 24337452</col>
+		<col> </col>
+	</row>
+	<row>
+		<col>Lyon RC, Mezzano V, Wright A, Pfeiffer E, Chuang J, Banares K, Castaneda A, Ouyang K, Cui L, Gu Y, Evans SM, Omens JH, Peterson KL,
+		McCulloch AD, Sheikh F</col>
+		<col>Connexin defects underlie arrhythmogenic right ventricular cardiomyopathy in a novel mouse model</col>
+		<col>Hum Mol Gen (2013)</col>
+		<col>PMID: 24108106</col>
+		<col> </col>
+	</row>
+	<row>
+		<col>Lo YH, Peachey T, Abramson D, McCulloch A, Michailova A</col>
+		<col>Sensitivity of rabbit ventricular action potential and Ca2+ dynamics to small variations in membrane currents and ion diffusion coefficients</col>
+		<col>Bio Med Res Int Vol 2103, Article ID 565431 (2013)</col>
+		<col><![CDATA[<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3814049">PMC3814049</a>]]></col>
+		<col> </col>
+	</row>
 </table>
