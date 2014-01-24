@@ -49,6 +49,7 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
 
+/*
         // Citations  old award
         data = new google.visualization.DataTable();
         data.addColumn('string', 'Year');
@@ -79,6 +80,7 @@
         var chart = new google.visualization.LineChart(document.getElementById('citations2_div'));
         chart.draw(data, options);
         
+*/
         // Citations current award
         data = new google.visualization.DataTable();
         data.addColumn('string', 'Year');
@@ -90,7 +92,7 @@
             ["2010", 298, 29, 487, 295],
             ["2011", 335, 26, 482, 337],
             ["2012", 445, 29, 530, 339],
-            ["2013",   0,   0,   0,  0,  ],
+            ["2013", 209,  0,118,  404],
         ]);
 
         var options = {
@@ -118,9 +120,11 @@
     <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('citations1_div'));">Save as PNG image</button>
     <button style="position:relative; left:60" onclick="toImg(document.getElementById('citations1_div'), document.getElementById('img_div'));">Convert to image</button>
     
+<!--
     <div id="citations2_div" style="width: 600px; height: 300px; "></div>
     <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('citations2_div'));">Save as PNG image</button>
     <button style="position:relative; left:60" onclick="toImg(document.getElementById('citations2_div'), document.getElementById('img_div'));">Convert to image</button>
+-->
     
     <br />
 

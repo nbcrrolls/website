@@ -49,6 +49,7 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
 
+/*
         // MEME statistics old
         var data = new google.visualization.DataTable();
         data.addColumn({ type: 'string', label: 'Labels' });
@@ -69,7 +70,7 @@
         var options = {
             width: 400, 
             height: 360, 
-            title: 'MEME toolkit services users',
+            title: 'MEME toolkit services unique users',
             colors: ['#d64e28'],
             hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
             vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
@@ -77,6 +78,7 @@
                     { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
         };
         chart.draw(data, options);
+*/
         
         // MEME statistics new
         var data = new google.visualization.DataTable();
@@ -95,7 +97,7 @@
         var options = {
             width: 400, 
             height: 360, 
-            title: 'MEME toolkit services users',
+            title: 'MEME toolkit services unique users',
             colors: ['#d64e28'],
             hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
             vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
@@ -104,22 +106,69 @@
         };
         chart.draw(data, options);
         
+        // Pie chart user distribution 
+        data = new google.visualization.DataTable();
+        data.addColumn('string', 'Domain name');
+        data.addColumn('number', 'Domain count');
+        data.addRows([
+        ["com", 96326],
+        ["net", 50031],
+        ["edu", 27332],
+        ["other", 23283],
+        ["gov", 1478],
+        ["de", 8838],
+        ["uk", 7567],
+        ["fr", 5243],
+        ["cn", 4251],
+        ["jp", 4230],
+        ["org", 3041],
+        ["es", 2738],
+        ["ca", 2731],
+        ["tw", 2294],
+        ]);
+
+        var options = {
+            title: "MEME toolkit users distribution by domain",
+            width: 400,
+            height: 360,
+            legend: {position: 'right', textStyle: {color: 'black', fontSize: 9}},
+            backgroundColor: "#FFFFFF",
+        };
+
+        var geochart = new google.visualization.PieChart(document.getElementById('meme3_div'));
+        geochart.draw(data, options);
+
+
       }
     </script>
 
   </head>
   <body>
      <h3 align="center"><font color="#0082A0">MEME statistics</font></h3>
+    <p>
+     <strong>Bar chart:</strong> the number of users who accessed MEME toolkit services (by unique host IP)<br>
+     <strong>Pie chart:</strong> the distribution of users email by domain. Domains by country with fewer than 1000 entries each
+             are grouped into "other". <br>
+             Large proportion of users in .com domains is likely related to their usage of @gmail.com
+             or similar email address while their hosts are located  in .edu domain. 
+    </p>
 
     <div id="meme1_div" style="width: 400px; height: 360px; float: left"></div>
+    <div id="meme3_div" style="width: 400px; height: 360px; float: left"></div>
+<!--
     <div id="meme2_div" style="width: 400px; height: 360px; float: left"></div>
+-->
     <br style="clear: left;" />
 
     <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('meme1_div'));">Save as PNG image</button>
     <button style="position:relative; left:60" onclick="toImg(document.getElementById('meme1_div'), document.getElementById('img_div'));">Convert to image</button>
     
+    <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('meme3_div'));">Save as PNG image</button>
+    <button style="position:relative; left:200" onclick="toImg(document.getElementById('meme3_div'), document.getElementById('img_div'));">Convert to image</button>
+<!--
     <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('meme2_div'));">Save as PNG image</button>
     <button style="position:relative; left:200" onclick="toImg(document.getElementById('meme2_div'), document.getElementById('img_div'));">Convert to image</button>
+-->
     
     <br />
 

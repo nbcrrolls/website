@@ -50,6 +50,7 @@
       function drawChart() {
 
         // Continuity statistics old
+/*
         var data = new google.visualization.DataTable();
         data.addColumn({ type: 'string', label: 'Labels' });
         data.addColumn({ type: 'number', label: 'Count' });
@@ -77,6 +78,7 @@
                     { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
         };
         chart.draw(data, options);
+*/
         
         // Continuity statistics new
         var data = new google.visualization.DataTable();
@@ -88,6 +90,7 @@
             ["2010", 955, 955, '955'],
             ["2011", 995, 995, '995'],
             ["2012", 1128, 1128, '1128'],
+            ["2013", 1218, 1218, '1218'],
         ]);
 
         var chart = new google.visualization.ComboChart(document.getElementById('continuity1_div'));
@@ -103,22 +106,63 @@
         };
         chart.draw(data, options);
         
+        // Pie chart Continuity downloads 
+        data = new google.visualization.DataTable();
+        data.addColumn('string', 'Domain name');
+        data.addColumn('number', 'Domain count');
+        data.addRows([
+        ["edu", 768],
+        ["com", 231],
+        ["other", 99],
+        ["uk", 26],
+        ["de", 16],
+        ["ca", 15],
+        ["cn", 13],
+        ["au", 12],
+        ["gov", 12],
+        ["it", 11],
+        ["fr", 8],
+        ["net", 7],
+        ]);
+
+        var options = {
+            title: "Continuity downloads distribution by domain",
+            width: 400,
+            height: 360,
+            legend: {position: 'right', textStyle: {color: 'black', fontSize: 9}},
+            backgroundColor: "#FFFFFF",
+        };
+
+        var geochart = new google.visualization.PieChart(document.getElementById('continuity3_div'));
+        geochart.draw(data, options);
+
       }
     </script>
 
   </head>
   <body>
     <h3 align="center"><font color="#0082A0">Continuity statistics</font></h3>
+    <p>
+     <strong>Bar chart:</strong> the total number of registerd users of Continuity as of 2013.<br>
+     <strong>Pie chart:</strong> the distribution of registerd users by domain. Domains with fewer than 6 entries each
+             are grouped into "other". 
+    </p>
 
     <div id="continuity1_div" style="width: 400px; height: 360px; float: left"></div>
-    <div id="continuity2_div" style="width: 400px; height: 360px; float: left"></div>
+    <div id="continuity3_div" style="width: 400px; height: 360px; float: left"></div>
     <br style="clear: left;" />
 
     <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('continuity1_div'));">Save as PNG image</button>
     <button style="position:relative; left:60" onclick="toImg(document.getElementById('continuity1_div'), document.getElementById('img_div'));">Convert to image</button>
 
+<!--
+    <div id="continuity2_div" style="width: 400px; height: 360px; float: left"></div>
     <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('continuity2_div'));">Save as PNG image</button>
     <button style="position:relative; left:200" onclick="toImg(document.getElementById('continuity2_div'), document.getElementById('img_div'));">Convert to image</button>
+
+-->
+    <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('continuity3_div'));">Save as PNG image</button>
+    <button style="position:relative; left:200" onclick="toImg(document.getElementById('continuity3_div'), document.getElementById('img_div'));">Convert to image</button>
 
     <br />
 

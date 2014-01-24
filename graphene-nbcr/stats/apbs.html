@@ -48,7 +48,7 @@
       google.load("visualization", "1", {packages:["corechart", "treemap", "geochart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
-
+/*
         // APBS statistics old
         var data = new google.visualization.DataTable();
         data.addColumn({ type: 'string', label: 'Labels' });
@@ -77,6 +77,7 @@
                     { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
         };
         chart.draw(data, options);
+*/
         
         // APBS statistics new
         var data = new google.visualization.DataTable();
@@ -88,6 +89,7 @@
             ["2010", 14534, 14534, '14534'],
             ["2011", 15302, 15302, '15302'],
             ["2012", 17697, 17697, '17697'],
+            ["2013", 19504, 19504, '19504'],
         ]);
 
         var chart = new google.visualization.ComboChart(document.getElementById('apbs1_div'));
@@ -103,22 +105,201 @@
         };
         chart.draw(data, options);
         
+        // Website access : World geographical distribution 
+        data = new google.visualization.DataTable();
+        data.addColumn('string', 'Country');
+        data.addColumn('number', 'Web service access ');
+        data.addRows([
+        ["United States", 26194],
+        ["Germany", 5769],
+        ["India", 5229],
+        ["United Kingdom", 3910],
+        ["Japan", 3646],
+        ["China", 2785],
+        ["Italy", 2566],
+        ["France", 2429],
+        ["Canada", 2294],
+        ["Brazil", 1685],
+        ["Spain", 1439],
+        ["Mexico", 1248],
+        ["Australia", 1211],
+        ["Switzerland", 1211],
+        ["Taiwan", 1190],
+        ["Chile", 994],
+        ["Russia", 994],
+        ["Poland", 900],
+        ["Israel", 894],
+        ["South Korea", 786],
+        ["Singapore", 692],
+        ["Netherlands", 691],
+        ["Czech Republic", 578],
+        ["Romania", 554],
+        ["Denmark", 527],
+        ["(not set)", 526],
+        ["Sweden", 517],
+        ["Austria", 487],
+        ["Iran", 465],
+        ["Malaysia", 437],
+        ["Turkey", 403],
+        ["Portugal", 396],
+        ["Belgium", 391],
+        ["Argentina", 371],
+        ["Tunisia", 344],
+        ["Hong Kong", 336],
+        ["Greece", 316],
+        ["Finland", 298],
+        ["Thailand", 278],
+        ["Colombia", 262],
+        ["Bulgaria", 249],
+        ["Uruguay", 236],
+        ["Vietnam", 236],
+        ["Hungary", 231],
+        ["New Zealand", 213],
+        ["Pakistan", 201],
+        ["Indonesia", 189],
+        ["Norway", 172],
+        ["Philippines", 153],
+        ["Croatia", 137],
+        ["Egypt", 127],
+        ["Ireland", 126],
+        ["South Africa", 117],
+        ["Ukraine", 116],
+        ["Slovenia", 101],
+        ["Algeria", 79],
+        ["Saudi Arabia", 76],
+        ["Sri Lanka", 72],
+        ["Serbia", 72],
+        ["Oman", 57],
+        ["Lithuania", 53],
+        ["Peru", 53],
+        ["Bangladesh", 52],
+        ["Slovakia", 44],
+        ["United Arab Emirates", 39 ],
+        ["Belarus", 38],
+        ["Moldova", 38],
+        ["Jordan", 29],
+        ["Nigeria", 24],
+        ["Puerto Rico", 24],
+        ["Ecuador", 22],
+        ["Estonia", 22],
+        ["Iraq", 22],
+        ["Palestine", 21],
+        ["Latvia", 18],
+        ["Kenya", 17],
+        ["Réunion", 17],
+        ["Azerbaijan", 15],
+        ["Morocco", 15],
+        ["Luxembourg", 14],
+        ["Venezuela", 14],
+        ["Armenia", 13],
+        ["Cuba", 13],
+        ["Bosnia and Herzegovina", 12],
+        ["Ghana", 12],
+        ["Macau", 12],
+        ["Cyprus", 11],
+        ["Ethiopia", 10],
+        ["Lebanon", 10],
+        ["Qatar", 10],
+        ["Sudan", 8],
+        ["Tanzania", 8],
+        ["Nepal", 7],
+        ["Trinidad and Tobago", 7],
+        ["Bolivia", 6],
+        ["Costa Rica", 6],
+        ["Guatemala", 6],
+        ["Cambodia", 6],
+        ["Kuwait", 6],
+        ["Myanmar (Burma)", 6],
+        ["Bahrain", 5],
+        ["Côte d�~@~YIvoire", 5],
+        ["Iceland", 5],
+        ["El Salvador", 5],
+        ["Zimbabwe", 5],
+        ["Kazakhstan", 4],
+        ["Malta", 4],
+        ["Mauritius", 4],
+        ["Uganda", 4],
+        ["Kosovo", 4],
+        ["Albania", 3],
+        ["Cameroon", 3],
+        ["Dominican Republic", 3],
+        ["Georgia", 3],
+        ["Jamaica", 3],
+        ["Libya", 3],
+        ["Macedonia", 3],
+        ["Mongolia", 3],
+        ["Botswana", 2],
+        ["Fiji", 2],
+        ["Guyana", 2],
+        ["Rwanda", 2],
+        ["Yemen", 2],
+        ["Afghanistan", 1],
+        ["Burkina Faso", 1],
+        ["Brunei", 1],
+        ["Bahamas", 1],
+        ["Belize", 1],
+        ["Grenada", 1],
+        ["Gambia", 1],
+        ["Guam", 1],
+        ["Kyrgyzstan", 1],
+        ["Saint Kitts and Nevis", 1],
+        ["Liberia", 1],
+        ["Montenegro", 1],
+        ["Malawi", 1],
+        ["Namibia", 1],
+        ["Nicaragua", 1],
+        ["Panama", 1],
+        ["Papua New Guinea", 1],
+        ["Seychelles", 1],
+        ["Suriname", 1],
+        ["Syria", 1],
+        ["Timor-Leste", 1],
+        ["Uzbekistan", 1],
+        ["Zambia", 1],
+        ]);
+
+        var options = {
+            resolution: "country",
+            width: 400, 
+            backgroundColor: "#FFFFFF",
+            datalessRegionColor: "#EEE5E5",
+            colorAxis: { colors : ['#b3e2f9','#0860b3' ], },
+        };
+
+        var container = document.getElementById('apbs3_div');
+        var geochart = new google.visualization.GeoChart(container);
+        geochart.draw(data, options);
       }
+
     </script>
 
   </head>
   <body>
     <h3 align="center"><font color="#0082A0">APBS statistics</font></h3>
+    <p>
+        <strong>Bar chart</strong>: the total number of registerd users of APBS as of 2013.<br>
+        <strong>Map</strong>: geographical distribution of APBS website 
+        (<a href="http://www.poissonboltzmann.org">http://www.poissonboltzmann.org</a>)
+        visits, as tracked through google analytics over the calendar year of 2013.
+    </p>
+
 
     <div id="apbs1_div" style="width: 400px; height: 360px; float: left"></div>
+    <div id="apbs3_div" style="width: 400px; height: 360px; float: left"></div>
+<!--
     <div id="apbs2_div" style="width: 400px; height: 360px; float: left"></div>
+-->
     <br style="clear: left;" />
 
     <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('apbs1_div'));">Save as PNG image</button>
     <button style="position:relative; left:60" onclick="toImg(document.getElementById('apbs1_div'), document.getElementById('img_div'));">Convert to image</button>
 
+    <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('apbs3_div'));">Save as PNG image</button>
+    <button style="position:relative; left:200" onclick="toImg(document.getElementById('apbs3_div'), document.getElementById('img_div'));">Convert to image</button>
+<!--
     <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('apbs2_div'));">Save as PNG image</button>
     <button style="position:relative; left:200" onclick="toImg(document.getElementById('apbs2_div'), document.getElementById('img_div'));">Convert to image</button>
+-->
 
     <br />
 
