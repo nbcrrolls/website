@@ -343,4 +343,3 @@ Enable Google Analytics
 #. Add the same code snippet 
    to /var/www/html/index.html
 
-
