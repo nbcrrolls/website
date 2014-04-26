@@ -2,115 +2,54 @@
   <head>
     <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script> 
     <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script>
-    <script>
-      function getImgData(chartContainer) {
-        var chartArea = chartContainer.getElementsByTagName('svg')[0].parentNode;
-        var svg = chartArea.innerHTML;
-        var doc = chartContainer.ownerDocument;
-        var canvas = doc.createElement('canvas');
-        canvas.setAttribute('width', chartArea.offsetWidth);
-        canvas.setAttribute('height', chartArea.offsetHeight);
-        
-        canvas.setAttribute(
-            'style',
-            'position: absolute; ' +
-            'top: ' + (-chartArea.offsetHeight * 2) + 'px;' +
-            'left: ' + (-chartArea.offsetWidth * 2) + 'px;');
-        doc.body.appendChild(canvas);
-        canvg(canvas, svg);
-        var imgData = canvas.toDataURL("image/png");
-        canvas.parentNode.removeChild(canvas);
-        return imgData;
-      }
-      
-      function saveAsImg(chartContainer) {
-        var imgData = getImgData(chartContainer);
-        
-        // Replacing the mime-type will force the browser to trigger a download
-        // rather than displaying the image in the browser window.
-        window.location = imgData.replace("image/png", "image/octet-stream");
-      }
-      
-      function toImg(chartContainer, imgContainer) { 
-        var doc = chartContainer.ownerDocument;
-        var img = doc.createElement('img');
-        img.src = getImgData(chartContainer);
-        
-        while (imgContainer.firstChild) {
-          imgContainer.removeChild(imgContainer.firstChild);
-        }
-        imgContainer.appendChild(img);
-      }
-    </script>
-
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="base.js"> </script>
+
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart", "treemap", "geochart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
+      // Define variables for the charts 
 
-        // Continuity statistics old
-/*
-        var data = new google.visualization.DataTable();
-        data.addColumn({ type: 'string', label: 'Labels' });
-        data.addColumn({ type: 'number', label: 'Count' });
-        data.addColumn({ type: 'number', label: '' });
-        data.addColumn({ type: 'string', role: 'annotation' });
-        data.addRows([
-            ["2003", 124, 124, '124'],
-            ["2004", 377, 377, '377'],
-            ["2005", 400, 400, '400'],
-            ["2006", 465, 465, '465'],
-            ["2007", 539, 539, '539'],
-            ["2008", 695, 695, '695'],
-            ["2009", 856, 856, '856'],
-        ]);
+      // Continuity registered users
+      var data1 = new google.visualization.DataTable();
+      data1.addColumn({ type: 'string', label: 'Labels' });
+      data1.addColumn({ type: 'number', label: 'Count' });
+      data1.addColumn({ type: 'number', label: '' });
+      data1.addColumn({ type: 'string', role: 'annotation' });
 
-        var chart = new google.visualization.ComboChart(document.getElementById('continuity2_div'));
-        var options = {
-            width: 400, 
-            height: 360, 
-            title: 'Registered users of Continuity',
-            colors: ['#99cc33'],
-            hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
-            vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
-            series: [{ type: 'bars',  visibleInLegend:false },
-                    { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
-        };
-        chart.draw(data, options);
-*/
-        
-        // Continuity statistics new
-        var data = new google.visualization.DataTable();
-        data.addColumn({ type: 'string', label: 'Labels' });
-        data.addColumn({ type: 'number', label: 'Count' });
-        data.addColumn({ type: 'number', label: '' });
-        data.addColumn({ type: 'string', role: 'annotation' });
-        data.addRows([
+      var options1 = {
+          width: 400, 
+          height: 360, 
+          title: 'Registered users of Continuity ',
+          colors: ['#99cc33'],
+          hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
+          vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
+          series: [{ type: 'bars',  visibleInLegend:false },
+                  { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
+      };
+
+      // Continuity registered users by domain
+      data2 = new google.visualization.DataTable();
+      data2.addColumn('string', 'Domain name');
+      data2.addColumn('number', 'Domain count');
+
+      var options2 = {
+          title: "Continuity downloads distribution by domain",
+          width: 400,
+          height: 360,
+          legend: {position: 'right', textStyle: {color: 'black', fontSize: 9}},
+          backgroundColor: "#FFFFFF",
+      };
+
+      function addData() {
+        // add registered users
+        data1.addRows([
             ["2010", 955, 955, '955'],
             ["2011", 995, 995, '995'],
             ["2012", 1128, 1128, '1128'],
             ["2013", 1218, 1218, '1218'],
         ]);
 
-        var chart = new google.visualization.ComboChart(document.getElementById('continuity1_div'));
-        var options = {
-            width: 400, 
-            height: 360, 
-            title: 'Registered users of Continuity ',
-            colors: ['#99cc33'],
-            hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
-            vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
-            series: [{ type: 'bars',  visibleInLegend:false },
-                    { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
-        };
-        chart.draw(data, options);
-        
-        // Pie chart Continuity downloads 
-        data = new google.visualization.DataTable();
-        data.addColumn('string', 'Domain name');
-        data.addColumn('number', 'Domain count');
-        data.addRows([
+        // add registered users domain 
+        data2.addRows([
         ["edu", 768],
         ["com", 231],
         ["other", 99],
@@ -124,48 +63,56 @@
         ["fr", 8],
         ["net", 7],
         ]);
+      }
 
-        var options = {
-            title: "Continuity downloads distribution by domain",
-            width: 400,
-            height: 360,
-            legend: {position: 'right', textStyle: {color: 'black', fontSize: 9}},
-            backgroundColor: "#FFFFFF",
-        };
-
-        var geochart = new google.visualization.PieChart(document.getElementById('continuity3_div'));
-        geochart.draw(data, options);
+      // Define charts drawing
+      function drawChart() {
+        addData();
+        
+        // bar chart of registered users
+        var chart1 = new google.visualization.ComboChart(document.getElementById('continuity1'));
+        chart1.draw(data1, options1);
+        
+        // pie chart of registered users domains
+        var geochart = new google.visualization.PieChart(document.getElementById('continuity2'));
+        geochart.draw(data2, options2);
 
       }
+
+      google.setOnLoadCallback(drawChart);
+
     </script>
 
   </head>
   <body>
     <h3 align="center"><font color="#0082A0">Continuity statistics</font></h3>
-    <p>
-     <strong>Bar chart:</strong> the total number of registerd users of Continuity as of 2013.<br>
+      Current statistics are through 2013.<br><br>
+     <strong>Bar chart:</strong> the total number of registerd users of Continuity.<br>
      <strong>Pie chart:</strong> the distribution of registerd users by domain. Domains with fewer than 6 entries each
-             are grouped into "other". 
-    </p>
+             are grouped into "other". <br>
 
-    <div id="continuity1_div" style="width: 400px; height: 360px; float: left"></div>
-    <div id="continuity3_div" style="width: 400px; height: 360px; float: left"></div>
+    <!-- bar and pie charts -->
+    <div id="continuity1" style="width: 400px; height: 360px; float: left"></div>
+    <div id="continuity2" style="width: 400px; height: 360px; float: left"></div>
     <br style="clear: left;" />
 
-    <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('continuity1_div'));">Save as PNG image</button>
-    <button style="position:relative; left:60" onclick="toImg(document.getElementById('continuity1_div'), document.getElementById('img_div'));">Convert to image</button>
+    <!-- bar chart buttons -->
+    <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('continuity1'));">
+        Save bar chart as PNG image
+    </button>
+    <button style="position:relative; left:60" onclick="toImg(document.getElementById('continuity1'), document.getElementById('img_div'));">
+        Convert bar chart  to image
+    </button>
 
-<!--
-    <div id="continuity2_div" style="width: 400px; height: 360px; float: left"></div>
-    <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('continuity2_div'));">Save as PNG image</button>
-    <button style="position:relative; left:200" onclick="toImg(document.getElementById('continuity2_div'), document.getElementById('img_div'));">Convert to image</button>
+    <!-- pie chart buttons -->
+    <button style="position:relative; left:140 " onclick="saveAsImg(document.getElementById('continuity2'));">
+        Save pie chart as PNG image
+    </button>
+    <button style="position:relative; left:140" onclick="toImg(document.getElementById('continuity2'), document.getElementById('img_div'));">
+        Convert pie chart to image
+    </button>
 
--->
-    <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('continuity3_div'));">Save as PNG image</button>
-    <button style="position:relative; left:200" onclick="toImg(document.getElementById('continuity3_div'), document.getElementById('img_div'));">Convert to image</button>
-
-    <br />
-
+    <!-- "image placement" position  on the page-->
     <div id="img_div" style="width: 400px; position: relative; top:10;  z-index: 10; border: 1px solid #0082A0; color: #0082A0">
       Image will be placed here
     </div>

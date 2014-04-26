@@ -2,58 +2,78 @@
   <head>
     <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script> 
     <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script>
-    <script>
-      function getImgData(chartContainer) {
-        var chartArea = chartContainer.getElementsByTagName('svg')[0].parentNode;
-        var svg = chartArea.innerHTML;
-        var doc = chartContainer.ownerDocument;
-        var canvas = doc.createElement('canvas');
-        canvas.setAttribute('width', chartArea.offsetWidth);
-        canvas.setAttribute('height', chartArea.offsetHeight);
-        
-        canvas.setAttribute(
-            'style',
-            'position: absolute; ' +
-            'top: ' + (-chartArea.offsetHeight * 2) + 'px;' +
-            'left: ' + (-chartArea.offsetWidth * 2) + 'px;');
-        doc.body.appendChild(canvas);
-        canvg(canvas, svg);
-        var imgData = canvas.toDataURL("image/png");
-        canvas.parentNode.removeChild(canvas);
-        return imgData;
-      }
-      
-      function saveAsImg(chartContainer) {
-        var imgData = getImgData(chartContainer);
-        
-        // Replacing the mime-type will force the browser to trigger a download
-        // rather than displaying the image in the browser window.
-        window.location = imgData.replace("image/png", "image/octet-stream");
-      }
-      
-      function toImg(chartContainer, imgContainer) { 
-        var doc = chartContainer.ownerDocument;
-        var img = doc.createElement('img');
-        img.src = getImgData(chartContainer);
-        
-        while (imgContainer.firstChild) {
-          imgContainer.removeChild(imgContainer.firstChild);
-        }
-        imgContainer.appendChild(img);
-      }
-    </script>
-
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="base.js"> </script>
+
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart", "treemap", "geochart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-          
-        // Web services access from uniq hostip: US geographical distribution 
-        data = new google.visualization.DataTable();
-        data.addColumn('string', 'State');
-        data.addColumn('number', 'Web service access from unique hostip');
-        data.addRows([
+      // Define variables for the charts 
+
+      // Web services access from uniq hostip: US geographical distribution 
+      var data1 = new google.visualization.DataTable();
+      data1.addColumn('string', 'State');
+      data1.addColumn('number', 'Web service access from unique hostip');
+
+      var options1 = {
+          width: 400, 
+          region: "US", 
+          resolution: "provinces",
+          backgroundColor: "#FFFFFF",
+          datalessRegionColor: "#EEE5E5",
+          colorAxis: { colors : ['#b3e2f9','#0860b3' ],
+          //colorAxis: { colors : ['#00dddd','#0011dd' ],
+          //colorAxis: { colors : ['#00dddd','#00aadd','#0077dd','#0044dd','#0011dd' ],
+          },
+      };
+
+      // Web services access from uniq hostip: World geographical distribution 
+      data2 = new google.visualization.DataTable();
+      data2.addColumn('string', 'Country');
+      data2.addColumn('number', 'Web service access from unique hostip');
+
+      var options2 = {
+          resolution: "country",
+          width: 400, 
+          backgroundColor: "#FFFFFF",
+          datalessRegionColor: "#EEE5E5",
+          colorAxis: { colors : ['#b3e2f9','#0860b3' ],
+          },
+      };
+
+      // OPAL services invocations  total
+      var data3 = new google.visualization.DataTable();
+      data3.addColumn({ type: 'string', label: 'Labels' });
+      data3.addColumn({ type: 'number', label: 'Count' });
+      data3.addColumn({ type: 'number', label: '' });
+      data3.addColumn({ type: 'string', role: 'annotation' });
+
+      var options3 = {
+          width: 400, 
+          height: 360, 
+          title: 'Total web services invocations',
+          colors: ['#c9084b'],
+          hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
+          vAxis: {maxValue: 320000, ticks: [100000,200000,300000], title: 'Count', textStyle: {color: 'black', fontSize: 11}},
+          series: [{ type: 'bars',  visibleInLegend:false },
+                  { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
+      };
+
+      // Opal services invocations by application
+      data4 = new google.visualization.DataTable();
+      data4.addColumn('string', 'Service name');
+      data4.addColumn('number', 'Service count');
+
+      var options4 = {
+          title: "Web services invocations by application ",
+          width: 400,
+          height: 360,
+          legend: {position: 'right', textStyle: {color: 'black', fontSize: 9}},
+          backgroundColor: "#FFFFFF",
+      };
+
+      // Add data from opal stats
+      function addData() {
+        // US geographical distribution 
+        data1.addRows([
         ["WA", 100],
         ["DE", 2],
         ["DC", 7],
@@ -106,26 +126,8 @@
         ["SD", 5],
         ]);
 
-        var options = {
-            width: 400, 
-            region: "US", 
-            resolution: "provinces",
-            backgroundColor: "#FFFFFF",
-            datalessRegionColor: "#EEE5E5",
-            colorAxis: { colors : ['#b3e2f9','#0860b3' ],
-            //colorAxis: { colors : ['#00dddd','#0011dd' ],
-            //colorAxis: { colors : ['#00dddd','#00aadd','#0077dd','#0044dd','#0011dd' ],
-            },
-        };
-        var container = document.getElementById('mapUS_div');
-        var geochart = new google.visualization.GeoChart(container);
-        geochart.draw(data, options);
-        
-        // Web services access from uniq hostip: World geographical distribution 
-        data = new google.visualization.DataTable();
-        data.addColumn('string', 'Country');
-        data.addColumn('number', 'Web service access from unique hostip');
-        data.addRows([
+        // World geographical distribution 
+        data2.addRows([
         ["BD", 19],
         ["BE", 77],
         ["FR", 321],
@@ -213,29 +215,8 @@
         ["GB", 648],
         ]);
 
-        var options = {
-            resolution: "country",
-            width: 400, 
-            backgroundColor: "#FFFFFF",
-            datalessRegionColor: "#EEE5E5",
-            colorAxis: { colors : ['#b3e2f9','#0860b3' ],
-            //colorAxis: { colors : ['#00dddd','#0011dd' ],
-            //colorAxis: { colors : ['#00dddd','#00aadd','#0077dd','#0044dd','#0011dd' ],
-            },
-
-        };
-
-        var container = document.getElementById('mapWorld_div');
-        var geochart = new google.visualization.GeoChart(container);
-        geochart.draw(data, options);
-
-        // OPAL statistics 
-        var data = new google.visualization.DataTable();
-        data.addColumn({ type: 'string', label: 'Labels' });
-        data.addColumn({ type: 'number', label: 'Count' });
-        data.addColumn({ type: 'number', label: '' });
-        data.addColumn({ type: 'string', role: 'annotation' });
-        data.addRows([
+        // OPAL services invocations  total
+        data3.addRows([
             ["2007", 14741, 14741, '14741'],
             ["2008", 75059, 75059, '75059'],
             ["2009", 143079, 143079, '143079'],
@@ -246,25 +227,8 @@
             ["2014", 103017, 103017, '103017'],
         ]);
 
-        var chart = new google.visualization.ComboChart(document.getElementById('opal1_div'));
-        var options = {
-            width: 400, 
-            height: 360, 
-            title: 'Total web services invocations',
-            colors: ['#c9084b'],
-            hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
-            vAxis: {maxValue: 320000, ticks: [100000,200000,300000], title: 'Count', textStyle: {color: 'black', fontSize: 11}},
-            series: [{ type: 'bars',  visibleInLegend:false },
-                    { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
-        };
-        chart.draw(data, options);
-        
-      // START
-        // Opal services  by application
-        data = new google.visualization.DataTable();
-        data.addColumn('string', 'Service name');
-        data.addColumn('number', 'Service count');
-        data.addRows([
+        // Opal services invocations by application
+        data4.addRows([
         ["meme", 49782],
         ["SMAP", 16],
         ["smiley2png", 11],
@@ -282,70 +246,95 @@
         ["openbabel", 5],
         ]);
 
-        var options = {
-            title: "Web services invocations by application ",
-            width: 400,
-            height: 360,
-            legend: {position: 'right', textStyle: {color: 'black', fontSize: 9}},
-            backgroundColor: "#FFFFFF",
-        };
+      };
 
-        var container = document.getElementById('opal2_div');
-        var geochart = new google.visualization.PieChart(container);
-        geochart.draw(data, options);
+      // Define charts drawing
+      function drawChart() {
+        addData();
+        // map geolocation US
+        var chart1 = new google.visualization.GeoChart(document.getElementById('mapUS'));
+        chart1.draw(data1, options1);
+        
+        // map geolocation world
+        var chart2 = new google.visualization.GeoChart(document.getElementById('mapWorld'));
+        chart2.draw(data2, options2);
 
-      // END
+        // bar chart total opal invocations 
+        var chart3 = new google.visualization.ComboChart(document.getElementById('opalTotal'));
+        chart3.draw(data3, options3);
+        
+        // pie chart opal invocations  by application
+        var chart4 = new google.visualization.PieChart(document.getElementById('opalByApp'));
+        chart4.draw(data4, options4);
+
       }
+
+      // Draw charts
+      google.setOnLoadCallback(drawChart);
+
     </script>
 
   </head>
+
   <body>
     <h3 align="center"><font color="#0082A0">OPAL web services statistics</font> </h3>
-    <p> 
-        The first two graphs show geographical distribution of Opal web services invocations by 
-        unique host IP in the US and worldwide during 2014.<br>
-        The bar graph shows web services access by calendar year.
-        The pie chart shows proportion of web services access by application.<br>
-        Current year counts are through March of 2014.<br>
-    </p>
+        Current year statistics are through March of 2014.<br>
+        <b>Maps</b> show geographical distribution of Opal web services invocations by 
+        unique host IP in the US and worldwide.<br>
+        <b>Bar chart</b> shows the total web services invocations by calendar year.<br>
+        <b>Pie chart</b> shows proportion of web services access by application.<br><br>
+        Use <b>Convert</b> buttons to view an image in a frame below and 
+        <b>Save</b> buttons to copy an image to your Desktop.<br>
 
      <!-- 2 geolocation graphs -->
-    <div id="mapUS_div" style="width: 400px; height: 360px; float: left"></div>
-    <div id="mapWorld_div" style="width: 400px; height: 360px; float: left"></div>
+    <div id="mapUS" style="width: 400px; height: 360px; float: left"></div>
+    <div id="mapWorld" style="width: 400px; height: 360px; float: left"></div>
     <br style="clear: left;" />
 
      <!-- US map  buttons -->
-    <button style="position:relative; left:20 " onclick="saveAsImg(document.getElementById('mapUS_div'));">Save US map image</button>
-    <button style="position:relative; left:20" onclick="toImg(document.getElementById('mapUS_div'), document.getElementById('img_div'));">Convert US map to image</button>
+    <button style="position:relative; left:20 " onclick="saveAsImg(document.getElementById('mapUS'));">
+         Save US map image
+    </button>
+    <button style="position:relative; left:20" onclick="toImg(document.getElementById('mapUS'), document.getElementById('img_div'));">
+         Convert US map to image
+    </button>
     
      <!-- World map  buttons -->
-    <button style="position:relative; left:180 " onclick="saveAsImg(document.getElementById('mapWorld_div'));">Save World map image</button>
-    <button style="position:relative; left:180" onclick="toImg(document.getElementById('mapWorld_div'), document.getElementById('img_div'));">Convert World map to image</button>
+    <button style="position:relative; left:180 " onclick="saveAsImg(document.getElementById('mapWorld'));">
+        Save World map image
+    </button>
+    <button style="position:relative; left:180" onclick="toImg(document.getElementById('mapWorld'), document.getElementById('img_div'));">
+        Convert World map to image
+    </button>
     
     <br style="clear: left;" />
 
      <!-- bar chart  and pie graph-->
-    <div id="opal1_div" style="width: 400px; height: 360px; float: left"></div>
-    <div id="opal2_div" style="width: 400px; height: 360px; float: left"></div>
+    <div id="opalTotal" style="width: 400px; height: 360px; float: left"></div>
+    <div id="opalByApp" style="width: 400px; height: 360px; float: left"></div>
     <br style="clear: left;" />
 
      <!-- bar chart buttons -->
-    <button style="position:relative; left:20" onclick="saveAsImg(document.getElementById('opal1_div'));">Save bar chart image</button>
-    <button style="position:relative; left:20" onclick="toImg(document.getElementById('opal1_div'), document.getElementById('img_div'));">Convert bar chart to image</button>
+    <button style="position:relative; left:20" onclick="saveAsImg(document.getElementById('opalTotal'));">
+        Save bar chart image
+    </button>
+    <button style="position:relative; left:20" onclick="toImg(document.getElementById('opalTotal'), document.getElementById('img_div'));">
+        Convert bar chart to image
+    </button>
 
      <!-- pie chart buttons -->
-    <button style="position:relative; left:180" onclick="saveAsImg(document.getElementById('opal2_div'));">Save pie chart image</button>
-    <button style="position:relative; left:180" onclick="toImg(document.getElementById('opal2_div'), document.getElementById('img_div'));">Convert pie chart to image</button>
+    <button style="position:relative; left:180" onclick="saveAsImg(document.getElementById('opalByApp'));">
+        Save pie chart image
+    </button>
+    <button style="position:relative; left:180" onclick="toImg(document.getElementById('opalByApp'), document.getElementById('img_div'));">
+        Convert pie chart to image
+    </button>
     <br style="clear: left;" />
 
-    <!-- "image placement" position -->
+    <!-- "image placement" position  on the page-->
     <div id="img_div" style="width: 400px; position: relative; left:20; top:20;  z-index: 10; border: 1px solid #0082A0; color: #0082A0">
       Image will be placed here
     </div>
 
-     <!-- web esrvices by application pie graph -->
-<!--
--->
-    
 </body>
 </html>

@@ -2,315 +2,139 @@
   <head>
     <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script> 
     <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script>
-    <script>
-      function getImgData(chartContainer) {
-        var chartArea = chartContainer.getElementsByTagName('svg')[0].parentNode;
-        var svg = chartArea.innerHTML;
-        var doc = chartContainer.ownerDocument;
-        var canvas = doc.createElement('canvas');
-        canvas.setAttribute('width', chartArea.offsetWidth);
-        canvas.setAttribute('height', chartArea.offsetHeight);
-        
-        canvas.setAttribute(
-            'style',
-            'position: absolute; ' +
-            'top: ' + (-chartArea.offsetHeight * 2) + 'px;' +
-            'left: ' + (-chartArea.offsetWidth * 2) + 'px;');
-        doc.body.appendChild(canvas);
-        canvg(canvas, svg);
-        var imgData = canvas.toDataURL("image/png");
-        canvas.parentNode.removeChild(canvas);
-        return imgData;
-      }
-      
-      function saveAsImg(chartContainer) {
-        var imgData = getImgData(chartContainer);
-        
-        // Replacing the mime-type will force the browser to trigger a download
-        // rather than displaying the image in the browser window.
-        window.location = imgData.replace("image/png", "image/octet-stream");
-      }
-      
-      function toImg(chartContainer, imgContainer) { 
-        var doc = chartContainer.ownerDocument;
-        var img = doc.createElement('img');
-        img.src = getImgData(chartContainer);
-        
-        while (imgContainer.firstChild) {
-          imgContainer.removeChild(imgContainer.firstChild);
-        }
-        imgContainer.appendChild(img);
-      }
-    </script>
-
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart", "treemap", "geochart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-/*
-        // MGLTools statistics old
-        var data1 = new google.visualization.DataTable();
-        data1.addColumn({ type: 'string', label: 'Labels' });
-        data1.addColumn({ type: 'number', label: 'Count' });
-        data1.addColumn({ type: 'number', label: '' });
-        data1.addColumn({ type: 'string', role: 'annotation' });
-        data1.addRows([
-            ["2006", 86, 86, '86'],
-            ["2007", 1366, 1366, '1366'],
-            ["2008", 3151, 3151, '3151'],
-            ["2009", 5512, 5512, '5512'],
-        ]);
+    <script type="text/javascript" src="base.js"> </script>
 
-        var chart1 = new google.visualization.ComboChart(document.getElementById('mgl2_div'));
-        var options1 = {
-            width: 400, 
-            height: 360, 
-            title: 'Total number of Registered users of MGLTools',
-            colors: ['#9532bc'],
-            hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
-            vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
-            series: [{ type: 'bars',  visibleInLegend:false },
-                    { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
-        };
-        chart1.draw(data1, options1);
-*/
-        // MGLTools statistics new
-        var data2 = new google.visualization.DataTable();
-        data2.addColumn({ type: 'string', label: 'Labels' });
-        data2.addColumn({ type: 'number', label: 'Count' });
-        data2.addColumn({ type: 'number', label: '' });
-        data2.addColumn({ type: 'string', role: 'annotation' });
-        data2.addRows([
-            // verified by Sargis on Jan 16, 2013
+    <script type="text/javascript">
+      // Define variables for the charts 
+
+      // MGLTools registered users
+      var data1 = new google.visualization.DataTable();
+      data1.addColumn({ type: 'string', label: 'Labels' });
+      data1.addColumn({ type: 'number', label: 'Count' });
+      data1.addColumn({ type: 'number', label: '' });
+      data1.addColumn({ type: 'string', role: 'annotation' });
+
+      var options1 = {
+          width: 400, 
+          height: 360, 
+          title: 'MGLTools registered users',
+          colors: ['#9532bc'],
+          hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
+          vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
+          series: [{ type: 'bars',  visibleInLegend:false },
+                  { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
+      };
+
+      // Web services access from uniq hostip: World geographical distribution 
+      var data2 = new google.visualization.DataTable();
+      data2.addColumn('string', 'Country');
+      data2.addColumn('number', 'Count of service access');
+
+      var options2 = {
+          resolution: "country",
+          width: 400, 
+          height: 360, 
+          backgroundColor: "#FFFFFF",
+          datalessRegionColor: "#E5E5E5",
+          colorAxis: { colors : ['#b3e2f9','#0860b3' ], },
+      };
+
+      // Add data from stats
+      function addData() {
+
+        // registered users 
+        data1.addRows([
             ["2010", 8239, 8239, '8239'],
             ["2011", 10910, 10910, '10910'],
             ["2012", 14150, 14150, '14150'],
             ["2013", 18441, 18441, '18441'],
-            // old from excel file and last report.
-            // ["2010", 8115, 8115, '8115'],
-            // ["2011", 10914, 10914, '10914'],
-            // ["2012", 13192, 13192, '13192'],
-            // ["2013", 18567, 18567, '18567'],
         ]);
 
-        var chart2 = new google.visualization.ComboChart(document.getElementById('mgl1_div'));
-        var options2 = {
-            width: 400, 
-            height: 360, 
-            title: 'Total  number of Registered users of MGLTools',
-            colors: ['#9532bc'],
-            hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
-            vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
-            series: [{ type: 'bars',  visibleInLegend:false },
-                    { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
-        };
-        chart2.draw(data2, options2);
+        // access from uniq hostip
+        data2.addRows([
+            ["United States",16721], ["India",12630], ["China",7182], ["United Kingdom",2524], ["Japan",2512],
+            ["Germany",2440], ["Brazil",2362], ["Italy",1815], ["Mexico",1701], ["Canada",1517],
+            ["France",1511], ["Iran",1456], ["Spain",1218], ["South Korea",1170], ["Poland",1095],
+            ["Australia",967], ["Turkey",927], ["Taiwan",889], ["Malaysia",863], ["Pakistan",820],
+            ["Russia",707], ["Portugal",647], ["(not set)",640], ["Thailand",634], ["Indonesia",627],
+            ["Chile",616], ["Colombia",546], ["Singapore",529], ["Switzerland",509], ["Sweden",480],
+            ["Netherlands",462], ["Argentina",450], ["Belgium",394], ["Egypt",355], ["Hong Kong",316],
+            ["Czech Republic",314], ["Ukraine",288], ["Austria",282], ["Algeria",271], ["South Africa",255],
+            ["Israel",247], ["Vietnam",247], ["Greece",218], ["Serbia",214], ["Bangladesh",207],
+            ["Hungary",206], ["Ireland",202], ["Denmark",194], ["Morocco",189], ["Finland",186],
+            ["Philippines",163], ["Saudi Arabia",151], ["Peru",149], ["Romania",135], ["Slovenia",120],
+            ["Norway",108], ["Puerto Rico",91], ["United Arab Emirates",90], ["Sri Lanka",86], ["Venezuela",81],
+            ["Kenya",73], ["Croatia",71], ["Armenia",69], ["Nigeria",67], ["New Zealand",66],
+            ["Belarus",65], ["Jordan",64], ["Tunisia",64], ["Bulgaria",63], ["Iraq",63],
+            ["Sudan",62], ["Guatemala",53], ["Estonia",42], ["Macau",40], ["Lithuania",38],
+            ["Mongolia",38], ["Slovakia",38], ["Cuba",37], ["Cyprus",37], ["Latvia",32],
+            ["Ecuador",30], ["Lebanon",29], ["Uzbekistan",28], ["Azerbaijan",27], ["Ghana",25],
+            ["Senegal",23], ["Uruguay",23], ["Luxembourg",21], ["Cameroon",20], ["Costa Rica",17],
+            ["Palestine",17], ["Libya",15], ["Qatar",15], ["Syria",15], ["Georgia",13],
+            ["Moldova",13], ["Kazakhstan",11], ["Nepal",11], ["Dominican Republic",10], ["Bolivia",9],
+            ["Ethiopia",9], ["Iceland",9], ["Malta",8], ["Macedonia (FYROM)",7], ["Albania",6],
+            ["Saint Lucia",6], ["Oman",6], ["Côte d’Ivoire",5], ["Paraguay",5], ["St. Vincent & Grenadines",5],
+            ["Kosovo",5], ["Barbados",4], ["Bahrain",4], ["Kyrgyzstan",4], ["North Korea",4],
+            ["Mauritius",4], ["Panama",4], ["Bosnia and Herzegovina",3], ["French Guiana",3], ["Kuwait",3],
+            ["Laos",3], ["Rwanda",3], ["Trinidad and Tobago",3], ["Brunei",2], ["Fiji",2],
+            ["Honduras",2], ["Jamaica",2], ["Martinique",2], ["Maldives",2], ["Nicaragua",2],
+            ["Réunion",2], ["Tanzania",2], ["Uganda",2], ["Afghanistan",1], ["Angola",1],
+            ["Burkina Faso",1], ["Bermuda",1], ["Botswana",1], ["Faroe Islands",1], ["Gibraltar",1],
+            ["Guam",1], ["Cambodia",1], ["Montenegro",1], ["Madagascar",1], ["Mali",1],
+            ["Montserrat",1], ["Namibia",1], ["El Salvador",1], ["Swaziland",1], ["Turks and Caicos Islands",1],
+            ["Yemen",1], ["Zimbabwe",1],
+        ]);
+      } 
+
+      // Define charts drawing
+      function drawChart() {
+        addData();
+
+        // registered users
+        var chart1 = new google.visualization.ComboChart(document.getElementById('mgl1'));
+        chart1.draw(data1, options1);
         
         // Web services access from uniq hostip: World geographical distribution 
-        var data3 = new google.visualization.DataTable();
-        data3.addColumn('string', 'Country');
-        data3.addColumn('number', 'Count of service access');
-        data3.addRows([
-["United States",16721],
-["India",12630],
-["China",7182],
-["United Kingdom",2524],
-["Japan",2512],
-["Germany",2440],
-["Brazil",2362],
-["Italy",1815],
-["Mexico",1701],
-["Canada",1517],
-["France",1511],
-["Iran",1456],
-["Spain",1218],
-["South Korea",1170],
-["Poland",1095],
-["Australia",967],
-["Turkey",927],
-["Taiwan",889],
-["Malaysia",863],
-["Pakistan",820],
-["Russia",707],
-["Portugal",647],
-["(not set)",640],
-["Thailand",634],
-["Indonesia",627],
-["Chile",616],
-["Colombia",546],
-["Singapore",529],
-["Switzerland",509],
-["Sweden",480],
-["Netherlands",462],
-["Argentina",450],
-["Belgium",394],
-["Egypt",355],
-["Hong Kong",316],
-["Czech Republic",314],
-["Ukraine",288],
-["Austria",282],
-["Algeria",271],
-["South Africa",255],
-["Israel",247],
-["Vietnam",247],
-["Greece",218],
-["Serbia",214],
-["Bangladesh",207],
-["Hungary",206],
-["Ireland",202],
-["Denmark",194],
-["Morocco",189],
-["Finland",186],
-["Philippines",163],
-["Saudi Arabia",151],
-["Peru",149],
-["Romania",135],
-["Slovenia",120],
-["Norway",108],
-["Puerto Rico",91],
-["United Arab Emirates",90],
-["Sri Lanka",86],
-["Venezuela",81],
-["Kenya",73],
-["Croatia",71],
-["Armenia",69],
-["Nigeria",67],
-["New Zealand",66],
-["Belarus",65],
-["Jordan",64],
-["Tunisia",64],
-["Bulgaria",63],
-["Iraq",63],
-["Sudan",62],
-["Guatemala",53],
-["Estonia",42],
-["Macau",40],
-["Lithuania",38],
-["Mongolia",38],
-["Slovakia",38],
-["Cuba",37],
-["Cyprus",37],
-["Latvia",32],
-["Ecuador",30],
-["Lebanon",29],
-["Uzbekistan",28],
-["Azerbaijan",27],
-["Ghana",25],
-["Senegal",23],
-["Uruguay",23],
-["Luxembourg",21],
-["Cameroon",20],
-["Costa Rica",17],
-["Palestine",17],
-["Libya",15],
-["Qatar",15],
-["Syria",15],
-["Georgia",13],
-["Moldova",13],
-["Kazakhstan",11],
-["Nepal",11],
-["Dominican Republic",10],
-["Bolivia",9],
-["Ethiopia",9],
-["Iceland",9],
-["Malta",8],
-["Macedonia (FYROM)",7],
-["Albania",6],
-["Saint Lucia",6],
-["Oman",6],
-["Côte d’Ivoire",5],
-["Paraguay",5],
-["St. Vincent & Grenadines",5],
-["Kosovo",5],
-["Barbados",4],
-["Bahrain",4],
-["Kyrgyzstan",4],
-["North Korea",4],
-["Mauritius",4],
-["Panama",4],
-["Bosnia and Herzegovina",3],
-["French Guiana",3],
-["Kuwait",3],
-["Laos",3],
-["Rwanda",3],
-["Trinidad and Tobago",3],
-["Brunei",2],
-["Fiji",2],
-["Honduras",2],
-["Jamaica",2],
-["Martinique",2],
-["Maldives",2],
-["Nicaragua",2],
-["Réunion",2],
-["Tanzania",2],
-["Uganda",2],
-["Afghanistan",1],
-["Angola",1],
-["Burkina Faso",1],
-["Bermuda",1],
-["Botswana",1],
-["Faroe Islands",1],
-["Gibraltar",1],
-["Guam",1],
-["Cambodia",1],
-["Montenegro",1],
-["Madagascar",1],
-["Mali",1],
-["Montserrat",1],
-["Namibia",1],
-["El Salvador",1],
-["Swaziland",1],
-["Turks and Caicos Islands",1],
-["Yemen",1],
-["Zimbabwe",1],
-        ]);
-
-        var options3 = {
-            resolution: "country",
-            width: 400, 
-            height: 360, 
-            backgroundColor: "#FFFFFF",
-            datalessRegionColor: "#E5E5E5",
-            colorAxis: { colors : ['#b3e2f9','#0860b3' ],
-            //colorAxis: { colors : ['#a0c5e8','#0860b3' ],
-            //colorAxis: { colors : ['#00dddd','#00aadd','#0077dd','#0044dd','#0011dd' ],
-            },
-        };
-        var chart3 = new google.visualization.GeoChart(document.getElementById('mapWorld_div'));
-        chart3.draw(data3, options3);
+        var chart2 = new google.visualization.GeoChart(document.getElementById('mgl2'));
+        chart2.draw(data2, options2);
       }
+
+      // Draw charts
+      google.setOnLoadCallback(drawChart);
+
     </script>
 
   </head>
   <body>
     <h3 align="center"><font color="#0082A0">MGLTools statistics</font></h3>
+        Current statistics are through 2013.<br><br>
+        <strong>Bar chart</strong>: the total number of registerd users of MGLtools.<br>
+        <strong>Map</strong>: geographical distribution of <a href="http://mgltools.scripps.edu">MGLTools website</a> visits,
+        as tracked through google analytics over the calendar year.<br>
 
-    <p>
-        <strong>Bar chart</strong>: the total number of registerd users of MGLtools as of 2013.<br>
-        <strong>Map</strong>: geographical distribution of MGLTools website 
-        (<a href="http://mgltools.scripps.edu">http://mgltools.scripps.edu</a>) visits,<br>
-        as tracked through google analytics over the calendar year of 2013.
-    </p>
-
-    <div id="mgl1_div"     style="width: 400px; height: 360px; float: left"></div>
-    <div id="mapWorld_div" style="width: 400px; height: 360px; float: left"></div>
+    <!-- bar chart and map -->
+    <div id="mgl1"     style="width: 400px; height: 360px; float: left"></div>
+    <div id="mgl2" style="width: 400px; height: 360px; float: left"></div>
     <br style="clear: left;" />
 
-    <button style="position:relative; left:40 " onclick="saveAsImg(document.getElementById('mgl1_div'));">Save bar chart as image</button>
-    <button style="position:relative; left:40" onclick="toImg(document.getElementById('mgl1_div'), document.getElementById('img_div'));">Convert bar chart to image</button>
+    <!-- bar chart buttons -->
+    <button style="position:relative; left:40 " onclick="saveAsImg(document.getElementById('mgl1'));">
+        Save bar chart as image
+    </button>
+    <button style="position:relative; left:40" onclick="toImg(document.getElementById('mgl1'), document.getElementById('img_div'));">
+        Convert bar chart to image
+    </button>
     
-    <button style="position:relative; left:100 " onclick="saveAsImg(document.getElementById('mapWorld_div'));">Save map as image</button>
-    <button style="position:relative; left:100" onclick="toImg(document.getElementById('mapWorld_div'), document.getElementById('img_div'));">Convert map to image</button>
+    <!-- map buttons -->
+    <button style="position:relative; left:100 " onclick="saveAsImg(document.getElementById('mgl2'));">
+        Save map as image
+    </button>
+    <button style="position:relative; left:100" onclick="toImg(document.getElementById('mgl2'), document.getElementById('img_div'));">
+        Convert map to image
+    </button>
 
-<!--
-    <div id="mgl2_div"     style="width: 400px; height: 360px; float: left"></div> 
-    <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('mgl2_div'));">Save as PNG image</button>
-    <button style="position:relative; left:200" onclick="toImg(document.getElementById('mgl2_div'), document.getElementById('img_div'));">Convert to image</button>
--->
-    <br style="clear: left;" />
-    <br />
-
+    <!-- "image placement" position  on the page-->
     <div id="img_div" style="width: 400px; position: relative; top:10;  z-index: 10; border: 1px solid #0082A0; color: #0082A0">
       Image will be placed here
     </div>
