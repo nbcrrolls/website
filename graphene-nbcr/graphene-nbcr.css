@@ -1533,11 +1533,15 @@ h3.author-post-list {
 	font-family: Avant Garde, Century Gothic, Arial, sans-serif;
 	font-size: 12px;
 }
+/* Sidebar headers */
 .sidebar h3 {
 	background: url(images/bg-sidebar-h3.png) left bottom repeat-x #FFFFFF;
-	background: -moz-linear-gradient(left top, #CCCCCC, #FFFFFF);
-	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#CCCCCC), to(#FFFFFF));
-	background: linear-gradient(#9c9caa, #101030);
+        /*firefox */
+	background: -moz-linear-gradient(bottom , #AAAAAA, #FFFFFF);
+        /* safari, chrome */
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#FFFFFF), to(#AAAAAA));
+        /* firefox, safari, chrome */
+	background: linear-gradient(#AAAAAA, #FFFFFF);
 	border-bottom: 1px solid #FFFFFF;
 	-moz-border-radius: 2px 2px 0 0;
 	-webkit-border-radius: 2px 2px 0 0;
