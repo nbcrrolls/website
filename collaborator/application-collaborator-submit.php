@@ -305,12 +305,13 @@
 
         ## Send mail to recipient
 	$adminEmail = "nbcr-admin@ucsd.edu";
+	$collabEmail = "rmalmstrom@ucsd.edu";
 	$to      = $_SESSION["app_email"] . "," . $adminEmail;
 	$subject = 'Your NBCR Collaborator Application has been received.';
         $message = "Dear ". $Name . "\n\n" .
                    "Thank you for your Application submission.\n" .
                    "The NBCR Scientific Advisory Board meets monthly to review applications.\n" . 
-                   "Questions, comments or status inquiries can be sent to XXXX or XXXX.\n\n" .
+                   "Questions, comments or status inquiries can be sent to " . $collabEmail . ".\n\n" .
                    "National Biomedical Computation Research, UCSD\nhttp://nbcr.ucsd.edu ";	
         $headers = 'From: no-reply@nbcr.ucsd.edu' . "\r\n" .
 		   'Reply-To: ' . $adminEmail . "\r\n";
