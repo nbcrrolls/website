@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Backup wordpress wfeils and db
+# Backup wordpress files and DBs
 # Install as a cron job in /etc/cron.weekly
 # Need to enable ssh authorised access for copying backup to NAS
 
@@ -10,8 +10,8 @@ BACKDIR=/root/wp/backup/
 
 backup_wordpress_db () {
 # backup mysql DB
-USER='YOUR-USER'
-PASS='YOUR-PASS$'
+USER='USER1'
+PASS='PASS1'
 DB="wpdb"
 FILE=$BACKDIR/$DB-$DATE.sql.gz
 mysqldump -u $USER -p$PASS $DB | gzip > $FILE
@@ -28,21 +28,31 @@ scp $FILE2 blat.ucsd.edu:/state/primary/data/root/backup/wp
 
 backup_wiki_db () {
 # backup wikidb
-USER='wikiadmin'
-PASS='!p4Nwa$$'
+USER='USER2'
+PASS='PASS2'
 DB='wikidb'
 FILE3=$BACKDIR/$DB-$DATE.sql.gz
 mysqldump -u $USER -p$PASS $DB | gzip > $FILE3
 scp $FILE3 blat.ucsd.edu:/state/primary/data/root/backup/wp
 }
 
+backup_collaborator_db () {
+# backup colalborator
+USER='USER3'
+PASS='PASS3'
+DB='collaborator'
+FILE3=$BACKDIR/$DB-$DATE.sql.gz
+mysqldump -u $USER -p$PASS $DB | gzip > $FILE3
+scp $FILE3 blat.ucsd.edu:/state/primary/data/root/backup/wp
+}
 ######## main ##########
 backup_wordpress_db
 backup_wordpress_files
 backup_wiki_db
+backup_collaborator_db
 scp  /etc/cron.weekly/wp-backup blat.ucsd.edu:/state/primary/data/root/backup/wp
 
 ######## info ##########
-#To execute on another servers without uncompressing:
-# zcat backup.sql.gz | mysql --user=USER --password=PASS DBNAME
+#To execute on the other servers, without uncompressing, use the following command:
+#zcat backup.sql.gz | mysql --user=USER --password=PASS DBNAME
 
