@@ -304,15 +304,16 @@
         }
 
         ## Send mail to recipient
-	$to      = $_SESSION["app_email"] . ",admin@nbcr.net";
+	$adminEmail = "nbcr-admin@ucsd.edu";
+	$to      = $_SESSION["app_email"] . "," . $adminEmail;
 	$subject = 'Your NBCR Collaborator Application has been received.';
         $message = "Dear ". $Name . "\n\n" .
                    "Thank you for your Application submission.\n" .
-                   "The NBCR Scientific Advisory Board meets monthly to review applications. \n" . 
-                   "Questions, comments or status inquiries can be sent to XXXX or XXXX.". "\n" .
-                   "http://nbcr.ucsd.edu ". "\n\n" ."National Biomedical Computation Research, UCSD";	
-        $headers = 'From: admin@nbcr.ucsd.edu' . "\r\n" .
-		   'Reply-To: admin@nbcr.net' . "\r\n";
+                   "The NBCR Scientific Advisory Board meets monthly to review applications.\n" . 
+                   "Questions, comments or status inquiries can be sent to XXXX or XXXX.\n\n" .
+                   "National Biomedical Computation Research, UCSD\nhttp://nbcr.ucsd.edu ";	
+        $headers = 'From: no-reply@nbcr.ucsd.edu' . "\r\n" .
+		   'Reply-To: ' . $adminEmail . "\r\n";
 
 	mail($to, $subject, $message, $headers);
 	}
@@ -336,7 +337,7 @@
 <h5>Thank you, your Application has been submitted.</h5>
 <p> Once the application is reviewed, you will receive a notification and additional <br>
     information at the email address <?php print $save_email; ?> supplied in the application.<br /><br />
-    If you have further questions about this process, please contact us at: admin@nbcr.net <br /> <br />
+    If you have further questions about this process, please contact us at: <?php print $adminEmail; ?> <br /> <br />
     Click <a href="http://nbcr.ucsd.edu" target="_blank">here</a> to return to the NBCR main website.
 </p>
 </body>
