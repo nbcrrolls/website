@@ -5,6 +5,7 @@
 	################################################################################################
 	
 	## applications fields. This holds the applications table fields(indexes) used for sql queries.
+/*
 	$applicationFields = array (
 		"date",
 		"pi_first_name",
@@ -96,15 +97,15 @@
 		"personnel_degree" => 41,
 		"full_sum" => 42
 	);
+*/
 
 	########################################################################################################################
 	##### Database functions DO NOT EDIT ###################################################################################
 	########################################################################################################################
 
 	#####
-	## function: cleanSQLData()
-	## This function cleans the data array or singleton string. just in case the input has SQL injection,
-	## this function escapes/cleans the input string.
+	## Cleans the data array or singleton string. just in case the input has SQL injection,
+	## escapes/cleans the input string.
 	#####
 	function cleanSQLData($arr, $conn) {
 
@@ -139,10 +140,7 @@
 	} ## end of cleanSQLData
 
 
-	#####
-	## Function: openDB()
-	## This function opens the mysql database.
-	#####
+	##### opens the mysql database.  #####
 	function openDB() {
 		global $UseradminU, $UseradminP, $UseradminD, $dbhost;
 		## attempt to connect to the database.
@@ -152,21 +150,43 @@
 		return $dbhandle;
 	}
 
+	##### opens the mysql database for view access.  #####
+	function openDBview() {
+		global $UserpiU, $UserpiP, $UserpiD, $dbhandle, $dbhost;
+		## attempt to connect to the database.
+		$dbhandle = mysql_connect($dbhost,$UserpiU,$UserpiP);
+		mysql_select_db($UserpiD,$dbhandle) or die('Can\'t use database : '.mysql_error());
+		return $dbhandle;
+	}
 
-	#####
-	## Function: closeDB()
-	## This function closes the mysql database.
-	#####
+
+	##### closes the mysql database  #####
 	function closeDB($dbh) {
+		global $dbhandle;
 		## if exists, use dbhandle and close it.
 		if ($dbh) {
 			mysql_close($dbh);
+		} else {
+			## param dbh done, close the default dbhandle.
+			mysql_close($dbhandle);
 		}
 	}
 
 
-	########################################################################################################################
-	##### End of Database functions DO NOT EDIT ############################################################################
-	########################################################################################################################
+	##### returns a list of applicants. the parameter is the database dbHandle #####
+	function getApplicants($dbh) {
+		## get the database handle      
+		## if dbh handle dne, return false.
+		if (!$dbh) {
+			return false;
+		}
+		$query = "select date, id, app_first_name, app_last_name from applications order by id";
+
+		## call the query using the db handle.
+		$result = mysql_query($query, $dbh);
+		## return the result.   
+		return $result;
+	}
+
 
 ?>

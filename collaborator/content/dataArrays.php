@@ -62,7 +62,6 @@
 		"personnel_degree" => "/[^default]/"
 	);
 
-
 	## set the title array for applicant and PI sections
 	$titleArr = array (
 		"Select Title ..." => "default",
@@ -74,7 +73,6 @@
 		"Other - Please specify" => "Other"	
 	);
 
-	
 	## set the degree name-values array used for the input select drop down menu.
 	$degreeArr = array (
 		"Select Degree ..." => "default",
@@ -92,7 +90,6 @@
 		"(none)" => "none",
 		"(other)" => "other"
 	);
-
 
 	## year.month, week array for select visits_per
 	$visitsArr = array (
@@ -127,12 +124,10 @@
 		"MH"=>"MH",
 		"NR"=>"NR",
 		"NS"=>"NS",
-        "OD"=>"OD",
-        "RR"=>"RR",
+		"OD"=>"OD",
+		"RR"=>"RR",
 		"TW"=>"TW"
-        
-    );
-
+	);
 
 	## set the select states array
 	$statesArr = array (
@@ -427,5 +422,151 @@
 		"Zimbabwe" => "ZW"
 	);
 
+	## applications fields. This holds the applications table fields(indexes) used for sql queries.
+	$applicationFields = array (
+		"date",
+		"pi_first_name",
+		"pi_last_name",
+		"app_first_name",
+		"app_last_name",
+		"pi_title",
+		"app_title",
+		"pi_degree",
+		"app_degree",
+		"pi_phone",
+		"app_phone",
+		"pi_fax",
+		"app_fax",
+		"pi_email",
+		"app_email",
+		"lab",
+		"department",
+		"institution",
+		"street1",
+		"street2",
+		"city",
+		"state",
+		"zip",
+		"country",
+		"research_area",
+		"project_title",
+		"keywords",
+		"app_type",
+		"abs_sum",
+		"resource_software",
+		"resource_computer",
+		"personnel",
+		"personnel_first_name",
+		"personnel_last_name",
+		"personnel_title",
+		"personnel_email",
+		"visits",
+		"visits_per",
+		"status",
+		"status_date",
+		"personnel_degree",
+		"full_sum"
+	);
+
+	## applications array. This holds the applications table fields(indexes) used for sql queries.
+	$applicationTable = array (
+		"id" => 0,
+		"date" => 1,
+		"pi_first_name" => 2,
+		"pi_last_name" => 3,
+		"app_first_name" => 4,
+		"app_last_name" => 5,
+		"pi_title" => 6,
+		"app_title" => 7,
+		"pi_degree" => 8,
+		"app_degree" => 9,
+		"pi_phone" => 10,
+		"app_phone" => 11,
+		"pi_fax" => 12,
+		"app_fax" => 13,
+		"pi_email" => 14,
+		"app_email" => 15,
+		"lab" => 16,
+		"department" => 17,
+		"institution" => 18,
+		"street1" => 19,
+		"street2" => 20,
+		"city" => 21,
+		"state" => 22,
+		"zip" => 23,
+		"country" => 24,
+		"research_area" => 25,
+		"project_title" => 26,
+		"keywords" => 27,
+		"app_type" => 28,
+		"abs_sum" => 29,
+		"resource_software" => 30,
+		"resource_computer" => 31,
+		"personnel" => 32,
+		"personnel_first_name" => 33,
+		"personnel_last_name" => 34,
+		"personnel_title" => 35,
+		"personnel_email" => 36,
+		"visits" => 37,
+		"visits_per" => 38,
+		"status" => 39,
+		"status_date" => 40,
+		"personnel_degree" => 41,
+		"full_sum" => 42
+	);
+
+	## approved table field names.
+	$approvedFields = array (
+		"id",         
+		"classification",
+		"personnel",
+		"password",
+		"note"
+	);
+
+	## approved table field names to index.
+	$approvedTable = array (
+		"id" => 0,
+		"classification" => 1,
+		"personnel" => 2,
+		"password" => 3,
+		"note" => 20
+	);
+
+	## fundings fields. This holds the fundings table fields(indexes) used for sql queries.
+	$fundingsFields = array (
+		"app_id",
+		"source",
+		"grant_info",
+		"pi_first_name",
+		"pi_last_name",
+		"title",
+		"period"
+	);
+
+	## fundings array. This holds the funding table fields (indexes) used for sql queries.
+	$fundingsTable = array (
+		"app_id" => 0,
+		"source" => 1,
+		"grant_info" => 2,
+		"pi_first_name" => 3,
+		"pi_last_name" => 4,
+		"title" => 5,
+		"period" => 6
+	);
+
+	## publications fields. This holds the publications table fields(indexes) used for sql queries.
+	$publicationsFields = array (
+		"app_id",
+		"type",
+		"reference"
+	);
+
+	## publications array. This holds the publications table fields (indexes) used for sql queries.
+	$publicationsTable = array (
+		"app_id" => 0,
+		"type" => 1,
+		"reference" => 2
+	);
 
 ?>

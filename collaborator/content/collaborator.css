@@ -3,40 +3,55 @@ body {
 }
 
 
+a {
+	color: #CC3300;
+	text-decoration: none;
+}
+
+a:hover {
+	color: Navy;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #CC3300;
+}
+
+
 .star {
-color:#FF0000;
-font-size:12px;
+	color:#FF0000;
+	font-size:12px;
 }
 
 h1 {  
-font-family: Arial, Helvetica, sans-serif; 
-font-size: 19px; 
-font-style: normal; 
-line-height: 24px; 
-font-weight: bold; 
-color: #21818C; 
-text-decoration: none;
-text-align: center;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 19px; 
+	font-style: normal; 
+	line-height: 24px; 
+	font-weight: bold; 
+	color: #21818C; 
+	text-decoration: none;
+	text-align: center;
 }
 
 h2 {  
-font-family: Arial, Helvetica, sans-serif; 
-font-size: 17px; 
-font-style: normal; 
-line-height: 22px; 
-font-weight: bold; 
-color: #21818C; 
-text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 17px; 
+	font-style: normal; 
+	line-height: 22px; 
+	font-weight: bold; 
+	color: #21818C; 
+	text-decoration: none;
 }
 
 h3 {  
-font-family: Arial, Helvetica, sans-serif; 
-font-size: 14px; 
-font-style: normal; 
-font-weight: bold; 
-color: #21818C; 
-text-decoration: none;
-text-align: center;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 14px; 
+	font-style: normal; 
+	font-weight: bold; 
+	color: #21818C; 
+	text-decoration: none;
+	text-align: center;
 }
 
 h5 {
@@ -47,29 +62,50 @@ h5 {
 }
 
 p {  
-font-family: Arial, Helvetica, sans-serif; 
-font-size: 11px; 
-font-style: normal; 
-font-weight: normal; 
-font-variant: normal; 
-color: #000000; 
-text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	font-weight: normal; 
+	font-variant: normal; 
+	line-height: 13px; 
+	color: #000000; 
+	text-decoration: none;
 }
 
+p.paginate-section {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 13px;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000000;
+	text-decoration: none;
+}
 
 td {
-font-size: x-small;
+	font-size: small;
 }
 
+td.header {
+	color: White;
+	background-color: #21818C;
+	font-size: small;
+	font-weight: bold;
+}
 
 td.showReports {
 	text-align: center;
 }
+
 td.showReports_shade {
 	text-align: center;
 	background-color: #EEEEFF;
 }
 
+td.subHighlight {
+	color: #21818C; 
+	font-size: small;
+}
 
 textarea.field {
 	font-size: small;
@@ -99,13 +135,6 @@ select.error {
 	background-color: #BBE3E8;
 }
 
-
-td.subHighlight {
-	color: #21818C; 
-	font-size: small;
-
-}
-
 .title {
 	font-size: large;
 }
@@ -118,25 +147,43 @@ td.subHighlight {
 	font-size: small;
 }
 
-td.fieldDescription {
-font-family: Arial, Helvetica, sans-serif; 
-font-size: 11px; 
-font-style: normal; 
-line-height: 18px; 
-font-weight: normal; 
-font-variant: normal; 
-color: #000000;
-background-color: #f5f5f5;
-text-decoration: none;
+.acknowlegement {
+	color: #708090;
+	font-size: smaller;
 }
+
+.errormsg {
+	color: Red;
+	font-size: small;
+	font-weight: bold;
+}
+
+.validmsg {
+	color: green;
+	font-size: small;
+	font-weight: bold;
+}
+
+td.fieldDescription {
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	font-style: normal; 
+	line-height: 15px; 
+	font-weight: bold; 
+	font-variant: normal; 
+	color: #f5f5f5;
+	background-color: #21818C; 
+	text-decoration: none;
+}
+
 td.field {
-font-family: Arial, Helvetica, sans-serif; 
-font-size: 11px; 
-font-style: normal; 
-line-height: 18px; 
-font-weight: normal; 
-font-variant: normal; 
-text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	line-height: 18px; 
+	font-weight: normal; 
+	font-variant: normal; 
+	text-decoration: none;
 }
 
 td.fieldInput {
@@ -150,14 +197,20 @@ select.dateSelect {
 	
 }
 
-table.outline {
-	border-width: 1px 1px 1px 1px;
-	border-spacing: 1px;
-	border-style: dotted dotted dotted dotted;
-	border-color: gray gray gray gray;
-	border-collapse: separate;
-	background-color: white;
+tr.even  {
+	background-color: #DFF0FF;
+}
 
+tr.odd  {
+	background-color: #F9FFFF;
+}
+
+table.outline {
+	border-width: 1px;
+	border-spacing: 1px;
+	border-style: solid;
+	border-color: Silver;
+	border-collapse: collapse;
 }
 
 table.error {
@@ -169,29 +222,65 @@ table.error {
 	background-color: #BBE3E8;
 }
 
-.acknowlegement {
-	color: #708090;
-	font-size: smaller;
+/* buttons for different application status */
+.status {
+	background:url(images/overlay.png) repeat-x center #82C0F6;
+	color: #023548; 
+	border: 1px solid #82C0F6;
+	padding: 1px 5px 1px 5px;
+	font-weight: bold;
+	font-size: 11px;
+	text-align: center;
+	-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;
+	-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
 }
 
-input[type=submit]
-{
-  background:url(overlay.png) repeat-x center #21818C;
-  color: #FFFFFF; 
-  border: 1px solid #BFBFBF;
-  border-bottom:1px solid #9f9f9f;
-  font-weight: bold;
-  -moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;
-  -moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+.status:hover {
+	background-color: rgba(9,179,243,1.0);
+	border: 1px solid #09B3F3;
+	color: #FFFFFF; 
 }
 
-input[type=submit]:hover
-{
-  background-color: rgba(176,199,244,0.8);
-  border: 1px solid #9F9F9F;
-  border-bottom:1px solid #6F6F6F;
-  color: #000000; 
+.status a, a:visited {
+	color: #023548; 
 }
+
+.status:hover a {
+	color: #FFFFFF; 
+}
+      
+
+/* input buttons on forms */
+input[type=submit] {
+	background:url(images/overlay.png) repeat-x center #21818C;
+	color: #FFFFFF; 
+	border: 1px solid #BFBFBF;
+	border-bottom:1px solid #9f9f9f;
+	font-weight: bold;
+	-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;
+	-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+input[type=submit]:hover {
+	background-color: rgba(180,231,241,0.8);
+	border: 1px solid #2Eb4c4;
+	color: #1B6C75; 
+}
+
+input.buttons  { 
+	color: white; 
+	background-color: #07025a; 
+	border: solid 1px black;
+}
+
+/*
+input[type="reset"]::-moz-focus-inner, 
+input[type="button"]::-moz-focus-inner, 
+input[type="submit"]::-moz-focus-inner, 
+input[type="file"] > input[type="button"]::-moz-focus-inner
+*/
 
 table.borderStyle {
 	border: 1px solid #191970;
@@ -214,32 +303,31 @@ td.smallBold {
 	font-weight: bold;
 }
 
-td.columnID  { color: white; 
-font-size: small; font-weight: bold; background-color: #07025a }
-
-.errormsg {
-	color: Red;
-	font-size: small;
-	font-weight: bold;
+td.columnID  { 
+	color: white; 
+	font-size: small; 
+	font-weight: bold; 
+	background-color: #07025a 
 }
+
 td.fieldsubtitle { 
-font-family: Arial, Helvetica, sans-serif; 
-font-size: 11px;  
-line-height: 12px; 
-font-weight: bold; 
-font-variant: normal; 
-color: #f2f2f2;
-background-color: #3b5281;
-text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 11px;  
+	line-height: 12px; 
+	font-weight: bold; 
+	font-variant: normal; 
+	color: #f2f2f2;
+	background-color: #3b5281;
+	text-decoration: none;
 }
 
 td.fieldtitle {
-font-family: Arial, Helvetica, sans-serif;
-font-size: 14px;
-line-height: 14px;
-font-weight: bold;
-font-variant: normal;
-color: #f2f2f2;
-background-color: #3b5281;
-text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: bold;
+	font-variant: normal;
+	color: #f2f2f2;
+	background-color: #3b5281;
+	text-decoration: none;
 }

@@ -7,6 +7,9 @@
 	## database user info
 	require_once("content/accountInfo.php");
 
+	## array definitions  
+	require_once("content/dataArrays.php");
+
 	## require the database functions
 	require_once("content/databaseFunctions.php");
 
