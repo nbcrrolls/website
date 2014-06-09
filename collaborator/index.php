@@ -1,3 +1,9 @@
+<?php 
+    if (isset($_GET['emptyID']) && $_GET['emptyID'] === '1') {
+        $errorMessage = "<span class='errormsg'>Please provide application ID</span>";
+    }
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -10,6 +16,7 @@
 <h1>NBCR Collaborators application administration </h1>
 
 <center>
+<?php isset($errorMessage) ? print "<p>" . $errorMessage . "</p>" : print "";?>
 <table width="750" border="0" cellpadding="2" cellspacing="2" class="outline">
   <tr>
     <td class="header">Viewing</td>
@@ -45,7 +52,7 @@ These work in Chrome and Safari but fail in Firefox
       <form action="admin/view-applicant.php" method="get" name="view-applicant-by-id" target="_blank" id="view-applicant-by-id">
         <table border="0" cellpadding="0" cellspacing="0">
           <tr>
-            <td>View full application (enter application ID):</td>
+            <td>View full application (enter application ID <span class="star">*</span>):</td>
             <td><input name="id" type="text" id="id" size="5" /></td>
             <td><input name="view-applicant" type="submit" id="view-applicant" value="View"/></td>
           </tr>
@@ -61,19 +68,19 @@ These work in Chrome and Safari but fail in Firefox
 
   <tr>
     <td>Update new application status 
-        <a href="update-application-status.php?status=New"><img src="content/images/green-arrow.png" valign="bottom" /></a>
+        <a href="admin/update-application-status.php?status=New"><img src="content/images/green-arrow.png" valign="bottom" /></a>
     </td>
   </tr>
 
   <tr>
     <td>
-        <form action="update-application-summary.php" method="get" name="update-application-summary-by-id" 
+        <form action="admin/update-application-summary.php" method="get" name="update-summary-by-id" 
               target="_blank" id="update-application-summary-by-id">
           <table border="0" cellpadding="0" cellspacing="0">
             <tr>
-              <td>Update abstract/full summary (enter application ID): </td>
+              <td>Update abstract or summary (enter application ID <span class="star">*</span>):</td>
               <td><input name="id" type="text" id="id" size="5" /></td>
-              <td><input name="update-application-summary" type="submit" id="update-application-summary" value="Update"/></td>
+              <td><input name="update-summary" type="submit" id="update-summary" value="Update"/></td>
             </tr>
           </table>
 	</form>
@@ -86,7 +93,7 @@ These work in Chrome and Safari but fail in Firefox
 
   <tr>
     <td>
-      <p><a href="audit-db.php">Applications database administration</a> <img src="content/images/lock.png" width="15" valign="center"/></p>
+      <p><a href="admin/audit-db.php">Applications database administration</a> <img src="content/images/lock.png" width="15" valign="center"/></p>
     <br/>
     </td>
   </tr>
