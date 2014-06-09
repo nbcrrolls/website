@@ -172,13 +172,13 @@
 		print<<<THEAD
 			<table width='85%' border='1' cellpadding='2' cellspacing='0' class='outline'>
 			    <tr class='header'>
-				<td class='fieldDescription' width='90'><div align='center'> Application</div> </td>
-				<td class='fieldDescription' width='130'><div align='center'>Principal Investigator </div></td>
-				<td class='fieldDescription' width='130'><div align='center'>Applicant</div></td>
-				<td class='fieldDescription' width='130'><div align='center'>Research Area </div></td>
-				<td class='fieldDescription' width='230'><div align='center'>Project Title </div></td>
-				<td class='fieldDescription' width='220'><div align='center'>Organization/Laboratory</div></td>
-				<td class='fieldDescription'><div align='center'>Resource Type(s)</div></td>
+				<td class='fieldDescription' width='75'><div align='center'> Application</div> </td>
+				<td class='fieldDescription' width='100'><div align='center'>PI</div></td>
+				<td class='fieldDescription' width='100'><div align='center'>Applicant</div></td>
+				<td class='fieldDescription' width='100'><div align='center'>Research Area </div></td>
+				<td class='fieldDescription' width='200'><div align='center'>Project Title </div></td>
+				<td class='fieldDescription' width='200'><div align='center'>Organization/Laboratory</div></td>
+				<td class='fieldDescription'><div align='center'>Resources</div></td>
 			    </tr>
 THEAD;
 		$count = 0;
@@ -203,7 +203,9 @@ THEAD;
 						{$row[$applicationTable['department']]}</br>
 						{$row[$applicationTable['institution']]}
 					</td>
-					<td class='results'>{$row[$applicationTable['resource']]}</td>
+					<td class='results'><b>Software:</b> {$row[$applicationTable['resource_software']]}<br>
+					                    <b>Hardware:</b> {$row[$applicationTable['resource_computer']]}
+					</td>
 				  </tr>
 EOT;
 			$count += 1;
