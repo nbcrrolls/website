@@ -1,0 +1,11 @@
+.. role:: sec
+
+.. |PI| replace:: :sec:`PI`  
+.. |INSTITUTION| replace:: :sec:`Institution` 
+.. |PROJECT TITLE| replace::   :sec:`Project Title` 
+.. |BTRC PERSONNEL| replace::   :sec:`BTRC Personnel`
+.. |TR&D PROJECT| replace::   :sec:`TR&D Project` 
+.. |STATUS| replace::   :sec:`Status`
+.. |EXTERNAL FUNDING| replace::   :sec:`External Funding` 
+.. |BTRC RESOURCE COLLABORATION| replace::   :sec:`BTRC Resource Collaboration`
+.. |RELEVANT PUBLICATIONS| replace:: :sec:`Relevant publications`

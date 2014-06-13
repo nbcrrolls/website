@@ -1,0 +1,39 @@
+.. highlight:: rest
+.. include:: defn-rst
+
+.. role:: project
+
+:project:`DBP X`
+------------------
+
+|PI|
+   
+|INSTITUTION|
+   
+|PROJECT TITLE|
+   
+|BTRC PERSONNEL|
+   
+|TR&D PROJECT|
+   
+|STATUS|
+   
+|EXTERNAL FUNDING|
+   
+|BTRC RESOURCE COLLABORATION|
+    
+|RELEVANT PUBLICATIONS|
+   .. role:: pubauthor
+
+   .. role:: pubtitle
+
+   .. role:: pubprint
+
+#.  | :pubauthor:
+      :pubtitle:
+      :pubprint:
+
+#.  | :pubauthor:
+      :pubtitle:
+      :pubprint:
+

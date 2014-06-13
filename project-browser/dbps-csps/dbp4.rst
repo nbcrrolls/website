@@ -1,0 +1,32 @@
+.. highlight:: rest
+.. include:: defn-rst
+
+.. role:: project
+
+:project:`DBP 4`
+------------------
+.. index:: DBP 4
+
+|PI|
+   Veglia, Gianluigi; Melacini, Giuseppe; Taylor, Susan
+|INSTITUTION|
+   University of Minnesota, MN; McMaster University, Canada; University of California, San Diego, CA
+|PROJECT TITLE|
+   :index:`Multi-scale Modeling of a Canonical Signaling Transduction Domain: From Conformational Ensembles to Protein Function in Protein Kinase A`
+|BTRC PERSONNEL|
+   \R. Amaro, I. Altintas, A. McCulloch, L. Clementi, D. Crawl, J. Durrant, R. Malmstrom, A. McCammon, J. Schulze
+|TR&D PROJECT|
+   Core 1, Core 2, Core 3, and Core 4
+|STATUS|
+   New (Started 6/12)
+|EXTERNAL FUNDING|
+   NIH R01-GM064742 (Veglia, PI), 09/16/2002-03/31/2016; 
+   R01-GM100310 (Vegia, PI; Taylor, Co-I), 04/01/2012-02/29/2016; 
+   R01-GM072701 (Veglia, PI), 06/01/2007-02/29/2016; Canadian Institute of Health (Melacini, PI), 09/01/2012- 08/31/2017; 
+   NSERC (Melacini, PI), 04/01/2009-3/31/2014; 
+   NIH R01 GM34921 (Taylor, PI), 03/01/2010-02/28/2015; NIH R01 GM19301 (Taylor, PI), 05/01/2009-11/30/2014; 
+   NIH P01 DK54441 (Taylor, PI), 04/01/2013-03/31/2018
+|BTRC RESOURCE COLLABORATION|
+   National Resource of Cell Analysis and Modeling
+|RELEVANT PUBLICATIONS|
+   NA
