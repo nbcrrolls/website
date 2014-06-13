@@ -2,155 +2,117 @@
   <head>
     <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script> 
     <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script>
-    <script>
-      function getImgData(chartContainer) {
-        var chartArea = chartContainer.getElementsByTagName('svg')[0].parentNode;
-        var svg = chartArea.innerHTML;
-        var doc = chartContainer.ownerDocument;
-        var canvas = doc.createElement('canvas');
-        canvas.setAttribute('width', chartArea.offsetWidth);
-        canvas.setAttribute('height', chartArea.offsetHeight);
-        
-        canvas.setAttribute(
-            'style',
-            'position: absolute; ' +
-            'top: ' + (-chartArea.offsetHeight * 2) + 'px;' +
-            'left: ' + (-chartArea.offsetWidth * 2) + 'px;');
-        doc.body.appendChild(canvas);
-        canvg(canvas, svg);
-        var imgData = canvas.toDataURL("image/png");
-        canvas.parentNode.removeChild(canvas);
-        return imgData;
-      }
-      
-      function saveAsImg(chartContainer) {
-        var imgData = getImgData(chartContainer);
-        
-        // Replacing the mime-type will force the browser to trigger a download
-        // rather than displaying the image in the browser window.
-        window.location = imgData.replace("image/png", "image/octet-stream");
-      }
-      
-      function toImg(chartContainer, imgContainer) { 
-        var doc = chartContainer.ownerDocument;
-        var img = doc.createElement('img');
-        img.src = getImgData(chartContainer);
-        
-        while (imgContainer.firstChild) {
-          imgContainer.removeChild(imgContainer.firstChild);
-        }
-        imgContainer.appendChild(img);
-      }
-    </script>
-
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart", "treemap", "geochart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-          
-        // Collaborators: US geographical distribution 
-        data = new google.visualization.DataTable();
-        data.addColumn('string', 'State');
-        data.addColumn('number', 'Collaborators');
-        data.addRows([
-            ["AL", 2],
-            ["AZ", 1],
-            ["CA", 19],
-            ["FL", 1],
-            ["GA", 2],
-            ["ID", 2],
-            ["IL", 7],
-            ["LA", 2],
-            ["MA", 2],
-            ["MI", 1],
-            ["MN", 1],
-            ["MO", 1],
-            ["NC", 3],
-            ["NJ", 1],
-            ["NY", 3],
-            ["OH", 2],
-            ["PA", 1],
-            ["TX", 4],
-            ["UT", 2],
-            ["VA", 6],
-            ["WA", 4],
-            ["WI", 1],
-        ]);
+    <script type="text/javascript" src="base.js"> </script>
 
-        var options = {
-            region: "US", 
-            resolution: "provinces",
-            backgroundColor: "#FFFFFF",
-            datalessRegionColor: "#EEE5E5",
-            colorAxis: { minValue : 1, maxValue : 19, 
-                         colors : ['#00dddd','#00aadd','#0077dd','#0044dd','#0011dd' ],
+    <script type="text/javascript">
+      // Define variables for the charts 
+
+      // Collaborators US geographical distribution 
+      data1 = new google.visualization.DataTable();
+      data1.addColumn('string', 'State');
+      data1.addColumn('number', 'Collaborators');
+
+      var options1 = {
+          region: "US", 
+          resolution: "provinces",
+          backgroundColor: "#FFFFFF",
+          datalessRegionColor: "#EEE5E5",
+          colorAxis: { minValue : 1, maxValue : 21, 
+                       colors : ['#0860b3','#0860b3' ],
+                      // use to highlight different colors : ['#b3e2f9','#0860b3' ],
+                      //colors : ['#00dddd','#00aadd','#0077dd','#0044dd','#0011dd' ],
             },
         };
-        var container = document.getElementById('mapUS_div');
-        var geochart = new google.visualization.GeoChart(container);
-        geochart.draw(data, options);
-        
-        // Collaborators: World geographical distribution 
-        data = new google.visualization.DataTable();
-        data.addColumn('string', 'Country');
-        data.addColumn('number', 'Collaborators');
-        data.addRows([
-            ["USA", 68],
-            ["UK", 4],
-            ["NORWAY", 3],
-            ["NETHERLANDS", 2],
-            ["AUSTRALIA", 1],
-            ["CANADA", 1],
-            ["FRANCE", 1],
-            ["IRELAND", 1],
-            ["ITALY", 1],
-            ["POLAND", 1],
-            ["SWEDEN", 1],
-            ["TAIWAN", 1],
-        ]);
 
-        var options = {
-            //title: "Collaborators worldwide", 
-            //width: 400, 
-            //height: 310, 
-            //legend: {position: 'right', textStyle: {color: 'black', fontSize: 9}},
-            //colors: ['#0033dd', '#0066aa', '#00a3cc', '#00ccff', '#ff9313',
-            //          '#ff9313', '#ff9313', '#ff9313', '#ff9313', '#ff9313',  '#ff9313', '#ff9313'
-            //        ],
-            //backgroundColor: "#FFFFFF",
+        // Collaborators World geographical distribution 
+        data2 = new google.visualization.DataTable();
+        data2.addColumn('string', 'Country');
+        data2.addColumn('number', 'Collaborators');
+
+        var options2 = {
             region: "world",
             resolution: "country",
             backgroundColor: "#FFFFFF",
             datalessRegionColor: "#EEE5E5",
             colorAxis: { minValue : 1, maxValue : 68, 
-                         colors : ['#00dddd','#00aadd','#0077dd','#0044dd','#0011dd' ],
+			 colors : ['#0860b3','#0860b3' ],
+			 // use to highlight different colors : ['#b3e2f9','#0860b3' ],
+                         //colors : ['#00dddd','#00aadd','#0077dd','#0044dd','#0011dd' ],
             },
         };
 
-        var container = document.getElementById('mapWorld_div');
-        //var geochart = new google.visualization.PieChart(container);
-        var geochart = new google.visualization.GeoChart(container);
-        geochart.draw(data, options);
+      // Add data from stats
+      function addData() {
+        // US distribution
+        data1.addRows([
+        ["WA", 4], ["DC", 1], ["WI", 1], ["WV", 1], ["FL", 1],
+        ["NJ", 1], ["TX", 5], ["LA", 2], ["NC", 2], ["NY", 3],
+        ["PA", 1], ["VA", 1], ["CA", 21], ["AL", 2], ["IL", 2],
+        ["GA", 2], ["ID", 1], ["CT", 1], ["MA", 4], ["OH", 1],
+        ["UT", 4], ["MO", 3], ["MN", 3], ["OR", 1], ]);
+        
+        // world distribution
+        data2.addRows([
+        ["Canada", 2],
+        ["Netherlands", 1],
+        ["Italy", 1],
+        ["Ireland", 1],
+        ["Poland", 1],
+        ["Scotland", 2],
+        ["Luxembourg", 1],
+        ["UK", 3],
+        ["New", 1],
+        ["Taiwan", 1],
+        ["Spain", 1],
+        ["US", 68],
+        ]);
+
+      };
+
+      // Define charts drawing
+      function drawChart() {
+        addData();
+
+        // US distribution
+        var chart1 = new google.visualization.GeoChart(document.getElementById('mapUS_div'));
+        chart1.draw(data1, options1);
+
+        // world distribution
+        var chart2 = new google.visualization.GeoChart(document.getElementById('mapWorld_div'));
+        chart2.draw(data2, options2);
       }
+
+      // Draw charts
+      google.setOnLoadCallback(drawChart);
+
     </script>
 
   </head>
   <body>
     <h3 align="center"><font color="#0082A0">Geographical distribution of NBCR collaborators</font></h3>
+    <p>
+      Current statistics are through 2013.<br>
+     <b>Maps</b> show geographical distribution of NBCR collaborators in the US and worldwide.<br>
+     Collaborators total is 83, including 68 in the US.<br><br>
+     Use <b>Convert</b> buttons to view an image in a frame below and 
+    <b>Save</b> buttons to copy an image to your Desktop.<br>
+    </p>
 
+     <!-- 2 geolocation graphs -->
     <div id="mapUS_div" style="width: 400px; height: 360px; float: left"></div>
     <div id="mapWorld_div" style="width: 400px; height: 360px; float: left"></div>
     <br style="clear: left;" />
 
-    <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('mapUS_div'));">Save as PNG image</button>
-    <button style="position:relative; left:60" onclick="toImg(document.getElementById('mapUS_div'), document.getElementById('img_div'));">Convert to image</button>
+     <!-- US map buttons -->
+    <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('mapUS_div'));">Save US map as PNG image</button>
+    <button style="position:relative; left:60" onclick="toImg(document.getElementById('mapUS_div'), document.getElementById('img_div'));">Convert US map to image</button>
     
-    <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('mapWorld_div'));">Save as PNG image</button>
-    <button style="position:relative; left:200" onclick="toImg(document.getElementById('mapWorld_div'), document.getElementById('img_div'));">Convert to image</button>
+     <!-- World map buttons -->
+    <button style="position:relative; left:140 " onclick="saveAsImg(document.getElementById('mapWorld_div'));">Save world map as PNG image</button>
+    <button style="position:relative; left:140" onclick="toImg(document.getElementById('mapWorld_div'), document.getElementById('img_div'));">Convert world map to image</button>
     
-    <br />
-
+    <!-- "image placement" position  on the page-->
     <div id="img_div" style="width: 400px; position: relative; top:10;  z-index: 10; border: 1px solid #0082A0; color: #0082A0">
       Image will be placed here
     </div>

@@ -2,96 +2,20 @@
   <head>
     <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script> 
     <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script>
-    <script>
-      function getImgData(chartContainer) {
-        var chartArea = chartContainer.getElementsByTagName('svg')[0].parentNode;
-        var svg = chartArea.innerHTML;
-        var doc = chartContainer.ownerDocument;
-        var canvas = doc.createElement('canvas');
-        canvas.setAttribute('width', chartArea.offsetWidth);
-        canvas.setAttribute('height', chartArea.offsetHeight);
-        
-        canvas.setAttribute(
-            'style',
-            'position: absolute; ' +
-            'top: ' + (-chartArea.offsetHeight * 2) + 'px;' +
-            'left: ' + (-chartArea.offsetWidth * 2) + 'px;');
-        doc.body.appendChild(canvas);
-        canvg(canvas, svg);
-        var imgData = canvas.toDataURL("image/png");
-        canvas.parentNode.removeChild(canvas);
-        return imgData;
-      }
-      
-      function saveAsImg(chartContainer) {
-        var imgData = getImgData(chartContainer);
-        
-        // Replacing the mime-type will force the browser to trigger a download
-        // rather than displaying the image in the browser window.
-        window.location = imgData.replace("image/png", "image/octet-stream");
-      }
-      
-      function toImg(chartContainer, imgContainer) { 
-        var doc = chartContainer.ownerDocument;
-        var img = doc.createElement('img');
-        img.src = getImgData(chartContainer);
-        
-        while (imgContainer.firstChild) {
-          imgContainer.removeChild(imgContainer.firstChild);
-        }
-        imgContainer.appendChild(img);
-      }
-    </script>
-
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="base.js"> </script>
+
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart", "treemap", "geochart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
+      // Define variables for the charts 
 
-        // APBS statistics old
-        var data = new google.visualization.DataTable();
-        data.addColumn({ type: 'string', label: 'Labels' });
-        data.addColumn({ type: 'number', label: 'Count' });
-        data.addColumn({ type: 'number', label: '' });
-        data.addColumn({ type: 'string', role: 'annotation' });
-        data.addRows([
-            ["2003", 250, 250, '250'],
-            ["2004", 850, 850, '850'],
-            ["2005", 1750, 1750, '1750'],
-            ["2006", 2950, 2950, '2950'],
-            ["2007", 4750, 4750, '4750'],
-            ["2008", 7270, 7270, '7270'],
-            ["2009", 11880, 11880, '11880'],
-        ]);
+        // APBS registered users by year
+        var data1 = new google.visualization.DataTable();
+        data1.addColumn({ type: 'string', label: 'Labels' });
+        data1.addColumn({ type: 'number', label: 'Count' });
+        data1.addColumn({ type: 'number', label: '' });
+        data1.addColumn({ type: 'string', role: 'annotation' });
 
-        var chart = new google.visualization.ComboChart(document.getElementById('apbs2_div'));
-        var options = {
-            width: 400, 
-            height: 360, 
-            title: 'Registered users of APBS',
-            colors: ['#3b96ce'],
-            hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
-            vAxis: {ticks: [2000, 4000, 6000, 8000, 10000, 12000, 14000], title: 'Count', textStyle: {color: 'black', fontSize: 11}},
-            series: [{ type: 'bars',  visibleInLegend:false },
-                    { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
-        };
-        chart.draw(data, options);
-        
-        // APBS statistics new
-        var data = new google.visualization.DataTable();
-        data.addColumn({ type: 'string', label: 'Labels' });
-        data.addColumn({ type: 'number', label: 'Count' });
-        data.addColumn({ type: 'number', label: '' });
-        data.addColumn({ type: 'string', role: 'annotation' });
-        data.addRows([
-            ["2010", 14534, 14534, '14534'],
-            ["2011", 15302, 15302, '15302'],
-            ["2012", 17697, 17697, '17697'],
-        ]);
-
-        var chart = new google.visualization.ComboChart(document.getElementById('apbs1_div'));
-        var options = {
+        var options1 = {
             width: 400, 
             height: 360, 
             title: 'Registered users of APBS',
@@ -101,29 +25,120 @@
             series: [{ type: 'bars',  visibleInLegend:false },
                     { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
         };
-        chart.draw(data, options);
-        
-      }
-    </script>
 
+        // Website access world geographical distribution 
+        var data2 = new google.visualization.DataTable();
+        data2.addColumn('string', 'Country');
+        data2.addColumn('number', 'Web service access ');
+
+        var options2 = {
+            resolution: "country",
+            width: 400, 
+            backgroundColor: "#FFFFFF",
+            datalessRegionColor: "#EEE5E5",
+            colorAxis: { colors : ['#b3e2f9','#0860b3' ], },
+        };
+
+      // Add data from stats
+      function addData() {
+        // registered users count
+        data1.addRows([
+            ["2010", 14534, 14534, '14534'],
+            ["2011", 15302, 15302, '15302'],
+            ["2012", 17697, 17697, '17697'],
+            ["2013", 19504, 19504, '19504'],
+        ]);
+
+        // website visits geolocation 
+        data2.addRows([
+        ["United States", 26194], ["Germany", 5769], ["India", 5229], ["United Kingdom", 3910], ["Japan", 3646],
+        ["China", 2785], ["Italy", 2566], ["France", 2429], ["Canada", 2294], ["Brazil", 1685],
+        ["Spain", 1439], ["Mexico", 1248], ["Australia", 1211], ["Switzerland", 1211], ["Taiwan", 1190],
+        ["Chile", 994], ["Russia", 994], ["Poland", 900], ["Israel", 894], ["South Korea", 786],
+        ["Singapore", 692], ["Netherlands", 691], ["Czech Republic", 578], ["Romania", 554], ["Denmark", 527],
+        ["(not set)", 526], ["Sweden", 517], ["Austria", 487], ["Iran", 465], ["Malaysia", 437],
+        ["Turkey", 403], ["Portugal", 396], ["Belgium", 391], ["Argentina", 371], ["Tunisia", 344],
+        ["Hong Kong", 336], ["Greece", 316], ["Finland", 298], ["Thailand", 278], ["Colombia", 262],
+        ["Bulgaria", 249], ["Uruguay", 236], ["Vietnam", 236], ["Hungary", 231], ["New Zealand", 213],
+        ["Pakistan", 201], ["Indonesia", 189], ["Norway", 172], ["Philippines", 153], ["Croatia", 137],
+        ["Egypt", 127], ["Ireland", 126], ["South Africa", 117], ["Ukraine", 116], ["Slovenia", 101],
+        ["Algeria", 79], ["Saudi Arabia", 76], ["Sri Lanka", 72], ["Serbia", 72], ["Oman", 57],
+        ["Lithuania", 53], ["Peru", 53], ["Bangladesh", 52], ["Slovakia", 44], ["United Arab Emirates", 39 ],
+        ["Belarus", 38], ["Moldova", 38], ["Jordan", 29], ["Nigeria", 24], ["Puerto Rico", 24],
+        ["Ecuador", 22], ["Estonia", 22], ["Iraq", 22], ["Palestine", 21], ["Latvia", 18],
+        ["Kenya", 17], ["Réunion", 17], ["Azerbaijan", 15], ["Morocco", 15], ["Luxembourg", 14],
+        ["Venezuela", 14], ["Armenia", 13], ["Cuba", 13], ["Bosnia and Herzegovina", 12], ["Ghana", 12],
+        ["Macau", 12], ["Cyprus", 11], ["Ethiopia", 10], ["Lebanon", 10], ["Qatar", 10],
+        ["Sudan", 8], ["Tanzania", 8], ["Nepal", 7], ["Trinidad and Tobago", 7], ["Bolivia", 6],
+        ["Costa Rica", 6], ["Guatemala", 6], ["Cambodia", 6], ["Kuwait", 6], ["Myanmar (Burma)", 6],
+        ["Bahrain", 5], ["Côte d�~@~YIvoire", 5], ["Iceland", 5], ["El Salvador", 5], ["Zimbabwe", 5],
+        ["Kazakhstan", 4], ["Malta", 4], ["Mauritius", 4], ["Uganda", 4], ["Kosovo", 4],
+        ["Albania", 3], ["Cameroon", 3], ["Dominican Republic", 3], ["Georgia", 3], ["Jamaica", 3],
+        ["Libya", 3], ["Macedonia", 3], ["Mongolia", 3], ["Botswana", 2], ["Fiji", 2],
+        ["Guyana", 2], ["Rwanda", 2], ["Yemen", 2], ["Afghanistan", 1], ["Burkina Faso", 1],
+        ["Brunei", 1], ["Bahamas", 1], ["Belize", 1], ["Grenada", 1], ["Gambia", 1],
+        ["Guam", 1], ["Kyrgyzstan", 1], ["Saint Kitts and Nevis", 1], ["Liberia", 1], ["Montenegro", 1],
+        ["Malawi", 1], ["Namibia", 1], ["Nicaragua", 1], ["Panama", 1], ["Papua New Guinea", 1],
+        ["Seychelles", 1], ["Suriname", 1], ["Syria", 1], ["Timor-Leste", 1], ["Uzbekistan", 1],
+        ["Zambia", 1],
+        ]);
+
+      };
+
+      // Define charts drawing
+      function drawChart() {
+        addData();
+  
+        // bar chart of registered users
+        var chart1 = new google.visualization.ComboChart(document.getElementById('apbs1'));
+        chart1.draw(data1, options1);
+        
+        // website visits  geolocation
+        var chart2 = new google.visualization.GeoChart(document.getElementById('apbs2'));
+        chart2.draw(data2, options2);
+      }
+
+      // Draw charts
+      google.setOnLoadCallback(drawChart);
+
+    </script>
   </head>
+
   <body>
     <h3 align="center"><font color="#0082A0">APBS statistics</font></h3>
+        Current statistics are through 2013.<br><br>
+        <strong>Bar chart</strong>: the total number of registerd users of APBS.<br>
+        <strong>Map</strong>: geographical distribution of <a href="http://www.poissonboltzmann.org">APBS website</a>
+        visits, as tracked by google analytics over the calendar year.<br><br>
+        Use <b>Convert</b> buttons to view an image in a frame below and 
+        <b>Save</b> buttons to copy an image to your Desktop.<br>
 
-    <div id="apbs1_div" style="width: 400px; height: 360px; float: left"></div>
-    <div id="apbs2_div" style="width: 400px; height: 360px; float: left"></div>
+    <!-- chart and map -->
+    <div id="apbs1" style="width: 400px; height: 360px; float: left"></div>
+    <div id="apbs2" style="width: 400px; height: 360px; float: left"></div>
     <br style="clear: left;" />
 
-    <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('apbs1_div'));">Save as PNG image</button>
-    <button style="position:relative; left:60" onclick="toImg(document.getElementById('apbs1_div'), document.getElementById('img_div'));">Convert to image</button>
+    <!-- chart buttons -->
+    <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('apbs1'));">
+        Save chart as PNG image
+    </button>
+    <button style="position:relative; left:60" onclick="toImg(document.getElementById('apbs1'), document.getElementById('img_div'));">
+        Convert chart to image
+    </button>
 
-    <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('apbs2_div'));">Save as PNG image</button>
-    <button style="position:relative; left:200" onclick="toImg(document.getElementById('apbs2_div'), document.getElementById('img_div'));">Convert to image</button>
-
+    <!-- map buttons -->
+    <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('apbs2'));">
+        Save map as PNG image
+    </button>
+    <button style="position:relative; left:200" onclick="toImg(document.getElementById('apbs2'), document.getElementById('img_div'));">
+        Convert map to image
+    </button>
     <br />
 
+    <!-- "image placement" position  on the page-->
     <div id="img_div" style="width: 400px; position: relative; top:10;  z-index: 10; border: 1px solid #0082A0; color: #0082A0">
       Image will be placed here
     </div>
+
   </body>
 </html>

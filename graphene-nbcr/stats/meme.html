@@ -2,126 +2,115 @@
   <head>
     <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script> 
     <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script>
-    <script>
-      function getImgData(chartContainer) {
-        var chartArea = chartContainer.getElementsByTagName('svg')[0].parentNode;
-        var svg = chartArea.innerHTML;
-        var doc = chartContainer.ownerDocument;
-        var canvas = doc.createElement('canvas');
-        canvas.setAttribute('width', chartArea.offsetWidth);
-        canvas.setAttribute('height', chartArea.offsetHeight);
-        
-        canvas.setAttribute(
-            'style',
-            'position: absolute; ' +
-            'top: ' + (-chartArea.offsetHeight * 2) + 'px;' +
-            'left: ' + (-chartArea.offsetWidth * 2) + 'px;');
-        doc.body.appendChild(canvas);
-        canvg(canvas, svg);
-        var imgData = canvas.toDataURL("image/png");
-        canvas.parentNode.removeChild(canvas);
-        return imgData;
-      }
-      
-      function saveAsImg(chartContainer) {
-        var imgData = getImgData(chartContainer);
-        
-        // Replacing the mime-type will force the browser to trigger a download
-        // rather than displaying the image in the browser window.
-        window.location = imgData.replace("image/png", "image/octet-stream");
-      }
-      
-      function toImg(chartContainer, imgContainer) { 
-        var doc = chartContainer.ownerDocument;
-        var img = doc.createElement('img');
-        img.src = getImgData(chartContainer);
-        
-        while (imgContainer.firstChild) {
-          imgContainer.removeChild(imgContainer.firstChild);
-        }
-        imgContainer.appendChild(img);
-      }
-    </script>
-
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="base.js"> </script>
+
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart", "treemap", "geochart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
+      // Define variables for the charts 
 
-        // MEME statistics old
-        var data = new google.visualization.DataTable();
-        data.addColumn({ type: 'string', label: 'Labels' });
-        data.addColumn({ type: 'number', label: 'Count' });
-        data.addColumn({ type: 'number', label: '' });
-        data.addColumn({ type: 'string', role: 'annotation' });
-        data.addRows([
-            ["2003", 6540, 6540, '6540'],
-            ["2004", 7020, 7020, '7020'],
-            ["2005", 8860, 8860, '8860'],
-            ["2006", 9824, 9824, '9824'],
-            ["2007", 11532, 11532, '11532'],
-            ["2008", 13204, 13204, '13204'],
-            ["2009", 10229, 10229, '10229'],
-        ]);
+      // MEME unique users 
+      var data1 = new google.visualization.DataTable();
+      data1.addColumn({ type: 'string', label: 'Labels' });
+      data1.addColumn({ type: 'number', label: 'Count' });
+      data1.addColumn({ type: 'number', label: '' });
+      data1.addColumn({ type: 'string', role: 'annotation' });
 
-        var chart = new google.visualization.ComboChart(document.getElementById('meme2_div'));
-        var options = {
-            width: 400, 
-            height: 360, 
-            title: 'MEME toolkit services users',
-            colors: ['#d64e28'],
-            hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
-            vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
-            series: [{ type: 'bars',  visibleInLegend:false },
-                    { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
-        };
-        chart.draw(data, options);
-        
-        // MEME statistics new
-        var data = new google.visualization.DataTable();
-        data.addColumn({ type: 'string', label: 'Labels' });
-        data.addColumn({ type: 'number', label: 'Count' });
-        data.addColumn({ type: 'number', label: '' });
-        data.addColumn({ type: 'string', role: 'annotation' });
-        data.addRows([
+      var options1 = {
+          width: 400, 
+          height: 360, 
+          title: 'MEME toolkit services unique users',
+          colors: ['#d64e28'],
+          hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
+          vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
+          series: [{ type: 'bars',  visibleInLegend:false },
+                  { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
+      };
+
+      // user distribution  by domain
+      var data2 = new google.visualization.DataTable();
+      data2.addColumn('string', 'Domain name');
+      data2.addColumn('number', 'Domain count');
+
+      var options2 = {
+          title: "MEME toolkit users distribution by domain",
+          width: 400,
+          height: 360,
+          legend: {position: 'right', textStyle: {color: 'black', fontSize: 9}},
+          backgroundColor: "#FFFFFF",
+      };
+
+      // Add data from stats
+      function addData() {
+        // unique users 
+        data1.addRows([
             ["2010", 11297, 11297, '11297'],
             ["2011", 14255, 14255, '14255'],
             ["2012", 14231, 14231, '14231'],
+            ["2013", 17356, 17356, '17356'],
         ]);
 
-        var chart = new google.visualization.ComboChart(document.getElementById('meme1_div'));
-        var options = {
-            width: 400, 
-            height: 360, 
-            title: 'MEME toolkit services users',
-            colors: ['#d64e28'],
-            hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
-            vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
-            series: [{ type: 'bars',  visibleInLegend:false },
-                    { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
-        };
-        chart.draw(data, options);
+        // unique users by domain
+        data2.addRows([
+            ["com", 96326], ["net", 50031], ["edu", 27332], ["other", 23283], ["gov", 1478],
+            ["de", 8838], ["uk", 7567], ["fr", 5243], ["cn", 4251], ["jp", 4230],
+            ["org", 3041], ["es", 2738], ["ca", 2731], ["tw", 2294],
+        ]);
+
+      };
+
+      // Define charts drawing
+      function drawChart() {
+        addData();        
+
+        // unique users 
+        var chart1 = new google.visualization.ComboChart(document.getElementById('meme1'));
+        chart1.draw(data1, options1);
         
+        // unique users  by domain
+        var chart2 = new google.visualization.PieChart(document.getElementById('meme2'));
+        chart2.draw(data2, options2);
+
       }
+
+      // Draw charts
+      google.setOnLoadCallback(drawChart);
+
     </script>
 
   </head>
+
   <body>
      <h3 align="center"><font color="#0082A0">MEME statistics</font></h3>
+      Current statistics are through 2013.<br><br>
+     <strong>Bar chart:</strong> the number of users who accessed MEME toolkit services (by unique host IP)<br>
+     <strong>Pie chart:</strong> the distribution of users email by domain. Domains by country with fewer than 1000 entries each
+             are grouped into "other". <br>
+             Large proportion of users in .com domains is likely related to their usage of @gmail.com
+             or similar email address while their hosts are located  in .edu domain. <br><br>
+        Use <b>Convert</b> buttons to view an image in a frame below and 
+        <b>Save</b> buttons to copy an image to your Desktop.<br>
 
-    <div id="meme1_div" style="width: 400px; height: 360px; float: left"></div>
-    <div id="meme2_div" style="width: 400px; height: 360px; float: left"></div>
+    <!-- bar and pie charts -->
+    <div id="meme1" style="width: 400px; height: 360px; float: left"></div>
+    <div id="meme2" style="width: 400px; height: 360px; float: left"></div>
     <br style="clear: left;" />
 
-    <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('meme1_div'));">Save as PNG image</button>
-    <button style="position:relative; left:60" onclick="toImg(document.getElementById('meme1_div'), document.getElementById('img_div'));">Convert to image</button>
+    <!-- bar chart buttons -->
+    <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('meme1'));">
+        Save bar chart as PNG image
+    </button>
+    <button style="position:relative; left:60" onclick="toImg(document.getElementById('meme1'), document.getElementById('img_div'));">
+        Convert bar chart to image
+    </button>
     
-    <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('meme2_div'));">Save as PNG image</button>
-    <button style="position:relative; left:200" onclick="toImg(document.getElementById('meme2_div'), document.getElementById('img_div'));">Convert to image</button>
+    <!-- pie chart buttons -->
+    <button style="position:relative; left:140 " onclick="saveAsImg(document.getElementById('meme2'));">
+        Save map chart as PNG image</button>
+    <button style="position:relative; left:140" onclick="toImg(document.getElementById('meme2'), document.getElementById('img_div'));">
+        Convert map chart to image
+    </button>
     
-    <br />
-
+    <!-- "image placement" position  on the page-->
     <div id="img_div" style="width: 400px; position: relative; top:10;  z-index: 10; border: 1px solid #0082A0; color: #0082A0">
       Image will be placed here
     </div>

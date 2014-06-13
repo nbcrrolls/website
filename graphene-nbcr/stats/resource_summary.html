@@ -2,132 +2,74 @@
   <head>
     <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script> 
     <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script>
-    <script>
-      function getImgData(chartContainer) {
-        var chartArea = chartContainer.getElementsByTagName('svg')[0].parentNode;
-        var svg = chartArea.innerHTML;
-        var doc = chartContainer.ownerDocument;
-        var canvas = doc.createElement('canvas');
-        canvas.setAttribute('width', chartArea.offsetWidth);
-        canvas.setAttribute('height', chartArea.offsetHeight);
-        
-        canvas.setAttribute(
-            'style',
-            'position: absolute; ' +
-            'top: ' + (-chartArea.offsetHeight * 2) + 'px;' +
-            'left: ' + (-chartArea.offsetWidth * 2) + 'px;');
-        doc.body.appendChild(canvas);
-        canvg(canvas, svg);
-        var imgData = canvas.toDataURL("image/png");
-        canvas.parentNode.removeChild(canvas);
-        return imgData;
-      }
-      
-      function saveAsImg(chartContainer) {
-        var imgData = getImgData(chartContainer);
-        
-        // Replacing the mime-type will force the browser to trigger a download
-        // rather than displaying the image in the browser window.
-        window.location = imgData.replace("image/png", "image/octet-stream");
-      }
-      
-      function toImg(chartContainer, imgContainer) { 
-        var doc = chartContainer.ownerDocument;
-        var img = doc.createElement('img');
-        img.src = getImgData(chartContainer);
-        
-        while (imgContainer.firstChild) {
-          imgContainer.removeChild(imgContainer.firstChild);
-        }
-        imgContainer.appendChild(img);
-      }
-    </script>
-
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="base.js"> </script>
+
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart", "treemap", "geochart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
+      // Define variables for the charts 
 
-        // Resource summary 2004-2009
-        data = new google.visualization.DataTable();
-        data.addColumn('string', 'Year');
-        data.addColumn('number', 'Publications');
-        data.addColumn('number', 'Subprojects');
-        data.addColumn('number', 'Investigators');
-        data.addColumn('number', 'States');
-        data.addColumn('number', 'Countries');
-        data.addRows([
-            //["2002",  58,  66, 114, 18,  8],
-            //["2003",  57,  64, 115, 18,  7],
-            //["2004",  48,  77, 131, 19,  6],
-            ["2005",  49,  78, 136, 19,  7],
-            ["2006",  99,  82, 154, 19,  7],
-            ["2007", 103,  98, 181, 22, 13],
-            ["2008", 147, 125, 232, 22, 12],
-            ["2009",  37,  99, 183, 22, 10],
-        ]);
+      // Resource summary 
+      var data1 = new google.visualization.DataTable();
+      data1.addColumn('string', 'Year');
+      data1.addColumn('number', 'Publications');
+      data1.addColumn('number', 'Subprojects');
+      data1.addColumn('number', 'Investigators');
+      data1.addColumn('number', 'States');
+      data1.addColumn('number', 'Countries');
 
-        var options = {
-            pointSize: 3, 
-            width: 600, 
-            height: 300, 
-            hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
-            vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
-            title: 'NBCR Resource Summary 2004-2009 5-year award period',
-            legend: {position: 'right', textStyle: {color: 'black', fontSize: 11}},
-            //chartArea: {  width: "70%", height: "80%" },
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('resource2_div'));
-        chart.draw(data, options);
+      var options1 = {
+          pointSize: 3, 
+          width: 600, 
+          height: 300, 
+          hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
+          vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
+          title: 'NBCR Resource Summary, current award period ',
+          legend: {position: 'right', textStyle: {color: 'black', fontSize: 11}},
+      };
         
-        // Resource summary 2009-2013
-        data = new google.visualization.DataTable();
-        data.addColumn('string', 'Year');
-        data.addColumn('number', 'Publications');
-        data.addColumn('number', 'Subprojects');
-        data.addColumn('number', 'Investigators');
-        data.addColumn('number', 'States');
-        data.addColumn('number', 'Countries');
-        data.addRows([
+      // Add data from stats
+      function addData() {
+        data1.addRows([
             ["2010",  42,  48,  99, 17,  5],
             ["2011",  74,  55, 129, 22,  9],
             ["2012",  85,  63, 132, 22, 11],
-            ["2013",   0,   0,   0,  0,  0],
+            ["2013",  22,   0,   0,  24,  12],
         ]);
-
-        var options = {
-            pointSize: 3, 
-            width: 600, 
-            height: 300, 
-            hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
-            vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
-            title: 'NBCR Resource Summary 2009 - present, current award period ',
-            legend: {position: 'right', textStyle: {color: 'black', fontSize: 11}},
-        };
-
-        var chart = new google.visualization.ColumnChart(document.getElementById('resource1_div'));
-        chart.draw(data, options);
-        
       }
-    </script>
 
+      // Define charts drawing
+      function drawChart() {
+        addData();
+        // Resource summary
+        var chart1 = new google.visualization.ColumnChart(document.getElementById('resource1'));
+        chart1.draw(data1, options1);
+      }
+        
+      // Draw charts
+      google.setOnLoadCallback(drawChart);
+
+    </script>
   </head>
+
   <body>
     <h3 align="center"><font color="#0082A0">Resource Summary</font></h3>
+        Current statistics are through 2013.<br><br>
+        Use <b>Convert</b> buttons to view an image in a frame below and 
+        <b>Save</b> buttons to copy an image to your Desktop.<br>
 
-    <div id="resource1_div" style="width: 600px; height: 300px; "></div>
+    <!-- bar chart -->
+    <div id="resource1" style="width: 600px; height: 300px; "></div>
 
-    <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('resource1_div'));">Save as PNG image</button>
-    <button style="position:relative; left:60" onclick="toImg(document.getElementById('resource1_div'), document.getElementById('img_div'));">Convert to image</button>
-    
-    <div id="resource2_div" style="width: 600px; height: 300px; "></div>
-    <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('resource2_div'));">Save as PNG image</button>
-    <button style="position:relative; left:60" onclick="toImg(document.getElementById('resource2_div'), document.getElementById('img_div'));">Convert to image</button>
+    <!-- bar chart  buttons -->
+    <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('resource1'));">
+        Save bar chart as PNG image
+    </button>
+    <button style="position:relative; left:60" onclick="toImg(document.getElementById('resource1'), document.getElementById('img_div'));">
+        Convert bar chart to image
+    </button>
     
     <br />
-
+    <!-- "image placement" position  on the page-->
     <div id="img_div" style="width: 600px; position: relative; top:10;  z-index: 10; border: 1px solid #0082A0; color: #0082A0">
       Image will be placed here
     </div>
