@@ -1,0 +1,14 @@
+
+
+Create html distro for NBCR's project-browser
+
+1. dbps-csps/  - contains all raw DBP and CSP project files
+                 and scripts to create html files
+2. on host with Sphinx-enabled python run run.sh in dbps-csps/
+   this will create projects.tar.gz. 
+
+3. mv projects.tar.gz to this directory and run distro.sh
+   to create project-browser.tar.gz 
+
+4. copy project-browser.tar.gz to NBCR website host and untar in /var/www/html/
+   (change permissions on resulting project-browser/ )
