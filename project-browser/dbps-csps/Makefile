@@ -62,6 +62,7 @@ html:
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 	for i in `ls _build/html/*html` ; do \
 		sed -i "s/terms or a module\, class or function name\./words/g" $$i; \
+		sed -i "s/\&amp;\#/\&\#/g" $$i; \
 	done
 
 dirhtml:
