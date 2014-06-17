@@ -1,0 +1,236 @@
+#!/bin/env python
+
+import os
+import os.path
+import sys
+import glob
+
+
+class RawText:
+
+    def __init__(self, argv):
+        self.usageName = os.path.basename(argv[0])
+        self.default_patterns = ['dbp', 'csp']
+        self.checkArgs(argv)
+        self.setDefaults()
+
+    def checkArgs(self, argv):
+        nargs = len(argv)
+        if nargs < 2:
+            self.help()
+
+        self.pattern = argv[1]
+        if self.pattern not in self.default_patterns:
+            sys.exit('ERROR: pattern %s is not recognized. Valid values are %s' % (self.pattern, self.default_patterns))
+
+        if nargs == 2:
+            self.workdir = '.'
+        elif nargs ==3:
+            self.workdir = argv[2]
+        else:
+            self.help()
+
+        if not os.path.isdir(self.workdir):
+            sys.exit('ERROR: %s is not a directory' % self.workdir)
+        if not  self.workdir.endswith("/") :
+            self.workdir = self.workdir + "/"
+
+    def help (self):
+        """ print usage """
+        print 'Usage: %s pattern filedir\n' % self.usageName, \
+              '\tpattern - dbp or csp \n', \
+              '\tfiledir - directory with raw files \n'
+        sys.exit(0)
+
+    def naturalSort(self, l):
+        """ From http://blog.codinghorror.com/sorting-for-humans-natural-sort-order/"""
+        import re
+        """ Sort the given list in the way that humans expect. """
+        convert = lambda text: int(text) if text.isdigit() else text
+        alphanum_key = lambda key: [ convert(c) for c in re.split('([0-9]+)', key) ]
+        l.sort( key=alphanum_key )
+
+    def setDefaults(self):
+        self.allLogs = []
+        self.outFile = self.workdir + "screen_result_summary.log"
+        headline = '%s Number' % self.pattern.upper()
+        self.keys = [headline,
+                     'PI', 
+                     'INSTITUTION',
+                     'PROJECT TITLE',
+                     'BTRC PERSONNEL',
+                     'TR&D PROJECT',
+                     'STATUS',
+                     'EXTERNAL FUNDING',
+                     'BTRC RESOURCE COLLABORATION',
+                     'RELEVANT PUBLICATIONS']
+        self.wordID = headline
+        self.wordTitle = 'PROJECT TITLE'
+        self.wordPubs = 'RELEVANT PUBLICATIONS'
+	self.pubPrefix = "   .. role:: pubauthor\n\n   .. role:: pubtitle\n\n   .. role:: pubprint\n\n"
+        self.ext = ".rst"
+        self.divFile = "div-" + self.pattern 
+        self.divContent = ""
+        self.baseHtmlDir = "projects"
+
+    def getFileList(self):
+        files = glob.glob(self.pattern + '*[0-9]')
+        self.naturalSort(files)
+        self.files = files
+
+
+    def makeContent(self, file):
+        f = open(file)
+        lines = f.readlines()
+        f.close()
+
+        ldict = {}
+        lnum = 0
+        for line in lines :
+            str = line[:-1]
+            if str in self.keys:
+                key = str
+                ldict[str] = []
+            else:
+                ldict[key].append(lnum)
+            lnum += 1
+
+        # add div content
+        self.composeDiv(lines, ldict)
+
+        # create and return rst content
+        text = '' 
+        for key in self.keys:
+             vals = ldict.get(key, None)
+             if vals is not None:
+                if key != self.wordID:      # add line heading
+                    text += "|%s|\n" % key 
+                if key == self.wordID:      # add project id line and heading
+                    text += self.composeHeader(vals, lines)
+                elif key == self.wordTitle: # add project title line
+                    text += self.composeTitleString(vals, lines)
+                elif key == self.wordPubs:  # add  publications lines
+                    text += self.composePubString(vals, lines)
+                else:                       # add all other lines 
+                    str = ''
+                    for i in vals:
+                       str += "%s " % lines[i][:-1]
+                    text += "   %s\n" % str
+        return text 
+
+    def composeDiv(self, lines, ldict):
+        tags = "item %s " % self.pattern.upper()
+        # check for status
+        vals = ldict.get("STATUS", None)
+        if vals:
+            linenum = vals[0]
+            str = lines[linenum]
+            status = ["New", "Continuing", "Completed"]
+            for s in status: 
+                if s in str: 
+                    tags += "%s " % s
+            # check for start date
+            ind = str.find("/")
+            if ind > -1 :
+                tags += "20%2s " % str[ind+1:ind+3]
+
+        # check for core 
+        vals = ldict.get("TR&D PROJECT", None)
+        if vals:
+            linenum = vals[0]
+            str = lines[linenum]
+            cores = ["1", "2", "3", "4"]
+            for c in cores:
+                if c in str:
+                    tags += "Core%s " % c
+
+        # check for id 
+        id = None
+        vals = ldict.get(self.wordID, None)
+        if vals:
+            linenum = vals[0]
+            id = lines[linenum][:-1]
+
+        # check for title 
+        title = None
+        vals = ldict.get(self.wordTitle, None)
+        if vals:
+            title = ''
+            for i in vals:
+                title += lines[i]
+
+        # create div section
+        if not id: return
+        if not title: return
+        div  = '<div id=\"_%s%s\" class=\"%s\">\n' % (self.pattern, id, tags)
+        div += '<a href=\"%s/%s%s.html\">\n' % (self.baseHtmlDir, self.pattern, id)
+        div += '<span class=\"%snumber\">%s %s</span>\n' % (self.pattern, self.pattern.upper(), id)
+        div += '<span class=\"%stitle\">\n' %(self.pattern)
+        div += '%s' % title
+        div += '</span></a></div>\n\n'
+
+        self.divContent += div
+
+
+    def composeHeader(self, vals, lines):
+        if len(vals) > 1:
+            print "Error: project id is too long"
+
+        str = ''
+        for i in vals:
+            str += lines[i]
+        id = int(str)
+
+        header  = '.. highlight:: rest\n'
+        header += '.. include:: defn-rst\n\n'
+        header += '.. role:: project\n\n'
+        header += ':project:`%s %s`\n' % (self.pattern.upper(), id)
+        header += '---------------------------\n'
+        header += '.. index:: %s %s\n\n' % (self.pattern.upper(), id)
+
+        return header
+
+    def composeTitleString(self, vals, lines):
+            str = ''
+            for i in vals:
+                str += lines[i]
+
+            line = "   :index:`%s`\n" % str[:-1]
+            return line
+
+    def composePubString(self, vals, lines):
+            str = ''
+            if len(vals): # publications listed
+                str += self.pubPrefix
+            else:  # no publications 
+                str += "   NA\n" 
+            for i in vals:
+                str += "#.   | %s\n" % lines[i]
+            return str
+
+    def writeRST(self, fname, content):
+        outfile = fname + self.ext
+        f = open(outfile, "w")
+        f.write(content)
+        f.close()
+
+    def writeDiv(self):
+        f = open(self.divFile, "w")
+        f.write(self.divContent)
+        f.close()
+
+    def run(self):
+        self.getFileList()
+        for file in self.files:
+            if os.path.isfile (file):
+                content = self.makeContent(file)
+                self.writeRST(file, content)
+            else:
+                print "Error: %s is not a file, skipping " % file
+
+        self.writeDiv()
+
+if __name__ == "__main__":
+        app = RawText(sys.argv)
+        app.run()
+

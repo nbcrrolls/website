@@ -14,7 +14,7 @@ project = u'Projects listing'
 copyright = u'2014 University of California'
 version = ''
 release = ''
-exclude_patterns = ['_build']
+exclude_patterns = ['_build', 'save']
 
 pygments_style = 'sphinx'
 

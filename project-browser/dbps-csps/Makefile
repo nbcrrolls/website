@@ -9,6 +9,7 @@ BUILDDIR      = _build
 
 # directory name  for html files for archiving 
 NAME          = projects
+DIV           = div-*
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -52,6 +53,8 @@ help:
 clean:
 	rm -rf $(BUILDDIR)
 	rm -rf $(NAME) $(NAME).tar.gz
+	rm -rf rm dbp[0-9]*.rst
+	rm -rf rm csp[0-9]*.rst
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
@@ -185,7 +188,7 @@ pseudoxml:
 
 tar: html
 	ln -s $(BUILDDIR)/html $(NAME)
-	tar czvf $(NAME).tar.gz  $(NAME)/* --exclude _sources
+	tar czvf $(NAME).tar.gz  $(DIV) $(NAME)/* --exclude _sources
 	@echo
 	@echo "Created $(NAME).tar.gz"
 	rm -rf $(NAME)
