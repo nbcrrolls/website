@@ -222,13 +222,13 @@ a code {
 }
 
 .cspnumber {
-    color: #199698;
+    color: #049694;
     display: block;
     font-size: 1.0em;
     font-weight: bold;
     margin: 5px;
     text-align: center;
-    background: #ccffee;
+    background: #edf9f9;
 }
 .dbpnumber {
     color: #00aaff;
@@ -240,6 +240,7 @@ a code {
     background: #ddeeff;
 }
 
+.csptitle,
 .dbptitle {
     color: #000033;
     bottom: 1.6em;
