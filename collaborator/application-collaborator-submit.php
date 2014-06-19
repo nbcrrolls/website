@@ -309,7 +309,7 @@
         ## Send mail to recipient
 	$adminEmail = "nbcr-admin@ucsd.edu";
 	$collabEmail = "rmalmstrom@ucsd.edu";
-	$to      = $_SESSION["app_email"] . "," . $adminEmail;
+	$to      = $_SESSION["app_email"] . "," . $adminEmail . "," .  $collabEmail;
 	$subject = 'Your NBCR Collaborator Application has been received.';
         $message = "Dear ". $Name . "\n\n" .
                    "Thank you for your Application submission.\n" .
