@@ -287,7 +287,7 @@ On new host
 
 #. Create a wordpress database ``wpdb`` and set permissions. ::
 
-     mysqladmin create wpdb
+     mysqladmin create wpdb -p
      mysql -u root -p
      mysql> grant all privileges on wpdb.* to 'USER'@'localhost' identified by 'PASS';
 
