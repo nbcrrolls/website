@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Backup files and dirs from /var/www/html
+# Backup goes to nas-0-0  automounted dir
+
+SRC=/var/www/html
+date=`date +\%Y\%m\%d`
+HOSTDIR=/share/backup/rocce-vm0
+DEST=$HOSTDIR/$date
+BACKUPDIR=$DEST/$SRC
+LOG=$DEST/log
+
+ls /share/backup > /dev/null
+
+if [ -d $HOSTDIR ] ; then
+    mkdir -p $BACKUPDIR
+    touch $LOG
+else
+   echo "Can't mount backup directory $SRC"
+   exit 1
+fi
+
+FILES="oldDN.php index.html robots.txt \
+cardiacphysiome  \
+collaborator \
+pub \
+project-browser \
+reports \
+wiki \
+workflows \
+wordpress2 \
+"
+cd $SRC;  tar cpf - $FILES | (cd $BACKUPDIR; tar xpf -  > $LOG 2>&1 )
+
+ls -l /var/www/html > $DEST/ls-out
+cp -p /etc/auto.share $DEST
