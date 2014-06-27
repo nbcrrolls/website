@@ -1,9 +1,13 @@
+
+.. contents:: Using mediawiki
+
 Set up wiki
 ------------
 
+
 #. Point browser to http://your.host.name/wiki and follow a set up link.
 
-#. A link opens the installation from  to fill in 
+#. A link opens the installation form to fill in 
 
    **Site config** ::
 
@@ -61,6 +65,9 @@ Set up wiki
 Wiki modifications
 -------------------
 
+Uploads
+~~~~~~~~~
+
 #. Enable wiki uploads ::
 
      chown apache:apache /var/www/html/wiki/images
@@ -82,9 +89,10 @@ Wiki modifications
 
    NOTE: the ``post_max_size`` must be bigger then ``upload_max_size``
 
-#. Authorization changes
+Authorization changes
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Add the following lines to enable speciufic features in ``LocalSettings.php`` ::
+Add the following lines to enable speciufic features in ``LocalSettings.php`` ::
 
      # Requires that users are registered before they can edit
      $wgGroupPermissions['*']['edit'] = false;
