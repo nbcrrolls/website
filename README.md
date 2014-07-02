@@ -36,12 +36,12 @@ Enable captcha (done on vm1 as a test, still TODO)
 Enable captcha in grunion contact form plugin:
 * replace plugin file grunion-contact-form.php with  modified  per http://wordpress.org/support/topic/captcha-needed-for-grunion-contact-form
 
-* get public and private recaptcha keys from google and put in the grunion-contact-form.php:
-	Step 1 log into your google account
-	Step 2 type recaptcha in google search and get to https://www.google.com/recaptcha site
-	Step 3 click "Use reCAPTCHA ON YOUR SITE". 
-	Step 4 Click "Sign up Now!".
-	Step 5 follow directions to create keys
+* get public and private recaptcha keys from google and put in the grunion-contact-form.php:  
+	Step 1 log into your google account  
+	Step 2 type recaptcha in google search and get to https://www.google.com/recaptcha site  
+        Step 3 click on "Get reCAPTCHA" button  
+	Step 4 ON  a new page that starts with  "Use reCAPTCHA ON YOUR SITE" Click "Sign up Now!"  
+	Step 5 follow directions to create keys  
 
 * mkdir includes/ (inside the grunion plugin directory)
 
