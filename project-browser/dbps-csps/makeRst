@@ -1,9 +1,11 @@
-#!/bin/env python
+#!/usr/bin/env python
 
 import os
 import os.path
 import sys
 import glob
+import subprocess
+import re
 
 
 class RawText:
@@ -55,6 +57,8 @@ class RawText:
         self.outFile = self.workdir + "screen_result_summary.log"
         headline = '%s Number' % self.pattern.upper()
         self.keys = [headline,
+                     'IMAGE', 
+                     'DESCRIPTION', 
                      'PI', 
                      'INSTITUTION',
                      'PROJECT TITLE',
@@ -63,15 +67,22 @@ class RawText:
                      'STATUS',
                      'EXTERNAL FUNDING',
                      'BTRC RESOURCE COLLABORATION',
-                     'RELEVANT PUBLICATIONS']
+                     'RELEVANT PUBLICATIONS',
+                    ]
         self.wordID = headline
         self.wordTitle = 'PROJECT TITLE'
         self.wordPubs = 'RELEVANT PUBLICATIONS'
+        self.wordDesc = 'DESCRIPTION'
+        self.wordImage = 'IMAGE'
 	self.pubPrefix = "   .. role:: pubauthor\n\n   .. role:: pubtitle\n\n   .. role:: pubprint\n\n"
         self.ext = ".rst"
         self.divFile = "div-" + self.pattern 
         self.divContent = ""
         self.baseHtmlDir = "projects"
+        self.imagedir = "images/"
+        self.image_tag = "image: "
+        self.caption_tag = "caption: "
+        
 
     def getFileList(self):
         files = glob.glob(self.pattern + '*[0-9]')
@@ -95,7 +106,7 @@ class RawText:
                 ldict[key].append(lnum)
             lnum += 1
 
-        # add div content
+        # add div content and set self.haveImage flag
         self.composeDiv(lines, ldict)
 
         # create and return rst content
@@ -103,14 +114,19 @@ class RawText:
         for key in self.keys:
              vals = ldict.get(key, None)
              if vals is not None:
-                if key != self.wordID:      # add line heading
+                if key not in (self.wordID, self.wordImage): # add line heading for most keys
                     text += "|%s|\n" % key 
                 if key == self.wordID:      # add project id line and heading
-                    text += self.composeHeader(vals, lines)
+                    (header, id) = self.composeHeader(vals, lines)
+                    text += header
                 elif key == self.wordTitle: # add project title line
                     text += self.composeTitleString(vals, lines)
                 elif key == self.wordPubs:  # add  publications lines
                     text += self.composePubString(vals, lines)
+                elif key == self.wordImage: # check for image 
+                    continue
+                elif key == self.wordDesc:  # add description
+                    text += self.composeDescription(vals, lines, id)
                 else:                       # add all other lines 
                     str = ''
                     for i in vals:
@@ -159,6 +175,19 @@ class RawText:
             for i in vals:
                 title += lines[i]
 
+        # check for image 
+        self.haveImage = False
+        img = None
+        vals = ldict.get(self.wordImage, None)
+        if vals: 
+            # check for img and caption
+            imgname = lines[vals[0]][:-1]
+            imgcaption = lines[vals[1]][:-1]
+            if os.path.isfile ("%s%s" % (self.imagedir,imgname)):
+                self.haveImage = [imgname, imgcaption]
+            else:
+                self.haveImage = False
+
         # create div section
         if not id: return
         if not title: return
@@ -166,6 +195,8 @@ class RawText:
         div += '<a href=\"%s/%s%s.html\">\n' % (self.baseHtmlDir, self.pattern, id)
         div += '<span class=\"%snumber\">%s %s</span>\n' % (self.pattern, self.pattern.upper(), id)
         div += '<span class=\"%stitle\">\n' %(self.pattern)
+        if self.haveImage: 
+            div += '<img class=\"workflow-thumb\" src=\"%s/_images/%s\" align=\"left\"/>\n' % (self.baseHtmlDir, imgname)
         div += '%s' % title
         div += '</span></a></div>\n\n'
 
@@ -188,7 +219,7 @@ class RawText:
         header += '---------------------------\n'
         header += '.. index:: %s %s\n\n' % (self.pattern.upper(), id)
 
-        return header
+        return (header, id)
 
     def composeTitleString(self, vals, lines):
             str = ''
@@ -207,6 +238,84 @@ class RawText:
             for i in vals:
                 str += "#.   | %s\n" % lines[i]
             return str
+
+    def composeDescription(self, vals, lines, id):
+            str = ''
+            if self.haveImage: # have image  
+                str += "\n.. figure:: /images/%s\n" % self.haveImage[0]
+                str += "   :align: left\n\n" 
+                str += "   .. role:: caption\n\n" 
+                parts = self.composeCaption()
+                for p in parts:
+                    str += "   :caption:`%s` |br|\n" % p
+            str += "\n" 
+            for i in vals:
+                str += "%s" % lines[i]
+
+            str += "\n" 
+            return str
+
+    def composeCaption(self):
+        if not self.haveImage:
+            print "Wrong call to function composeCaption(). Error in logic "
+            sys.exit(-1)
+
+        # image filename and caption
+        img = self.haveImage[0]
+        caption = self.haveImage[1]
+
+        # find image width
+        width = self.getImageWidth(img)
+        parts = self.cutCaption(width, caption)
+        return parts
+
+    def getImageWidth(self, img):
+        cmd = "file %s%s" % (self.imagedir, img)
+        info, err = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
+        dim = info.split(',')[1]       # dimentions as W x H string
+        width = int(dim.split('x')[0]) # width
+        return width
+
+    def cutCaption(self, x, caption):
+        """ Return caption broken in strings to fit image width.
+            x - image width, y i- length of caption 
+        """
+        scale = 6.25 # for 250 width image caption line is 40 char long
+        y = len(caption)
+        array = [c.start() for c in re.finditer(' ', caption)]
+        parts = []
+
+        # no scaling needed, caption fits the image width
+        if x * 1.0 / y >= scale:
+            parts.append(caption)
+            return  parts
+
+        linelen = int(x/scale)
+
+        start = 0
+        end = 0
+        count = linelen
+        for a in array:
+            if a > count:
+                parts.append(caption[start:end]) 
+                #count += linelen
+                count += len(caption[start:end])
+                start = end+1
+                print "DEBUG count=", parts[-1]
+            end = a
+
+        parts.append(caption[start:]) 
+        return parts
+
+# 250 -> 40
+#.. figure:: /images/dbp1.png
+#   :align: left
+#
+#   .. role:: caption
+#
+#   :caption:`Figure caption goes here` |br|
+#   :caption:`second line of caption` 
+
 
     def writeRST(self, fname, content):
         outfile = fname + self.ext

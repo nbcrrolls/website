@@ -9,3 +9,12 @@
 .. |EXTERNAL FUNDING| replace::   :sec:`External Funding` 
 .. |BTRC RESOURCE COLLABORATION| replace::   :sec:`BTRC Resource Collaboration`
 .. |RELEVANT PUBLICATIONS| replace:: :sec:`Relevant publications`
+.. |DESCRIPTION| replace:: :sec:`Project Description`
+
+.. |br| raw:: html
+
+   <br />
+
+.. raw:: html
+
+   <style> .red {color:red; font-weight:bold} </style>

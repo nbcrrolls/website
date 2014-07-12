@@ -20,3 +20,21 @@ Jared Tangney, Joyce Chuang, Matthew Janssen, Adarsh Krishnamurthy, Peter Liao, 
 Vijay S. Rao, Steffen Lindert, Dan D. Wang, Peter Kekenes-Huskey, Yuanhua Chang, J. Andrew McCammon, Andrew McCulloch, Peter Arzberger, Michael Regnier, Mechanisms of altered cardiac myofibril relaxation caused by the cardiac troponin-I R145G mutation, Biophys J, 104: 311a. (2013)
 T. Liao, Y. Zhang, P. Kekenes-Huskey, Y. Cheng, A. Michailova, M. Holst, A. McCulloch, and J. A. McCammon, Multi-core CPU or GPU-accelerated multi- scale modeling for biomolecular complexes, Molecular Based Mathematical Biology.
 P. Kekenes-Huskey, T. Liao, J. Hake, A. Gillette, J. Zhang, A. Michailova, A. McCulloch, and A. McCammon, "Molecular and sub cellular-scale modeling of nucleotide diffusion in the cardiac myofilament lattice", Biophys J., accepted, 2013.
+IMAGE
+dbp2.png
+Superposition of molecular dynamics trajectory snapshots for the wild-type (wt, A), R145G (B), and R145G/S2324D (C) mutants, in order of increasing lability. The flexibility of TnI (blue) and TnC (red) relative to TnT (orange) is evidenced by the larger spatial extent spanned by the snapshots
+DESCRIPTION
+Quantitative information is available on molecular structures and kinetics as well as on sarcomere and tissue mechanics, but it 
+has not been possible to connect these detailed molecular structures and kinetics to molecular and cell systems-level models 
+owing in part to the lack of software well suited to such multi-scale problems. In this context , this project serves as a 
+key data-generating platform that will further systemic multi-scale modeling technology to achieve complex physiological 
+integration of molecular to organ-level effects of dATP, a biological feat that can be addressed uniquely by systems modeling.
+
+Progress thus far suggests the predominant effect of elevated (dATP) is to enhance myosin-actin crossbridge binding and 
+cycling and accelerated calcium transient decay, and an enhanced sarcoplasmic reticulum (SR) calcium uptake rate without change 
+in calcium transient amplitude. We hypothesize that the release of calcium by TnC feeds back into the myocyte system, then 
+affects the SR-calcium uptake rate. It is imperative, therefore, to decouple, then re-couple biological systems to unravel 
+the effects of dATP and reverse engineer whole-heart function to understand the systemic mechanisms of dATP effects. 
+This feat is not feasible solely by experimental approaches, thus requiring modeling techniques to elucidate intermolecular 
+systemic physiological functions.
+

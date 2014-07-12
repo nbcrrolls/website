@@ -17,3 +17,23 @@ NIH/NINDS 5R01-NS016295-25 (Ross, PI), 07/01/2010-06/30/2014; NIH/NICHD 5 P01 HD
 BTRC RESOURCE COLLABORATION
 National Center for Microscopy and Imaging Research, National Center for Multiscale Modeling of Biological Systems
 RELEVANT PUBLICATIONS
+IMAGE
+dbp6.png
+Cartoon of generalized neuron dendrite branch points with the putative distribution of select channels on the SER and plasma membrane. From Ross (2012).
+DESCRIPTION
+In cardiac muscle, calcium sparks represent activity of the molecular machinery responsible for coupling plasma membrane 
+depolarization to release of calcium from a form of smooth endoplasmic reticulum (SER), known as the sarcoplasmic 
+reticulum (SR), to elicit contraction of the muscle. Neuronal calcium sparks are found to be very prominent at 
+dendrite branch points and their role is not known, but involvement of SER is predicted based on previous RyR localizations.
+
+Neuronal dendrites are complicated structures in terms of their elaborate, tree-like morphology and their very extensive 
+internal membrane system of branching SER. Despite descriptions of an interconnected SER network in neuronal dendrites by 
+early serial section 3D EM and the presence of both RyR and IP3R calcium release channels on this anastomosing endomembrane 
+system, our understanding of the physiological roles and precise locations of calcium release processes inside dendrites 
+remains woefully incomplete.
+
+This project leverages recent development of methods to reconstruct large volumes of neuronal axons and dendrites using 
+serial block-face electron microscopy (EM) and serial-section electron tomography, and advances in models for 3D EM data 
+sets for their reuse as substrates for computational simulation of physiology. As the sample is carried forward from light 
+microcopy (LM) to higher-resolution EM, the technical challenges include locating the exact same area from LM that corresponds 
+to where a spark was recorded in a branch point of an individual neuronal dendrite in the EM volume of data.

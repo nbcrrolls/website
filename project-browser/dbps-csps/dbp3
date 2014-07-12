@@ -17,3 +17,17 @@ NIH/NCI RO1 CA-112560 (Kaiser, Lathrop, PIs), 12/01/2004-05/31/2015
 RELEVANT PUBLICATIONS
 Demir, O., R. Baronio, F. Salehi, C. D. Wassman, L. Hall, G. W. Hatfield, R. Chamberlin, P. Kaiser, R. H. Lathrop and R. E. Amaro (2011). "Ensemble-Based Computational Approach Discriminates Functional Activity of p53 Cancer and Rescue Mutants." Plos Computational Biology 7(10).
 Wassman, C. D., R. Baronio, O. Demir, B. D. Wallentine, C. K. Chen, L. V. Hall, F. Salehi, D. W. Lin, B. P. Chung, G. W. Hatfield, A. Richard Chamberlin, H. Luecke, R. H. Lathrop, P. Kaiser and R. E. Amaro (2013). "Computational identification of a transiently open L1/S3 pocket for reactivation of mutant p53." Nat Commun 4: 1407.
+IMAGE
+dbp3.png
+Workflows to support simulation analysis and RCS screening. (A) Conversion of MD simulations to a PDB trajectory with clustering performed by the Opal web service GROMACS clustering application. The resulting output files, notably the PDB files for the central cluster members, are displayed in a browser. (B) Conversion of MD simulations to a PDB trajectory with QR factorization to eliminate structural redundancy. The resulting output is displayed in a web browser.
+DESCRIPTION
+Many medically important proteins are disordered or destabilized in the disease state or have intrinsically disordered regions. 
+A prototypical example is p53, a well-known tumor-suppressor protein that prevents tumor formation through a number of mechanisms.
+
+The primary goal of this project is to leverage a novel computational methodology that identifies small molecules able to rescue 
+the function of protein targets destabilized by mutation, a method that represents a new approach to drug discovery. 
+
+We are applying this methodology in a multidisciplinary effort aimed at a major anti-cancer goal: discovery of a drug 
+to reactivate destabilized p53 cancer mutants. Pilot experiments applying our approach have yielded more putative new p53 cancer 
+mutant reactivation compounds than all those found in research efforts of the past 10 years.
+
