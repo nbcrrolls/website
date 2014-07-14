@@ -7,7 +7,7 @@ Cardiovascular Research and Training Institute & Bioengineering Department, Univ
 PROJECT TITLE
 Remodeling of Transverse Tubular System in Heart Failure and after Cardiac Resynchronization Therapy
 BTRC PERSONNEL
-R. Amaro, A. McCulloch, M. Holst, R. Kerchoffs, R. Lawrence, R. Malmstrom, A. Mihaylova, S. Phan, J.Vandorn
+\R. Amaro, A. McCulloch, M. Holst, R. Kerchoffs, R. Lawrence, R. Malmstrom, A. Mihaylova, S. Phan, J.Vandorn
 TR&D PROJECT
 Cores 1, 2, 3, and 4
 STATUS
@@ -18,7 +18,7 @@ RELEVANT PUBLICATIONS
 Kekenes-Huskey P, Cheng Y, Hake J, Sachse F, Bridge J, Holst M, McCammnon A, McCulloch A, Michailova AP (2012) Modeling effects of L- type Ca2+ current and Na+-Ca2+ exchanger on Ca2+ trigger flux in rabbit myocytes with realistic t-tubule geometries. Frontiers in Computational Physiology and Medicine: Calcium Signaling in Cardiac Myocyte 3, 351.
 IMAGE
 csp10.png
-Confocal images of sarcolemma including t-tubules (blue) and RyR clusters (red) obtained from tissue sections from DHF animal model.
+Confocal images of sarcolemma.
 DESCRIPTION
 More than five million Americans suffer and more than 250,000 die annually from heart failure (HF). 
 Several types of HF are associated with dyssynchronous ventricular contraction, which has deleterious 
@@ -40,5 +40,6 @@ structural remodeling of the spatial distribution of t-tubules and RyRs in cells
 DHF and CRT. We are characterizing spatial heterogeneity of structural and functional remodeling within 
 cells using a combination of imaging and computational approaches.
 
-On a figure, areas indicated by dashed rectangles are magnified on the right-hand side. 
-Arrows point to locally increased RyR density and t-tubule loss at cell ends.
+Figure shows confocal images of sarcolemma including t-tubules (blue) and RyR clusters (red) obtained 
+from tissue sections from DHF animal model.  Areas indicated by dashed rectangles are magnified on 
+the right-hand side.  Arrows point to locally increased RyR density and t-tubule loss at cell ends.

@@ -7,7 +7,7 @@ Carnegie Mellon University, Pittsburgh, PA
 PROJECT TITLE
 Multiscale Diffusion Modeling in Cardiac Myofilaments
 BTRC PERSONNEL
-R. Amaro, A. McCulloch, M. Holst, R. Kerchoffs, R. Malmstrom, A. Mihaylova, J.Vandorn, M. Sanner, L. Auten
+\R. Amaro, A. McCulloch, M. Holst, R. Kerchoffs, R. Malmstrom, A. Mihaylova, J.Vandorn, M. Sanner, L. Auten
 TR&D PROJECT
 Cores 1, 2, and 3
 STATUS
@@ -18,7 +18,7 @@ RELEVANT PUBLICATIONS
 Tao Liao, Yongjie Zhang, Peter M. Kekenes-Huskey, Yuhui Cheng, Anushka Michailova, Andrew D. McCulloch, Michael Holst, J. Andrew McCammon. Multi-core CPU or GPU-accelerated multi-scale modeling for biomolecular complexes. Molecular Based Mathematical Biology, 1,164-179, 2013
 IMAGE
 csp9.png
-Multi-scale model of thin actin filament complex. 
+Multi-scale model of thin actin filament complex.
 DESCRIPTION
 Today the key barriers computational biologists face are: (1) lack of efficient methods to effectively 
 construct accurate, multi-scale geometric models for large protein complexes; (2) the inability of existing 
