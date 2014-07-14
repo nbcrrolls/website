@@ -17,3 +17,20 @@ NIH R01 EB0018381 (Segars, PI), 08/01/2010-06/30/2014
 RELEVANT PUBLICATIONS
 Gonzales, M. J., Sturgeon, G., Krishnamurthy, A., Hake, J., Jonas, R., Stark, P., Rappel, W., Narayan, S., Zhang, Y., Segars, W., McCulloch, A., 2013a. A three-dimensional finite-element model of human atrial anatomy: New methods for cubic Hermite meshes with extraordinary vertices (accepted for publication in Medical Image Analysis).
 Gonzales, M. J., Sturgeon, G., Krishnamurthy, A., Hake, J., Jonas, R., Stark, P., Rappel, W. J., Narayan, S. M., Zhang, Y., Segars, W. P., McCulloch, A. D., 2013b. A three-dimensional finite element model of human atrial anatomy: New methods for cubic Hermite meshes with extraordinary vertices. Med Image Anal 17, 525-537
+DESCRIPTION
+Diagnostic imaging techniques can play a vital role in reducing the mortality rate and strain on the health care system 
+caused by cardiovascular disease by providing more efficient methods to screen and manage cardiac patients. Many 
+non-invasive imaging modalities and tools are being studied and developed to better detect, stratify, and monitor 
+therapy for patients with cardiac disease. As new methods emerge in response to cardiac disease, a major challenge 
+is how to determine which technique is best in terms of patient diagnosis and treatment, and how different techniques 
+may fit together to form a complete patient management strategy.
+
+Computer-based simulation is widely used to evaluate and improve medical imaging devices and procedures. These 
+techniques involve computer-generated phantoms that define patient anatomy and physiology, and models of the 
+imaging process. Given a model of the imaging process, imaging data of a computer phantom can be simulated 
+as if it were an actual patient. Foremost among these computer-generated phantoms is the 4D extended 
+Cardiac-Torso (XCAT) phantom.
+
+The goal of this project is to extend the FE human heart model to simulate abnormal functioning of the heart 
+due to cardiovascular disease and integrate these abilities into the XCAT phantom.
+

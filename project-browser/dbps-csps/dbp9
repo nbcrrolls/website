@@ -17,7 +17,7 @@ P50 GM094503, 08/11-07/16, The Virtual Physiological Rat Project, NIH/NIGMS, (Be
 RELEVANT PUBLICATIONS
 IMAGE
 dbp9.png
-Caption: Multi-physics cardiac models. (a) electrical activation isochrones, (b) ventricular pressure, (c) coronary vasculature, and (d) coronary microvasculature.
+Multi-physics cardiac models.
 DESCRIPTION
 Within the physiological modeling community, computational modeling of the heart has emerged as arguably the most advanced 
 exemplar of integrated cell-to-organ simulation. As such, the heart represents a highly promising candidate for 
@@ -29,3 +29,5 @@ design, testing, and hypothesis generation for experimental driven research; (ii
 system models; and (iii) providing a foundation for quantifying genotype-phenotype relationships. Our multi-scale 
 approach will allow the Virtual Physiological Rat group to tackle several questions that have been difficult to address, 
 owing to the complex and coupled nature of the metabolo-electro-contractile activation and relaxation process.
+
+Figure shows (a) electrical activation isochrones, (b) ventricular pressure, (c) coronary vasculature, and (d) coronary microvasculature.

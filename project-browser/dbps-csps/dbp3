@@ -19,7 +19,7 @@ Demir, O., R. Baronio, F. Salehi, C. D. Wassman, L. Hall, G. W. Hatfield, R. Cha
 Wassman, C. D., R. Baronio, O. Demir, B. D. Wallentine, C. K. Chen, L. V. Hall, F. Salehi, D. W. Lin, B. P. Chung, G. W. Hatfield, A. Richard Chamberlin, H. Luecke, R. H. Lathrop, P. Kaiser and R. E. Amaro (2013). "Computational identification of a transiently open L1/S3 pocket for reactivation of mutant p53." Nat Commun 4: 1407.
 IMAGE
 dbp3.png
-Workflows to support simulation analysis and RCS screening. (A) Conversion of MD simulations to a PDB trajectory with clustering performed by the Opal web service GROMACS clustering application. The resulting output files, notably the PDB files for the central cluster members, are displayed in a browser. (B) Conversion of MD simulations to a PDB trajectory with QR factorization to eliminate structural redundancy. The resulting output is displayed in a web browser.
+Workflows to support simulation analysis and RCS screening.
 DESCRIPTION
 Many medically important proteins are disordered or destabilized in the disease state or have intrinsically disordered regions. 
 A prototypical example is p53, a well-known tumor-suppressor protein that prevents tumor formation through a number of mechanisms.
@@ -31,3 +31,7 @@ We are applying this methodology in a multidisciplinary effort aimed at a major 
 to reactivate destabilized p53 cancer mutants. Pilot experiments applying our approach have yielded more putative new p53 cancer 
 mutant reactivation compounds than all those found in research efforts of the past 10 years.
 
+Figure shows (A) Conversion of MD simulations to a PDB trajectory with clustering performed by the Opal web 
+service GROMACS clustering application. The resulting output files, notably the PDB files for the central cluster members, 
+are displayed in a browser. (B) Conversion of MD simulations to a PDB trajectory with QR factorization 
+to eliminate structural redundancy. The resulting output is displayed in a web browser.

@@ -22,7 +22,7 @@ Yu Z, Holst MJ, Hayashi T, Bajaj CL, Ellisman MH, McCammon JA, Hoshijima M. Thre
 Yu Z, Yao G, Hoshijima M, Michailova A, Holst M. Multi-scale modeling of calcium dynamics in ventricular myocytes with realistic transverse tubules. IEEE Trans Biomed Eng., 2011;58(10):2947-51. PMID: 21632291, PMCID: 3179564.
 IMAGE
 dbp8.png
-SBFSEM (AB) demonstrates new structural details of couplons in normal mouse cardiac myocytes. Couplon (pink) distribution is mapped along with T-system network (green) and surface membrane (blue). RyR clusters are shown by immuno-staining in LM (CD). dSTORM (D) provides single-channel-resolution locational mapping of RyRs, which is extremely obscure in conventional confocal microscopic imaging.
+SBFSEM (AB) demonstrates new structural details of couplons in normal mouse cardiac myocytes.
 DESCRIPTION
 Our project's objectives are to (1) extend our first simulation model of calcium sparks built on a realistic 3D couplon 
 structure in a murine cardiomyocyte, decoded from the image of electron microscopic tomography (EMT) and (2) clarify how 
@@ -36,3 +36,6 @@ ryanodine receptor (RyR) distribution within and near couplons, and the control 
 coupling based on the realistic cellular organelle structure. Such knowledge will significantly advance our mechanistic 
 understanding of E-C coupling defects in disease processes such as heart failure.
 
+Figure shows Couplon (pink) distribution is mapped along with T-system network (green) and surface membrane 
+(blue). RyR clusters are shown by immuno-staining in LM (CD). dSTORM (D) provides single-channel-resolution 
+locational mapping of RyRs, which is extremely obscure in conventional confocal microscopic imaging.

@@ -16,3 +16,17 @@ EXTERNAL FUNDING
 NIH P01 GM091743-01-05 (Harris, PI; Harki, Co-I), 1/1/2011-12/31/2015; V Foundation Translational Grant (Harris, PI; Harki, Co-I), 11/1/2012- 10/30/2015; Department of Defense CDMRP Idea Award BC121347 (Harris, PI), 8/15/2013-8/14/2015; NIH R01 AI064046-06-10 (Harris, PI), 2/15/2011- 1/31/2015
 RELEVANT PUBLICATIONS
 Rathore, A., M. A. Carpenter, O. Demir, T. Ikeda, M. Li, N. Shaban, E. K. Law, D. Anokhin, W. L. Brown, R. E. Amaro and R. S. Harris (2013). The Local Dinucleotide Preference of APOBEC3G Can Be Altered from 5'-CC to 5'-TC by a Single Amino Acid Substitution. Journal of molecular biology (in press).
+IMAGE
+csp4.png
+Screen shot of Kepler workflow for parameterization of small molecule ligands for MD simulations and virtual screening.
+DESCRIPTION
+APOBEC3 or A3 enzymes are DNA cytosine deaminases that catalyze C-to-U conversion in single-stranded 
+DNA. With seven members (A3A, A3B, A3C, A3D, A3F, A3G, A3H) in humans, the A3 enzyme family works 
+as an arm of the innate immune system targeting foreign DNA for destruction. A3 enzymes have 
+significant roles in multiple diseases including HIV/AIDS pathogenesis and cancer mutagenesis.
+
+The primary goal of our work is structure- and ligand-based lead optimization of recently identified 
+weak inhibitors of A3 enzymes using state-of-the-art MD simulations and virtual screening. We are 
+applying a multidisciplinary approach to identify small-molecule inhibitors of several important A3 
+enzymes that can serve as drug leads targeting HIV pathogenesis, cancer mutagenesis, and genetic engineering.
+

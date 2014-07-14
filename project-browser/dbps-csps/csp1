@@ -17,3 +17,24 @@ NIH/NIGMS R01 GM100078 (Gorfe, PI) 9/2012-8/2017
 RELEVANT PUBLICATIONS
 Hocker, H. J., K. J. Cho, C. Y. Chen, N. Rambahal, S. R. Sagineedu, K. Shaari, J. Stanslas, J. F. Hancock and A. A. Gorfe (2013). Andrographolide derivatives inhibit guanine nucleotide exchange and abrogate oncogenic Ras function. Proc Natl Acad Sci U S A 110: 10201-10206
 Prakash, P., A. Sayyed-Ahmad and A. A. Gorfe (2012). The role of conserved waters in conformational transitions of Q61H K-ras. PLoS Comput Biol 8: e1002394.
+IMAGE
+csp1.png
+Overview of our dynamics-guided strategy for anti-Ras drug discovery.
+DESCRIPTION
+Ras proteins are key regulators of diverse cell-signaling pathways. Somatic Ras mutations are found in ~25% 
+of all human tumors and in up to 90% of specific tumor types. However, decades of efforts by both 
+academia and industry have failed to yield selective Ras inhibitors. Factors limiting the development of leads 
+to drugs, especially when targeting the GTP-hydrolyzing site, include conservation of the active site in a 
+large number of small G-proteins, the high concentration and affinity of cellular GTP for Ras, and 
+the requirement for Ras signaling of multiple regulators and specific spatiotemporal membrane-organization.
+
+We hypothesize that identifying and targeting allosteric sites on Ras by small molecule ligands will inhibit 
+its aberrant function by de-coupling the nucleotide-binding and membrane-interacting regions or by shifting the 
+equilibrium between active, inactive, and intermediate conformational states. We, therefore, designed a 
+therapeutic strategy that is guided by dynamics and focuses on allosteric sites of Ras. Our approach involves 
+multi-level computations and experiments.
+
+The figure shows an overview of our dynamics-guided strategy for anti-Ras drug discovery. Key aspects 
+include ensemble generation in solution and in membrane; identification of multiple binding sites; generation 
+of small molecule hits for each binding site and conformer; and experimental testing of candidate inhibitors.
+

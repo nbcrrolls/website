@@ -22,7 +22,7 @@ T. Liao, Y. Zhang, P. Kekenes-Huskey, Y. Cheng, A. Michailova, M. Holst, A. McCu
 P. Kekenes-Huskey, T. Liao, J. Hake, A. Gillette, J. Zhang, A. Michailova, A. McCulloch, and A. McCammon, "Molecular and sub cellular-scale modeling of nucleotide diffusion in the cardiac myofilament lattice", Biophys J., accepted, 2013.
 IMAGE
 dbp2.png
-Superposition of molecular dynamics trajectory snapshots for the wild-type (wt, A), R145G (B), and R145G/S2324D (C) mutants, in order of increasing lability. The flexibility of TnI (blue) and TnC (red) relative to TnT (orange) is evidenced by the larger spatial extent spanned by the snapshots
+Superposition of molecular dynamics trajectory snapshots.
 DESCRIPTION
 Quantitative information is available on molecular structures and kinetics as well as on sarcomere and tissue mechanics, but it 
 has not been possible to connect these detailed molecular structures and kinetics to molecular and cell systems-level models 
@@ -38,3 +38,6 @@ the effects of dATP and reverse engineer whole-heart function to understand the 
 This feat is not feasible solely by experimental approaches, thus requiring modeling techniques to elucidate intermolecular 
 systemic physiological functions.
 
+Figure shows superposition of molecular dynamics trajectory snapshots for the wild-type (wt, A), R145G (B), 
+and R145G/S2324D (C) mutants, in order of increasing lability. The flexibility of TnI (blue) 
+and TnC (red) relative to TnT (orange) is evidenced by the larger spatial extent spanned by the snapshots

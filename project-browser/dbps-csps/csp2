@@ -15,3 +15,26 @@ Continuing (Started 5/13)
 EXTERNAL FUNDING
 NIH Research Scholar Development Award K22-AI100927 (PI: Gumbart), 05/2013-05/2015; NIH Research Project Grant R01-GM101425 (Jensen, PI; Gumbart, Co-I), 04/2013-03/2017; NIH Research Project Grant R01- GM067887 (Schulten, PI; Gumbart, Co-I), 07/2013-06/2015
 RELEVANT PUBLICATIONS
+IMAGE
+csp2.png
+SecY complex (grey, orange, yellow) in a membrane, bound to channel partners.
+DESCRIPTION
+Combating infection has become increasingly difficult because bacteria are acquiring resistance 
+at an incredible pace, and current approaches to antibiotic development are producing diminishing returns. 
+Accounting for the atomic details of essential bacterial systems and their flexibility requires a 
+method that can capture both properties simultaneously. Molecular Dynamics (MD) simulations, with 
+their unique combination of effectively unlimited spatial and temporal resolution, provide a means 
+for generating novel structural data and elucidating a system's evolution between structurally 
+characterized states. When combined with rigorous experimental input and verification, simulations 
+represent a powerful tool for uncovering new, detailed insights into the structural, kinetic, 
+and energetic aspects of synthesis mechanisms in bacteria. MD simulations also permit an 
+interpretation of experimental results in terms of underlying molecular events. The use of the 
+myriad protein conformations observed in MD simulations will enable discovery of conformationally 
+selective ligands that might otherwise escape detection based on crystal structures alone.
+
+This project brings together diverse expertise in computer-aided drug discovery, workflow 
+development, emerging cyberinfrastructure technologies, and domain-specific interface development 
+to facilitate and enable discovery of new lead compounds for potential novel classes of antibiotics.
+
+The figure shows (A) Structure of the ribosome-SecY-nascent protein complex built with MDFF as preliminary results; 
+(B) SecA (red) bound to SecYEG.
