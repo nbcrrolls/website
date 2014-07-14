@@ -301,7 +301,6 @@ class RawText:
                 #count += linelen
                 count += len(caption[start:end])
                 start = end+1
-                print "DEBUG count=", parts[-1]
             end = a
 
         parts.append(caption[start:]) 
