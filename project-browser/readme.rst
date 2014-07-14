@@ -6,7 +6,7 @@ NBCR Project Browser
 
 This file explains how to create html distribution for the project browser
 
-Writign CSP and DBP files
+Writing CSP and DBP files
 -----------------------------
 
 This section explains how to write DBP and CSP files
