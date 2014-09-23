@@ -4,9 +4,9 @@
 make clean
 
 # create rst files from raw files
-echo "Creatikng dbp files"
+echo "Creating dbp files"
 ./makeRst dbp
-echo "Creatikng csp files"
+echo "Creating csp files"
 ./makeRst csp
 
 # create html files from rst

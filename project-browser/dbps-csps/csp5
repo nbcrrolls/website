@@ -7,7 +7,7 @@ University of Edinburgh (Schnaufer); University of Manchester (Greaney), UCSD (S
 PROJECT TITLE
 Integrated Strategies for Inhibitor Development against Trypanosoma brucei RNA Editing Ligase 1
 BTRC PERSONNEL
-R. Amaro, I. Altintas, D. Crawl, J. Durant, R. Lawrence, D. Lee, R. Malmstrom, S. Phan, S. Forli
+\R. Amaro, I. Altintas, D. Crawl, J. Durant, R. Lawrence, D. Lee, R. Malmstrom, S. Phan, S. Forli
 TR&D PROJECT
 Cores 1, 2 and 4
 STATUS
@@ -16,3 +16,21 @@ EXTERNAL FUNDING
 Wellcome Trust (PIs: Schnaufer, Greaney), 6/1/2011-6/31/2015; Alfred Benzon Foundation (PI: S\&#248;rensen), 2011-2014
 RELEVANT PUBLICATIONS
 Durrant, J. D., L. Hall, R. V. Swift, M. Landon, A. Schnaufer and R. E. Amaro (2010). Novel naphthalene-based inhibitors of Trypanosoma brucei RNA editing ligase 1. PLoS Negl Trop Dis 4(8): e803.
+IMAGE
+csp5.png
+Conducting lead optimization with AutoClickChem.
+DESCRIPTION
+As available drugs against African Sleeping Sickness are often ineffective, subject to resistance, 
+difficult to administer, costly, and in some cases highly toxic, there is an urgent need for novel 
+trypanocidal therapeutics. All trypanosomatids rely on a unique form of RNA editing for mitochondrial 
+gene expression. RNA editing Ligase 1 (REL1), a key enzyme in this editing process, is essential 
+for the survival of T.brucei. Furthermore, T.cruzi and Leishmania spp. have close TbREL1 
+orthologs, suggesting that REL1 inhibitors may have broad anti-trypanosomal activity. Importantly, 
+humans lack enzymes closely related to REL1, thus minimizing the potential for harmful side effects. 
+The active site in REL1 is flexible and is made up of a number of charged protein side-chains.
+
+The purpose of this project is to probe the flexibility of this pocket using enhanced sampling 
+simulation techniques and incorporating the relevant protein conformations into our drug 
+design approach. We aim to validate the use of conformations based on accelerated Molecular 
+Dynamics in drug discovery. And lastly, based on the simulations, we can extract details about the native 
+ligand binding, enzymatic function, and product dissociation.

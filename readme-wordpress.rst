@@ -343,3 +343,25 @@ Enable Google Analytics
 #. Add the same code snippet 
    to /var/www/html/index.html
 
+
+Enable captcha  on Contact form
+--------------------------------
+
+Enable captcha in grunion contact form plugin  in wordpress2/wp-content/plugins/grunion-contact-form/  
+
+#. replace plugin file grunion-contact-form.php with modified  per http://wordpress.org/support/topic/captcha-needed-for-grunion-contact-form 
+
+#. get public and private recaptcha keys from google and put in the grunion-contact-form.php:  
+
+   - Step 1 log into your google account  
+   - Step 2 type recaptcha in google search and get to https://www.google.com/recaptcha site  
+   - Step 3 click on "Get reCAPTCHA" button  
+   - Step 4 In a new window  "Click "Sign up Now!"  
+   - Step 5 follow directions to create keys 
+        
+#. mkdir includes/  
+
+#. touch includes/index.php  
+
+#. download recaptcha library from http://code.google.com/p/recaptcha/ and put the file recaptchalib.php 
+   in includes/

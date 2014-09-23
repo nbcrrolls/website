@@ -1,13 +1,5 @@
 
-/*
-ul {
-    display:block;
-    list-style-type:none;
-    margin:0;
-    padding:0;
-}
-*/
-
+/*        */
 a,
 a code {
     color: #212630;
@@ -15,21 +7,6 @@ a code {
 }
 
 #options a {
-/*
-  display: block;
-  padding: 0.2em 0.2em;
-  background-color: #DDD;
-  color: #222;
-  font-family:arial;
-  font-weight: bold;
-  text-shadow: 0 1px hsla( 0, 0%, 100%, 0.5 );
-  background-image: -webkit-linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) );
-  background-image:    -moz-linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) );
-  background-image:     -ms-linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) );
-  background-image:      -o-linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) );
-  background-image:         linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) );
-*/
-  background-color: #C0C0CC;
   background-color: #aabbcc;
   border-radius: 9px 9px 9px 9px;
   color: #FFFFFF;
@@ -140,28 +117,27 @@ a code {
 }
 
 .item {
-  width: 220px;
+  width: 240px;
   height: 100px;
   margin: 5px;
   float: left;
   overflow: hidden;
   position: relative;
   border-style: solid;
-  color: #aabbcc;
-  -webkit-border--radius: 1.0em;
-      -moz-border-radius: 1.0em;
-           border-radius: 1.0em;
+  border: 2px solid #aabbcc;
+  -webkit-border--radius: 0.8em;
+      -moz-border-radius: 0.8em;
+           border-radius: 0.8em;
 }     
 
 .workflow-thumb {
-    width: 290px;
-    height: 160px;
+    height: 65px;
     display: inline;
-    margin: 5px 0px 0px 13px;
+    margin: 2px 5px 5px 0px;
     overflow: hidden;
-    -webkit-border--radius: 1.2em;
-       -moz-border-radius: 1.2em;
-            border-radius: 1.2em;
+    -webkit-border--radius: 0.6em;
+       -moz-border-radius: 0.6em;
+            border-radius: 0.6em;
 }
 
 .workflow-name {
@@ -224,18 +200,18 @@ a code {
 .cspnumber {
     color: #049694;
     display: block;
-    font-size: 1.0em;
+    font-size: 0.8em;
     font-weight: bold;
-    margin: 5px;
+    padding: 3px, 0px, 3px, 0px;
     text-align: center;
     background: #edf9f9;
 }
 .dbpnumber {
     color: #00aaff;
     display: block;
-    font-size: 1.0em;
+    font-size: 0.8em;
     font-weight: bold;
-    margin: 5px;
+    padding: 3px, 0px, 3px, 0px;
     text-align: center;
     background: #ddeeff;
 }
@@ -246,13 +222,22 @@ a code {
     bottom: 1.6em;
     display: block;
     left: 0.5em;
-    font-size: 1.0em;
+    font-size: 0.8em;
     font-weight: bold;
-    padding: 2px 5px 2px 9px;
+    padding: 2px 5px 2px 5px;
+}
+
+.options {
+    color: #0a6699;
+    display: block;
+    font-size: 1.0em;
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px 5px 5px 5px;
 }
 
 .h1 {
-    color: #445577;
+    color: #0a6699;
     font-size: 1.3em;
     font-weight: bold;
     text-align: center;
@@ -260,8 +245,7 @@ a code {
 }
 
 h3 {
-    color: #222244;
+    color: #0a6699;
     font-size: 1.1em;
     font-weight: bold;
-    font-style: italic;
 }

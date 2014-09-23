@@ -7,7 +7,7 @@ Carnegie Mellon University, Pittsburgh, PA
 PROJECT TITLE
 Multiscale Diffusion Modeling in Cardiac Myofilaments
 BTRC PERSONNEL
-R. Amaro, A. McCulloch, M. Holst, R. Kerchoffs, R. Malmstrom, A. Mihaylova, J.Vandorn, M. Sanner, L. Auten
+\R. Amaro, A. McCulloch, M. Holst, R. Kerchoffs, R. Malmstrom, A. Mihaylova, J.Vandorn, M. Sanner, L. Auten
 TR&D PROJECT
 Cores 1, 2, and 3
 STATUS
@@ -16,3 +16,26 @@ EXTERNAL FUNDING
 NSF CAREER Award (Zhang, PI), 8/1/2012-7/31/2017; FA95501110346- AFOSR (Zhang, PI), 8/1/2011-7/31/2014; ONR Young Investigator Award (Zhang, PI), 6/15/2010-6/14/2014
 RELEVANT PUBLICATIONS
 Tao Liao, Yongjie Zhang, Peter M. Kekenes-Huskey, Yuhui Cheng, Anushka Michailova, Andrew D. McCulloch, Michael Holst, J. Andrew McCammon. Multi-core CPU or GPU-accelerated multi-scale modeling for biomolecular complexes. Molecular Based Mathematical Biology, 1,164-179, 2013
+IMAGE
+csp9.png
+Multi-scale model of thin actin filament complex.
+DESCRIPTION
+Today the key barriers computational biologists face are: (1) lack of efficient methods to effectively 
+construct accurate, multi-scale geometric models for large protein complexes; (2) the inability of existing 
+methods to include large, realistic cell surface geometries, sub-cellular organelles, and protein complex 
+distributions for finite-element simulations; and (3) the lack of automatic and parallel 3D 
+mesh-generation techniques for complicated molecular/sub-cellular assemblies with correct topology and robust quality improvement.
+
+To overcome these barriers, we established a novel computational framework of multi-scale geometric 
+modeling and mesh generation. The proposed algorithms will provide parallelized systematic methods to 
+automatically construct multi-scale, finite-element geometric models and high-quality meshes that will help 
+advance our understanding of anatomical and physiological properties at molecular, sub-cell, and cellular scales 
+using the predictive NBCR/UCSD cardiac models. The proposed algorithms and software tools of this CSP will 
+be validated by importing the constructed meshes directly to Smolfin (https://bitbucket.org/huskeypm/smolfin), 
+a software package at NBCR/UCSD for adaptive finite-element analysis of protein complexes properties and 
+calcium signaling in cardiomyocytes with realistic geometries.
+
+On a figure, high resolution is shown for the actin domain (cyan). 
+(a) biomolecular surface; 
+(b) exterior tetrahedral mesh; 
+(c) exterior mesh with embedded protein.

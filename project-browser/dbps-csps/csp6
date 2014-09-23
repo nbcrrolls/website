@@ -7,7 +7,7 @@ Universidad de Navarra, Pamplona, Spain
 PROJECT TITLE
 Development and Structure of Auditory Brainstem Circuits for Temporal Processing
 BTRC PERSONNEL
-R. Amaro, J. Bush, L. Clementi, R. Lawrence, D. Lee, R. Malmstrom, S. Peltier, S. Phan, J. Schulze, M. Sanner, L. Auten
+\R. Amaro, J. Bush, L. Clementi, R. Lawrence, D. Lee, R. Malmstrom, S. Peltier, S. Phan, J. Schulze, M. Sanner, L. Auten
 TR&D PROJECT
 Cores 2, and 4
 STATUS
@@ -15,3 +15,28 @@ Continuing (Started 5/12)
 EXTERNAL FUNDING
 Spanish Ministry of Science and Innovation (BFU2009-12160) (PI: Wesseling); European Union (PCIG11-GA-2012-322013) (Wesseling, PI)
 RELEVANT PUBLICATIONS
+IMAGE
+csp6.png
+Screen snapshot of the custom evaluation program.
+DESCRIPTION
+Recent experimental and theoretical advances have produced a new kinetic framework for rate-limiting steps 
+in synaptic vesicle trafficking. The original work was conducted on Schaffer collateral synapses in the 
+hippocampus, but our collaborators have preliminary electrophysiological data from gigantic and very 
+fast calyx of Held synapses in the brain stem suggesting that the framework is generalizable. 
+The rate-limiting steps cause two distinct types of short-term depression in connection strength when 
+synapses are used heavily, but the molecular and cell biological correlates remain to be identified. 
+
+Our project seeks to identify the correlate of the longest lasting component of depression, 
+termed "supply-rate depression." Our project is using and extending the TxBR software suite, and we are 
+building our own analytical tool set on top of the refined data that came out of the capabilities developed 
+during NBCR's current funding period. Without TxBR, we wouldn't be able to track the thin filaments that 
+link vesicles and test the hypothesis that vesicles are connected as part of the vesicle release machinery 
+of the presynaptic membrane. So further improvements to the TxBR software package will be useful to our work.
+
+The figure shows a screen snapshot of the custom evaluation program used for judging if pairs 
+of synaptic vesicles are cross-linked. The user can advance to the next or previous image quickly 
+by clicking the right or left arrow, respectively. Arrows advance to next non-evaluated image when the 
+"Not Evaluated Only" box is checked, as it is in this example. The software presents pairs 
+to the evaluator in a random order allowing the unbiased comparison of cross links between genotypes 
+and brain regions as well as between a variety of tissue preparation, image acquisition, and 
+tomogram reconstruction techniques.

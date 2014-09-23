@@ -2,24 +2,40 @@ CSP Number
 3
 PI
 Oldfield, Eric
-#
 INSTITUTION
 University of Illinois, Urbana-Champaign, IL
 PROJECT TITLE
 Next Generation Anti-cancer and Anti-infective Drug Leads
 BTRC PERSONNEL
-R. Amaro, L. Clementi, J. Durant, D. Lee, R. Malmstrom, S. Forli
-#
+\R. Amaro, L. Clementi, J. Durant, D. Lee, R. Malmstrom, S. Forli
 TR&D PROJECT
 Cores 1, 2, and 4
-#
 STATUS
 Continuing (Started 5/11)
-#
 EXTERNAL FUNDING
-#
 R01 CA15819 (Oldfield, PI), 6/2011-5/2016
 RELEVANT PUBLICATIONS
 Durrant, J. D., R. Cao, A. A. Gorfe, W. Zhu, J. Li, A. Sankovsky, E. Oldfield and J. A. McCammon (2011). Non-bisphosphonate inhibitors of isoprenoid biosynthesis identified via computer-aided drug design. Chem Biol Drug Des 78(3): 323-332
 Zhu, W., Y. Zhang, W. Sinko, M. E. Hensler, J. Olson, K. J. Molohon, S. Lindert, R. Cao, K. Li, K. Wang, Y. Wang, Y. L. Liu, A. Sankovsky, C. A. de Oliveira, D. A. Mitchell, V. Nizet, J. A. McCammon and E. Oldfield (2013). Antibacterial drug leads targeting isoprenoid biosynthesis. Proc Natl Acad Sci U S A 110(1): 123-128 
 Lindert, S., W. Zhu, Y.-L. Liu, R. Pang, E. Oldfield and J. A. McCammon (2013). Farnesyl Diphosphate Synthase Inhibitors from In Silico Screening. Chemical Biology & Drug Design 81: 742-748
+IMAGE
+csp3.png
+Our UPPS inhibitors were featured on the cover of Chemical Biology & Drug Design.
+DESCRIPTION
+Though usually harmless, S. aureus may lead to ear infections, sinusitis, pneumonia, meningitis, toxic 
+shock syndrome, and a number of postsurgical infections. Typically patients are prescribed antibiotics 
+(e.g., penicillins) that inhibit bacterial cell-wall formation. However, in recent years many 
+pathogenic bacteria have become resistant to this drug class after acquiring the b-lactamase enzyme, 
+which breaks down penicillin-like antibiotics.
+
+As a consequence of this emerging resistance, new drug leads are needed urgently. Drugs 
+targeting members of the isoprenoid biosynthesis pathway are particularly promising. Specifically, 
+undecaprenyl diphosphate synthase (UPPS) is currently being studied because it is essential 
+for bacterial cell growth and has no close human homologues.
+
+The objective of this CSP is to develop new antibacterial drugs. Working with experimentalists, 
+NBCR researchers have already aided in the discovery of UPPS inhibitors that were subsequently 
+optimized to nanomolar affinity. Continued computational efforts will require novel CADD methods 
+(e.g., methods that draw upon accelerated MD), which we will implement as BiSiDE workflows so 
+others in the community can easily apply these advances in their own work.
+

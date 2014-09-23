@@ -7,7 +7,7 @@ West Virginia University (Spirou), Vollum Institute, OHSU (von Gersdorff)
 PROJECT TITLE
 Development and Structure of Auditory Brainstem Circuits for Temporal Processing
 BTRC PERSONNEL
-R. Amaro, J. Bush, L. Clementi, D. Lee, R. Malmstrom, S. Peltier, S. Phan, J. Schulze, M. Sanner, L. Auten
+\R. Amaro, J. Bush, L. Clementi, D. Lee, R. Malmstrom, S. Peltier, S. Phan, J. Schulze, M. Sanner, L. Auten
 TR&D PROJECT
 Cores 1, 2, 3, and 4
 STATUS
@@ -15,3 +15,19 @@ New
 EXTERNAL FUNDING
 P20 GM103503 (Spiro, PI), 07/2010-06/2015; R21 DC012638 (Spirou, PI), 07/2012-06/2014; R01 DC007698 (Spirou, PI), 06/2007-05/2013; R01 DC012938 (von Gersdorff, PI; Spirou, Co-I), 12/2012-11/2017
 RELEVANT PUBLICATIONS
+IMAGE
+csp7.png
+Schematic of the Auditory central nervous system.
+DESCRIPTION
+The auditory system, in addition to monitoring environmental sounds for survival purposes, is the 
+sensory modality for many species that offers the broadest dimensions for intraspecies communication. 
+Unlike other mammalian sensory systems, the auditory system consists of many neuronal processing 
+stations between the peripheral receptors in the cochlea and the beginning of cortical processing 
+in the temporal lobe. Nonetheless, cochlear pathology is excessively weighted in explanations of 
+congenital and acquired hearing loss. Emerging pictures of misformed central circuitry and altered 
+physiology now shed light on a range of auditory spectrum disorders such as dyslexia and autism that 
+affect rapid processing of temporal information.
+
+Our project will deliver the first detailed wiring diagram of the front-end central nervous system 
+processor for auditory information and address a common critique of "connectomics" by merging 
+structural with functional information.

@@ -7,7 +7,7 @@ University of Minnesota, MN; McMaster University, Canada; University of Californ
 PROJECT TITLE
 Multi-scale Modeling of a Canonical Signaling Transduction Domain: From Conformational Ensembles to Protein Function in Protein Kinase A
 BTRC PERSONNEL
-R. Amaro, I. Altintas, A. McCulloch, L. Clementi, D. Crawl, J. Durant, R. Malmstrom, A. McCammon, J. Schulze
+\R. Amaro, I. Altintas, A. McCulloch, L. Clementi, D. Crawl, J. Durant, R. Malmstrom, A. McCammon, J. Schulze
 TR&D PROJECT
 Core 1, 2, 3, and 4
 STATUS
@@ -17,3 +17,18 @@ NIH R01-GM064742 (Veglia, PI), 09/16/2002-03/31/2016; R01-GM100310 (Vegia, PI; T
 BTRC RESOURCE COLLABORATION
 National Resource of Cell Analysis and Modeling
 RELEVANT PUBLICATIONS
+IMAGE
+dbp4.png
+Conformational change in PKA's regulatory subunit regulated through cAMP and PKA's catalytic subunit.
+DESCRIPTION
+The goal of this project is to understand how protein structure translates into the subcellular mechanism of action within 
+macromolecular complexes. We are exploring these fundamental questions within the context of cyclic-adenosine 
+mono-phosphate (cAMP)-dependent protein kinase A's (PKA) regulatory subunits (R) in cardiomyocytes.
+
+This project represents a new paradigm for multi-scale modeling in which association rates and free-energy landscapes 
+derived from molecular-scale simulations are integrated into mathematical models representing subcellular-scale events 
+and macromolecular complexes. Successful completion will generate multi-scale computational models of PKA, linking atomic-level 
+structures through free-energy landscapes and association rates to models of subcellular regulation. These models will 
+provide insight into the functional mechanism of the #-adrenergic pathway PKA in the cardiomyocyte and develop key 
+technologies and methods for integrating dispersed biological and chemical information into a coherent model that will 
+support prediction and study of small molecules and mutations in the function of the cell.
