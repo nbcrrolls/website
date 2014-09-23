@@ -12,7 +12,7 @@ driving applications, and providing opportunities for students in this environme
 Key projects in addition to NBCR  are PRAGMA, PRIME, and contribution to GLEON. ';
 $nbcr_role = 'Former Principal Investigator (through June 2013)';
 $photo = 'parzberger.png';
-$home_url = 'http://www.nbcr.net/data/people/parzberger/index.php';
+$home_url = '';
 $email = 'mailto:parzberg@ucsd.edu';
 
 ?>
