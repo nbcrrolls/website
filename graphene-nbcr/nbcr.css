@@ -181,6 +181,7 @@ table.simple {
 	background-color: #ffffff !important;
 }
 
+
 /* 2 text widgets in the left sife two-column */
 .swbar {
 	margin-left: 0px;
@@ -606,3 +607,67 @@ table.center {
         text-decoration: underline;
 }
 
+/* for amber workshop day-by-day schedule */
+table.amber-sched {
+        font: Avant Garde, Arial, sans-serif ;
+        border: 0px solid #fff !important;
+}
+.amber-sched .column-1 { 
+	width: 13%;
+	background-color: #ffffef !important;
+}
+.amber-sched .column-2 {
+	width: 59%;
+	background-color: #F0FBFE !important;
+}
+.amber-sched .column-3 {
+	width: 9%;
+	background-color: #DCEEFF !important;
+}
+.amber-sched .column-4 {
+	width: 19%;
+	background-color: #DCE7Ff !important;
+}
+table.amber-sched tr td {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 8pt;
+        border: 0px solid #fff !important; 
+        padding: 0px 0px 0px 5px !important;
+}
+
+.amber-sched .row-1 td {
+        font-weight: bold;
+        color: #005983 !important;
+	background-color: #cfefff !important;
+        border: 0px solid #fff !important;
+}
+
+table.day1,
+table.day2,
+table.day3,
+table.day4 {
+        font: Avant Garde, Arial, sans-serif ;
+        border: 0px solid #fff !important;
+}
+
+.day1 .row-2 td ,
+.day1 .row-6 td ,
+.day1 .row-8 td ,
+.day1 .row-11 td ,
+.day1 .row-13 td ,
+.day2 .row-3 td ,
+.day2 .row-5 td ,
+.day2 .row-9 td ,
+.day3 .row-3 td ,
+.day3 .row-5 td ,
+.day3 .row-7 td ,
+.day3 .row-10 td ,
+.day4 .row-4 td ,
+.day4 .row-6 td ,
+.day4 .row-9 td {
+        font-weight: bold;
+        color: #101030;
+        border: 0px solid #fff !important;
+	background-color: #ffffef !important;
+}
