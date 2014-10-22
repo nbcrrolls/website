@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<col>Time</col>
+		<col>Track</col>
+		<col>Type</col>
+		<col>Instructor</col>
+	</row>
+	<row>
+		<col>09:00 - 10:30</col>
+		<col>Hands-on session 3: Introduction to binding energy calculations using MM-PBSA and MM-GBSA (contd)</col>
+		<col>H</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>10:30 - 11:00</col>
+		<col><![CDATA[Tea & Coffee]]></col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>11:00 - 12:30</col>
+		<col>Statistical Mechanics for Free Energy Calculations</col>
+		<col>L</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>12:30 - 13:30</col>
+		<col>Lunch</col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>13:30 - 15:30</col>
+		<col>Hands-on session 4:  TI: Calculating relative binding free energies for protein/carbohydrate complexes</col>
+		<col>H</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>15:30 - 16:00</col>
+		<col><![CDATA[Tea & Coffee]]></col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>16:00 - 16:15</col>
+		<col>NVIDIA K40 GPU Raffle</col>
+		<col>#colspan#</col>
+		<col>RA/RW</col>
+	</row>
+	<row>
+		<col>16:15 - 18:00</col>
+		<col>Hands-on session 4: TI: Calculating relative binding free energies for protein/carbohydrate complexes (contd)</col>
+		<col>H</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>19:00 - 23:00</col>
+		<col>Workshop Social Evening (Location TBD)</col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+</table>

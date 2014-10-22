@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<col>Time</col>
+		<col>Track</col>
+		<col>Type</col>
+		<col>Instructor</col>
+	</row>
+	<row>
+		<col>09:00 - 09:45</col>
+		<col>Enhanced sampling techniques, Replica Exchange, Umbrella Sampling and other k00l stuff</col>
+		<col>L</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>09:45 - 10:30</col>
+		<col>Kepler Bioworkbench - Workflows for AMBER</col>
+		<col>#colspan#</col>
+		<col>RA/TBD</col>
+	</row>
+	<row>
+		<col>10:30 - 11:00</col>
+		<col><![CDATA[Tea & Coffee]]></col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>11:00 - 12:30</col>
+		<col>Hands-on session 5: Umbrella sampling simulations</col>
+		<col>H</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>12:30 - 13:30</col>
+		<col>Lunch</col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>13:30 - 14:45</col>
+		<col>Hands-on session 5:  Umbrella sampling simulations (contd)</col>
+		<col>H</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>14:45 - 15:30</col>
+		<col>An Overview of Lipid Simulations with AMBER</col>
+		<col>L</col>
+		<col>RW</col>
+	</row>
+	<row>
+		<col>15:30 - 16:00</col>
+		<col><![CDATA[Tea & Coffee]]></col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>16:00 - 17:30</col>
+		<col>Hands-on session 6: Lipid Simulations with AMBER</col>
+		<col>H</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>17:30 - 18:00</col>
+		<col>Final Remarks / Question and Answer / General Research Session</col>
+		<col>#colspan#</col>
+		<col>RW</col>
+	</row>
+</table>

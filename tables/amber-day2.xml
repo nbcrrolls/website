@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<col>Time</col>
+		<col>Track</col>
+		<col>Type</col>
+		<col>Instructor</col>
+	</row>
+	<row>
+		<col>09:45 - 10:30</col>
+		<col>Dealing with non-standard residues</col>
+		<col>H</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>10:30 - 11:00</col>
+		<col><![CDATA[Tea & Coffee]]></col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>11:00 - 12:30</col>
+		<col>Hands-on session 2: Building protein-ligand complexes containing non-standard residues with Antechamber</col>
+		<col>H</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>12:30 - 13:30</col>
+		<col>Lunch</col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>13:30 - 14:00</col>
+		<col>What if there is no crystal structure?</col>
+		<col>L</col>
+		<col>RW</col>
+	</row>
+	<row>
+		<col>14:00 - 14:45</col>
+		<col>Practical Guide to Running MM/PB(GB)SA calculations</col>
+		<col>L</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>14:45 - 15:30</col>
+		<col>Tips for Designing a Good Simulation Project</col>
+		<col>H</col>
+		<col>RW</col>
+	</row>
+	<row>
+		<col>15:30 - 16:00</col>
+		<col><![CDATA[Tea & Coffee]]></col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>16:00 - 18:00</col>
+		<col>Hands-on session 3: Introduction to binding energy calculations using MM-PBSA and MM-GBSA</col>
+		<col>H</col>
+		<col>TBD</col>
+	</row>
+</table>

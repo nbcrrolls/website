@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<col>Time</col>
+		<col>Track</col>
+		<col>Type</col>
+		<col>Instructor</col>
+	</row>
+	<row>
+		<col>08:30 - 09:00</col>
+		<col>Registration</col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>09:00 - 09:15</col>
+		<col>Welcome/Introduction to the Workshop</col>
+		<col>L</col>
+		<col>RA/RW</col>
+	</row>
+	<row>
+		<col>09:15 - 09:45</col>
+		<col>Student and Instructor Introductions</col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>09:45 - 10:30</col>
+		<col>Introduction to force fields and molecular dynamics - Part 1 of 2</col>
+		<col>L</col>
+		<col>RW</col>
+	</row>
+	<row>
+		<col>10:30 - 11:00</col>
+		<col><![CDATA[Tea & Coffee]]></col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>11:00 - 12:30</col>
+		<col>Introduction to force fields and molecular dynamics - Part 2 of 2</col>
+		<col>L</col>
+		<col>RW</col>
+	</row>
+	<row>
+		<col>12:30 - 13:30</col>
+		<col>Lunch</col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>13:30 - 14:15</col>
+		<col>Overview of the AMBER package and its programs</col>
+		<col>L</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>14:15 - 15:30</col>
+		<col>Hands-on session 1: Introduction to molecular dynamics simulations using AMBER [Optional Extension]</col>
+		<col>H</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>15:30 - 16:00</col>
+		<col><![CDATA[Tea & Coffee]]></col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>16:00 - 18:00</col>
+		<col>Hands-on session 1 (cont'd): Introduction to molecular dynamics simulations using AMBER [Optional Extension]</col>
+		<col>H</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>19:00 - 22:00</col>
+		<col>Workshop Dinner - Location TBD</col>
+		<col>#colspan#</col>
+		<col>#colspan#</col>
+	</row>
+</table>
