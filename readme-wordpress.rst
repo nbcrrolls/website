@@ -201,6 +201,17 @@ Tables are generated with ``WP-Table Reloaded`` plugin.
 
 * New tables can be added as xml files. 
 
+Dealing with tabs
+~~~~~~~~~~~~~~~~~~~
+Tabs are generated via ``Post UI tabs`` plugin. To change the settings for plugin 
+use  plugin configuration in ``Settings``.
+
+Tabs are created with the code :: 
+
+    [tab name="name 1"] content goes here ... [/tab]
+    [tab name="name 2"] content goes here ... [/tab]
+    [tab name="name 3"] content goes here ... [/tab]
+    [end_tabset]
  
 Change wordpress host fqdn 
 ---------------------------
