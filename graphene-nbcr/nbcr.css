@@ -671,3 +671,32 @@ table.day4 {
         border: 0px solid #fff !important;
 	background-color: #ffffef !important;
 }
+
+/* for free table */
+table.free {
+	border: 1px solid #fff !important;
+	margin-left: 20px; 
+	background-color: #ffffef !important;
+}
+.free tr td {
+	margin-left: 5px;
+	margin-right: 5px;
+	font: Avant Garde, Arial, sans-serif ;
+	border: 1px solid #efefef !important;
+	background-color: #efefef !important;
+	padding-left: 5px !important;
+	vertical-align: top;
+}
+.free .head td { 
+        font-weight: bold;
+	color: #005983 !important;
+	text-align:center;
+}
+
+.free .odd td {
+	background-color: #F0FBFE !important;
+}
+
+.free .even td {
+	background-color: #ffffff !important;
+}
