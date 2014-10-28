@@ -7,9 +7,15 @@
 		<col>Instructor</col>
 	</row>
 	<row>
-		<col>09:45 - 10:30</col>
+		<col>09:00 - 09:45</col>
 		<col>Dealing with non-standard residues</col>
-		<col>H</col>
+		<col>L</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>09:45 - 10:30</col>
+		<col>Practical Guide to Running MM/PB(GB)SA calculations</col>
+		<col>L</col>
 		<col>TBD</col>
 	</row>
 	<row>
@@ -37,15 +43,15 @@
 		<col>RW</col>
 	</row>
 	<row>
-		<col>14:00 - 14:45</col>
-		<col>Practical Guide to Running MM/PB(GB)SA calculations</col>
+		<col>14:00 - 15:00</col>
+		<col>Markov State Models and AMBER</col>
 		<col>L</col>
 		<col>TBD</col>
 	</row>
 	<row>
-		<col>14:45 - 15:30</col>
+		<col>15:00 - 15:30</col>
 		<col>Tips for Designing a Good Simulation Project</col>
-		<col>H</col>
+		<col>L</col>
 		<col>RW</col>
 	</row>
 	<row>
