@@ -655,10 +655,10 @@ table.day4 {
 .day1 .row-6 td ,
 .day1 .row-8 td ,
 .day1 .row-11 td ,
-.day1 .row-13 td ,
-.day2 .row-3 td ,
-.day2 .row-5 td ,
-.day2 .row-9 td ,
+.day1 .row-14 td ,
+.day2 .row-4 td ,
+.day2 .row-6 td ,
+.day2 .row-10 td ,
 .day3 .row-3 td ,
 .day3 .row-5 td ,
 .day3 .row-7 td ,
@@ -677,13 +677,14 @@ table.free {
 	border: 1px solid #fff !important;
 	margin-left: 20px; 
 	background-color: #ffffef !important;
+        font-size: 10pt;
 }
 .free tr td {
 	margin-left: 5px;
 	margin-right: 5px;
 	font: Avant Garde, Arial, sans-serif ;
-	border: 1px solid #efefef !important;
-	background-color: #efefef !important;
+	border: 1px solid #cfefff !important;
+	background-color: #cfefff !important;
 	padding-left: 5px !important;
 	vertical-align: top;
 }
@@ -691,6 +692,7 @@ table.free {
         font-weight: bold;
 	color: #005983 !important;
 	text-align:center;
+	background-color: #cfefff !important;
 }
 
 .free .odd td {
@@ -698,5 +700,6 @@ table.free {
 }
 
 .free .even td {
-	background-color: #ffffff !important;
+	background-color: #ffffef !important;
 }
+
