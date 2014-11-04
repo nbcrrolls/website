@@ -55,25 +55,31 @@
 		<col>TBD</col>
 	</row>
 	<row>
-		<col>14:15 - 15:30</col>
+		<col>14:15 - 15:45</col>
 		<col>Hands-on session 1: Introduction to molecular dynamics simulations using AMBER [Optional Extension]</col>
 		<col>H</col>
 		<col>TBD</col>
 	</row>
 	<row>
-		<col>15:30 - 16:00</col>
+		<col>15:45 - 16:15</col>
 		<col><![CDATA[Tea & Coffee]]></col>
 		<col>#colspan#</col>
 		<col>#colspan#</col>
 	</row>
 	<row>
-		<col>16:00 - 18:00</col>
-		<col>Hands-on session 1 (cont'd): Introduction to molecular dynamics simulations using AMBER [Optional Extension]</col>
-		<col>H</col>
+		<col>16:15 - 17:00</col>
+		<col>ew of AMBER Force Fields and Solvent Models</col>
+		<col>L</col>
 		<col>TBD</col>
 	</row>
 	<row>
-		<col>19:00 - 22:00</col>
+		<col>17:00 - 18:00</col>
+		<col>Keynote Lecure (Research Topic TBD)</col>
+		<col>L</col>
+		<col>TBD</col>
+	</row>
+	<row>
+		<col>18:00 - 21:00</col>
 		<col>Workshop Dinner - Location TBD</col>
 		<col>#colspan#</col>
 		<col>#colspan#</col>
