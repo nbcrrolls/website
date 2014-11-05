@@ -16,7 +16,7 @@
 		<col>09:00 - 09:15</col>
 		<col>Welcome/Introduction to the Workshop</col>
 		<col>L</col>
-		<col>RA/RW</col>
+		<col>Rommie Amaro/Ross Walker</col>
 	</row>
 	<row>
 		<col>09:15 - 09:45</col>
@@ -28,7 +28,7 @@
 		<col>09:45 - 10:30</col>
 		<col>Introduction to force fields and molecular dynamics - Part 1 of 2</col>
 		<col>L</col>
-		<col>RW</col>
+		<col>Ross Walker</col>
 	</row>
 	<row>
 		<col>10:30 - 11:00</col>
@@ -40,7 +40,7 @@
 		<col>11:00 - 12:30</col>
 		<col>Introduction to force fields and molecular dynamics - Part 2 of 2</col>
 		<col>L</col>
-		<col>RW</col>
+		<col>Ross Walker</col>
 	</row>
 	<row>
 		<col>12:30 - 13:30</col>
@@ -68,7 +68,7 @@
 	</row>
 	<row>
 		<col>16:15 - 17:00</col>
-		<col>ew of AMBER Force Fields and Solvent Models</col>
+		<col>Overview of AMBER Force Fields and Solvent Models</col>
 		<col>L</col>
 		<col>TBD</col>
 	</row>
