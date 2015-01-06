@@ -32,7 +32,7 @@
       data2.addColumn('number', 'Domain count');
 
       var options2 = {
-          title: "Continuity downloads distribution by domain",
+          title: "Continuity registered users by domain",
           width: 400,
           height: 360,
           legend: {position: 'right', textStyle: {color: 'black', fontSize: 9}},
@@ -42,26 +42,23 @@
       function addData() {
         // add registered users
         data1.addRows([
-            ["2010", 955, 955, '955'],
             ["2011", 995, 995, '995'],
             ["2012", 1128, 1128, '1128'],
             ["2013", 1218, 1218, '1218'],
+            ["2014", 1330, 1330, '1330'],
         ]);
 
         // add registered users domain 
         data2.addRows([
-        ["edu", 768],
-        ["com", 231],
-        ["other", 99],
-        ["uk", 26],
+        ["edu", 843],
+        ["com", 243],
+        ["other", 150],
+        ["uk", 28],
         ["de", 16],
-        ["ca", 15],
-        ["cn", 13],
-        ["au", 12],
+        ["cn", 14],
+        ["it", 13],
+        ["au", 11],
         ["gov", 12],
-        ["it", 11],
-        ["fr", 8],
-        ["net", 7],
         ]);
       }
 
@@ -86,9 +83,9 @@
   </head>
   <body>
     <h3 align="center"><font color="#0082A0">Continuity statistics</font></h3>
-      Current statistics are through 2013.<br><br>
-     <strong>Bar chart:</strong> the total number of registerd users of Continuity.<br>
-     <strong>Pie chart:</strong> the distribution of registerd users by domain. Domains with fewer than 6 entries each
+      Current statistics are through 2014.<br><br>
+     <strong>Bar chart:</strong> total number of registerd users of Continuity.<br>
+     <strong>Pie chart:</strong> distribution of registerd users by domain. Domains with fewer than 10 entries each
              are grouped into "other". <br>
 
     <!-- bar and pie charts -->
