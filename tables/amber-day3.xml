@@ -8,9 +8,9 @@
 	</row>
 	<row>
 		<col>09:00 - 10:30</col>
-		<col>Hands-on session 3: Introduction to binding energy calculations using MM-PBSA and MM-GBSA (contd)</col>
-		<col>H</col>
-		<col>TBD</col>
+		<col>Statistical Mechanics for Free Energy Calculations</col>
+		<col>L</col>
+		<col>Rob Swift</col>
 	</row>
 	<row>
 		<col>10:30 - 11:00</col>
@@ -19,10 +19,16 @@
 		<col>#colspan#</col>
 	</row>
 	<row>
-		<col>11:00 - 12:30</col>
-		<col>Statistical Mechanics for Free Energy Calculations</col>
+		<col>11:00 - 11:45</col>
+		<col>Accelerated Molecular Dynamics</col>
 		<col>L</col>
-		<col>TBD</col>
+		<col>Rob Swift</col>
+	</row>
+	<row>
+		<col>11:45 - 12:30</col>
+		<col>Constant pH Simulations</col>
+		<col>L</col>
+		<col>Olivia Kim</col>
 	</row>
 	<row>
 		<col>12:30 - 13:30</col>
@@ -43,20 +49,14 @@
 		<col>#colspan#</col>
 	</row>
 	<row>
-		<col>16:00 - 16:15</col>
-		<col>NVIDIA K40 GPU Raffle</col>
-		<col>#colspan#</col>
-		<col>RA/RW</col>
+		<col>16:00 - 17:00</col>
+		<col>Kepler Bioworkbench - Workflows for AMBER. </col>
+		<col>L</col>
+		<col>Ilkay Altinas</col>
 	</row>
 	<row>
-		<col>16:15 - 18:00</col>
-		<col>Hands-on session 4: TI: Calculating relative binding free energies for protein/carbohydrate complexes (contd)</col>
-		<col>H</col>
-		<col>TBD</col>
-	</row>
-	<row>
-		<col>19:00 - 23:00</col>
-		<col>Workshop Social Evening (Location TBD)</col>
+		<col>17:00 - 20:00</col>
+		<col><![CDATA[Attendee Poster Session & Social (NVIDIA K40 GPU to be awarded for best poster)]]></col>
 		<col>#colspan#</col>
 		<col>#colspan#</col>
 	</row>
