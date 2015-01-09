@@ -41,46 +41,42 @@
 
       // Add data from stats
       function addData() {
-        // registered users count
         data1.addRows([
-            ["2010", 14534, 14534, '14534'],
             ["2011", 15302, 15302, '15302'],
             ["2012", 17697, 17697, '17697'],
             ["2013", 19504, 19504, '19504'],
+            ["2014", 21360, 21360, '21360'],
         ]);
 
-        // website visits geolocation 
         data2.addRows([
-        ["United States", 26194], ["Germany", 5769], ["India", 5229], ["United Kingdom", 3910], ["Japan", 3646],
-        ["China", 2785], ["Italy", 2566], ["France", 2429], ["Canada", 2294], ["Brazil", 1685],
-        ["Spain", 1439], ["Mexico", 1248], ["Australia", 1211], ["Switzerland", 1211], ["Taiwan", 1190],
-        ["Chile", 994], ["Russia", 994], ["Poland", 900], ["Israel", 894], ["South Korea", 786],
-        ["Singapore", 692], ["Netherlands", 691], ["Czech Republic", 578], ["Romania", 554], ["Denmark", 527],
-        ["(not set)", 526], ["Sweden", 517], ["Austria", 487], ["Iran", 465], ["Malaysia", 437],
-        ["Turkey", 403], ["Portugal", 396], ["Belgium", 391], ["Argentina", 371], ["Tunisia", 344],
-        ["Hong Kong", 336], ["Greece", 316], ["Finland", 298], ["Thailand", 278], ["Colombia", 262],
-        ["Bulgaria", 249], ["Uruguay", 236], ["Vietnam", 236], ["Hungary", 231], ["New Zealand", 213],
-        ["Pakistan", 201], ["Indonesia", 189], ["Norway", 172], ["Philippines", 153], ["Croatia", 137],
-        ["Egypt", 127], ["Ireland", 126], ["South Africa", 117], ["Ukraine", 116], ["Slovenia", 101],
-        ["Algeria", 79], ["Saudi Arabia", 76], ["Sri Lanka", 72], ["Serbia", 72], ["Oman", 57],
-        ["Lithuania", 53], ["Peru", 53], ["Bangladesh", 52], ["Slovakia", 44], ["United Arab Emirates", 39 ],
-        ["Belarus", 38], ["Moldova", 38], ["Jordan", 29], ["Nigeria", 24], ["Puerto Rico", 24],
-        ["Ecuador", 22], ["Estonia", 22], ["Iraq", 22], ["Palestine", 21], ["Latvia", 18],
-        ["Kenya", 17], ["RÃ©union", 17], ["Azerbaijan", 15], ["Morocco", 15], ["Luxembourg", 14],
-        ["Venezuela", 14], ["Armenia", 13], ["Cuba", 13], ["Bosnia and Herzegovina", 12], ["Ghana", 12],
-        ["Macau", 12], ["Cyprus", 11], ["Ethiopia", 10], ["Lebanon", 10], ["Qatar", 10],
-        ["Sudan", 8], ["Tanzania", 8], ["Nepal", 7], ["Trinidad and Tobago", 7], ["Bolivia", 6],
-        ["Costa Rica", 6], ["Guatemala", 6], ["Cambodia", 6], ["Kuwait", 6], ["Myanmar (Burma)", 6],
-        ["Bahrain", 5], ["CÃ´te dâ~@~YIvoire", 5], ["Iceland", 5], ["El Salvador", 5], ["Zimbabwe", 5],
-        ["Kazakhstan", 4], ["Malta", 4], ["Mauritius", 4], ["Uganda", 4], ["Kosovo", 4],
-        ["Albania", 3], ["Cameroon", 3], ["Dominican Republic", 3], ["Georgia", 3], ["Jamaica", 3],
-        ["Libya", 3], ["Macedonia", 3], ["Mongolia", 3], ["Botswana", 2], ["Fiji", 2],
-        ["Guyana", 2], ["Rwanda", 2], ["Yemen", 2], ["Afghanistan", 1], ["Burkina Faso", 1],
-        ["Brunei", 1], ["Bahamas", 1], ["Belize", 1], ["Grenada", 1], ["Gambia", 1],
-        ["Guam", 1], ["Kyrgyzstan", 1], ["Saint Kitts and Nevis", 1], ["Liberia", 1], ["Montenegro", 1],
-        ["Malawi", 1], ["Namibia", 1], ["Nicaragua", 1], ["Panama", 1], ["Papua New Guinea", 1],
-        ["Seychelles", 1], ["Suriname", 1], ["Syria", 1], ["Timor-Leste", 1], ["Uzbekistan", 1],
-        ["Zambia", 1],
+        ["Canada", 944], ["Saudi Arabia", 73], ["Lithuania", 65], ["Cambodia", 1], ["Ethiopia", 5],
+        ["Aruba", 1], ["Palestine", 3], ["Belize", 1], ["Argentina", 163], ["Bolivia", 4],
+        ["Cameroon", 5], ["Ghana", 3], ["Slovenia", 59], ["Guatemala", 2], ["Germany", 3323],
+        ["Spain", 814], ["Liberia", 2], ["Netherlands", 314], ["Jamaica", 5], ["Oman", 6],
+        ["Tanzania", 1], ["Yemen", 2], ["Pakistan", 116], ["South Africa", 86], ["Albania", 2],
+        ["Macau", 4], ["Nicaragua", 1], ["El Salvador", 4], ["Kosovo", 2], ["India", 2895],
+        ["Azerbaijan", 2], ["United States", 11806], ["Kenya", 10], ["Tajikistan", 1], ["Turkey", 200],
+        ["Bangladesh", 15], ["Mongolia", 4], ["France", 1147], ["Slovakia", 16], ["Peru", 24],
+        ["Laos", 1], ["Norway", 373], ["Malawi", 1], ["Sri Lanka", 13], ["Singapore", 218],
+        ["China", 1623], ["Armenia", 10], ["Sierra Leone", 1], ["Ukraine", 31], ["Bahrain", 2],
+        ["Finland", 163], ["Libya", 2], ["Indonesia", 200], ["Costa Rica", 6], ["Mauritius", 1],
+        ["Sweden", 332], ["Vietnam", 261], ["Czech Republic", 210], ["Cªte dÍIvoire", 1], ["Russia", 407],
+        ["United Arab Emirates", 16], ["Romania", 197], ["Angola", 3], ["Portugal", 244], ["Bosnia and Herzegovina", 4],
+        ["Malaysia", 174], ["Austria", 315], ["Uganda", 5], ["Hungary", 103], ["Brazil", 1048],
+        ["United Kingdom", 2026], ["Kuwait", 2], ["Panama", 2], ["Luxembourg", 7], ["Ireland", 84],
+        ["Syria", 1], ["Nigeria", 19], ["Ecuador", 15], ["Brunei", 3], ["Australia", 464],
+        ["Iran", 250], ["Algeria", 18], ["Chile", 306], ["Belgium", 246], ["Thailand", 135],
+        ["Haiti", 1], ["Bulgaria", 61], ["Georgia", 4], ["Denmark", 331], ["Philippines", 58],
+        ["Moldova", 100], ["Morocco", 6], ["Croatia", 79], ["Switzerland", 589], ["New Zealand", 175],
+        ["Iraq", 14], ["Estonia", 14], ["Uruguay", 89], ["Lebanon", 16], ["Puerto Rico", 7],
+        ["Uzbekistan", 2], ["Tunisia", 176], ["Colombia", 116], ["Taiwan", 459], ["Cyprus", 7],
+        ["Barbados", 1], ["Qatar", 4], ["Dominican Republic", 3], ["Italy", 1077], ["Sudan", 1],
+        ["Nepal", 1], ["Malta", 21], ["Suriname", 5], ["Anguilla", 1], ["Venezuela", 12],
+        ["Israel", 229], ["Iceland", 10], ["Zambia", 2], ["Senegal", 1], ["Zimbabwe", 1],
+        ["Jordan", 5], ["Kazakhstan", 3], ["Poland", 471], ["Macedonia", 2], ["South Korea", 602],
+        ["Latvia", 7], ["Japan", 1323], ["Belarus", 9], ["Cape Verde", 1], ["Trinidad and Tobago", 3],
+        ["Mexico", 454], ["Egypt", 55], ["R_union", 6], ["Cuba", 5], ["Serbia", 55],
+        ["Hong Kong", 125], ["Greece", 134], ["Paraguay", 1], ["Namibia", 1],
         ]);
 
       };
@@ -89,11 +85,9 @@
       function drawChart() {
         addData();
   
-        // bar chart of registered users
         var chart1 = new google.visualization.ComboChart(document.getElementById('apbs1'));
         chart1.draw(data1, options1);
         
-        // website visits  geolocation
         var chart2 = new google.visualization.GeoChart(document.getElementById('apbs2'));
         chart2.draw(data2, options2);
       }
@@ -106,10 +100,10 @@
 
   <body>
     <h3 align="center"><font color="#0082A0">APBS statistics</font></h3>
-        Current statistics are through 2013.<br><br>
         <strong>Bar chart</strong>: the total number of registerd users of APBS.<br>
         <strong>Map</strong>: geographical distribution of <a href="http://www.poissonboltzmann.org">APBS website</a>
-        visits, as tracked by google analytics over the calendar year.<br><br>
+        visits, as tracked by google analytics over the calendar year. <br>For 2014 only half a year is available due
+        to the loss of google analytics data.<br><br>
         Use <b>Convert</b> buttons to view an image in a frame below and 
         <b>Save</b> buttons to copy an image to your Desktop.<br>
 
