@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script> 
+    <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="base.js"> </script>
+
+    <script type="text/javascript">
+      // Define variables for the charts 
+
+        // PDB2PQR registered users by year
+        var data1 = new google.visualization.DataTable();
+        data1.addColumn({ type: 'string', label: 'Labels' });
+        data1.addColumn({ type: 'number', label: 'Count' });
+        data1.addColumn({ type: 'number', label: '' });
+        data1.addColumn({ type: 'string', role: 'annotation' });
+
+        var options1 = {
+            width: 400, 
+            height: 360, 
+            title: 'Registered users of PDB2PQR',
+            colors: ['#3b96ce'],
+            hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
+            vAxis: {ticks: [7500, 8000, 8500, 9000, 9500], title: 'Count', textStyle: {color: 'black', fontSize: 11}},
+            series: [{ type: 'bars',  visibleInLegend:false },
+                    { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
+        };
+
+        // Website access world geographical distribution 
+        var data2 = new google.visualization.DataTable();
+        data2.addColumn('string', 'Country');
+        data2.addColumn('number', 'Web service access ');
+
+        var options2 = {
+            resolution: "country",
+            width: 400, 
+            backgroundColor: "#FFFFFF",
+            datalessRegionColor: "#EEE5E5",
+            colorAxis: { colors : ['#b3e2f9','#0860b3' ], },
+        };
+
+      // Add data from stats
+      function addData() {
+        data1.addRows([
+            ["2013", 8017, 8017, '8017'],
+            ["2014", 9232, 9232, '9232'],
+        ]);
+
+        data2.addRows([
+     ["United States", 10347], ["Germany", 2757], ["India", 2219], ["China", 1923], ["Japan", 1739],
+     ["United Kingdom", 1573], ["Brazil", 1313], ["France", 1101], ["Canada", 943], ["Spain", 771],
+     ["Italy", 736], ["Mexico", 734], ["Chile", 560], ["Taiwan", 556], ["South Korea", 511],
+     ["Switzerland", 501], ["Australia", 401], ["Uruguay", 392], ["Poland", 322],
+     ["Singapore", 305], ["Norway", 304], ["Tunisia", 278], ["Austria", 260],
+     ["Iran", 259], ["Portugal", 245], ["Russia", 242], ["Netherlands", 236],
+     ["Czech Republic", 227], ["Israel", 219], ["Denmark", 217], ["Malaysia", 211],
+     ["Sweden", 202], ["Argentina", 198], ["Belgium", 180], ["New Zealand", 171],
+     ["Hong Kong", 156], ["Thailand", 133], ["Greece", 114], ["Turkey", 85],
+     ["Indonesia", 75], ["Ireland", 73], ["Vietnam", 65], ["Saudi Arabia", 61],
+     ["Colombia", 57], ["Finland", 54], ["Egypt", 31], ["Moldova", 31],
+     ["Pakistan", 29], ["South Africa", 29], ["Slovenia", 27], ["Cuba", 23],
+     ["not set)", 23], ["Malta", 22], ["Romania", 22], ["Hungary", 21],
+     ["Bulgaria", 20], ["Croatia", 18], ["Serbia", 18], ["Morocco", 17],
+     ["Iceland", 16], ["Lithuania", 15], ["Belarus", 14], ["Ukraine", 11],
+     ["Rí©union", 9], ["Iraq", 7], ["Latvia", 7], ["Peru", 7],
+     ["Qatar", 7], ["Bangladesh", 5], ["Estonia", 5], ["Venezuela", 5],
+     ["Algeria", 4], ["Kuwait", 4], ["Mongolia", 4], ["Cyprus", 3],
+     ["Ecuador", 3], ["Georgia", 3], ["Oman", 3], ["Philippines", 3],
+     ["Palestine", 3], ["Suriname", 3], ["Bolivia", 2], ["Dominican Republic", 2],
+     ["Albania", 1], ["Costa Rica", 1], ["Micronesia", 1], ["Guadeloupe", 1],
+     ["Montenegro", 1], ["Macedonia (FYROM)", 1], ["Macau", 1], ["Namibia", 1],
+     ["Puerto Rico", 1], ["Slovakia", 1], ["Senegal", 1], ["El Salvador", 1], ["Kosovo", 1],
+        ]);
+
+      };
+
+      // Define charts drawing
+      function drawChart() {
+        addData();
+  
+        var chart1 = new google.visualization.ComboChart(document.getElementById('apbs1'));
+        chart1.draw(data1, options1);
+        
+        var chart2 = new google.visualization.GeoChart(document.getElementById('apbs2'));
+        chart2.draw(data2, options2);
+      }
+
+      // Draw charts
+      google.setOnLoadCallback(drawChart);
+
+    </script>
+  </head>
+
+  <body>
+    <h3 align="center"><font color="#0082A0">PDB2PQR statistics</font></h3>
+        <strong>Bar chart</strong>: the total number of registerd users of PDB2PQR.<br>
+        <strong>Map</strong>: geographical distribution of <a href="http://www.poissonboltzmann.org">PDB2PQR website</a>
+        visits, as tracked by google analytics over the calendar year. <br>For 2014 only half a year is available due
+        to the loss of google analytics data.<br><br>
+        Use <b>Convert</b> buttons to view an image in a frame below and 
+        <b>Save</b> buttons to copy an image to your Desktop.<br>
+
+    <!-- chart and map -->
+    <div id="apbs1" style="width: 400px; height: 360px; float: left"></div>
+    <div id="apbs2" style="width: 400px; height: 360px; float: left"></div>
+    <br style="clear: left;" />
+
+    <!-- chart buttons -->
+    <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('apbs1'));">
+        Save chart as PNG image
+    </button>
+    <button style="position:relative; left:60" onclick="toImg(document.getElementById('apbs1'), document.getElementById('img_div'));">
+        Convert chart to image
+    </button>
+
+    <!-- map buttons -->
+    <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('apbs2'));">
+        Save map as PNG image
+    </button>
+    <button style="position:relative; left:200" onclick="toImg(document.getElementById('apbs2'), document.getElementById('img_div'));">
+        Convert map to image
+    </button>
+    <br />
+
+    <!-- "image placement" position  on the page-->
+    <div id="img_div" style="width: 400px; position: relative; top:10;  z-index: 10; border: 1px solid #0082A0; color: #0082A0">
+      Image will be placed here
+    </div>
+
+  </body>
+</html>
