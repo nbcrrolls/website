@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <table>
 	<row>
-		<col><![CDATA[<a href="?page_id=2185">Rommie Amaro</a>]]></col>
-        <col><![CDATA[<a href="?page_id=3235">Jacob Durrant</a>]]></col>
+		<col><![CDATA[<a href="?page_id=4382">Ilkay Altintas</a>]]></col>
+		<col><![CDATA[<a href="?page_id=3235">Jacob Durrant</a>]]></col>
 		<col><![CDATA[<a href="?page_id=2261">Roy Kerckhoffs</a>]]></col>
 		<col><![CDATA[<a href="?page_id=2382">Nora Makhsudova</a>]]></col>
-		<col><![CDATA[<a href="?page_id=2268">Sebastian Phan</a>]]></col>
-	</row>
-	<row>
-        <col><![CDATA[<a href="?page_id=3232">Ludovic Autin</a>]]></col>
-		<col><![CDATA[<a href="?page_id=2306">Mark Ellisman</a>]]></col>
-		<col><![CDATA[<a href="?page_id=2281">Robert Konecny </a>]]></col>
-		<col><![CDATA[<a href="?page_id=2347">Andy McCammon  </a>]]></col>
 		<col><![CDATA[<a href="?page_id=2288">Michel Sanner, TSRI</a>]]></col>
 	</row>
 	<row>
-		<col><![CDATA[<a href="?page_id=2231">Nathan Baker, PNNL</a>]]></col>
-		<col><![CDATA[<a href="?page_id=2319">Stefano Forli, TSRI</a>]]></col>
-        <col><![CDATA[<a href="?page_id=3226">Adarsh Krishnamurthy</a>]]></col>
-		<col><![CDATA[<a href="?page_id=2367">Andrew McCulloch </a>]]></col>
+		<col><![CDATA[<a href="?page_id=2185">Rommie Amaro</a>]]></col>
+		<col><![CDATA[<a href="?page_id=2306">Mark Ellisman</a>]]></col>
+		<col><![CDATA[<a href="?page_id=2281">Robert Konecny </a>]]></col>
+		<col><![CDATA[<a href="?page_id=2347">Andy McCammon  </a>]]></col>
 		<col><![CDATA[<a href="?page_id=2377">Teri Simas</a>]]></col>
 	</row>
 	<row>
-        <col><![CDATA[<a href="?page_id=3229">Britton Boras</a>]]></col>
-		<col><![CDATA[<a href="?page_id=2795">Michael Holst</a>]]></col>
-		<col><![CDATA[<a href="?page_id=3054">David Lee</a>]]></col>
-		<col><![CDATA[<a href="?page_id=2789">Anushka Michailova </a>]]></col>
+		<col><![CDATA[<a href="?page_id=3232">Ludovic Autin, TSRI</a>]]></col>
+		<col><![CDATA[<a href="?page_id=2319">Stefano Forli, TSRI</a>]]></col>
+		<col><![CDATA[<a href="?page_id=3226">Adarsh Krishnamurthy</a>]]></col>
+		<col><![CDATA[<a href="?page_id=2367">Andrew McCulloch </a>]]></col>
 		<col><![CDATA[<a href="?page_id=2808">Jeff Van Dorn</a>  ]]></col>
 	</row>
 	<row>
-		<col><![CDATA[<a href="?page_id=2275">Yuanhua Cheng</a>]]></col>
-		<col><![CDATA[<a href="?page_id=2361">Gary Huber</a>]]></col>
-		<col><![CDATA[<a href="?page_id=2300">Rick Lawrence</a>]]></col>
+		<col><![CDATA[<a href="?page_id=2231">Nathan Baker, PNNL</a>]]></col>
+		<col><![CDATA[<a href="?page_id=2795">Michael Holst</a>]]></col>
+		<col><![CDATA[<a href="?page_id=3054">David Lee</a>]]></col>
 		<col><![CDATA[<a href="?page_id=2222">Art Olson, TSRI</a>]]></col>
-        <col><![CDATA[<a href="?page_id=3223">Kevin Vincent</a>]]></col>
+		<col><![CDATA[<a href="?page_id=3223">Kevin Vincent</a>]]></col>
 	</row>
 	<row>
-        <col><![CDATA[<a href="?page_id=3219">Luca Clementi</a>]]></col>
-		<col><![CDATA[<a href="?page_id=2204"> Ruth Huey, TSRI</a>]]></col>
-		<col><![CDATA[<a href="?page_id=2312">Steffen Lindert</a>]]></col>
+		<col><![CDATA[<a href="?page_id=3229">Britton Boras</a>]]></col>
+		<col><![CDATA[<a href="?page_id=2361">Gary Huber</a>]]></col>
+		<col><![CDATA[<a href="?page_id=2300">Rick Lawrence</a>]]></col>
 		<col><![CDATA[<a href="?page_id=2244">Philip Papadopoulos</a>]]></col>
 		<col><![CDATA[<a href="?page_id=1309">Nadya Williams</a>]]></col>
 	</row>
 	<row>
-		<col><![CDATA[<a href="?page_id=2294">Sargis Dallakyan, TSRI</a>]]></col>
+		<col><![CDATA[<a href="?page_id=2275">Yuanhua Cheng</a>]]></col>
+		<col><![CDATA[<a href="?page_id=2204"> Ruth Huey, TSRI</a>]]></col>
+		<col><![CDATA[<a href="?page_id=2312">Steffen Lindert</a>]]></col>
+		<col><![CDATA[<a href="?page_id=3058">Steven Peltier</a>]]></col>
+		<col></col>
+	</row>
+	<row>
+		<col><![CDATA[<a href="?page_id=3219">Luca Clementi</a>]]></col>
 		<col><![CDATA[<a href="?page_id=2238">Pete Kekenes-Huskey</a>]]></col>
 		<col><![CDATA[<a href="?page_id=3050">Robert Malmstrom</a>]]></col>
-		<col><![CDATA[<a href="?page_id=3058">Steven Peltier</a>]]></col>
-		<col> </col>
+		<col><![CDATA[<a href="?page_id=2268">Sebastian Phan</a>]]></col>
+		<col></col>
 	</row>
 </table>
