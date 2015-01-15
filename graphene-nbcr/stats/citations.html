@@ -10,7 +10,6 @@
         var data1 = new google.visualization.DataTable();
         data1.addColumn('string', 'Year');
         data1.addColumn('number', 'MEME');
-        data1.addColumn('number', 'Continuity');
         data1.addColumn('number', 'MGLTools/Autodock');
         data1.addColumn('number', 'APBS');
 
@@ -28,10 +27,10 @@
       function addData() {
         // Citations current award period
         data1.addRows([
-            ["2011", 817, 26, 482, 337],
-            ["2012", 1043, 29, 530, 339],
-            ["2013", 1259,  0, 831, 470],
-            ["2014", 1314,  0, 965, 491],
+            ["2011",  817, 482, 337],
+            ["2012", 1043, 530, 339],
+            ["2013", 1259, 831, 470],
+            ["2014", 1314, 965, 491],
         ]);
 
       };
