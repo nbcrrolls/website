@@ -607,6 +607,25 @@ table.center {
         text-decoration: underline;
 }
 
+/* for DSM workshop day-by-day schedule */
+table.dsm-sched {
+        font: Avant Garde, Arial, sans-serif ;
+        border: 0px solid #fff !important;
+}
+.dsm-sched .column-1 {
+        width: 25%;
+        background-color: #ffffef !important;
+}
+.dsm-sched .column-2 {
+        width: 65%;
+        background-color: #F0FBFE !important;
+}
+.dsm-sched .column-3 {
+        width: 10%;
+        background-color: #DCEEFF !important;
+}
+
+
 /* for amber workshop day-by-day schedule */
 table.amber-sched {
         font: Avant Garde, Arial, sans-serif ;
@@ -628,6 +647,8 @@ table.amber-sched {
 	width: 19%;
 	background-color: #DCE7Ff !important;
 }
+
+table.dsm-sched tr td,
 table.amber-sched tr td {
         margin-left: 5px;
         margin-right: 5px;
@@ -636,6 +657,7 @@ table.amber-sched tr td {
         padding: 0px 0px 0px 5px !important;
 }
 
+.dsm-sched .row-1 td,
 .amber-sched .row-1 td {
         font-weight: bold;
         color: #005983 !important;
@@ -651,6 +673,8 @@ table.day4 {
         border: 0px solid #fff !important;
 }
 
+.dsm-sched .row-3 td,
+.dsm-sched .row-5 td,
 .day1 .row-2 td ,
 .day1 .row-6 td ,
 .day1 .row-8 td ,
