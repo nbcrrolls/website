@@ -10,7 +10,6 @@
         var data1 = new google.visualization.DataTable();
         data1.addColumn('string', 'Year');
         data1.addColumn('number', 'MEME');
-        data1.addColumn('number', 'Continuity');
         data1.addColumn('number', 'MGLTools/Autodock');
         data1.addColumn('number', 'APBS');
 
@@ -18,20 +17,20 @@
             pointSize: 3, 
             width: 600, 
             height: 300, 
-            title: 'Citations according to Scopus',
+            title: 'Citations according to Scopus (Google Scholar for MEME)',
             legend: {position: 'bottom', textStyle: {color: 'black', fontSize: 11}},
             hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
-            vAxis: {title: 'Number', textStyle: {color: 'black', fontSize: 11}},
+            vAxis: {ticks: [0, 500, 1000, 1500], title: 'Number', textStyle: {color: 'black', fontSize: 11}},
         };
 
       // Add data from stats
       function addData() {
         // Citations current award period
         data1.addRows([
-            ["2010", 298, 29, 487, 295],
-            ["2011", 335, 26, 482, 337],
-            ["2012", 445, 29, 530, 339],
-            ["2013", 209,  0,118,  404],
+            ["2011",  817, 482, 337],
+            ["2012", 1043, 530, 339],
+            ["2013", 1259, 831, 470],
+            ["2014", 1314, 965, 491],
         ]);
 
       };
@@ -54,8 +53,8 @@
 
   <body>
      <h3 align="center"><font color="#0082A0">Citations summary</font></h3>
-       Use <b>Convert</b> buttons to view an image in a frame below and 
-        <b>Save</b> buttons to copy an image to your Desktop.<br>
+       Use <b>Convert</b> button to view an image in a frame below <br> 
+       Use <b>Save</b> button to copy an image to your Desktop.<br>
 
     <!-- bar chart and buttons -->
     <div id="citations1" style="width: 600px; height: 300px; "></div>
