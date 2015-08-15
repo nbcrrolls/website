@@ -34,3 +34,5 @@ cd $SRC;  tar cpf - $FILES | (cd $BACKUPDIR; tar xpf -  > $LOG 2>&1 )
 
 ls -l /var/www/html > $DEST/ls-out
 cp -p /etc/auto.share $DEST
+cp -p /etc/php.ini $DEST
+
