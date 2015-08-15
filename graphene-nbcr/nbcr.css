@@ -608,18 +608,34 @@ table.center {
 }
 
 /* for DSM workshop day-by-day schedule */
+table.dsm-day1,
+table.dsm-day3,
+table.dsm-day4,
+table.dsm-day5,
 table.dsm-sched {
         font: Avant Garde, Arial, sans-serif ;
         border: 0px solid #fff !important;
 }
+.dsm-day1 .column-1 ,
+.dsm-day3 .column-1 ,
+.dsm-day4 .column-1 ,
+.dsm-day5 .column-1 ,
 .dsm-sched .column-1 {
         width: 25%;
         background-color: #ffffef !important;
 }
+.dsm-day1 .column-2 ,
+.dsm-day3 .column-2 ,
+.dsm-day4 .column-2 ,
+.dsm-day5 .column-2 ,
 .dsm-sched .column-2 {
         width: 65%;
         background-color: #F0FBFE !important;
 }
+.dsm-day1 .column-3 ,
+.dsm-day3 .column-3 ,
+.dsm-day4 .column-3 ,
+.dsm-day5 .column-3 ,
 .dsm-sched .column-3 {
         width: 10%;
         background-color: #DCEEFF !important;
@@ -649,6 +665,10 @@ table.amber-sched {
 }
 
 table.dsm-sched tr td,
+table.dsm-day1 tr td,
+table.dsm-day3 tr td,
+table.dsm-day4 tr td,
+table.dsm-day5 tr td,
 table.amber-sched tr td {
         margin-left: 5px;
         margin-right: 5px;
@@ -658,6 +678,10 @@ table.amber-sched tr td {
 }
 
 .dsm-sched .row-1 td,
+.dsm-day1 .row-1 td,
+.dsm-day3 .row-1 td,
+.dsm-day4 .row-1 td,
+.dsm-day5 .row-1 td,
 .amber-sched .row-1 td {
         font-weight: bold;
         color: #005983 !important;
@@ -673,8 +697,25 @@ table.day4 {
         border: 0px solid #fff !important;
 }
 
+.dsm-day1 .row-2 td,
+.dsm-day1 .row-3 td,
+.dsm-day1 .row-5 td,
+.dsm-day1 .row-8 td,
+
 .dsm-sched .row-3 td,
 .dsm-sched .row-5 td,
+
+.dsm-day3 .row-4 td,
+.dsm-day3 .row-7 td,
+.dsm-day3 .row-9 td,
+
+.dsm-day4 .row-4 td,
+.dsm-day4 .row-6 td,
+.dsm-day4 .row-8 td,
+
+.dsm-day5 .row-3 td,
+.dsm-day5 .row-5 td,
+
 .day1 .row-2 td ,
 .day1 .row-6 td ,
 .day1 .row-8 td ,
