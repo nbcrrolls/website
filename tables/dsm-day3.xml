@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<col>Time</col>
+		<col>Track</col>
+		<col>Type</col>
+	</row>
+	<row>
+		<col>09:00 - 10:00</col>
+		<col>Introduction to image-based finite element meshing</col>
+		<col>L</col>
+	</row>
+	<row>
+		<col>10:00 - 10:30</col>
+		<col>Verify Software Installation</col>
+		<col>H</col>
+	</row>
+	<row>
+		<col>10:30 - 10:45</col>
+		<col>Coffee Break</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>10:45 - 11:30</col>
+		<col>Introduction to Blender and the HexBlender toolkit</col>
+		<col>L</col>
+	</row>
+	<row>
+		<col>11:30 - 12:30</col>
+		<col>Creating cardiac anatomic model from segmented human CT images</col>
+		<col>H</col>
+	</row>
+	<row>
+		<col>12:30 - 14:00</col>
+		<col>Lunch</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>14:00 - 15:30</col>
+		<col>Continuation of cardiac meshing from human CT images</col>
+		<col>H</col>
+	</row>
+	<row>
+		<col>15:30 - 15:45</col>
+		<col>Coffee braek</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>15:45 - 17:00</col>
+		<col>Finalize mesh creation and prepare mesh for exporting to
+		Continuity: regularization and subdivision</col>
+		<col>H</col>
+	</row>
+</table>

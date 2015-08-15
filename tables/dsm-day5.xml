@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<col>Time</col>
+		<col>Track</col>
+		<col>Type</col>
+	</row>
+	<row>
+		<col>09:00 - 10:30</col>
+		<col>Lecture - Part 1</col>
+		<col>L</col>
+	</row>
+	<row>
+		<col>10:30 - 10:45</col>
+		<col>Coffee Break</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>10:45 - 12:00</col>
+		<col>Lecture - Part 2</col>
+		<col>L</col>
+	</row>
+	<row>
+		<col>12:00 - 13:30</col>
+		<col>Lunch</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>13:30 - 16:30</col>
+		<col>Hands on and Consultation Session</col>
+		<col>L</col>
+	</row>
+	<row>
+		<col>16:30 - 17:00</col>
+		<col>Closing Remarks </col>
+		<col>#colspan#</col>
+	</row>
+</table>

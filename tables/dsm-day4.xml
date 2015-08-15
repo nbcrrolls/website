@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<col>Time</col>
+		<col>Track</col>
+		<col>Type</col>
+	</row>
+	<row>
+		<col>09:00 - 10:00</col>
+		<col>Introduction to cardiac fiber architecture and diffusion tensor MRI imaging</col>
+		<col>L</col>
+	</row>
+	<row>
+		<col>10:00 - 10:45</col>
+		<col>Introduction to continuity</col>
+		<col>L</col>
+	</row>
+	<row>
+		<col>10:45 - 11:00</col>
+		<col>Coffee Break</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>11:00 - 12:00</col>
+		<col>Exporting with cardiac model from Blender to Continuity</col>
+		<col>H</col>
+	</row>
+	<row>
+		<col>12:00 - 13:30</col>
+		<col>Lunch</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>13:30 - 14:30</col>
+		<col>Using Continuity to fit a high-order cardiac anatomic model</col>
+		<col>H</col>
+	</row>
+	<row>
+		<col>14:30 - 15:00</col>
+		<col>Group photo</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>15:00 - 17:00</col>
+		<col>Fitting fiber architecture model to Diffusion Tensor MRI data with Continuity</col>
+		<col>H</col>
+	</row>
+</table>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<col>Time</col>
+		<col>Track</col>
+		<col>Type</col>
+	</row>
+	<row>
+		<col>08:30 - 08:50</col>
+		<col>Registration</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>08:50 - 09:00</col>
+		<col>Welcome: Profs. Amaro and McCulloch</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>09:00 - 10:30</col>
+		<col>Introduction to EM modalities for big data collection and segmentation</col>
+		<col>L</col>
+	</row>
+	<row>
+		<col>10:30 - 10:45</col>
+		<col>Coffee Break</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>10:45 - 11:30</col>
+		<col>Manual Segmentaiton with IMOD</col>
+		<col>H</col>
+	</row>
+	<row>
+		<col>11:30 - 12:00</col>
+		<col>Automated Segmentaiton with SLASH portal</col>
+		<col>H</col>
+	</row>
+	<row>
+		<col>12:00 - 13:30</col>
+		<col>Lunch</col>
+		<col>#colspan#</col>
+	</row>
+	<row>
+		<col>13:30 - 14:30</col>
+		<col>Segmentation quality and building 3D models</col>
+		<col>H</col>
+	</row>
+</table>
