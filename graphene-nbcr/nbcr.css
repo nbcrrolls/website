@@ -607,6 +607,34 @@ table.center {
         text-decoration: underline;
 }
 
+/* for SBDD workshop day-by-day schedule */
+table.sbdd-day1,
+table.sbdd-day2,
+table.sbdd-day3,
+table.sbdd-day4,
+table.sbdd-day5 {
+        font: Avant Garde, Arial, sans-serif ;
+        border: 0px solid #fff !important;
+}
+
+.sbdd-day1 .column-1 ,
+.sbdd-day2 .column-1 ,
+.sbdd-day3 .column-1 ,
+.sbdd-day4 .column-1 ,
+.sbdd-day5 .column-1 {
+        width: 15%;
+        background-color: #ffffef !important;
+}
+
+.sbdd-day1 .column-2 ,
+.sbdd-day2 .column-2 ,
+.sbdd-day3 .column-2 ,
+.sbdd-day4 .column-2 ,
+.sbdd-day5 .column-2 {
+        width: 75%;
+        background-color: #F0FBFE !important;
+}
+
 /* for DSM workshop day-by-day schedule */
 table.dsm-day1,
 table.dsm-day3,
@@ -621,7 +649,7 @@ table.dsm-sched {
 .dsm-day4 .column-1 ,
 .dsm-day5 .column-1 ,
 .dsm-sched .column-1 {
-        width: 25%;
+        width: 15%;
         background-color: #ffffef !important;
 }
 .dsm-day1 .column-2 ,
@@ -629,7 +657,7 @@ table.dsm-sched {
 .dsm-day4 .column-2 ,
 .dsm-day5 .column-2 ,
 .dsm-sched .column-2 {
-        width: 65%;
+        width: 75%;
         background-color: #F0FBFE !important;
 }
 .dsm-day1 .column-3 ,
@@ -664,6 +692,11 @@ table.amber-sched {
 	background-color: #DCE7Ff !important;
 }
 
+table.sbdd-day1 tr td,
+table.sbdd-day2 tr td,
+table.sbdd-day3 tr td,
+table.sbdd-day4 tr td,
+table.sbdd-day5 tr td,
 table.dsm-sched tr td,
 table.dsm-day1 tr td,
 table.dsm-day3 tr td,
@@ -677,6 +710,11 @@ table.amber-sched tr td {
         padding: 0px 0px 0px 5px !important;
 }
 
+.sbdd-day1 .row-1 td,
+.sbdd-day2 .row-1 td,
+.sbdd-day3 .row-1 td,
+.sbdd-day4 .row-1 td,
+.sbdd-day5 .row-1 td,
 .dsm-sched .row-1 td,
 .dsm-day1 .row-1 td,
 .dsm-day3 .row-1 td,
@@ -696,6 +734,30 @@ table.day4 {
         font: Avant Garde, Arial, sans-serif ;
         border: 0px solid #fff !important;
 }
+
+.sbdd-day1 .row-2 td,
+.sbdd-day1 .row-3 td,
+.sbdd-day1 .row-6 td,
+.sbdd-day1 .row-8 td,
+.sbdd-day1 .row-10 td,
+
+.sbdd-day2 .row-3 td,
+.sbdd-day2 .row-6 td,
+.sbdd-day2 .row-8 td,
+
+.sbdd-day3 .row-3 td,
+.sbdd-day3 .row-5 td,
+.sbdd-day3 .row-7 td,
+
+.sbdd-day4 .row-3 td,
+.sbdd-day4 .row-5 td,
+.sbdd-day4 .row-7 td,
+
+.sbdd-day5 .row-3 td,
+.sbdd-day5 .row-5 td,
+.sbdd-day5 .row-6 td,
+.sbdd-day5 .row-8 td,
+.sbdd-day5 .row-10 td,
 
 .dsm-day1 .row-2 td,
 .dsm-day1 .row-3 td,
