@@ -1,125 +1,18 @@
 <html>
-  <head>
-    <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script> 
-    <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript" src="base.js"> </script>
-
-    <script type="text/javascript">
-      // Define variables for the charts 
-
-      // MEME unique users 
-      var data1 = new google.visualization.DataTable();
-      data1.addColumn({ type: 'string', label: 'Labels' });
-      data1.addColumn({ type: 'number', label: 'Count' });
-      data1.addColumn({ type: 'number', label: '' });
-      data1.addColumn({ type: 'string', role: 'annotation' });
-
-      var options1 = {
-          width: 400, 
-          height: 360, 
-          title: 'MEME toolkit services unique users',
-          colors: ['#d64e28'],
-          hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
-          vAxis: {title: 'Count', textStyle: {color: 'black', fontSize: 11}},
-          series: [{ type: 'bars',  visibleInLegend:false },
-                  { type: 'line', color:'black', lineWidth: 0, visibleInLegend:false, pointSize: 0}]
-      };
-
-      // user distribution  by domain
-      var data2 = new google.visualization.DataTable();
-      data2.addColumn('string', 'Domain name');
-      data2.addColumn('number', 'Domain count');
-
-      var options2 = {
-          title: "MEME toolkit users distribution by domain",
-          width: 400,
-          height: 360,
-          legend: {position: 'right', textStyle: {color: 'black', fontSize: 9}},
-          backgroundColor: "#FFFFFF",
-      };
-
-      // Add data from stats
-      function addData() {
-        // unique users 
-        data1.addRows([
-            ["2011", 14255, 14255, '14255'],
-            ["2012", 14231, 14231, '14231'],
-            ["2013", 17356, 17356, '17356'],
-            ["2014", 19195, 19195, '19195'],
-        ]);
-
-        // unique users by domain
-        data2.addRows([
-            ["com", 120607],
-            ["other", 27041],
-            ["edu", 29455],
-            ["org", 2965],
-            ["ca", 2978],
-            ["cn", 3722],
-            ["jp", 5619],
-            ["fr", 5880],
-            ["net", 68463],
-            ["uk", 8452],
-            ["de", 8642],
-        ]);
-
-      };
-
-      // Define charts drawing
-      function drawChart() {
-        addData();        
-
-        // unique users 
-        var chart1 = new google.visualization.ComboChart(document.getElementById('meme1'));
-        chart1.draw(data1, options1);
-        
-        // unique users  by domain
-        var chart2 = new google.visualization.PieChart(document.getElementById('meme2'));
-        chart2.draw(data2, options2);
-
-      }
-
-      // Draw charts
-      google.setOnLoadCallback(drawChart);
-
-    </script>
-
-  </head>
-
+  <head></head>
   <body>
      <h3 align="center"><font color="#0082A0">MEME statistics</font></h3>
-     <strong>Bar chart:</strong> the number of users who accessed MEME toolkit services (by unique email)<br>
-     <strong>Pie chart:</strong> the distribution of users email by domain. Domains by country with fewer than 2000 entries each
-             are grouped into "other". <br>
-             Large proportion of users in .com domains is likely related to their usage of @gmail.com
-             or similar email address while their hosts are located  in .edu domain. <br><br>
-        Use <b>Convert</b> buttons to view an image in a frame below and 
-        <b>Save</b> buttons to copy an image to your Desktop.<br>
+      NBCR hosted MEME suit of application through May of 2015. <br>
+      As of June, 2015 MEME developers are using their own web server.<br><br>
 
-    <!-- bar and pie charts -->
-    <div id="meme1" style="width: 400px; height: 360px; float: left"></div>
-    <div id="meme2" style="width: 400px; height: 360px; float: left"></div>
-    <br style="clear: left;" />
+      During 2015 MEME develoeprs switched recording user emails to recording a <br>
+      unique browser session ID in the MEME Suite log files. This was required by the<br>
+      journal NAR, which insisted that on-line tools not require a user to input<br>
+      their email address.  As a result, the user ids in the log files for 2015<br>
+      are a mix of email addresses and made-up ids and are not possible to represent <br>
+      by user uniq domain.<br><br>
 
-    <!-- bar chart buttons -->
-    <button style="position:relative; left:60 " onclick="saveAsImg(document.getElementById('meme1'));">
-        Save bar chart as PNG image
-    </button>
-    <button style="position:relative; left:60" onclick="toImg(document.getElementById('meme1'), document.getElementById('img_div'));">
-        Convert bar chart to image
-    </button>
-    
-    <!-- pie chart buttons -->
-    <button style="position:relative; left:140 " onclick="saveAsImg(document.getElementById('meme2'));">
-        Save map chart as PNG image</button>
-    <button style="position:relative; left:140" onclick="toImg(document.getElementById('meme2'), document.getElementById('img_div'));">
-        Convert map chart to image
-    </button>
-    
-    <!-- "image placement" position  on the page-->
-    <div id="img_div" style="width: 400px; position: relative; top:10;  z-index: 10; border: 1px solid #0082A0; color: #0082A0">
-      Image will be placed here
-    </div>
+      The number of uniq sessions for the period of January - May 2015 was 10228
+      which accoubnts for repeate and new users.<br>
   </body>
 </html>
