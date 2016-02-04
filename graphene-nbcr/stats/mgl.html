@@ -45,10 +45,11 @@
 
         // registered users 
         data1.addRows([
-            ["2010", 8239, 8239, '8239'],
             ["2011", 10910, 10910, '10910'],
             ["2012", 14150, 14150, '14150'],
             ["2013", 18441, 18441, '18441'],
+            ["2014", 20086, 20086, '20086'],
+            ["2015", 21667, 21667, '21667'],
         ]);
 
         // access from uniq hostip
@@ -96,8 +97,8 @@
         chart1.draw(data1, options1);
         
         // Web services access from uniq hostip: World geographical distribution 
-        var chart2 = new google.visualization.GeoChart(document.getElementById('mgl2'));
-        chart2.draw(data2, options2);
+        //NPW var chart2 = new google.visualization.GeoChart(document.getElementById('mgl2'));
+        //NPW chart2.draw(data2, options2);
       }
 
       // Draw charts
@@ -110,9 +111,10 @@
     <h3 align="center"><font color="#0082A0">MGLTools statistics</font></h3>
         Current statistics are through 2013.<br><br>
         <strong>Bar chart</strong>: the total number of registerd users of MGLtools.<br>
+<!-- NPW 
         <strong>Map</strong>: geographical distribution of <a href="http://mgltools.scripps.edu">MGLTools website</a> visits,
         as tracked through google analytics over the calendar year.<br>
-
+NPW -->
     <!-- bar chart and map -->
     <div id="mgl1"     style="width: 400px; height: 360px; float: left"></div>
     <div id="mgl2" style="width: 400px; height: 360px; float: left"></div>
@@ -127,13 +129,14 @@
     </button>
     
     <!-- map buttons -->
+<!-- NPW
     <button style="position:relative; left:100 " onclick="saveAsImg(document.getElementById('mgl2'));">
         Save map as image
     </button>
     <button style="position:relative; left:100" onclick="toImg(document.getElementById('mgl2'), document.getElementById('img_div'));">
         Convert map to image
     </button>
-
+NPW -->
     <!-- "image placement" position  on the page-->
     <div id="img_div" style="width: 400px; position: relative; top:10;  z-index: 10; border: 1px solid #0082A0; color: #0082A0">
       Image will be placed here
