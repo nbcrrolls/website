@@ -46,6 +46,7 @@
             ["2012", 17697, 17697, '17697'],
             ["2013", 19504, 19504, '19504'],
             ["2014", 21360, 21360, '21360'],
+            ["2015", 21925, 21925, '21925'],
         ]);
 
         data2.addRows([
@@ -87,9 +88,10 @@
   
         var chart1 = new google.visualization.ComboChart(document.getElementById('apbs1'));
         chart1.draw(data1, options1);
-        
+<!-- NPW
         var chart2 = new google.visualization.GeoChart(document.getElementById('apbs2'));
         chart2.draw(data2, options2);
+NPW -->
       }
 
       // Draw charts
@@ -101,9 +103,11 @@
   <body>
     <h3 align="center"><font color="#0082A0">APBS statistics</font></h3>
         <strong>Bar chart</strong>: the total number of registerd users of APBS.<br>
+<!-- NPW
         <strong>Map</strong>: geographical distribution of <a href="http://www.poissonboltzmann.org">APBS website</a>
         visits, as tracked by google analytics over the calendar year. <br>For 2014 only half a year is available due
         to the loss of google analytics data.<br><br>
+NPW -->
         Use <b>Convert</b> buttons to view an image in a frame below and 
         <b>Save</b> buttons to copy an image to your Desktop.<br>
 
@@ -120,6 +124,7 @@
         Convert chart to image
     </button>
 
+<!-- NPW
     <!-- map buttons -->
     <button style="position:relative; left:200 " onclick="saveAsImg(document.getElementById('apbs2'));">
         Save map as PNG image
@@ -127,6 +132,7 @@
     <button style="position:relative; left:200" onclick="toImg(document.getElementById('apbs2'), document.getElementById('img_div'));">
         Convert map to image
     </button>
+NPW -->
     <br />
 
     <!-- "image placement" position  on the page-->
