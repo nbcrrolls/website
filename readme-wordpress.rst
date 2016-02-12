@@ -417,13 +417,13 @@ work. Thje are for a single site only.  Per this link https://codex.wordpress.or
       update wp_2_posts SET post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
       update wp_2_links  SET link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
 
-      update wp_4_options SET option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu')
-      where option_name = 'home' OR option_name = 'siteurl'; update wp_4_posts SET guid = replace(guid,'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_4_options SET option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu') where option_name = 'home' OR option_name = 'siteurl'; 
+      update wp_4_posts SET guid = replace(guid,'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
       update wp_4_posts SET post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
       update wp_4_links  SET link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
 
-      update wp_options set option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu')
-      where option_name = 'home' OR option_name = 'siteurl'; update wp_posts SET guid = replace(guid, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_options set option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu') where option_name = 'home' OR option_name = 'siteurl'; 
+      update wp_posts SET guid = replace(guid, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
       update wp_posts SET post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
       update wp_links  SET link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
 
