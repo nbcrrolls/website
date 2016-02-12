@@ -376,3 +376,67 @@ Enable captcha in grunion contact form plugin  in wordpress2/wp-content/plugins/
 
 #. download recaptcha library from http://code.google.com/p/recaptcha/ and put the file recaptchalib.php 
    in includes/
+
+Move wordpress configuration  to root
+-------------------------------------
+
+2016, Feb. Request to remove wordporess2/ from the website. 
+Need to move wordpress installation to root. 
+None of the recipes in http://codex.wordpress.org/Moving_WordPress#Moving_WordPress_Multisite 
+work. Thje are for a single site only.  Per this link https://codex.wordpress.org/Changing_The_Site_URL need to do a manula change.
+
+#. back up wpdb and /var/www/html/wordpress2/
+
+#. find all occurences of wordpress2/ in files in wordpress2/ :: 
+
+      # cd /var/www/html/wordpress2/ 
+      # find -l -r wordpress2 . 
+
+   - in .htaccess comment out line RewriteBase /wordpress2/
+   - in wp-config.php substitute ``/wordpress2/`` with ``/``
+   - in all other files  rm wordpress2/ 
+
+#. move all files fromn wordpress2 ::
+
+      # cd /var/www/html
+      # mv wordpress2/* .
+      # mv wordpress2/.htaccess .
+
+#. update wpdb entries ::
+
+      # mysql -u root -p
+      mysql> use wpdb; 
+      execute the following queries
+      update wp_3_options SET option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu') where option_name = 'home' OR option_name = 'siteurl';
+      update wp_3_posts SET guid = replace(guid, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_3_posts SET post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_3_links  SET link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+
+      update wp_2_options SET option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu') where option_name = 'home' OR option_name = 'siteurl';
+      update wp_2_posts SET guid = replace(guid, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_2_posts SET post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_2_links  SET link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+
+      update wp_4_options SET option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu')
+      where option_name = 'home' OR option_name = 'siteurl'; update wp_4_posts SET guid = replace(guid,'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_4_posts SET post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_4_links  SET link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+
+      update wp_options set option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu')
+      where option_name = 'home' OR option_name = 'siteurl'; update wp_posts SET guid = replace(guid, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_posts SET post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_links  SET link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+
+      update wp_site set path = replace(path, '/wordpress2/', '/');
+      update wp_blogs set path = replace(path, '/wordpress2/', '/');
+
+This is done on a test server first (already updated wordpress 4.x. 
+Do similar on main server. 
+
+**TODO**
+on a test server can see the other  3 sites but cardyac physiom has a link to point ot main server
+on a main server none of the site blgos are awailalbea. Get an error:
+``The requested URL /cardiacphysiome/wp-admin/ was not found on this server.``
+
+Need to fix the sites. 
+
