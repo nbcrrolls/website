@@ -245,11 +245,11 @@ Change wordpress host fqdn
    and resulted in all pages reloading to home page. The multisite may be an issue  ::
 
       mysql - root -p
-      mysql> UPDATE wp_options SET option_value = replace(option_value, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2') 
+      mysql> update wp_options set option_value = replace(option_value, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2') 
              where option_name = 'home' OR option_name = 'siteurl';
-      mysql> UPDATE wp_posts SET guid = replace(guid,'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
-      mysql> UPDATE wp_posts SET post_content = replace(post_content, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
-      mysql> UPDATE wp_links SET link_url = replace(link_url, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
+      mysql> update wp_posts set guid = replace(guid,'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
+      mysql> update wp_posts set post_content = replace(post_content, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
+      mysql> update wp_links set link_url = replace(link_url, 'http://rocce-vm0.ucsd.edu/wordpress2', 'http://www2.nbcr.net/wordpress2');
 
 
 #. Check all the files in wordpress2/ 
@@ -310,11 +310,55 @@ On new host
 #. Update settings in the database to new urls ::
 
      /usr/bin/mysql -u root -p wpdb
-     mysql>UPDATE wp_options SET option_value = replace(option_value, 'http://old.ucsd.edu/wordpress2', 'http://new.ucsd.edu/wordpress2') 
+     mysql>update wp_options set option_value = replace(option_value, 'http://old.ucsd.edu/wordpress2', 'http://new.ucsd.edu/wordpress2') 
            where option_name = 'home' OR option_name = 'siteurl';
-     mysql>select * from wp_options where option_value='http://new.ucsd.edu/wordpress2';
-     mysql>UPDATE wp_posts SET guid = replace(guid,'http://old.ucsd.edu/wordpress2', 'http://new.ucsd.edu/wordpress2');
-     mysql>UPDATE wp_posts SET post_content = replace(post_content, 'http://old.ucsd.edu/wordpress2', 'http://new.ucsd.edu/wordpress2');
+     mysql>update wp_posts set guid = replace(guid,'http://old.ucsd.edu/wordpress2', 'http://new.ucsd.edu/wordpress2');
+     mysql>update wp_posts set post_content = replace(post_content, 'http://old.ucsd.edu/wordpress2', 'http://new.ucsd.edu/wordpress2');
+
+   On rocce-vm1 fixed with additional ::
+
+       # for cardiacphysiome site
+       update wp_2_options set option_value = replace(option_value, 'nbcr.ucsd.edu', 'rocce-vm1.ucsd.edu');
+       update wp_2_posts set guid = replace(guid, 'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_2_posts set post_content = replace(post_content, 'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_2_posts set pinged = replace(pinged, 'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_2_links set link_url = replace(link_url, 'http://nbcr.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu/wordpress2');
+       update wp_2_postmeta set meta_value = replace(meta_value,'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_2_comments set comment_author_url = replace(comment_author_url,'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_2_blogs set domain=replace(domain,'nbcr.ucsd.edu','rocce-vm1.ucsd.edu');
+
+       # for prime site
+       update wp_3_options set option_value = replace(option_value, 'nbcr.ucsd.edu', 'rocce-vm1.ucsd.edu');
+       update wp_3_posts set guid = replace(guid, 'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_3_posts set post_content = replace(post_content, 'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_3_posts set pinged = replace(pinged, 'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_3_links set link_url = replace(link_url, 'http://nbcr.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu/wordpress2');
+       update wp_3_postmeta set meta_value = replace(meta_value,'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_3_comments set comment_author_url = replace(comment_author_url,'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_3_blogs set domain=replace(domain,'nbcr.ucsd.edu','rocce-vm1.ucsd.edu');
+
+       # for SI site
+       update wp_4_options set option_value = replace(option_value, 'nbcr.ucsd.edu', 'rocce-vm1.ucsd.edu');
+       update wp_4_posts set guid = replace(guid, 'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_4_posts set post_content = replace(post_content, 'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_4_posts set pinged = replace(pinged, 'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_4_links set link_url = replace(link_url, 'http://nbcr.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu/wordpress2');
+       update wp_4_postmeta set meta_value = replace(meta_value,'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_4_comments set comment_author_url = replace(comment_author_url,'http://nbcr.ucsd.edu', 'http://rocce-vm1.ucsd.edu');
+       update wp_4_blogs set domain=replace(domain,'nbcr.ucsd.edu','rocce-vm1.ucsd.edu');
+       
+       # for main site tables 
+       update wp_options set option_value = replace(option_value, 'http://nbcr.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu/wordpress2') where option_name = 'home' OR option_name = 'siteurl';
+       update wp_posts set post_content = replace(post_content, 'http://nbcr.ucsd.edu/wordpress2','http://rocce-vm1.ucsd.edu/wordpress2');
+       update wp_posts set post_title = replace(post_title, 'http://nbcr.ucsd.edu/wordpress2','http://rocce-vm1.ucsd.edu.wordpress2');
+       update wp_posts set pinged = replace(pinged, 'http://nbcr.ucsd.edu/wordpress2','http://rocce-vm1.ucsd.edu/wordpress2');
+       update wp_posts set guid = replace(guid, 'http://nbcr.ucsd.edu/wordpress2','http://rocce-vm1.ucsd.edu/wordpress2');
+       update wp_links set link_url = replace(link_url, 'http://nbcr.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu/wordpress2');
+       update wp_blogs set domain=replace(domain,'nbcr.ucsd.edu','rocce-vm1.ucsd.edu');
+
+       update wp_site set domain = replace(domain, 'nbcr.ucsd.edu', 'rocce-vm1.ucsd.edu')
+       update wp_sitemeta set meta_value = replace(meta_value, 'http://nbcr.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu/wordpress2') where meta_key = 'siteurl';
+
 
 Enable Google Analytics
 -----------------------
@@ -407,36 +451,70 @@ work. Thje are for a single site only.  Per this link https://codex.wordpress.or
       # mysql -u root -p
       mysql> use wpdb; 
       execute the following queries
-      update wp_3_options SET option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu') where option_name = 'home' OR option_name = 'siteurl';
-      update wp_3_posts SET guid = replace(guid, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
-      update wp_3_posts SET post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
-      update wp_3_links  SET link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_3_options set option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu') where option_name = 'home' OR option_name = 'siteurl';
+      update wp_3_posts set guid = replace(guid, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_3_posts set post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_3_links  set link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
 
-      update wp_2_options SET option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu') where option_name = 'home' OR option_name = 'siteurl';
-      update wp_2_posts SET guid = replace(guid, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
-      update wp_2_posts SET post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
-      update wp_2_links  SET link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_2_options set option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu') where option_name = 'home' OR option_name = 'siteurl';
+      update wp_2_posts set guid = replace(guid, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_2_posts set post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_2_links  set link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
 
-      update wp_4_options SET option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu') where option_name = 'home' OR option_name = 'siteurl'; 
-      update wp_4_posts SET guid = replace(guid,'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
-      update wp_4_posts SET post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
-      update wp_4_links  SET link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_4_options set option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu') where option_name = 'home' OR option_name = 'siteurl'; 
+      update wp_4_posts set guid = replace(guid,'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_4_posts set post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_4_links  set link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
 
       update wp_options set option_value = replace(option_value, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu') where option_name = 'home' OR option_name = 'siteurl'; 
-      update wp_posts SET guid = replace(guid, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
-      update wp_posts SET post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
-      update wp_links  SET link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_posts set guid = replace(guid, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_posts set post_content = replace(post_content, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
+      update wp_links  set link_url = replace(link_url, 'http://rocce-vm1.ucsd.edu/wordpress2', 'http://rocce-vm1.ucsd.edu');
 
       update wp_site set path = replace(path, '/wordpress2/', '/');
       update wp_blogs set path = replace(path, '/wordpress2/', '/');
 
-This is done on a test server first (already updated wordpress 4.x. 
-Do similar on main server. 
+   This is done on a test server first (already updated wordpress 4.x. 
+   Do similar on main server. 
 
-**TODO**
-on a test server can see the other  3 sites but cardyac physiom has a link to point ot main server
-on a main server none of the site blgos are awailalbea. Get an error:
-``The requested URL /cardiacphysiome/wp-admin/ was not found on this server.``
+   on a test server can see the other 3 sites but cardyac physiome has a link to point to main server
+   on a main server none of the site blogs are awailalbea. Get an error:
+   ``The requested URL /cardiacphysiome/wp-admin/ was not found on this server.``
 
-Need to fix the sites. 
+   **FIX**  Redo mdultiple quieries, clean the order, simplify, the result
+   should be ::
+
+       update wp_2_options set option_value = replace(option_value, '/wordpress2','');
+       update wp_2_posts set guid = replace(guid, '/wordpress2','');
+       update wp_2_posts set post_content = replace(post_content, '/wordpress2','');
+       update wp_2_posts set pinged = replace(pinged, '/wordpress2','');
+       update wp_2_links set link_url = replace(link_url, '/wordpress2', '');
+       update wp_2_postmeta set meta_value = replace(meta_value, '/wordpress2','');
+       update wp_2_comments set comment_author_url = replace(comment_author_url,'/wordpress2','');
+
+       update wp_3_options set option_value = replace(option_value, '/wordpress2','');
+       update wp_3_posts set guid = replace(guid, '/wordpress2','');
+       update wp_3_posts set post_content = replace(post_content, '/wordpress2','');
+       update wp_3_posts set pinged = replace(pinged, '/wordpress2','');
+       update wp_3_links set link_url = replace(link_url, '/wordpress2', '');
+       update wp_3_postmeta set meta_value = replace(meta_value, '/wordpress2','');
+       update wp_3_comments set comment_author_url = replace(comment_author_url,'/wordpress2','');
+
+       update wp_4_options set option_value = replace(option_value, '/wordpress2','');
+       update wp_4_posts set guid = replace(guid, '/wordpress2','');
+       update wp_4_posts set post_content = replace(post_content, '/wordpress2','');
+       update wp_4_posts set pinged = replace(pinged, '/wordpress2','');
+       update wp_4_links set link_url = replace(link_url, '/wordpress2', '');
+       update wp_4_postmeta set meta_value = replace(meta_value, '/wordpress2','');
+       update wp_4_comments set comment_author_url = replace(comment_author_url,'/wordpress2','');
+
+       update wp_options set option_value = replace(option_value, '/wordpress2','');
+       update wp_posts set guid = replace(guid, '/wordpress2','');
+       update wp_posts set post_content = replace(post_content, '/wordpress2','');
+       update wp_posts set pinged = replace(pinged, '/wordpress2','');
+       update wp_links  set link_url = replace(link_url, '/wordpress2', '');
+       update wp_sitemeta set meta_value = replace(meta_value, '/wordpress2','');
+       update wp_tdomf_table_widgets set widget_value = replace(widget_value,'/wordpress2','');
+       update wp_site set path = replace(path, '/wordpress2/', '/');
+       update wp_blogs set path = replace(path, '/wordpress2/', '/');
 
