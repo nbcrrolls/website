@@ -24,14 +24,14 @@ Create initial wp-config.php file. ::
 
 Edit wp-config.php 
 
-   #. define dbnamme, dbuser, dbpass, dbhost ::
+#. define dbnamme, dbuser, dbpass, dbhost ::
 
        define('DB_NAME', 'wpdb');
        define('DB_USER', 'USER');       <-- put user account info
        define('DB_PASSWORD', 'PASS');   <-- put user account info
        define('DB_HOST', 'localhost:/var/lib/mysql/mysql.sock');
 
-   #. Generate 8 keys at  https://api.wordpress.org/secret-key/1.1/salt/ and put in ::
+#. Generate 8 keys at  https://api.wordpress.org/secret-key/1.1/salt/ and put in ::
 
        define('AUTH_KEY',         'put your unique phrase here');
        define('SECURE_AUTH_KEY',  'put your unique phrase here');
@@ -42,12 +42,12 @@ Edit wp-config.php
        define('LOGGED_IN_SALT',   'put your unique phrase here');
        define('NONCE_SALT',       'put your unique phrase here');
 
-   #. define WP\_SITEURL, WP\_HOME ::
+#. define WP\_SITEURL, WP\_HOME ::
 
        define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/wordpress2');
        define('WP_HOME',    'http://' . $_SERVER['HTTP_HOST'] . '/wordpress2');
 
-   #. add multisite (if using multiple hostings) :: 
+#. add multisite (if using multiple hostings) :: 
 
        define( 'MULTISITE', true );
        define( 'SUBDOMAIN_INSTALL', false );
@@ -427,7 +427,7 @@ Move wordpress configuration  to root
 2016, Feb. Request to remove wordporess2/ from the website. 
 Need to move wordpress installation to root. 
 None of the recipes in http://codex.wordpress.org/Moving_WordPress#Moving_WordPress_Multisite 
-work. Thje are for a single site only.  Per this link https://codex.wordpress.org/Changing_The_Site_URL need to do a manula change.
+work. Thje are for a single site only.  Per this link https://codex.wordpress.org/Changing_The_Site_URL need to do a manual change.
 
 #. back up wpdb and /var/www/html/wordpress2/
 
