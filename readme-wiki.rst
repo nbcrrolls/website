@@ -106,3 +106,16 @@ Add the following lines to enable speciufic features in ``LocalSettings.php`` ::
      # allow external imges linking
      $wgAllowExternalImages = true;
 
+Track mediawiki stats with google analytics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Edit wiki/skins/MonoBook.php and insert tracking code before </body> tag: ::
+
+    <script src="http://www.google-analytics.com/urchin.js"
+    type="text/javascript">
+    </script>
+    <script type="text/javascript">
+    _uacct="UA-890371-1";
+    urchinTracker();
+    </script>
+
