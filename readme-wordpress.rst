@@ -523,8 +523,8 @@ Search, indexing
 
 #. submit site to search engines: 
 
-        https://www.google.com/webmasters/tools/submit-url?continue=/addurl&pli=1
-        http://www.bing.com/toolbox/submit-site-url
+    https://www.google.com/webmasters/tools/submit-url?continue=/addurl&pli=1
+    http://www.bing.com/toolbox/submit-site-url
         
 #. google search console 
     
@@ -532,4 +532,5 @@ Search, indexing
    and click on the website link nbcr.ucsd.edu to get to the dashboard.
    Use Crawl menu to see errors, and stats. clean errors.
     
-    
+#. google analytics
+   https://analytics.google.com/analytics
