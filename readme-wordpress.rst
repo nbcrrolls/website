@@ -544,8 +544,9 @@ Search, indexing
    find the blog_public option in that list. If you want your blog to be indexed by search engines, 
    make sure blog_public option is set to 1 and save.
 
-   Finally, check the blog and View Source. Ensure that the following bit of code does not appear:
-    <meta name='robots' content='noindex,nofollow' />
+   Finally, check the blog and View Source. Ensure that the following bit of code does not appear::
+   
+       <meta name='robots' content='noindex,nofollow' />
     
    NOTE: blog_public was 0 as of 2016-03-09 on rocce-vm0 but 1 on test rocce-vm1. NOt sure when or how
    the setting was changed. NO direct access to this option.php page form admin pages unless typed verbatim.
