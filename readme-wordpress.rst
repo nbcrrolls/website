@@ -518,3 +518,18 @@ work. Thje are for a single site only.  Per this link https://codex.wordpress.or
        update wp_site set path = replace(path, '/wordpress2/', '/');
        update wp_blogs set path = replace(path, '/wordpress2/', '/');
 
+Search, indexing
+------------------
+
+#. submit site to search engines: 
+
+        https://www.google.com/webmasters/tools/submit-url?continue=/addurl&pli=1
+        http://www.bing.com/toolbox/submit-site-url
+        
+#. google search console 
+    
+   Use URL https://www.google.com/webmasters/tools/home?hl=en to get to the webmasters tools
+   and click on the website link nbcr.ucsd.edu to get to the dashboard.
+   Use Crawl menu to see errors, and stats. clean errors.
+    
+    
