@@ -569,3 +569,5 @@ Search, indexing
 #. check google webmaster guidlines https://support.google.com/webmasters/answer/35769 
 
    see also chekc of guidlines as a list http://www.hobo-web.co.uk/webmaster-guidelines/
+   Search engine optimization guide form google http://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf
+   
