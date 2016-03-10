@@ -552,3 +552,16 @@ Search, indexing
     
    NOTE: blog_public was 0 as of 2016-03-09 on rocce-vm0 but 1 on test rocce-vm1. NOt sure when or how
    the setting was changed. NO direct access to this option.php page form admin pages unless typed verbatim.
+   
+#. see if google knows about the site and its pages ::
+
+   site:nbcr.ucsd.edu
+   info:nbcr.ucsd.edu
+   
+#. create sitemaap.xml 
+   
+   use https://www.xml-sitemaps.com/ to create sitemap.xml. Download, and edit to remove extras
+   (attachments, old docs links, etc, erroneous links). UPload to website and install as sitemap.xml at /
+   
+   At google webtools search console https://www.google.com/webmasters/tools/sitemap-list?
+   add new sitemap.  Test at the earch console, result : 407 pages submitted.
