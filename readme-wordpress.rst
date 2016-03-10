@@ -567,3 +567,5 @@ Search, indexing
    add new sitemap.  Test at the earch console, result : 407 pages submitted.
 
 #. check google webmaster guidlines https://support.google.com/webmasters/answer/35769 
+
+   see also chekc of guidlines as a list http://www.hobo-web.co.uk/webmaster-guidelines/
