@@ -565,3 +565,5 @@ Search, indexing
    
    At google webtools search console https://www.google.com/webmasters/tools/sitemap-list?
    add new sitemap.  Test at the earch console, result : 407 pages submitted.
+
+#. check google webmaster guidlines https://support.google.com/webmasters/answer/35769 
