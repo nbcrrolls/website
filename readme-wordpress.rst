@@ -525,6 +525,8 @@ Search, indexing
 
     https://www.google.com/webmasters/tools/submit-url?continue=/addurl&pli=1
     http://www.bing.com/toolbox/submit-site-url
+   
+   Also submit  site map to Google via  Webmaster Tools  http://www.google.com/webmasters/tools
         
 #. google search console 
     
