@@ -48,7 +48,7 @@ global $graphene_settings;
 <!--
                 <?php _e('Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Licence</a>.', 'graphene'); ?>
 -->
-                <img src="<?php echo get_stylesheet_directory_uri().'/images/logos/NBCR-logo.png'; ?>" alt="" class="small-logo" />
+                <img src="<?php echo get_stylesheet_directory_uri().'/images/logos/NBCR-logo.png'; ?>" alt="" class="medium-logo" />
                 <img src="<?php echo get_stylesheet_directory_uri().'/images/logos/NIH-logo.png'; ?>" alt="" class="small-logo" />
                 <img src="<?php echo get_stylesheet_directory_uri().'/images/logos/NIGMS-logo.png'; ?>" alt="" class="small-logo" />
                 </p>
