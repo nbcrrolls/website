@@ -573,3 +573,10 @@ Search, indexing
    Search engine optimization guide from google:
    http://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf
    
+#. enabling RSS feeds
+
+  normally these are enabled by default. Check site via validator http://validator.w3.org/feed/
+
+  The problem  with graphene-nbcr theme (was in a few phph files wehre theere was an empty line outside of <?php ...?>
+  Fix: remove empty lines and recheck with validator
+

@@ -10,9 +10,7 @@
  */
 global $graphene_settings;
 ?>
-  
     </div><!-- #content-main -->
-    
     <?php
     
         /* Sidebar 1 on the right side? */
@@ -25,24 +23,17 @@ global $graphene_settings;
         }
     
     ?>
-    
-
 </div><!-- #content -->
-
 <?php /* Get the footer widget area */ ?>
 <?php get_template_part('sidebar', 'footer'); ?>
-
 <?php do_action('graphene_before_footer'); ?>
-
 <div id="footer">
-
     <?php if (!$graphene_settings['hide_copyright']) : ?>
         <div id="copyright" <?php if (!$graphene_settings['show_cc'] && !is_rtl()) {
         echo 'style="background:none;padding-left:20px;"';
     } elseif (!$graphene_settings['show_cc'] && is_rtl()) {
         echo 'style="background:none;padding-right:20px;"';
     } ?>>
-
             <?php if ($graphene_settings['copy_text'] == '') : ?>
                 <p>
 <!--
@@ -55,12 +46,9 @@ global $graphene_settings;
             <?php else : ?>
             <?php echo stripslashes($graphene_settings['copy_text']); ?>
         <?php endif; ?>
-
     <?php do_action('graphene_copyright'); ?>
         </div>
 <?php endif; ?>
-
-
     <div id="w3c">
         <p>
             <a title="<?php esc_attr_e('Valid XHTML 1.0 Strict', 'graphene'); ?>" href="http://validator.w3.org/check?uri=referer" id="w3c_xhtml"><span><?php _e('Valid XHTML 1.0 Strict', 'graphene'); ?></span></a> 
@@ -69,14 +57,11 @@ global $graphene_settings;
 
     <?php do_action('graphene_w3c'); ?>
     </div>
-
-
     <div id="developer">
         <p>
         <?php /* translators: %1$s is the blog title, %2$s is the theme's name, %3$s is the theme's author */ ?>
 <?php printf(__('%1$s uses %2$s-based theme', 'graphene'), '<a href="' . get_home_url() . '">' . get_bloginfo('name') . '</a>', '<a href="http://www.khairul-syahir.com/wordpress-dev/graphene-theme">' . ucfirst(get_template()) . '</a>' ); ?>
         </p>
-
 <?php do_action('graphene_developer'); ?>
     </div>
     <div class="sidebar-wrap clearfix">
@@ -85,19 +70,12 @@ global $graphene_settings;
             <li><?php wp_loginout(); ?></li>
         </ul>
     </div>
-
-
-
 </div><!-- #footer -->
-
 <?php do_action('graphene_after_footer'); ?>
-
 </div><!-- #container -->
-
 <?php if (!get_theme_mod('background_image', false) && !get_theme_mod('background_color', false)) : ?>
     </div><!-- .bg-gradient -->
 <?php endif; ?>
-
 <?php wp_footer(); ?>
 </body>
 </html>
