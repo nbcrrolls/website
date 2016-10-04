@@ -11,9 +11,7 @@
 /* use one-column page setting */
 global $graphene_settings;
 $graphene_settings['column_mode']='one-column'; 
-
  get_header(); ?>
- 
     <?php
     /* Run the loop to output the posts.
      * If you want to overload this in a child theme then include a file
@@ -21,6 +19,4 @@ $graphene_settings['column_mode']='one-column';
      */
      get_template_part('loop', 'single');
     ?>
-
 <?php get_footer(); ?>
-

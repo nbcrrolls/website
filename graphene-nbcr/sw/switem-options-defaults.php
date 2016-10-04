@@ -1,4 +1,3 @@
-
 <?php 
 /**
  * Set the default values for sw item default settings. 

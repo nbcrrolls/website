@@ -528,3 +528,65 @@ Log
 		     wp-filebase 
 
 2016-02-11 - move multisite to root form wordpress2/
+
+Search, indexing
+------------------
+
+#. submit site to search engines: 
+
+    https://www.google.com/webmasters/tools/submit-url?continue=/addurl&pli=1
+    http://www.bing.com/toolbox/submit-site-url
+   
+   Also submit  site map to Google via  Webmaster Tools  http://www.google.com/webmasters/tools
+        
+#. google search console 
+    
+   Use URL https://www.google.com/webmasters/tools/home?hl=en to get to the webmasters tools
+   and click on the website link nbcr.ucsd.edu to get to the dashboard.
+   Use Crawl menu to see errors, and stats. clean errors.
+    
+#. google analytics
+   https://analytics.google.com/analytics
+
+#. Check privacy option in wordpress. 2016-03-09
+   
+   Visit wp-admin/options.php of the blog. it's not linked to anywhere within the admin panel. 
+   It's purpose is simply to show all of blog's configuration options -- anything placed in 
+   the options table of the tabase. Be careful what you change within this screen!
+
+   find the blog_public option in that list. If you want your blog to be indexed by search engines, 
+   make sure blog_public option is set to 1 and save.
+
+   Finally, check the blog and View Source. Ensure that the following bit of code does not appear::
+   
+       <meta name='robots' content='noindex,nofollow' />
+    
+   NOTE: blog_public was 0 as of 2016-03-09 on rocce-vm0 but 1 on test rocce-vm1. NOt sure when or how
+   the setting was changed. NO direct access to this option.php page form admin pages unless typed verbatim.
+   
+#. see if google knows about the site and its pages ::
+
+   site:nbcr.ucsd.edu
+   info:nbcr.ucsd.edu
+   
+#. create sitemaap.xml 
+   
+   use https://www.xml-sitemaps.com/ to create sitemap.xml. Download, and edit to remove extras
+   (attachments, old docs links, etc, erroneous links). UPload to website and install as sitemap.xml at /
+   
+   At google webtools search console https://www.google.com/webmasters/tools/sitemap-list?
+   add new sitemap.  Test at the earch console, result : 407 pages submitted.
+
+#. check google webmaster guidlines https://support.google.com/webmasters/answer/35769 
+
+   see also guidlines as a list http://www.hobo-web.co.uk/webmaster-guidelines/
+   
+   Search engine optimization guide from google:
+   http://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf
+   
+#. enabling RSS feeds
+
+  normally these are enabled by default. Check site via validator http://validator.w3.org/feed/
+
+  The problem  with graphene-nbcr theme (was in a few phph files wehre theere was an empty line outside of <?php ...?>
+  Fix: remove empty lines and recheck with validator
