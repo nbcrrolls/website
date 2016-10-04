@@ -518,3 +518,13 @@ work. Thje are for a single site only.  Per this link https://codex.wordpress.or
        update wp_site set path = replace(path, '/wordpress2/', '/');
        update wp_blogs set path = replace(path, '/wordpress2/', '/');
 
+Log
+-----
+2016-02-12 - update themse:  graphene 1.9.4.2, magazine-basic, twentyten
+             update plugins: formidable, global-content-blocks, captcha
+			 delete inactive plugins: akismet download-manager lightview-plus
+             put simple-retail-menus tabby-responsive-tabs
+	         tdo-mini-forms thethe-image-slider wp-compare-tables
+		     wp-filebase 
+
+2016-02-11 - move multisite to root form wordpress2/
