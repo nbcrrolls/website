@@ -521,6 +521,82 @@ work. They are for a single site only.  Per this link https://codex.wordpress.or
 Log
 -----
 
+* 2016-12-23
+
+  update nbcr.conf apache file with 
+
+  * add cache expiration  :: 
+
+    ### EXPIRES CACHING 
+    #<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType text/x-javascript "access plus 1 month"
+    ExpiresByType application/x-shockwave-flash "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    #</IfModule>
+    ### EXPIRES CACHING 
+
+  * cache control headers ::
+
+    ### BEGIN Cache-Control Headers, set caching to 4 weeks for each
+    #<IfModule mod_headers.c>
+      <filesMatch "\.(ico|jpg|jpeg|png|gif|swf)$">
+        Header set Cache-Control "max-age=2419200, must-revalidate"
+      </filesMatch>
+      <filesMatch "\.(css)$">
+        Header set Cache-Control "max-age=2419200"
+      </filesMatch>
+      <filesMatch "\.(js)$">
+        Header set Cache-Control "max-age=2419200"
+      </filesMatch>
+      <filesMatch "\.(x?html?|php)$">
+        Header set Cache-Control "max-age=2419200, must-revalidate"
+      </filesMatch>
+      <filesMatch "\.analytics.js$">
+        Header set Cache-Control "max-age=2419200"
+      </filesMatch>
+    #</IfModule>
+    ### END Cache-Control Headers
+
+  *  turn off etags ::
+
+    ### Turn ETags Off
+    #<ifModule mod_headers.c>
+      Header unset ETag
+    #</ifModule>
+      FileETag None
+
+    # Make sure proxies don't deliver the wrong content
+      Header append Vary User-Agent env=!dont-vary
+    <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+      Header set Expires "Sun, 31 Jan 2017 20:00:00 GMT"
+    </FilesMatch> 
+
+    ### Turn ETags Off
+
+  * rm last modified header, leave commented out ::
+
+    ### Remove Last-Modified Header
+    #<ifModule mod_headers.c>
+    #  Header unset Last-Modified
+    #</ifModule>
+    ### Remove Last-Modified Header
+
+  * add compression ::
+
+    # Compress only a few types
+    AddOutputFilterByType DEFLATE text/plain text/css text/html text/xml
+    text/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript application/javascript
+
+
 * 2016-02-12 
 
   update themse:  graphene 1.9.4.2, magazine-basic, twentyten
