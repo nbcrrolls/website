@@ -1,20 +1,2 @@
-/*
-Theme Name: Graphene-NBCR
-Theme URI: http://www.khairul-syahir.com/wordpress-dev/graphene-theme
-Description: Based on The Graphene theme for Wordpress 3.0.
-Version: 1.0
-Author:
-Author URI: http://www.khairul-syahir.com
-Tags: black, blue, white, one-column, two-columns, three-columns, right-sidebar, left-sidebar, fixed-width, custom-colors, custom-header, custom-background, custom-menu, editor-style, theme-options, threaded-comments, sticky-post, translation-ready, rtl-language-support
-License: GNU General Public License, v2 (or newer)
-License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-Template: graphene
-*/
-
-@import url("../graphene/style.css");
-@import url("graphene-nbcr.css");
-@import url("nbcr.css");
-
-#access{overflow: visible;}
+@import url("../graphene/style.css"); @import url("graphene-nbcr.css"); @import url("nbcr.css"); #access{overflow: visible;}
 #main{clear: both;}
-
