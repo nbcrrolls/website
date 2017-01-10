@@ -427,7 +427,7 @@ Move wordpress configuration  to root
 2016, Feb. Request to remove wordporess2/ from the website. 
 Need to move wordpress installation to root. 
 None of the recipes in http://codex.wordpress.org/Moving_WordPress#Moving_WordPress_Multisite 
-work. Thje are for a single site only.  Per this link https://codex.wordpress.org/Changing_The_Site_URL need to do a manual change.
+work. They are for a single site only.  Per this link https://codex.wordpress.org/Changing_The_Site_URL need to do a manual change.
 
 #. back up wpdb and /var/www/html/wordpress2/
 
@@ -521,14 +521,19 @@ work. Thje are for a single site only.  Per this link https://codex.wordpress.or
 Log
 -----
 
-2016-02-12 - update themse:  graphene 1.9.4.2, magazine-basic, twentyten
-             update plugins: formidable, global-content-blocks, captcha
-			 delete inactive plugins: akismet download-manager lightview-plus
-             put simple-retail-menus tabby-responsive-tabs
-	         tdo-mini-forms thethe-image-slider wp-compare-tables
-		     wp-filebase 
+* 2016-02-12 
 
-2016-02-11 - move multisite to root form wordpress2/
+  update themse:  graphene 1.9.4.2, magazine-basic, twentyten
+
+  update plugins: formidable, global-content-blocks, captcha
+
+  delete inactive plugins: akismet download-manager lightview-plus
+
+  put simple-retail-menus tabby-responsive-tabs tdo-mini-forms thethe-image-slider wp-compare-tables wp-filebase 
+
+* 2016-02-11 
+
+  move multisite to root form wordpress2/
 
 Search, indexing
 ------------------
@@ -562,8 +567,8 @@ Search, indexing
    
        <meta name='robots' content='noindex,nofollow' />
     
-   NOTE: blog_public was 0 as of 2016-03-09 on rocce-vm0 but 1 on test rocce-vm1. NOt sure when or how
-   the setting was changed. NO direct access to this option.php page form admin pages unless typed verbatim.
+   NOTE: blog_public was 0 as of 2016-03-09 on rocce-vm0 but 1 on test rocce-vm1. Not sure when or how
+   the setting was changed. No direct access to this option.php page form admin pages unless typed verbatim.
    
 #. see if google knows about the site and its pages ::
 
@@ -587,7 +592,22 @@ Search, indexing
    
 #. enabling RSS feeds
 
-  normally these are enabled by default. Check site via validator http://validator.w3.org/feed/
+   Normally, these are enabled by default. Check site via validator http://validator.w3.org/feed/
 
-  The problem  with graphene-nbcr theme (was in a few phph files wehre theere was an empty line outside of <?php ...?>
-  Fix: remove empty lines and recheck with validator
+   The problem  with graphene-nbcr theme was in a few php files where there was an empty line outside of <?php ...?>
+   Fix: remove empty lines and recheck with validator
+
+Optimization, validation, performance
+----------------------------------------
+
+#. **Five free tools to improve yout website page load speed** 
+   
+   See an article at 
+   http://www.itworld.com/internet/381129/five-free-tools-improve-your-websites-page-loading-time?source=ITWNLE_nlt_today_2013-11-02
+
+   * Google PageSpeed Insights http://developers.google.com/speed/pagespeed/insights/
+   * Pingdom Website Speed Test http://tools.pingdom.com/fpt/
+   * Web Page Test http://www.webpagetest.org/
+   * GTmetrix http://gtmetrix.com/
+   * Web Page Analyzer http://www.websiteoptimization.com/services/analyze/
+
