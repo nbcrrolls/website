@@ -611,3 +611,4 @@ Optimization, validation, performance
    * GTmetrix http://gtmetrix.com/
    * Web Page Analyzer http://www.websiteoptimization.com/services/analyze/
 
+#. Test javascript using Javascript usage tool  https://varvy.com/tools/js/
