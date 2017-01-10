@@ -520,6 +520,7 @@ work. Thje are for a single site only.  Per this link https://codex.wordpress.or
 
 Log
 -----
+
 2016-02-12 - update themse:  graphene 1.9.4.2, magazine-basic, twentyten
              update plugins: formidable, global-content-blocks, captcha
 			 delete inactive plugins: akismet download-manager lightview-plus
@@ -534,8 +535,8 @@ Search, indexing
 
 #. submit site to search engines: 
 
-    https://www.google.com/webmasters/tools/submit-url?continue=/addurl&pli=1
-    http://www.bing.com/toolbox/submit-site-url
+   https://www.google.com/webmasters/tools/submit-url?continue=/addurl&pli=1
+   http://www.bing.com/toolbox/submit-site-url
    
    Also submit  site map to Google via  Webmaster Tools  http://www.google.com/webmasters/tools
         
