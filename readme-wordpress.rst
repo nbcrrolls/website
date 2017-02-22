@@ -687,3 +687,8 @@ Optimization, validation, performance
    * Web Page Analyzer http://www.websiteoptimization.com/services/analyze/
 
 #. Test javascript using Javascript usage tool  https://varvy.com/tools/js/
+
+Links for editing styles
+-------------------------
+
+#. animation delay property with css  http://www.w3schools.com/cssref/css3_pr_animation-delay.asp
