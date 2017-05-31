@@ -692,3 +692,14 @@ Links for editing styles
 -------------------------
 
 #. animation delay property with css  http://www.w3schools.com/cssref/css3_pr_animation-delay.asp
+
+
+Links
+-------
+
+* Installing on the root vs. a subdirectory  https://premium.wpmudev.org/forums/topic/installing-wordpress-on-the-root-vs-a-sub-directory
+* moving https://codex.wordpress.org/Moving_WordPress
+* robotx.txt fetch error  https://support.google.com/webmasters/answer/2409682?hl=en
+* crawl errors ( need google login) https://www.google.com/webmasters/tools/crawl-errors?hl=en&authuser=0&siteUrl=http://nbcr.ucsd.edu/#t1=1
+* updating https://codex.wordpress.org/Updating_WordPress
+ 
